@@ -23,6 +23,7 @@
           </leafNode>
           <leafNode name="cap-add">
             <properties>
+              <doc_text>TEXT</doc_text>
               <help>Container capabilities/permissions</help>
               <completionHelp>
                 <list>net-admin net-bind-service net-raw setpcap sys-admin sys-module sys-time</list>

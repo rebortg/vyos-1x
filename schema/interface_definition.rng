@@ -161,6 +161,9 @@
           <ref name="help"/>
         </optional>
         <optional>
+          <ref name="doc_text"/>
+        </optional>
+        <optional>
           <ref name="constraint"/>
         </optional>
         <zeroOrMore>
@@ -326,6 +329,12 @@
           </element>
         </zeroOrMore>
       </interleave>
+    </element>
+  </define>
+  <!-- docs -->
+  <define name="doc_text">
+    <element name="doc_text">
+      <text/>
     </element>
   </define>
 </grammar>
