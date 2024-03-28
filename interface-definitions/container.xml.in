@@ -4,6 +4,8 @@
     <properties>
       <help>Container applications</help>
       <priority>450</priority>
+      <doc_headline>Containers</doc_headline>
+      <doc_text>The VyOS container implementation is based on https://podman.io as a deamonless container engine.</doc_text>
     </properties>
     <children>
       <tagNode name="name">
@@ -23,7 +25,7 @@
           </leafNode>
           <leafNode name="cap-add">
             <properties>
-              <doc_text>TEXT</doc_text>
+              <doc_text>Set container capabilities or permissions.</doc_text>
               <help>Container capabilities/permissions</help>
               <completionHelp>
                 <list>net-admin net-bind-service net-raw setpcap sys-admin sys-module sys-time</list>
@@ -124,6 +126,12 @@
               <constraint>
                 #include <include/constraint/host-name.xml.i>
               </constraint>
+              <doc_text>Sets the image name in the hub registry</doc_text>
+              <doc_codeexample>
+                set container name mysql-server image mysql:8.0
+                set container name mysql-server image quay.io/mysql:8.0
+              </doc_codeexample>
+              <doc_hints>If a registry is not specified, Docker.io will be used as the container registry unless an alternative registry is specified using set container registry or the registry is included in the image name</doc_hints>
               <constraintErrorMessage>Host-name must be alphanumeric and can contain hyphens</constraintErrorMessage>
             </properties>
           </leafNode>

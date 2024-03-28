@@ -164,6 +164,15 @@
           <ref name="doc_text"/>
         </optional>
         <optional>
+          <ref name="doc_headline"/>
+        </optional>
+        <optional>
+          <ref name="doc_hints"/>
+        </optional>
+        <optional>
+          <ref name="doc_codeexample"/>
+        </optional>
+        <optional>
           <ref name="constraint"/>
         </optional>
         <zeroOrMore>
@@ -332,8 +341,24 @@
     </element>
   </define>
   <!-- docs -->
+
   <define name="doc_text">
     <element name="doc_text">
+      <text/>
+    </element>
+  </define>
+  <define name="doc_headline">
+    <element name="doc_headline">
+      <text/>
+    </element>
+  </define>
+  <define name="doc_codeexample">
+    <element name="doc_codeexample">
+      <text/>
+    </element>
+  </define>
+  <define name="doc_hints">
+    <element name="doc_hints">
       <text/>
     </element>
   </define>
