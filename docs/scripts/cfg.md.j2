@@ -1,0 +1,66 @@
+<dl>
+{% for command in commandnames %}
+<dt>
+  <div class="command-block">```set {{ command }}```</div>
+</dt>
+
+{% endfor %}
+
+<dd>
+<div class="command-meta">
+  {% if cmd.multi %}
+  <span class="meta-item multi">multi</span>
+  {% endif %}
+  {% if cmd.valueless %}
+  <span class="meta-item valueless">valueless</span>
+  {% endif %}
+  {% if not cmd.valueless and not cmd.multi %}
+  <span class="meta-item single">single</span>
+  {% endif %}
+  {% if cmd.secret %}
+  <span class="meta-item secret">secret</span>
+  {% endif %}
+  {% if cmd.default_value %}
+  <span class="meta-item default">default: {{ cmd.default_value }}</span>
+  {% endif %}
+</div>
+
+{{ cmd.help }}
+
+{% if cmd.value_help != [] %}
+| Value | Help |
+|-------|------|
+{% for value, help in cmd.value_help %}
+| `{{ value }}` |  {{ help }} |
+{% endfor %}
+
+{% endif %}
+{% if cmd.node_type != "other" %}
+constraint error message: {{ cmd.constraint_error_message }}
+
+{% endif %}
+{% if cmd.docs.text != "" %}
+{{ cmd.docs.text }}
+
+{% endif %}
+{% if cmd.docs.hints | length > 0 %}
+{% for hint in cmd.docs.hints %}
+:::{{ hint.hint_type }}
+
+{{ hint.text }}
+
+:::
+{% endfor %}
+{% endif %}
+
+{% if cmd.docs.usageExample != "" %}
+Usage Example:
+
+{% for line in cmd.docs.usageExample.split('\n') %}
+  {{ line }}
+{% endfor %}
+
+{% endif %}
+
+</dd>
+</dl>

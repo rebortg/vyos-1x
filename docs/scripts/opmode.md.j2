@@ -1,0 +1,12 @@
+<dl>
+{% for command in commandnames %}
+<dt>
+  <div class="command-block">```{{ command }}```</div>
+</dt>
+
+{% endfor %}
+
+<dd>
+  {{ cmd.help }}
+</dd>
+</dl>
