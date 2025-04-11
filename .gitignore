@@ -159,3 +159,12 @@ python/vyos/proto/vyconf_proto.py
 # We do not use pip
 Pipfile
 Pipfile.lock
+
+# Docusaurus
+docs/node_modules
+docs/build
+docs/.docusaurus
+docs/.cache-loader
+
+# MacOS releated
+.DS_Store
