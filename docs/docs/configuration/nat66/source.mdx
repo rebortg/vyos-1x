@@ -1,0 +1,280 @@
+---
+title: Source NAT66
+description: Source NAT66 Configuration
+cfg:
+    - nat66 source
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; destination port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; source port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number
+
+| Value | Help |
+|-------|------|
+| `` |  \n\nMultiple destination ports can be specified as a comma-separated list.\nThe whole list can also be negated using &#39;!&#39;.\nFor example: &#39;!22,telnet,http,123,1001-1005&#39; |
+| `start-end` |  Numbered port range (e.g. 1001-1005) |
+| `u32:1-65535` |  Numeric IP port |
+| `txt` |  Named port (any name in /etc/services, e.g., http) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; destination prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; source prefix</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 prefix to be translated
+
+| Value | Help |
+|-------|------|
+| `!ipv6net` |  Match everything except the specified IPv6 prefix |
+| `ipv6net` |  IPv6 prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; exclude</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Exclude packets matching this rule from NAT
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; log</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log packets hitting this rule
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; outbound-interface name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match interface
+
+| Value | Help |
+|-------|------|
+| `!txt` |  Inverted interface name to match |
+| `txt*` |  Interface name with wildcard |
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Protocol to match (protocol name, number, or &#34;all&#34;)
+
+| Value | Help |
+|-------|------|
+| `!&lt;protocol&gt;` |  IP protocol name |
+| `&lt;protocol&gt;` |  IP protocol name |
+| `u32:0-255` |  IP protocol number |
+| `tcp_udp` |  Both TCP and UDP |
+| `all` |  All IP protocols |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; translation address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 address to translate to
+
+| Value | Help |
+|-------|------|
+| `masquerade` |  NAT to the primary address of outbound-interface |
+| `ipv6net` |  IPv6 prefix |
+| `ipv6` |  IPv6 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat66 source rule &lt;tag&gt; translation port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number
+
+| Value | Help |
+|-------|------|
+| `range` |  Numbered port range (e.g., 1001-1005) |
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,1644 @@
+---
+title: DSN
+description: DSN Configuration
+cfg:
+    - service dns
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+Interval in seconds to wait between Dynamic DNS updates
+
+| Value | Help |
+|-------|------|
+| `u32:60-3600` |  Time in seconds |
+
+constraint error message: Interval must be between 60 and 3600 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; address interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; address web skip</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Pattern to skip from the HTTP(S) respose
+
+| Value | Help |
+|-------|------|
+| `txt` |  Pattern to skip from the HTTP(S) respose to extract the external IP address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; address web url</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remote URL
+
+| Value | Help |
+|-------|------|
+| `url` |  Remote HTTP(S) URL |
+
+constraint error message: Invalid HTTP(S) URL format
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; expiry-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time in seconds for the hostname to be marked expired in cache
+
+| Value | Help |
+|-------|------|
+| `u32:300-2160000` |  Time in seconds |
+
+constraint error message: Expiry time must be between 300 and 2160000 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; host-name</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hostname to register with Dynamic DNS service
+
+constraint error message: Host-name must be alphanumeric, can contain hyphens and can be prefixed with '@' or '*'
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; ip-version</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: ipv4</span>
+
+IP address version to use
+
+| Value | Help |
+|-------|------|
+| `both` |  Use both IPv4 and IPv6 address |
+| `_ipv6` |  Use only IPv6 address |
+| `_ipv4` |  Use only IPv4 address |
+
+constraint error message: IP Version must be literal 'ipv4', 'ipv6' or 'both'
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+File containing TSIG authentication key for RFC2136 nsupdate on remote DNS server
+
+| Value | Help |
+|-------|------|
+| `filename` |  File in /config/auth directory |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Password used for authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  Password |
+
+constraint error message: Password is limited to ASCII characters only, with a total length of 128
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+ddclient protocol used for Dynamic DNS service
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; server</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remote Dynamic DNS server to send updates to
+
+| Value | Help |
+|-------|------|
+| `hostname` |  Fully qualified domain name of the remote server |
+| `ipv6` |  IPv6 address of the remote server |
+| `ipv4` |  IPv4 address of the remote server |
+
+constraint error message: Remote server must be IP address or fully qualified domain name
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; ttl</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time-to-live (TTL)
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  TTL in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; username</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Username used for authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  Username |
+
+constraint error message: Username is limited to ASCII characters only, with a total length of 128
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; wait-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time in seconds to wait between update attempts
+
+| Value | Help |
+|-------|------|
+| `u32:60-86400` |  Time in seconds |
+
+constraint error message: Wait time must be between 60 and 86400 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic name &lt;tag&gt; zone</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DNS zone to be updated
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of DNS zone |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns dynamic vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding allow-from</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Networks allowed to query this server
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 address and prefix length |
+| `ipv4net` |  IP address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records a &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records aaaa &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records cname &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records mx &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records ns &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records ptr &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records spf &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records srv &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records txt &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records a &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records a &lt;tag&gt; ttl</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records aaaa &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records cname &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records mx &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records ns &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records ptr &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records spf &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records srv &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records txt &lt;tag&gt; ttl</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+Time-to-live (TTL)
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  TTL in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records aaaa &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records cname &lt;tag&gt; target</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records ptr &lt;tag&gt; target</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Target DNS name
+
+| Value | Help |
+|-------|------|
+| `name.example.com` |  Absolute DNS name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records mx &lt;tag&gt; server &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Server priority
+
+| Value | Help |
+|-------|------|
+| `u32:1-999` |  Server priority (lower numbers are higher priority) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; lookup-a</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+A flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; lookup-srv</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+S flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; order</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Rule order
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Rule order (lower order is evaluated first) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; preference</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Rule preference
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Rule preference |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; protocol-specific</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+P flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; regexp</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Regular expression
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; replacement</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Replacement DNS name
+
+| Value | Help |
+|-------|------|
+| `name.example.com` |  Absolute DNS name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; resolve-uri</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+U flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records naptr &lt;tag&gt; rule &lt;tag&gt; service</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Service type
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records ns &lt;tag&gt; target</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Target DNS server authoritative for subdomain
+
+| Value | Help |
+|-------|------|
+| `nsXX.example.com` |  Absolute DNS name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records spf &lt;tag&gt; value</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Record contents
+
+| Value | Help |
+|-------|------|
+| `txt` |  Record contents |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records srv &lt;tag&gt; entry &lt;tag&gt; hostname</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Server hostname
+
+| Value | Help |
+|-------|------|
+| `name.example.com` |  Absolute DNS name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records srv &lt;tag&gt; entry &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  TCP/UDP port number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records srv &lt;tag&gt; entry &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Entry priority
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Entry priority (lower numbers are higher priority) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records srv &lt;tag&gt; entry &lt;tag&gt; weight</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Entry weight
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Entry weight |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding authoritative-domain &lt;tag&gt; records txt &lt;tag&gt; value</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Record contents
+
+| Value | Help |
+|-------|------|
+| `txt` |  Record contents |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding cache-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10000</span>
+
+DNS forwarding cache size
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  DNS forwarding cache size |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding dhcp</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interfaces whose DHCP client nameservers to forward requests to
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding dns64-prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Help to communicate between IPv6-only client and IPv4-only server
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 address and /96 only prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding dnssec</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: process-no-validate</span>
+
+DNSSEC mode
+
+| Value | Help |
+|-------|------|
+| `validate` |  Full blown DNSSEC validation. Send SERVFAIL to clients on bogus responses. |
+| `log-fail` |  Similar behaviour to process, but validate RRSIGs on responses and log bogus responses. |
+| `process` |  Respond with DNSSEC records to clients that ask for it. Validation for clients that request it. |
+| `process-no-validate` |  Respond with DNSSEC records to clients that ask for it. No validation done at all! |
+| `off` |  No DNSSEC processing whatsoever! |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding domain &lt;tag&gt; addnta</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Add NTA (negative trust anchor) for this domain (must be set if the domain does not support DNSSEC)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding domain &lt;tag&gt; name-server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding name-server &lt;tag&gt; port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding port</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 53</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding domain &lt;tag&gt; recursion-desired</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set the &#34;recursion desired&#34; bit in requests to the upstream nameserver
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding exclude-throttle-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address or subnet
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 address |
+| `ipv6` |  IPv6 address |
+| `ipv4net` |  IPv4 prefix to match |
+| `ipv4` |  IPv4 address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding ignore-hosts-file</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not use local /etc/hosts file in name resolution
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding listen-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IP addresses to listen on
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address to listen for incoming connections |
+| `ipv4` |  IPv4 address to listen for incoming connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding negative-ttl</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3600</span>
+
+Maximum amount of time negative entries are cached
+
+| Value | Help |
+|-------|------|
+| `u32:0-7200` |  Seconds to cache NXDOMAIN entries |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding no-serve-rfc1918</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Makes the server authoritatively not aware of RFC1918 addresses
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding options ecs-add-for</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Client netmask for which EDNS Client Subnet will be added
+
+| Value | Help |
+|-------|------|
+| `!ipv6net` |  Match everything except the specified IPv6 prefix |
+| `ipv6net` |  IPv6 prefix to match |
+| `!ipv4net` |  Match everything except the specified IPv4 prefix |
+| `ipv4net` |  IPv4 prefix to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding options ecs-ipv4-bits</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Number of bits of IPv4 address to pass for EDNS Client Subnet
+
+| Value | Help |
+|-------|------|
+| `u32:0-32` |  Number of bits of IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding options edns-subnet-allow-list</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Netmask or domain that we should enable EDNS subnet for
+
+| Value | Help |
+|-------|------|
+| `txt` |  Netmask or domain |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding serve-stale-extension</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Number of times the expired TTL of a record is extended by 30 seconds when serving stale
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Number of times to extend the TTL |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding source-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0.0.0.0 ::</span>
+
+Source IP address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 source address |
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding system</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use system name servers
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dns forwarding timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1500</span>
+
+Number of milliseconds to wait for a remote authoritative server to respond
+
+| Value | Help |
+|-------|------|
+| `u32:10-60000` |  Network timeout in milliseconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

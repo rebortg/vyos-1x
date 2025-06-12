@@ -1,0 +1,794 @@
+---
+title: MPLS
+description: MPLS Configuration
+cfg:
+    - protocols mpls
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp allocation ipv4 access-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Access-list number
+
+| Value | Help |
+|-------|------|
+| `u32:1-2699` |  Access list number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp allocation ipv6 access-list6</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Access-list6 number
+
+| Value | Help |
+|-------|------|
+| `u32:1-2699` |  Access list number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp discovery hello-ipv4-holdtime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hello IPv4 hold time
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp discovery hello-ipv4-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hello IPv4 interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp discovery hello-ipv6-holdtime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hello IPv6 hold time
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp discovery hello-ipv6-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hello IPv6 interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp discovery session-ipv4-holdtime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp neighbor &lt;tag&gt; session-holdtime</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Session IPv4 hold time
+
+| Value | Help |
+|-------|------|
+| `u32:15-65535` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp discovery session-ipv6-holdtime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Session IPv6 hold time
+
+| Value | Help |
+|-------|------|
+| `u32:15-65535` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp discovery transport-ipv4-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Transport IPv4 address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 bind as transport |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp discovery transport-ipv6-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Transport IPv6 address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 bind as transport |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp export ipv4 explicit-null</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp export ipv6 explicit-null</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Explicit-Null Label
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp export ipv4 export-filter filter-access-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp import ipv4 import-filter filter-access-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Access-list number to apply FEC filtering
+
+| Value | Help |
+|-------|------|
+| `u32:1-2699` |  Access list number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp export ipv4 export-filter neighbor-access-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp import ipv4 import-filter neighbor-access-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Access-list number for IPv4 neighbor selection to apply filtering
+
+| Value | Help |
+|-------|------|
+| `u32:1-2699` |  Access list number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp export ipv6 export-filter filter-access-list6</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp import ipv6 import-filter filter-access-list6</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Access-list6 number to apply FEC filtering
+
+| Value | Help |
+|-------|------|
+| `u32:1-2699` |  Access list number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp export ipv6 export-filter neighbor-access-list6</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp import ipv6 import-filter neighbor-access-list6</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Access-list6 number for IPv6 neighbor selection to apply filtering
+
+| Value | Help |
+|-------|------|
+| `u32:1-2699` |  Access list number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp neighbor &lt;tag&gt; password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Neighbor password
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp neighbor &lt;tag&gt; ttl-security</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Neighbor TTL security
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable neighbor TTL security |
+| `u32:1-254` |  TTL |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp parameters cisco-interop-tlv</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable Cisco non-compliant format capability TLV
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp parameters ordered-control</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable LDP ordered label distribution control mode
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp parameters transport-prefer-ipv4</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefer IPv4 for TCP peer transport connection
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp router-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Override default router identifier
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Router-ID in IP address format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp targeted-neighbor ipv4 address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Neighbor/session address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Neighbor/session address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp targeted-neighbor ipv4 enable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp targeted-neighbor ipv6 enable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Accept and respond to targeted hellos
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp targeted-neighbor ipv4 hello-holdtime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp targeted-neighbor ipv6 hello-holdtime</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hello hold time
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp targeted-neighbor ipv4 hello-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp targeted-neighbor ipv6 hello-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hello interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls ldp targeted-neighbor ipv6 address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Neighbor/session address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Neighbor/session address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls parameters maximum-ttl</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum TTL for MPLS packets
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Maximum hops allowed |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols mpls parameters no-propagate-ttl</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable copy of IP TTL to MPLS TTL
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

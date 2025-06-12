@@ -1,0 +1,3572 @@
+# Coverage
+
+## Configuration Commands which are not covered by any template
+
+```
+```
+
+## Operational Mode Commands which are not covered by any template
+
+```
+- add
+- add raid
+- add raid by-id
+- add raid by-id member
+- add raid member
+- add system
+- add system image
+- add system image username
+- add system image username password
+- add system image vrf
+- add system image vrf username
+- add system image vrf username password
+- clear
+- clear console
+- clear dhcp-server
+- clear dhcp-server lease
+- clear dhcpv6-server
+- clear dhcpv6-server lease
+- clear dns
+- clear dns dynamic
+- clear dns dynamic cache
+- clear flow-accounting
+- clear flow-accounting counters
+- clear interfaces
+- clear interfaces bonding
+- clear interfaces bonding counters
+- clear interfaces bridge
+- clear interfaces bridge counters
+- clear interfaces connection
+- clear interfaces counters
+- clear interfaces dummy
+- clear interfaces dummy counters
+- clear interfaces ethernet
+- clear interfaces ethernet counters
+- clear interfaces geneve
+- clear interfaces geneve counters
+- clear interfaces input
+- clear interfaces input counters
+- clear interfaces l2tpv3
+- clear interfaces l2tpv3 counters
+- clear interfaces loopback
+- clear interfaces loopback counters
+- clear interfaces macsec
+- clear interfaces macsec counters
+- clear interfaces openvpn
+- clear interfaces openvpn counters
+- clear interfaces pppoe
+- clear interfaces pppoe counters
+- clear interfaces pseudo-ethernet
+- clear interfaces pseudo-ethernet counters
+- clear interfaces sstp
+- clear interfaces sstp counters
+- clear interfaces tunnel
+- clear interfaces tunnel counters
+- clear interfaces virtual-ethernet
+- clear interfaces virtual-ethernet counters
+- clear interfaces vti
+- clear interfaces vti counters
+- clear interfaces vxlan
+- clear interfaces vxlan counters
+- clear interfaces wireguard
+- clear interfaces wireguard counters
+- clear interfaces wireless
+- clear interfaces wireless counters
+- clear interfaces wwan
+- clear interfaces wwan counters
+- clear ip
+- clear ip prefix-list
+- clear ip prefix-list node.tag
+- clear ipv6
+- clear ipv6 prefix-list
+- clear ipv6 prefix-list node.tag
+- clear log
+- clear session
+- clone
+- clone system
+- clone system config
+- clone system config from
+- configure
+- connect
+- connect console
+- connect interface
+- copy
+- copy file
+- copy file to
+- delete
+- delete file
+- delete raid
+- delete raid by-id
+- delete raid by-id member
+- delete raid member
+- delete system
+- delete system image
+- disconnect
+- disconnect interface
+- encryption
+- encryption disable
+- encryption enable
+- encryption load
+- execute
+- execute bandwidth-test
+- execute bandwidth-test accept
+- execute bandwidth-test accept tcp
+- execute bandwidth-test accept udp
+- execute bandwidth-test initiate
+- execute bandwidth-test initiate tcp
+- execute bandwidth-test initiate udp
+- execute owping
+- execute port-scan
+- execute port-scan host
+- execute port-scan host node.tag
+- execute shell
+- execute shell netns
+- execute shell vrf
+- execute ssh
+- execute ssh host
+- execute ssh host user
+- execute telnet
+- execute telnet to
+- execute telnet to port
+- execute twping
+- execute wake-on-lan
+- execute wake-on-lan interface
+- execute wake-on-lan interface host
+- force
+- force arp
+- force arp duplicate
+- force arp duplicate interface
+- force arp duplicate interface address
+- force arp reply
+- force arp reply interface
+- force arp reply interface address
+- force arp reply interface address count
+- force arp request
+- force arp request interface
+- force arp request interface address
+- force arp request interface address count
+- force commit-archive
+- force ipv6-nd
+- force ipv6-nd interface
+- force ipv6-nd interface address
+- force ipv6-rd
+- force ipv6-rd interface
+- force ipv6-rd interface address
+- force mtu
+- force mtu host
+- force mtu host interface
+- force ntp
+- force ntp synchronization
+- force ntp synchronization vrf
+- force root-partition-auto-resize
+- format
+- format by-id
+- format by-id disk
+- format by-id disk like
+- format disk
+- format disk like
+- generate
+- generate firewall
+- generate firewall rule-resequence
+- generate firewall rule-resequence start
+- generate firewall rule-resequence start step
+- generate interfaces
+- generate interfaces debug-archive
+- generate ipsec
+- generate ipsec debug-archive
+- generate ipsec profile
+- generate ipsec profile ios-remote-access
+- generate ipsec profile ios-remote-access remote
+- generate ipsec profile ios-remote-access remote name
+- generate ipsec profile ios-remote-access remote name profile
+- generate ipsec profile ios-remote-access remote profile
+- generate ipsec profile ios-remote-access remote profile name
+- generate ipsec profile windows-remote-access
+- generate ipsec profile windows-remote-access remote
+- generate ipsec profile windows-remote-access remote name
+- generate macsec
+- generate macsec mka
+- generate macsec mka cak
+- generate macsec mka cak gcm-aes-128
+- generate macsec mka cak gcm-aes-256
+- generate macsec mka ckn
+- generate nat
+- generate nat rule-resequence
+- generate nat rule-resequence start
+- generate nat rule-resequence start step
+- generate nat64
+- generate nat64 rule-resequence
+- generate nat64 rule-resequence start
+- generate nat64 rule-resequence start step
+- generate nat66
+- generate nat66 rule-resequence
+- generate nat66 rule-resequence start
+- generate nat66 rule-resequence start step
+- generate openconnect
+- generate openconnect username
+- generate openconnect username otp-key
+- generate openconnect username otp-key hotp-time
+- generate openconnect username otp-key hotp-time digits
+- generate openconnect username otp-key hotp-time digits interval
+- generate openconnect username otp-key hotp-time interval
+- generate openconnect username otp-key hotp-time interval digits
+- generate openvpn
+- generate openvpn client-config
+- generate openvpn client-config interface
+- generate openvpn client-config interface ca
+- generate openvpn client-config interface ca certificate
+- generate openvpn client-config interface ca certificate key
+- generate pki
+- generate pki ca
+- generate pki ca file
+- generate pki ca install
+- generate pki ca sign
+- generate pki ca sign file
+- generate pki ca sign install
+- generate pki certificate
+- generate pki certificate file
+- generate pki certificate install
+- generate pki certificate self-signed
+- generate pki certificate self-signed file
+- generate pki certificate self-signed install
+- generate pki certificate sign
+- generate pki certificate sign file
+- generate pki certificate sign install
+- generate pki crl
+- generate pki crl file
+- generate pki crl install
+- generate pki dh
+- generate pki dh file
+- generate pki dh install
+- generate pki key-pair
+- generate pki key-pair file
+- generate pki key-pair install
+- generate pki openvpn
+- generate pki openvpn shared-secret
+- generate pki openvpn shared-secret file
+- generate pki openvpn shared-secret install
+- generate pki ssh-key
+- generate pki ssh-key file
+- generate pki ssh-key install
+- generate pki wireguard
+- generate pki wireguard key-pair
+- generate pki wireguard key-pair install
+- generate pki wireguard key-pair install interface
+- generate pki wireguard preshared-key
+- generate pki wireguard preshared-key install
+- generate pki wireguard preshared-key install interface
+- generate pki wireguard preshared-key install interface peer
+- generate psk
+- generate psk random
+- generate psk random size
+- generate public-key-command
+- generate public-key-command user
+- generate public-key-command user path
+- generate ssh
+- generate ssh client-key
+- generate ssh server-key
+- generate system
+- generate system login
+- generate system login username
+- generate system login username otp-key
+- generate system login username otp-key hotp-time
+- generate system login username otp-key hotp-time rate-limit
+- generate system login username otp-key hotp-time rate-limit rate-time
+- generate system login username otp-key hotp-time rate-limit rate-time window-size
+- generate system login username otp-key hotp-time window-size
+- generate system login username otp-key hotp-time window-size rate-limit
+- generate system login username otp-key hotp-time window-size rate-limit rate-time
+- generate tech-support
+- generate tech-support archive
+- generate wireguard
+- generate wireguard client-config
+- generate wireguard client-config interface
+- generate wireguard client-config interface server
+- generate wireguard client-config interface server address
+- generate wireguard client-config interface server address address
+- import
+- import pki
+- import pki ca
+- import pki ca file
+- import pki ca key-file
+- import pki certificate
+- import pki certificate file
+- import pki certificate key-file
+- import pki crl
+- import pki crl file
+- import pki dh
+- import pki dh file
+- import pki key-pair
+- import pki key-pair private-file
+- import pki key-pair public-file
+- import pki openvpn
+- import pki openvpn shared-secret
+- import pki openvpn shared-secret file
+- install
+- install image
+- install mok
+- monitor
+- monitor bandwidth
+- monitor bandwidth interface
+- monitor bridge
+- monitor bridge fdb
+- monitor bridge link
+- monitor bridge mdb
+- monitor command
+- monitor command diff
+- monitor log
+- monitor log certbot
+- monitor log color
+- monitor log conntrack-sync
+- monitor log console-server
+- monitor log dhcp
+- monitor log dhcp client
+- monitor log dhcp client interface
+- monitor log dhcp server
+- monitor log dhcpv6
+- monitor log dhcpv6 client
+- monitor log dhcpv6 client interface
+- monitor log dhcpv6 server
+- monitor log dns
+- monitor log dns dynamic
+- monitor log dns forwarding
+- monitor log flow-accounting
+- monitor log frr
+- monitor log ids
+- monitor log ids ddos-protection
+- monitor log ipoe-server
+- monitor log ipsec
+- monitor log kernel
+- monitor log l2tp
+- monitor log macsec
+- monitor log macsec interface
+- monitor log mdns
+- monitor log mdns repeater
+- monitor log ndp-proxy
+- monitor log nhrp
+- monitor log ntp
+- monitor log openconnect
+- monitor log openvpn
+- monitor log openvpn interface
+- monitor log pppoe
+- monitor log pppoe interface
+- monitor log pppoe-server
+- monitor log pptp
+- monitor log protocol
+- monitor log protocol bfd
+- monitor log protocol bgp
+- monitor log protocol isis
+- monitor log protocol mpls
+- monitor log protocol multicast
+- monitor log protocol nhrp
+- monitor log protocol openfabric
+- monitor log protocol ospf
+- monitor log protocol ospfv3
+- monitor log protocol rip
+- monitor log protocol ripng
+- monitor log protocol static
+- monitor log router-advert
+- monitor log snmp
+- monitor log ssh
+- monitor log ssh dynamic-protection
+- monitor log sstp
+- monitor log sstpc
+- monitor log sstpc interface
+- monitor log vpn
+- monitor log vyos-configd
+- monitor log vyos-domain-resolver
+- monitor log webproxy
+- monitor log webproxy access-log
+- monitor log webproxy cache-log
+- monitor log wireless
+- monitor log wireless hostapd
+- monitor log wireless hostapd interface
+- monitor log wireless wpa-supplicant
+- monitor log wireless wpa-supplicant interface
+- monitor ndp
+- monitor ndp interface
+- monitor ndp interface type
+- monitor ndp type
+- monitor protocol
+- monitor protocol bgp
+- monitor protocol bgp disable
+- monitor protocol bgp disable all
+- monitor protocol bgp disable allow-martians
+- monitor protocol bgp disable as4
+- monitor protocol bgp disable bestpath
+- monitor protocol bgp disable flowspec
+- monitor protocol bgp disable keepalives
+- monitor protocol bgp disable labelpool
+- monitor protocol bgp disable neighbor-events
+- monitor protocol bgp disable nht
+- monitor protocol bgp disable pbr
+- monitor protocol bgp disable rib
+- monitor protocol bgp disable update-groups
+- monitor protocol bgp disable updates
+- monitor protocol bgp disable vnc
+- monitor protocol bgp disable vnc import-bi-attach
+- monitor protocol bgp disable vnc import-del-remote
+- monitor protocol bgp disable vnc rfapi-query
+- monitor protocol bgp disable vnc verbose
+- monitor protocol bgp enable
+- monitor protocol bgp enable allow-martians
+- monitor protocol bgp enable as4
+- monitor protocol bgp enable bestpath
+- monitor protocol bgp enable flowspec
+- monitor protocol bgp enable keepalives
+- monitor protocol bgp enable labelpool
+- monitor protocol bgp enable neighbor-events
+- monitor protocol bgp enable nht
+- monitor protocol bgp enable pbr
+- monitor protocol bgp enable rib
+- monitor protocol bgp enable update-groups
+- monitor protocol bgp enable updates
+- monitor protocol bgp enable vnc
+- monitor protocol bgp enable vnc import-bi-attach
+- monitor protocol bgp enable vnc import-del-remote
+- monitor protocol bgp enable vnc rfapi-query
+- monitor protocol bgp enable vnc verbose
+- monitor protocol ospf
+- monitor protocol ospf disable
+- monitor protocol ospf disable event
+- monitor protocol ospf disable ism
+- monitor protocol ospf disable ism events
+- monitor protocol ospf disable ism status
+- monitor protocol ospf disable ism timers
+- monitor protocol ospf disable lsa
+- monitor protocol ospf disable lsa flooding
+- monitor protocol ospf disable lsa generate
+- monitor protocol ospf disable lsa install
+- monitor protocol ospf disable lsa refresh
+- monitor protocol ospf disable nsm
+- monitor protocol ospf disable nsm events
+- monitor protocol ospf disable nsm status
+- monitor protocol ospf disable nsm timers
+- monitor protocol ospf disable nssa
+- monitor protocol ospf disable packet
+- monitor protocol ospf disable packet all
+- monitor protocol ospf disable packet all detail
+- monitor protocol ospf disable packet all recv
+- monitor protocol ospf disable packet all recv detail
+- monitor protocol ospf disable packet all send
+- monitor protocol ospf disable packet all send detail
+- monitor protocol ospf disable packet dd
+- monitor protocol ospf disable packet dd detail
+- monitor protocol ospf disable packet dd recv
+- monitor protocol ospf disable packet dd recv detail
+- monitor protocol ospf disable packet dd send
+- monitor protocol ospf disable packet dd send detail
+- monitor protocol ospf disable packet hello
+- monitor protocol ospf disable packet hello detail
+- monitor protocol ospf disable packet hello recv
+- monitor protocol ospf disable packet hello recv detail
+- monitor protocol ospf disable packet hello send
+- monitor protocol ospf disable packet hello send detail
+- monitor protocol ospf disable packet ls-ack
+- monitor protocol ospf disable packet ls-ack detail
+- monitor protocol ospf disable packet ls-ack recv
+- monitor protocol ospf disable packet ls-ack recv detail
+- monitor protocol ospf disable packet ls-ack send
+- monitor protocol ospf disable packet ls-ack send detail
+- monitor protocol ospf disable packet ls-request
+- monitor protocol ospf disable packet ls-request detail
+- monitor protocol ospf disable packet ls-request recv
+- monitor protocol ospf disable packet ls-request recv detail
+- monitor protocol ospf disable packet ls-request send
+- monitor protocol ospf disable packet ls-request send detail
+- monitor protocol ospf disable packet ls-update
+- monitor protocol ospf disable packet ls-update detail
+- monitor protocol ospf disable packet ls-update recv
+- monitor protocol ospf disable packet ls-update recv detail
+- monitor protocol ospf disable packet ls-update send
+- monitor protocol ospf disable packet ls-update send detail
+- monitor protocol ospf disable rib
+- monitor protocol ospf disable rib interface
+- monitor protocol ospf disable rib redistribute
+- monitor protocol ospf enable
+- monitor protocol ospf enable event
+- monitor protocol ospf enable ism
+- monitor protocol ospf enable ism events
+- monitor protocol ospf enable ism status
+- monitor protocol ospf enable ism timers
+- monitor protocol ospf enable lsa
+- monitor protocol ospf enable lsa flooding
+- monitor protocol ospf enable lsa generate
+- monitor protocol ospf enable lsa install
+- monitor protocol ospf enable lsa refresh
+- monitor protocol ospf enable nsm
+- monitor protocol ospf enable nsm events
+- monitor protocol ospf enable nsm status
+- monitor protocol ospf enable nsm timers
+- monitor protocol ospf enable nssa
+- monitor protocol ospf enable packet
+- monitor protocol ospf enable packet all
+- monitor protocol ospf enable packet all detail
+- monitor protocol ospf enable packet all recv
+- monitor protocol ospf enable packet all recv detail
+- monitor protocol ospf enable packet all send
+- monitor protocol ospf enable packet all send detail
+- monitor protocol ospf enable packet dd
+- monitor protocol ospf enable packet dd detail
+- monitor protocol ospf enable packet dd recv
+- monitor protocol ospf enable packet dd recv detail
+- monitor protocol ospf enable packet dd send
+- monitor protocol ospf enable packet dd send detail
+- monitor protocol ospf enable packet hello
+- monitor protocol ospf enable packet hello detail
+- monitor protocol ospf enable packet hello recv
+- monitor protocol ospf enable packet hello recv detail
+- monitor protocol ospf enable packet hello send
+- monitor protocol ospf enable packet hello send detail
+- monitor protocol ospf enable packet ls-ack
+- monitor protocol ospf enable packet ls-ack detail
+- monitor protocol ospf enable packet ls-ack recv
+- monitor protocol ospf enable packet ls-ack recv detail
+- monitor protocol ospf enable packet ls-ack send
+- monitor protocol ospf enable packet ls-ack send detail
+- monitor protocol ospf enable packet ls-request
+- monitor protocol ospf enable packet ls-request detail
+- monitor protocol ospf enable packet ls-request recv
+- monitor protocol ospf enable packet ls-request recv detail
+- monitor protocol ospf enable packet ls-request send
+- monitor protocol ospf enable packet ls-request send detail
+- monitor protocol ospf enable packet ls-update
+- monitor protocol ospf enable packet ls-update detail
+- monitor protocol ospf enable packet ls-update recv
+- monitor protocol ospf enable packet ls-update recv detail
+- monitor protocol ospf enable packet ls-update send
+- monitor protocol ospf enable packet ls-update send detail
+- monitor protocol ospf enable rib
+- monitor protocol ospf enable rib interface
+- monitor protocol ospf enable rib redistribute
+- monitor protocol ospfv3
+- monitor protocol ospfv3 disable
+- monitor protocol ospfv3 disable abr
+- monitor protocol ospfv3 disable asbr
+- monitor protocol ospfv3 disable border-routers
+- monitor protocol ospfv3 disable border-routers area-id
+- monitor protocol ospfv3 disable border-routers router-id
+- monitor protocol ospfv3 disable flooding
+- monitor protocol ospfv3 disable interface
+- monitor protocol ospfv3 disable lsa
+- monitor protocol ospfv3 disable lsa as-external
+- monitor protocol ospfv3 disable lsa inter-prefix
+- monitor protocol ospfv3 disable lsa inter-router
+- monitor protocol ospfv3 disable lsa intra-prefix
+- monitor protocol ospfv3 disable lsa link
+- monitor protocol ospfv3 disable lsa network
+- monitor protocol ospfv3 disable lsa router
+- monitor protocol ospfv3 disable lsa unknown
+- monitor protocol ospfv3 disable message
+- monitor protocol ospfv3 disable message all
+- monitor protocol ospfv3 disable message dbdesc
+- monitor protocol ospfv3 disable message hello
+- monitor protocol ospfv3 disable message lsack
+- monitor protocol ospfv3 disable message lsreq
+- monitor protocol ospfv3 disable message lsupdate
+- monitor protocol ospfv3 disable message unknown
+- monitor protocol ospfv3 disable neighbor
+- monitor protocol ospfv3 disable neighbor event
+- monitor protocol ospfv3 disable neighbor state
+- monitor protocol ospfv3 disable rib
+- monitor protocol ospfv3 disable rib recv
+- monitor protocol ospfv3 disable rib send
+- monitor protocol ospfv3 disable route
+- monitor protocol ospfv3 disable route inter-area
+- monitor protocol ospfv3 disable route intra-area
+- monitor protocol ospfv3 disable route memory
+- monitor protocol ospfv3 disable route table
+- monitor protocol ospfv3 disable spf
+- monitor protocol ospfv3 disable spf database
+- monitor protocol ospfv3 disable spf process
+- monitor protocol ospfv3 disable spf time
+- monitor protocol ospfv3 enable
+- monitor protocol ospfv3 enable abr
+- monitor protocol ospfv3 enable asbr
+- monitor protocol ospfv3 enable border-routers
+- monitor protocol ospfv3 enable border-routers area-id
+- monitor protocol ospfv3 enable border-routers router-id
+- monitor protocol ospfv3 enable flooding
+- monitor protocol ospfv3 enable interface
+- monitor protocol ospfv3 enable lsa
+- monitor protocol ospfv3 enable lsa as-external
+- monitor protocol ospfv3 enable lsa inter-prefix
+- monitor protocol ospfv3 enable lsa inter-router
+- monitor protocol ospfv3 enable lsa intra-prefix
+- monitor protocol ospfv3 enable lsa link
+- monitor protocol ospfv3 enable lsa network
+- monitor protocol ospfv3 enable lsa router
+- monitor protocol ospfv3 enable lsa unknown
+- monitor protocol ospfv3 enable message
+- monitor protocol ospfv3 enable message all
+- monitor protocol ospfv3 enable message dbdesc
+- monitor protocol ospfv3 enable message hello
+- monitor protocol ospfv3 enable message lsack
+- monitor protocol ospfv3 enable message lsreq
+- monitor protocol ospfv3 enable message lsupdate
+- monitor protocol ospfv3 enable message unknown
+- monitor protocol ospfv3 enable neighbor
+- monitor protocol ospfv3 enable neighbor event
+- monitor protocol ospfv3 enable neighbor state
+- monitor protocol ospfv3 enable rib
+- monitor protocol ospfv3 enable rib recv
+- monitor protocol ospfv3 enable rib send
+- monitor protocol ospfv3 enable route
+- monitor protocol ospfv3 enable route inter-area
+- monitor protocol ospfv3 enable route intra-area
+- monitor protocol ospfv3 enable route memory
+- monitor protocol ospfv3 enable route table
+- monitor protocol ospfv3 enable spf
+- monitor protocol ospfv3 enable spf database
+- monitor protocol ospfv3 enable spf process
+- monitor protocol ospfv3 enable spf time
+- monitor protocol rib
+- monitor protocol rib disable
+- monitor protocol rib disable events
+- monitor protocol rib disable kernel
+- monitor protocol rib disable mpls
+- monitor protocol rib disable nexthop
+- monitor protocol rib disable packet
+- monitor protocol rib disable packet detail
+- monitor protocol rib disable packet recv
+- monitor protocol rib disable packet send
+- monitor protocol rib disable rib
+- monitor protocol rib disable rib detailed
+- monitor protocol rib enable
+- monitor protocol rib enable events
+- monitor protocol rib enable kernel
+- monitor protocol rib enable mpls
+- monitor protocol rib enable nexthop
+- monitor protocol rib enable packet
+- monitor protocol rib enable packet detail
+- monitor protocol rib enable packet recv
+- monitor protocol rib enable packet send
+- monitor protocol rib enable rib
+- monitor protocol rib enable rib detailed
+- monitor protocol rip
+- monitor protocol rip disable
+- monitor protocol rip disable all
+- monitor protocol rip disable events
+- monitor protocol rip disable packet
+- monitor protocol rip disable packet recv
+- monitor protocol rip disable packet send
+- monitor protocol rip disable rib
+- monitor protocol rip enable
+- monitor protocol rip enable events
+- monitor protocol rip enable packet
+- monitor protocol rip enable packet recv
+- monitor protocol rip enable packet send
+- monitor protocol rip enable rib
+- monitor protocol ripng
+- monitor protocol ripng disable
+- monitor protocol ripng disable all
+- monitor protocol ripng disable events
+- monitor protocol ripng disable packet
+- monitor protocol ripng disable packet recv
+- monitor protocol ripng disable packet send
+- monitor protocol ripng disable rib
+- monitor protocol ripng enable
+- monitor protocol ripng enable events
+- monitor protocol ripng enable packet
+- monitor protocol ripng enable packet recv
+- monitor protocol ripng enable packet send
+- monitor protocol ripng enable rib
+- monitor traceroute
+- monitor traceroute node.tag
+- monitor traffic
+- monitor traffic interface
+- monitor traffic interface node.tag
+- mtr
+- mtr node.tag
+- ping
+- ping node.tag
+- poweroff
+- poweroff at
+- poweroff at date
+- poweroff cancel
+- poweroff in
+- poweroff now
+- reboot
+- reboot at
+- reboot at date
+- reboot cancel
+- reboot in
+- reboot now
+- release
+- release dhcp
+- release dhcp interface
+- release dhcpv6
+- release dhcpv6 interface
+- rename
+- rename system
+- rename system image
+- rename system image to
+- renew
+- renew certbot
+- reset
+- reset bgp
+- reset bgp 1-4294967295
+- reset bgp 1-4294967295 in
+- reset bgp 1-4294967295 in prefix-filter
+- reset bgp 1-4294967295 message-stats
+- reset bgp 1-4294967295 out
+- reset bgp 1-4294967295 soft
+- reset bgp 1-4294967295 soft in
+- reset bgp 1-4294967295 soft out
+- reset bgp all
+- reset bgp external
+- reset bgp external in
+- reset bgp external in prefix-filter
+- reset bgp external message-stats
+- reset bgp external out
+- reset bgp external soft
+- reset bgp external soft in
+- reset bgp external soft out
+- reset bgp in
+- reset bgp in prefix-filter
+- reset bgp ipv4
+- reset bgp ipv4 1-4294967295
+- reset bgp ipv4 1-4294967295 in
+- reset bgp ipv4 1-4294967295 in prefix-filter
+- reset bgp ipv4 1-4294967295 message-stats
+- reset bgp ipv4 1-4294967295 out
+- reset bgp ipv4 1-4294967295 soft
+- reset bgp ipv4 1-4294967295 soft in
+- reset bgp ipv4 1-4294967295 soft out
+- reset bgp ipv4 all
+- reset bgp ipv4 external
+- reset bgp ipv4 external in
+- reset bgp ipv4 external in prefix-filter
+- reset bgp ipv4 external message-stats
+- reset bgp ipv4 external out
+- reset bgp ipv4 external soft
+- reset bgp ipv4 external soft in
+- reset bgp ipv4 external soft out
+- reset bgp ipv4 in
+- reset bgp ipv4 in prefix-filter
+- reset bgp ipv4 message-stats
+- reset bgp ipv4 out
+- reset bgp ipv4 peer-group
+- reset bgp ipv4 peer-group in
+- reset bgp ipv4 peer-group in prefix-filter
+- reset bgp ipv4 peer-group message-stats
+- reset bgp ipv4 peer-group out
+- reset bgp ipv4 peer-group soft
+- reset bgp ipv4 peer-group soft in
+- reset bgp ipv4 peer-group soft out
+- reset bgp ipv4 soft
+- reset bgp ipv4 soft in
+- reset bgp ipv4 soft out
+- reset bgp ipv6
+- reset bgp ipv6 1-4294967295
+- reset bgp ipv6 1-4294967295 in
+- reset bgp ipv6 1-4294967295 in prefix-filter
+- reset bgp ipv6 1-4294967295 message-stats
+- reset bgp ipv6 1-4294967295 out
+- reset bgp ipv6 1-4294967295 soft
+- reset bgp ipv6 1-4294967295 soft in
+- reset bgp ipv6 1-4294967295 soft out
+- reset bgp ipv6 all
+- reset bgp ipv6 external
+- reset bgp ipv6 external in
+- reset bgp ipv6 external in prefix-filter
+- reset bgp ipv6 external message-stats
+- reset bgp ipv6 external out
+- reset bgp ipv6 external soft
+- reset bgp ipv6 external soft in
+- reset bgp ipv6 external soft out
+- reset bgp ipv6 in
+- reset bgp ipv6 in prefix-filter
+- reset bgp ipv6 message-stats
+- reset bgp ipv6 out
+- reset bgp ipv6 peer-group
+- reset bgp ipv6 peer-group in
+- reset bgp ipv6 peer-group in prefix-filter
+- reset bgp ipv6 peer-group message-stats
+- reset bgp ipv6 peer-group out
+- reset bgp ipv6 peer-group soft
+- reset bgp ipv6 peer-group soft in
+- reset bgp ipv6 peer-group soft out
+- reset bgp ipv6 soft
+- reset bgp ipv6 soft in
+- reset bgp ipv6 soft out
+- reset bgp l2vpn
+- reset bgp l2vpn evpn
+- reset bgp l2vpn evpn 1-4294967295
+- reset bgp l2vpn evpn 1-4294967295 in
+- reset bgp l2vpn evpn 1-4294967295 in prefix-filter
+- reset bgp l2vpn evpn 1-4294967295 message-stats
+- reset bgp l2vpn evpn 1-4294967295 out
+- reset bgp l2vpn evpn 1-4294967295 soft
+- reset bgp l2vpn evpn 1-4294967295 soft in
+- reset bgp l2vpn evpn 1-4294967295 soft out
+- reset bgp l2vpn evpn all
+- reset bgp l2vpn evpn external
+- reset bgp l2vpn evpn external in
+- reset bgp l2vpn evpn external in prefix-filter
+- reset bgp l2vpn evpn external message-stats
+- reset bgp l2vpn evpn external out
+- reset bgp l2vpn evpn external soft
+- reset bgp l2vpn evpn external soft in
+- reset bgp l2vpn evpn external soft out
+- reset bgp l2vpn evpn in
+- reset bgp l2vpn evpn in prefix-filter
+- reset bgp l2vpn evpn message-stats
+- reset bgp l2vpn evpn out
+- reset bgp l2vpn evpn peer-group
+- reset bgp l2vpn evpn peer-group in
+- reset bgp l2vpn evpn peer-group in prefix-filter
+- reset bgp l2vpn evpn peer-group message-stats
+- reset bgp l2vpn evpn peer-group out
+- reset bgp l2vpn evpn peer-group soft
+- reset bgp l2vpn evpn peer-group soft in
+- reset bgp l2vpn evpn peer-group soft out
+- reset bgp l2vpn evpn soft
+- reset bgp l2vpn evpn soft in
+- reset bgp l2vpn evpn soft out
+- reset bgp message-stats
+- reset bgp out
+- reset bgp peer-group
+- reset bgp peer-group in
+- reset bgp peer-group in prefix-filter
+- reset bgp peer-group message-stats
+- reset bgp peer-group out
+- reset bgp peer-group soft
+- reset bgp peer-group soft in
+- reset bgp peer-group soft out
+- reset bgp prefix
+- reset bgp soft
+- reset bgp soft in
+- reset bgp soft out
+- reset bgp vrf
+- reset bgp vrf 1-4294967295
+- reset bgp vrf 1-4294967295 in
+- reset bgp vrf 1-4294967295 in prefix-filter
+- reset bgp vrf 1-4294967295 message-stats
+- reset bgp vrf 1-4294967295 out
+- reset bgp vrf 1-4294967295 soft
+- reset bgp vrf 1-4294967295 soft in
+- reset bgp vrf 1-4294967295 soft out
+- reset bgp vrf all
+- reset bgp vrf external
+- reset bgp vrf external in
+- reset bgp vrf external in prefix-filter
+- reset bgp vrf external message-stats
+- reset bgp vrf external out
+- reset bgp vrf external soft
+- reset bgp vrf external soft in
+- reset bgp vrf external soft out
+- reset bgp vrf ipv4
+- reset bgp vrf ipv4 1-4294967295
+- reset bgp vrf ipv4 1-4294967295 in
+- reset bgp vrf ipv4 1-4294967295 in prefix-filter
+- reset bgp vrf ipv4 1-4294967295 message-stats
+- reset bgp vrf ipv4 1-4294967295 out
+- reset bgp vrf ipv4 1-4294967295 soft
+- reset bgp vrf ipv4 1-4294967295 soft in
+- reset bgp vrf ipv4 1-4294967295 soft out
+- reset bgp vrf ipv4 all
+- reset bgp vrf ipv4 external
+- reset bgp vrf ipv4 external in
+- reset bgp vrf ipv4 external in prefix-filter
+- reset bgp vrf ipv4 external message-stats
+- reset bgp vrf ipv4 external out
+- reset bgp vrf ipv4 external soft
+- reset bgp vrf ipv4 external soft in
+- reset bgp vrf ipv4 external soft out
+- reset bgp vrf ipv4 in
+- reset bgp vrf ipv4 in prefix-filter
+- reset bgp vrf ipv4 message-stats
+- reset bgp vrf ipv4 out
+- reset bgp vrf ipv4 peer-group
+- reset bgp vrf ipv4 peer-group in
+- reset bgp vrf ipv4 peer-group in prefix-filter
+- reset bgp vrf ipv4 peer-group message-stats
+- reset bgp vrf ipv4 peer-group out
+- reset bgp vrf ipv4 peer-group soft
+- reset bgp vrf ipv4 peer-group soft in
+- reset bgp vrf ipv4 peer-group soft out
+- reset bgp vrf ipv4 soft
+- reset bgp vrf ipv4 soft in
+- reset bgp vrf ipv4 soft out
+- reset bgp vrf ipv6
+- reset bgp vrf ipv6 1-4294967295
+- reset bgp vrf ipv6 1-4294967295 in
+- reset bgp vrf ipv6 1-4294967295 in prefix-filter
+- reset bgp vrf ipv6 1-4294967295 message-stats
+- reset bgp vrf ipv6 1-4294967295 out
+- reset bgp vrf ipv6 1-4294967295 soft
+- reset bgp vrf ipv6 1-4294967295 soft in
+- reset bgp vrf ipv6 1-4294967295 soft out
+- reset bgp vrf ipv6 all
+- reset bgp vrf ipv6 external
+- reset bgp vrf ipv6 external in
+- reset bgp vrf ipv6 external in prefix-filter
+- reset bgp vrf ipv6 external message-stats
+- reset bgp vrf ipv6 external out
+- reset bgp vrf ipv6 external soft
+- reset bgp vrf ipv6 external soft in
+- reset bgp vrf ipv6 external soft out
+- reset bgp vrf ipv6 in
+- reset bgp vrf ipv6 in prefix-filter
+- reset bgp vrf ipv6 message-stats
+- reset bgp vrf ipv6 out
+- reset bgp vrf ipv6 peer-group
+- reset bgp vrf ipv6 peer-group in
+- reset bgp vrf ipv6 peer-group in prefix-filter
+- reset bgp vrf ipv6 peer-group message-stats
+- reset bgp vrf ipv6 peer-group out
+- reset bgp vrf ipv6 peer-group soft
+- reset bgp vrf ipv6 peer-group soft in
+- reset bgp vrf ipv6 peer-group soft out
+- reset bgp vrf ipv6 soft
+- reset bgp vrf ipv6 soft in
+- reset bgp vrf ipv6 soft out
+- reset bgp vrf l2vpn
+- reset bgp vrf l2vpn evpn
+- reset bgp vrf l2vpn evpn 1-4294967295
+- reset bgp vrf l2vpn evpn 1-4294967295 in
+- reset bgp vrf l2vpn evpn 1-4294967295 in prefix-filter
+- reset bgp vrf l2vpn evpn 1-4294967295 message-stats
+- reset bgp vrf l2vpn evpn 1-4294967295 out
+- reset bgp vrf l2vpn evpn 1-4294967295 soft
+- reset bgp vrf l2vpn evpn 1-4294967295 soft in
+- reset bgp vrf l2vpn evpn 1-4294967295 soft out
+- reset bgp vrf l2vpn evpn all
+- reset bgp vrf l2vpn evpn external
+- reset bgp vrf l2vpn evpn external in
+- reset bgp vrf l2vpn evpn external in prefix-filter
+- reset bgp vrf l2vpn evpn external message-stats
+- reset bgp vrf l2vpn evpn external out
+- reset bgp vrf l2vpn evpn external soft
+- reset bgp vrf l2vpn evpn external soft in
+- reset bgp vrf l2vpn evpn external soft out
+- reset bgp vrf l2vpn evpn in
+- reset bgp vrf l2vpn evpn in prefix-filter
+- reset bgp vrf l2vpn evpn message-stats
+- reset bgp vrf l2vpn evpn out
+- reset bgp vrf l2vpn evpn peer-group
+- reset bgp vrf l2vpn evpn peer-group in
+- reset bgp vrf l2vpn evpn peer-group in prefix-filter
+- reset bgp vrf l2vpn evpn peer-group message-stats
+- reset bgp vrf l2vpn evpn peer-group out
+- reset bgp vrf l2vpn evpn peer-group soft
+- reset bgp vrf l2vpn evpn peer-group soft in
+- reset bgp vrf l2vpn evpn peer-group soft out
+- reset bgp vrf l2vpn evpn soft
+- reset bgp vrf l2vpn evpn soft in
+- reset bgp vrf l2vpn evpn soft out
+- reset bgp vrf node.tag
+- reset bgp vrf node.tag in
+- reset bgp vrf node.tag in prefix-filter
+- reset bgp vrf node.tag message-stats
+- reset bgp vrf node.tag out
+- reset bgp vrf node.tag soft
+- reset bgp vrf node.tag soft in
+- reset bgp vrf node.tag soft out
+- reset bgp vrf peer-group
+- reset bgp vrf peer-group in
+- reset bgp vrf peer-group in prefix-filter
+- reset bgp vrf peer-group message-stats
+- reset bgp vrf peer-group out
+- reset bgp vrf peer-group soft
+- reset bgp vrf peer-group soft in
+- reset bgp vrf peer-group soft out
+- reset bgp vrf prefix
+- reset conntrack
+- reset conntrack-sync
+- reset conntrack-sync external-cache
+- reset conntrack-sync internal-cache
+- reset dns
+- reset dns dynamic
+- reset dns forwarding
+- reset dns forwarding all
+- reset dns forwarding domain
+- reset ip
+- reset ip arp
+- reset ip arp address
+- reset ip arp interface
+- reset ip arp table
+- reset ip bgp
+- reset ip bgp 1-4294967295
+- reset ip bgp 1-4294967295 in
+- reset ip bgp 1-4294967295 in prefix-filter
+- reset ip bgp 1-4294967295 message-stats
+- reset ip bgp 1-4294967295 out
+- reset ip bgp 1-4294967295 soft
+- reset ip bgp 1-4294967295 soft in
+- reset ip bgp 1-4294967295 soft out
+- reset ip bgp all
+- reset ip bgp dampening
+- reset ip bgp dampening node.tag
+- reset ip bgp external
+- reset ip bgp external in
+- reset ip bgp external in prefix-filter
+- reset ip bgp external message-stats
+- reset ip bgp external out
+- reset ip bgp external soft
+- reset ip bgp external soft in
+- reset ip bgp external soft out
+- reset ip bgp in
+- reset ip bgp in prefix-filter
+- reset ip bgp message-stats
+- reset ip bgp out
+- reset ip bgp peer-group
+- reset ip bgp peer-group in
+- reset ip bgp peer-group in prefix-filter
+- reset ip bgp peer-group message-stats
+- reset ip bgp peer-group out
+- reset ip bgp peer-group soft
+- reset ip bgp peer-group soft in
+- reset ip bgp peer-group soft out
+- reset ip bgp soft
+- reset ip bgp soft in
+- reset ip bgp soft out
+- reset ip bgp vrf
+- reset ip bgp vrf all
+- reset ip bgp vrf node.tag
+- reset ip igmp
+- reset ip igmp interfaces
+- reset ip multicast
+- reset ip multicast route
+- reset ip nhrp
+- reset ip nhrp cache
+- reset ip nhrp shortcut
+- reset ip route
+- reset ip route cache
+- reset ipoe-server
+- reset ipoe-server session
+- reset ipoe-server session interface
+- reset ipoe-server session sid
+- reset ipoe-server session username
+- reset ipv6
+- reset ipv6 neighbors
+- reset ipv6 neighbors address
+- reset ipv6 neighbors interface
+- reset ipv6 route
+- reset ipv6 route cache
+- reset mpls
+- reset mpls ldp
+- reset mpls ldp neighbor
+- reset openvpn
+- reset openvpn client
+- reset openvpn interface
+- reset pppoe-server
+- reset pppoe-server all
+- reset pppoe-server interface
+- reset pppoe-server username
+- reset rpki
+- reset terminal
+- reset vpn
+- reset vpn ipsec
+- reset vpn ipsec profile
+- reset vpn ipsec profile tunnel
+- reset vpn ipsec profile tunnel remote-host
+- reset vpn ipsec remote-access
+- reset vpn ipsec remote-access all
+- reset vpn ipsec remote-access user
+- reset vpn ipsec site-to-site
+- reset vpn ipsec site-to-site all
+- reset vpn ipsec site-to-site peer
+- reset vpn ipsec site-to-site peer tunnel
+- reset vpn ipsec site-to-site peer vti
+- reset vpn l2tp
+- reset vpn l2tp all
+- reset vpn l2tp interface
+- reset vpn l2tp user
+- reset vpn pptp
+- reset vpn pptp all
+- reset vpn pptp interface
+- reset vpn pptp user
+- reset vpn sstp
+- reset vpn sstp all
+- reset vpn sstp interface
+- reset vpn sstp user
+- reset wireguard
+- reset wireguard interface
+- reset wireguard interface peer
+- restart
+- restart all
+- restart babel
+- restart bfd
+- restart bgp
+- restart conntrack-sync
+- restart dhcp
+- restart dhcp relay-agent
+- restart dhcp server
+- restart dhcpv6
+- restart dhcpv6 relay-agent
+- restart dhcpv6 server
+- restart dns
+- restart dns dynamic
+- restart dns forwarding
+- restart flow-accounting
+- restart haproxy
+- restart igmp-proxy
+- restart ipoe-server
+- restart ipsec
+- restart isis
+- restart ldp
+- restart mdns
+- restart mdns repeater
+- restart ntp
+- restart openconnect-server
+- restart openfabric
+- restart ospf
+- restart ospfv3
+- restart pim6
+- restart pppoe-server
+- restart rip
+- restart ripng
+- restart router-advert
+- restart serial
+- restart serial console
+- restart serial console device
+- restart snmp
+- restart ssh
+- restart static
+- restart suricata
+- restart wan-load-balance
+- restart webproxy
+- restart zebra
+- set
+- set builtin
+- set console
+- set console keymap
+- set date
+- set pppoe-server
+- set pppoe-server maintenance-mode
+- set pppoe-server maintenance-mode cancel
+- set pppoe-server maintenance-mode enable
+- set system
+- set system boot-console
+- set system image
+- set system image default-boot
+- set terminal
+- set terminal key
+- set terminal key query-help
+- set terminal length
+- set terminal pager
+- set terminal width
+- show
+- show arp
+- show arp interface
+- show babel
+- show babel interface
+- show babel neighbor
+- show babel route
+- show bfd
+- show bfd peer
+- show bfd peer counters
+- show bfd peers
+- show bfd peers brief
+- show bfd peers counters
+- show bfd static
+- show bfd static routes
+- show bgp
+- show bgp cidr-only
+- show bgp cidr-only wide
+- show bgp community
+- show bgp community accept-own
+- show bgp community accept-own-nexthop
+- show bgp community blackhole
+- show bgp community exact-match
+- show bgp community graceful-shutdown
+- show bgp community llgr-stale
+- show bgp community local-AS
+- show bgp community no-advertise
+- show bgp community no-export
+- show bgp community no-llgr
+- show bgp community no-peer
+- show bgp community route-filter-translated-v4
+- show bgp community route-filter-translated-v6
+- show bgp community route-filter-v4
+- show bgp community route-filter-v6
+- show bgp community-list
+- show bgp community-list exact-match
+- show bgp dampening
+- show bgp dampening dampened-paths
+- show bgp dampening flap-statistics
+- show bgp dampening parameters
+- show bgp filter-list
+- show bgp ipv4
+- show bgp ipv4 bestpath
+- show bgp ipv4 community
+- show bgp ipv4 community accept-own
+- show bgp ipv4 community accept-own-nexthop
+- show bgp ipv4 community blackhole
+- show bgp ipv4 community exact-match
+- show bgp ipv4 community graceful-shutdown
+- show bgp ipv4 community llgr-stale
+- show bgp ipv4 community local-AS
+- show bgp ipv4 community no-advertise
+- show bgp ipv4 community no-export
+- show bgp ipv4 community no-llgr
+- show bgp ipv4 community no-peer
+- show bgp ipv4 community route-filter-translated-v4
+- show bgp ipv4 community route-filter-translated-v6
+- show bgp ipv4 community route-filter-v4
+- show bgp ipv4 community route-filter-v6
+- show bgp ipv4 community-list
+- show bgp ipv4 community-list exact-match
+- show bgp ipv4 dampening
+- show bgp ipv4 dampening dampened-paths
+- show bgp ipv4 dampening flap-statistics
+- show bgp ipv4 dampening parameters
+- show bgp ipv4 filter-list
+- show bgp ipv4 flowspec
+- show bgp ipv4 flowspec bestpath
+- show bgp ipv4 flowspec community
+- show bgp ipv4 flowspec community accept-own
+- show bgp ipv4 flowspec community accept-own-nexthop
+- show bgp ipv4 flowspec community blackhole
+- show bgp ipv4 flowspec community exact-match
+- show bgp ipv4 flowspec community graceful-shutdown
+- show bgp ipv4 flowspec community llgr-stale
+- show bgp ipv4 flowspec community local-AS
+- show bgp ipv4 flowspec community no-advertise
+- show bgp ipv4 flowspec community no-export
+- show bgp ipv4 flowspec community no-llgr
+- show bgp ipv4 flowspec community no-peer
+- show bgp ipv4 flowspec community route-filter-translated-v4
+- show bgp ipv4 flowspec community route-filter-translated-v6
+- show bgp ipv4 flowspec community route-filter-v4
+- show bgp ipv4 flowspec community route-filter-v6
+- show bgp ipv4 flowspec community-list
+- show bgp ipv4 flowspec community-list exact-match
+- show bgp ipv4 flowspec dampening
+- show bgp ipv4 flowspec dampening dampened-paths
+- show bgp ipv4 flowspec dampening flap-statistics
+- show bgp ipv4 flowspec dampening parameters
+- show bgp ipv4 flowspec detail
+- show bgp ipv4 flowspec filter-list
+- show bgp ipv4 flowspec large-community
+- show bgp ipv4 flowspec large-community exact-match
+- show bgp ipv4 flowspec large-community-list
+- show bgp ipv4 flowspec large-community-list exact-match
+- show bgp ipv4 flowspec longer-prefixes
+- show bgp ipv4 flowspec multipath
+- show bgp ipv4 flowspec neighbors
+- show bgp ipv4 flowspec neighbors advertised-routes
+- show bgp ipv4 flowspec neighbors dampened-routes
+- show bgp ipv4 flowspec neighbors filtered-routes
+- show bgp ipv4 flowspec neighbors flap-statistics
+- show bgp ipv4 flowspec neighbors prefix-counts
+- show bgp ipv4 flowspec neighbors received
+- show bgp ipv4 flowspec neighbors received prefix-filter
+- show bgp ipv4 flowspec neighbors received-routes
+- show bgp ipv4 flowspec neighbors routes
+- show bgp ipv4 flowspec prefix-list
+- show bgp ipv4 flowspec regexp
+- show bgp ipv4 flowspec route-map
+- show bgp ipv4 flowspec statistics
+- show bgp ipv4 flowspec summary
+- show bgp ipv4 flowspec summary established
+- show bgp ipv4 flowspec summary failed
+- show bgp ipv4 flowspec wide
+- show bgp ipv4 large-community
+- show bgp ipv4 large-community exact-match
+- show bgp ipv4 large-community-list
+- show bgp ipv4 large-community-list exact-match
+- show bgp ipv4 longer-prefixes
+- show bgp ipv4 multipath
+- show bgp ipv4 neighbors
+- show bgp ipv4 neighbors advertised-routes
+- show bgp ipv4 neighbors dampened-routes
+- show bgp ipv4 neighbors filtered-routes
+- show bgp ipv4 neighbors flap-statistics
+- show bgp ipv4 neighbors prefix-counts
+- show bgp ipv4 neighbors received
+- show bgp ipv4 neighbors received prefix-filter
+- show bgp ipv4 neighbors received-routes
+- show bgp ipv4 neighbors routes
+- show bgp ipv4 prefix-list
+- show bgp ipv4 regexp
+- show bgp ipv4 route-map
+- show bgp ipv4 statistics
+- show bgp ipv4 summary
+- show bgp ipv4 summary established
+- show bgp ipv4 summary failed
+- show bgp ipv4 vpn
+- show bgp ipv4 vpn bestpath
+- show bgp ipv4 vpn community
+- show bgp ipv4 vpn community accept-own
+- show bgp ipv4 vpn community accept-own-nexthop
+- show bgp ipv4 vpn community blackhole
+- show bgp ipv4 vpn community exact-match
+- show bgp ipv4 vpn community graceful-shutdown
+- show bgp ipv4 vpn community llgr-stale
+- show bgp ipv4 vpn community local-AS
+- show bgp ipv4 vpn community no-advertise
+- show bgp ipv4 vpn community no-export
+- show bgp ipv4 vpn community no-llgr
+- show bgp ipv4 vpn community no-peer
+- show bgp ipv4 vpn community route-filter-translated-v4
+- show bgp ipv4 vpn community route-filter-translated-v6
+- show bgp ipv4 vpn community route-filter-v4
+- show bgp ipv4 vpn community route-filter-v6
+- show bgp ipv4 vpn community-list
+- show bgp ipv4 vpn community-list exact-match
+- show bgp ipv4 vpn dampening
+- show bgp ipv4 vpn dampening dampened-paths
+- show bgp ipv4 vpn dampening flap-statistics
+- show bgp ipv4 vpn dampening parameters
+- show bgp ipv4 vpn filter-list
+- show bgp ipv4 vpn large-community
+- show bgp ipv4 vpn large-community exact-match
+- show bgp ipv4 vpn large-community-list
+- show bgp ipv4 vpn large-community-list exact-match
+- show bgp ipv4 vpn longer-prefixes
+- show bgp ipv4 vpn multipath
+- show bgp ipv4 vpn neighbors
+- show bgp ipv4 vpn neighbors advertised-routes
+- show bgp ipv4 vpn neighbors dampened-routes
+- show bgp ipv4 vpn neighbors filtered-routes
+- show bgp ipv4 vpn neighbors flap-statistics
+- show bgp ipv4 vpn neighbors prefix-counts
+- show bgp ipv4 vpn neighbors received
+- show bgp ipv4 vpn neighbors received prefix-filter
+- show bgp ipv4 vpn neighbors received-routes
+- show bgp ipv4 vpn neighbors routes
+- show bgp ipv4 vpn prefix-list
+- show bgp ipv4 vpn regexp
+- show bgp ipv4 vpn route-map
+- show bgp ipv4 vpn statistics
+- show bgp ipv4 vpn summary
+- show bgp ipv4 vpn summary established
+- show bgp ipv4 vpn summary failed
+- show bgp ipv4 vpn wide
+- show bgp ipv4 wide
+- show bgp ipv6
+- show bgp ipv6 bestpath
+- show bgp ipv6 community
+- show bgp ipv6 community accept-own
+- show bgp ipv6 community accept-own-nexthop
+- show bgp ipv6 community blackhole
+- show bgp ipv6 community exact-match
+- show bgp ipv6 community graceful-shutdown
+- show bgp ipv6 community llgr-stale
+- show bgp ipv6 community local-AS
+- show bgp ipv6 community no-advertise
+- show bgp ipv6 community no-export
+- show bgp ipv6 community no-llgr
+- show bgp ipv6 community no-peer
+- show bgp ipv6 community route-filter-translated-v4
+- show bgp ipv6 community route-filter-translated-v6
+- show bgp ipv6 community route-filter-v4
+- show bgp ipv6 community route-filter-v6
+- show bgp ipv6 community-list
+- show bgp ipv6 community-list exact-match
+- show bgp ipv6 dampening
+- show bgp ipv6 dampening dampened-paths
+- show bgp ipv6 dampening flap-statistics
+- show bgp ipv6 dampening parameters
+- show bgp ipv6 filter-list
+- show bgp ipv6 large-community
+- show bgp ipv6 large-community exact-match
+- show bgp ipv6 large-community-list
+- show bgp ipv6 large-community-list exact-match
+- show bgp ipv6 longer-prefixes
+- show bgp ipv6 multipath
+- show bgp ipv6 neighbors
+- show bgp ipv6 neighbors advertised-routes
+- show bgp ipv6 neighbors dampened-routes
+- show bgp ipv6 neighbors filtered-routes
+- show bgp ipv6 neighbors flap-statistics
+- show bgp ipv6 neighbors prefix-counts
+- show bgp ipv6 neighbors received
+- show bgp ipv6 neighbors received prefix-filter
+- show bgp ipv6 neighbors received-routes
+- show bgp ipv6 neighbors routes
+- show bgp ipv6 prefix-list
+- show bgp ipv6 regexp
+- show bgp ipv6 route-map
+- show bgp ipv6 statistics
+- show bgp ipv6 summary
+- show bgp ipv6 summary established
+- show bgp ipv6 summary failed
+- show bgp ipv6 vpn
+- show bgp ipv6 vpn bestpath
+- show bgp ipv6 vpn community
+- show bgp ipv6 vpn community accept-own
+- show bgp ipv6 vpn community accept-own-nexthop
+- show bgp ipv6 vpn community blackhole
+- show bgp ipv6 vpn community exact-match
+- show bgp ipv6 vpn community graceful-shutdown
+- show bgp ipv6 vpn community llgr-stale
+- show bgp ipv6 vpn community local-AS
+- show bgp ipv6 vpn community no-advertise
+- show bgp ipv6 vpn community no-export
+- show bgp ipv6 vpn community no-llgr
+- show bgp ipv6 vpn community no-peer
+- show bgp ipv6 vpn community route-filter-translated-v4
+- show bgp ipv6 vpn community route-filter-translated-v6
+- show bgp ipv6 vpn community route-filter-v4
+- show bgp ipv6 vpn community route-filter-v6
+- show bgp ipv6 vpn community-list
+- show bgp ipv6 vpn community-list exact-match
+- show bgp ipv6 vpn dampening
+- show bgp ipv6 vpn dampening dampened-paths
+- show bgp ipv6 vpn dampening flap-statistics
+- show bgp ipv6 vpn dampening parameters
+- show bgp ipv6 vpn filter-list
+- show bgp ipv6 vpn large-community
+- show bgp ipv6 vpn large-community exact-match
+- show bgp ipv6 vpn large-community-list
+- show bgp ipv6 vpn large-community-list exact-match
+- show bgp ipv6 vpn longer-prefixes
+- show bgp ipv6 vpn multipath
+- show bgp ipv6 vpn neighbors
+- show bgp ipv6 vpn neighbors advertised-routes
+- show bgp ipv6 vpn neighbors dampened-routes
+- show bgp ipv6 vpn neighbors filtered-routes
+- show bgp ipv6 vpn neighbors flap-statistics
+- show bgp ipv6 vpn neighbors prefix-counts
+- show bgp ipv6 vpn neighbors received
+- show bgp ipv6 vpn neighbors received prefix-filter
+- show bgp ipv6 vpn neighbors received-routes
+- show bgp ipv6 vpn neighbors routes
+- show bgp ipv6 vpn prefix-list
+- show bgp ipv6 vpn regexp
+- show bgp ipv6 vpn route-map
+- show bgp ipv6 vpn statistics
+- show bgp ipv6 vpn summary
+- show bgp ipv6 vpn summary established
+- show bgp ipv6 vpn summary failed
+- show bgp ipv6 vpn wide
+- show bgp ipv6 wide
+- show bgp l2vpn
+- show bgp l2vpn evpn
+- show bgp l2vpn evpn all
+- show bgp l2vpn evpn all overlay
+- show bgp l2vpn evpn all tags
+- show bgp l2vpn evpn community
+- show bgp l2vpn evpn community exact-match
+- show bgp l2vpn evpn es
+- show bgp l2vpn evpn es detail
+- show bgp l2vpn evpn es-evi
+- show bgp l2vpn evpn es-evi detail
+- show bgp l2vpn evpn es-evi vni
+- show bgp l2vpn evpn es-vrf
+- show bgp l2vpn evpn import-rt
+- show bgp l2vpn evpn large-community
+- show bgp l2vpn evpn large-community exact-match
+- show bgp l2vpn evpn large-community-list
+- show bgp l2vpn evpn large-community-list exact-match
+- show bgp l2vpn evpn neighbors
+- show bgp l2vpn evpn neighbors advertised-routes
+- show bgp l2vpn evpn neighbors routes
+- show bgp l2vpn evpn next-hops
+- show bgp l2vpn evpn rd
+- show bgp l2vpn evpn rd overlay
+- show bgp l2vpn evpn rd tags
+- show bgp l2vpn evpn route
+- show bgp l2vpn evpn route detail
+- show bgp l2vpn evpn route type
+- show bgp l2vpn evpn route type 1
+- show bgp l2vpn evpn route type 2
+- show bgp l2vpn evpn route type 3
+- show bgp l2vpn evpn route type 4
+- show bgp l2vpn evpn route type 5
+- show bgp l2vpn evpn route type ead
+- show bgp l2vpn evpn route type es
+- show bgp l2vpn evpn route type macip
+- show bgp l2vpn evpn route type multicast
+- show bgp l2vpn evpn route type prefix
+- show bgp l2vpn evpn route vni
+- show bgp l2vpn evpn statistics
+- show bgp l2vpn evpn summary
+- show bgp l2vpn evpn summary established
+- show bgp l2vpn evpn summary failed
+- show bgp l2vpn evpn vni
+- show bgp large-community
+- show bgp large-community exact-match
+- show bgp large-community-list
+- show bgp large-community-list exact-match
+- show bgp mac
+- show bgp mac hash
+- show bgp martian
+- show bgp martian next-hop
+- show bgp memory
+- show bgp neighbors
+- show bgp neighbors advertised-routes
+- show bgp neighbors dampened-routes
+- show bgp neighbors filtered-routes
+- show bgp neighbors flap-statistics
+- show bgp neighbors prefix-counts
+- show bgp neighbors received
+- show bgp neighbors received prefix-filter
+- show bgp neighbors received-routes
+- show bgp neighbors routes
+- show bgp nexthop
+- show bgp nexthop detail
+- show bgp prefix-list
+- show bgp regexp
+- show bgp route-map
+- show bgp segment-routing
+- show bgp segment-routing srv6
+- show bgp statistics
+- show bgp statistics-all
+- show bgp summary
+- show bgp summary established
+- show bgp summary failed
+- show bgp vni
+- show bgp vni type
+- show bgp vni type 1
+- show bgp vni type 2
+- show bgp vni type 3
+- show bgp vni type ead
+- show bgp vni type macip
+- show bgp vni type multicast
+- show bgp vni vtep
+- show bgp vrf
+- show bgp vrf community
+- show bgp vrf community accept-own
+- show bgp vrf community accept-own-nexthop
+- show bgp vrf community blackhole
+- show bgp vrf community exact-match
+- show bgp vrf community graceful-shutdown
+- show bgp vrf community llgr-stale
+- show bgp vrf community local-AS
+- show bgp vrf community no-advertise
+- show bgp vrf community no-export
+- show bgp vrf community no-llgr
+- show bgp vrf community no-peer
+- show bgp vrf community route-filter-translated-v4
+- show bgp vrf community route-filter-translated-v6
+- show bgp vrf community route-filter-v4
+- show bgp vrf community route-filter-v6
+- show bgp vrf community-list
+- show bgp vrf community-list exact-match
+- show bgp vrf dampening
+- show bgp vrf dampening dampened-paths
+- show bgp vrf dampening flap-statistics
+- show bgp vrf dampening parameters
+- show bgp vrf filter-list
+- show bgp vrf ipv4
+- show bgp vrf ipv4 bestpath
+- show bgp vrf ipv4 community
+- show bgp vrf ipv4 community accept-own
+- show bgp vrf ipv4 community accept-own-nexthop
+- show bgp vrf ipv4 community blackhole
+- show bgp vrf ipv4 community exact-match
+- show bgp vrf ipv4 community graceful-shutdown
+- show bgp vrf ipv4 community llgr-stale
+- show bgp vrf ipv4 community local-AS
+- show bgp vrf ipv4 community no-advertise
+- show bgp vrf ipv4 community no-export
+- show bgp vrf ipv4 community no-llgr
+- show bgp vrf ipv4 community no-peer
+- show bgp vrf ipv4 community route-filter-translated-v4
+- show bgp vrf ipv4 community route-filter-translated-v6
+- show bgp vrf ipv4 community route-filter-v4
+- show bgp vrf ipv4 community route-filter-v6
+- show bgp vrf ipv4 community-list
+- show bgp vrf ipv4 community-list exact-match
+- show bgp vrf ipv4 dampening
+- show bgp vrf ipv4 dampening dampened-paths
+- show bgp vrf ipv4 dampening flap-statistics
+- show bgp vrf ipv4 dampening parameters
+- show bgp vrf ipv4 filter-list
+- show bgp vrf ipv4 flowspec
+- show bgp vrf ipv4 flowspec bestpath
+- show bgp vrf ipv4 flowspec community
+- show bgp vrf ipv4 flowspec community accept-own
+- show bgp vrf ipv4 flowspec community accept-own-nexthop
+- show bgp vrf ipv4 flowspec community blackhole
+- show bgp vrf ipv4 flowspec community exact-match
+- show bgp vrf ipv4 flowspec community graceful-shutdown
+- show bgp vrf ipv4 flowspec community llgr-stale
+- show bgp vrf ipv4 flowspec community local-AS
+- show bgp vrf ipv4 flowspec community no-advertise
+- show bgp vrf ipv4 flowspec community no-export
+- show bgp vrf ipv4 flowspec community no-llgr
+- show bgp vrf ipv4 flowspec community no-peer
+- show bgp vrf ipv4 flowspec community route-filter-translated-v4
+- show bgp vrf ipv4 flowspec community route-filter-translated-v6
+- show bgp vrf ipv4 flowspec community route-filter-v4
+- show bgp vrf ipv4 flowspec community route-filter-v6
+- show bgp vrf ipv4 flowspec community-list
+- show bgp vrf ipv4 flowspec community-list exact-match
+- show bgp vrf ipv4 flowspec dampening
+- show bgp vrf ipv4 flowspec dampening dampened-paths
+- show bgp vrf ipv4 flowspec dampening flap-statistics
+- show bgp vrf ipv4 flowspec dampening parameters
+- show bgp vrf ipv4 flowspec detail
+- show bgp vrf ipv4 flowspec filter-list
+- show bgp vrf ipv4 flowspec large-community
+- show bgp vrf ipv4 flowspec large-community exact-match
+- show bgp vrf ipv4 flowspec large-community-list
+- show bgp vrf ipv4 flowspec large-community-list exact-match
+- show bgp vrf ipv4 flowspec longer-prefixes
+- show bgp vrf ipv4 flowspec multipath
+- show bgp vrf ipv4 flowspec neighbors
+- show bgp vrf ipv4 flowspec neighbors advertised-routes
+- show bgp vrf ipv4 flowspec neighbors dampened-routes
+- show bgp vrf ipv4 flowspec neighbors filtered-routes
+- show bgp vrf ipv4 flowspec neighbors flap-statistics
+- show bgp vrf ipv4 flowspec neighbors prefix-counts
+- show bgp vrf ipv4 flowspec neighbors received
+- show bgp vrf ipv4 flowspec neighbors received prefix-filter
+- show bgp vrf ipv4 flowspec neighbors received-routes
+- show bgp vrf ipv4 flowspec neighbors routes
+- show bgp vrf ipv4 flowspec prefix-list
+- show bgp vrf ipv4 flowspec regexp
+- show bgp vrf ipv4 flowspec route-map
+- show bgp vrf ipv4 flowspec statistics
+- show bgp vrf ipv4 flowspec summary
+- show bgp vrf ipv4 flowspec summary established
+- show bgp vrf ipv4 flowspec summary failed
+- show bgp vrf ipv4 flowspec wide
+- show bgp vrf ipv4 large-community
+- show bgp vrf ipv4 large-community exact-match
+- show bgp vrf ipv4 large-community-list
+- show bgp vrf ipv4 large-community-list exact-match
+- show bgp vrf ipv4 longer-prefixes
+- show bgp vrf ipv4 multipath
+- show bgp vrf ipv4 neighbors
+- show bgp vrf ipv4 neighbors advertised-routes
+- show bgp vrf ipv4 neighbors dampened-routes
+- show bgp vrf ipv4 neighbors filtered-routes
+- show bgp vrf ipv4 neighbors flap-statistics
+- show bgp vrf ipv4 neighbors prefix-counts
+- show bgp vrf ipv4 neighbors received
+- show bgp vrf ipv4 neighbors received prefix-filter
+- show bgp vrf ipv4 neighbors received-routes
+- show bgp vrf ipv4 neighbors routes
+- show bgp vrf ipv4 prefix-list
+- show bgp vrf ipv4 regexp
+- show bgp vrf ipv4 route-map
+- show bgp vrf ipv4 statistics
+- show bgp vrf ipv4 summary
+- show bgp vrf ipv4 summary established
+- show bgp vrf ipv4 summary failed
+- show bgp vrf ipv4 vpn
+- show bgp vrf ipv4 vpn bestpath
+- show bgp vrf ipv4 vpn community
+- show bgp vrf ipv4 vpn community accept-own
+- show bgp vrf ipv4 vpn community accept-own-nexthop
+- show bgp vrf ipv4 vpn community blackhole
+- show bgp vrf ipv4 vpn community exact-match
+- show bgp vrf ipv4 vpn community graceful-shutdown
+- show bgp vrf ipv4 vpn community llgr-stale
+- show bgp vrf ipv4 vpn community local-AS
+- show bgp vrf ipv4 vpn community no-advertise
+- show bgp vrf ipv4 vpn community no-export
+- show bgp vrf ipv4 vpn community no-llgr
+- show bgp vrf ipv4 vpn community no-peer
+- show bgp vrf ipv4 vpn community route-filter-translated-v4
+- show bgp vrf ipv4 vpn community route-filter-translated-v6
+- show bgp vrf ipv4 vpn community route-filter-v4
+- show bgp vrf ipv4 vpn community route-filter-v6
+- show bgp vrf ipv4 vpn community-list
+- show bgp vrf ipv4 vpn community-list exact-match
+- show bgp vrf ipv4 vpn dampening
+- show bgp vrf ipv4 vpn dampening dampened-paths
+- show bgp vrf ipv4 vpn dampening flap-statistics
+- show bgp vrf ipv4 vpn dampening parameters
+- show bgp vrf ipv4 vpn filter-list
+- show bgp vrf ipv4 vpn large-community
+- show bgp vrf ipv4 vpn large-community exact-match
+- show bgp vrf ipv4 vpn large-community-list
+- show bgp vrf ipv4 vpn large-community-list exact-match
+- show bgp vrf ipv4 vpn longer-prefixes
+- show bgp vrf ipv4 vpn multipath
+- show bgp vrf ipv4 vpn neighbors
+- show bgp vrf ipv4 vpn neighbors advertised-routes
+- show bgp vrf ipv4 vpn neighbors dampened-routes
+- show bgp vrf ipv4 vpn neighbors filtered-routes
+- show bgp vrf ipv4 vpn neighbors flap-statistics
+- show bgp vrf ipv4 vpn neighbors prefix-counts
+- show bgp vrf ipv4 vpn neighbors received
+- show bgp vrf ipv4 vpn neighbors received prefix-filter
+- show bgp vrf ipv4 vpn neighbors received-routes
+- show bgp vrf ipv4 vpn neighbors routes
+- show bgp vrf ipv4 vpn prefix-list
+- show bgp vrf ipv4 vpn regexp
+- show bgp vrf ipv4 vpn route-map
+- show bgp vrf ipv4 vpn statistics
+- show bgp vrf ipv4 vpn summary
+- show bgp vrf ipv4 vpn summary established
+- show bgp vrf ipv4 vpn summary failed
+- show bgp vrf ipv4 vpn wide
+- show bgp vrf ipv4 wide
+- show bgp vrf ipv6
+- show bgp vrf ipv6 bestpath
+- show bgp vrf ipv6 community
+- show bgp vrf ipv6 community accept-own
+- show bgp vrf ipv6 community accept-own-nexthop
+- show bgp vrf ipv6 community blackhole
+- show bgp vrf ipv6 community exact-match
+- show bgp vrf ipv6 community graceful-shutdown
+- show bgp vrf ipv6 community llgr-stale
+- show bgp vrf ipv6 community local-AS
+- show bgp vrf ipv6 community no-advertise
+- show bgp vrf ipv6 community no-export
+- show bgp vrf ipv6 community no-llgr
+- show bgp vrf ipv6 community no-peer
+- show bgp vrf ipv6 community route-filter-translated-v4
+- show bgp vrf ipv6 community route-filter-translated-v6
+- show bgp vrf ipv6 community route-filter-v4
+- show bgp vrf ipv6 community route-filter-v6
+- show bgp vrf ipv6 community-list
+- show bgp vrf ipv6 community-list exact-match
+- show bgp vrf ipv6 dampening
+- show bgp vrf ipv6 dampening dampened-paths
+- show bgp vrf ipv6 dampening flap-statistics
+- show bgp vrf ipv6 dampening parameters
+- show bgp vrf ipv6 filter-list
+- show bgp vrf ipv6 large-community
+- show bgp vrf ipv6 large-community exact-match
+- show bgp vrf ipv6 large-community-list
+- show bgp vrf ipv6 large-community-list exact-match
+- show bgp vrf ipv6 longer-prefixes
+- show bgp vrf ipv6 multipath
+- show bgp vrf ipv6 neighbors
+- show bgp vrf ipv6 neighbors advertised-routes
+- show bgp vrf ipv6 neighbors dampened-routes
+- show bgp vrf ipv6 neighbors filtered-routes
+- show bgp vrf ipv6 neighbors flap-statistics
+- show bgp vrf ipv6 neighbors prefix-counts
+- show bgp vrf ipv6 neighbors received
+- show bgp vrf ipv6 neighbors received prefix-filter
+- show bgp vrf ipv6 neighbors received-routes
+- show bgp vrf ipv6 neighbors routes
+- show bgp vrf ipv6 prefix-list
+- show bgp vrf ipv6 regexp
+- show bgp vrf ipv6 route-map
+- show bgp vrf ipv6 statistics
+- show bgp vrf ipv6 summary
+- show bgp vrf ipv6 summary established
+- show bgp vrf ipv6 summary failed
+- show bgp vrf ipv6 vpn
+- show bgp vrf ipv6 vpn bestpath
+- show bgp vrf ipv6 vpn community
+- show bgp vrf ipv6 vpn community accept-own
+- show bgp vrf ipv6 vpn community accept-own-nexthop
+- show bgp vrf ipv6 vpn community blackhole
+- show bgp vrf ipv6 vpn community exact-match
+- show bgp vrf ipv6 vpn community graceful-shutdown
+- show bgp vrf ipv6 vpn community llgr-stale
+- show bgp vrf ipv6 vpn community local-AS
+- show bgp vrf ipv6 vpn community no-advertise
+- show bgp vrf ipv6 vpn community no-export
+- show bgp vrf ipv6 vpn community no-llgr
+- show bgp vrf ipv6 vpn community no-peer
+- show bgp vrf ipv6 vpn community route-filter-translated-v4
+- show bgp vrf ipv6 vpn community route-filter-translated-v6
+- show bgp vrf ipv6 vpn community route-filter-v4
+- show bgp vrf ipv6 vpn community route-filter-v6
+- show bgp vrf ipv6 vpn community-list
+- show bgp vrf ipv6 vpn community-list exact-match
+- show bgp vrf ipv6 vpn dampening
+- show bgp vrf ipv6 vpn dampening dampened-paths
+- show bgp vrf ipv6 vpn dampening flap-statistics
+- show bgp vrf ipv6 vpn dampening parameters
+- show bgp vrf ipv6 vpn filter-list
+- show bgp vrf ipv6 vpn large-community
+- show bgp vrf ipv6 vpn large-community exact-match
+- show bgp vrf ipv6 vpn large-community-list
+- show bgp vrf ipv6 vpn large-community-list exact-match
+- show bgp vrf ipv6 vpn longer-prefixes
+- show bgp vrf ipv6 vpn multipath
+- show bgp vrf ipv6 vpn neighbors
+- show bgp vrf ipv6 vpn neighbors advertised-routes
+- show bgp vrf ipv6 vpn neighbors dampened-routes
+- show bgp vrf ipv6 vpn neighbors filtered-routes
+- show bgp vrf ipv6 vpn neighbors flap-statistics
+- show bgp vrf ipv6 vpn neighbors prefix-counts
+- show bgp vrf ipv6 vpn neighbors received
+- show bgp vrf ipv6 vpn neighbors received prefix-filter
+- show bgp vrf ipv6 vpn neighbors received-routes
+- show bgp vrf ipv6 vpn neighbors routes
+- show bgp vrf ipv6 vpn prefix-list
+- show bgp vrf ipv6 vpn regexp
+- show bgp vrf ipv6 vpn route-map
+- show bgp vrf ipv6 vpn statistics
+- show bgp vrf ipv6 vpn summary
+- show bgp vrf ipv6 vpn summary established
+- show bgp vrf ipv6 vpn summary failed
+- show bgp vrf ipv6 vpn wide
+- show bgp vrf ipv6 wide
+- show bgp vrf l2vpn
+- show bgp vrf l2vpn evpn
+- show bgp vrf l2vpn evpn all
+- show bgp vrf l2vpn evpn all overlay
+- show bgp vrf l2vpn evpn all tags
+- show bgp vrf l2vpn evpn community
+- show bgp vrf l2vpn evpn community exact-match
+- show bgp vrf l2vpn evpn es
+- show bgp vrf l2vpn evpn es detail
+- show bgp vrf l2vpn evpn es-evi
+- show bgp vrf l2vpn evpn es-evi detail
+- show bgp vrf l2vpn evpn es-evi vni
+- show bgp vrf l2vpn evpn es-vrf
+- show bgp vrf l2vpn evpn import-rt
+- show bgp vrf l2vpn evpn large-community
+- show bgp vrf l2vpn evpn large-community exact-match
+- show bgp vrf l2vpn evpn large-community-list
+- show bgp vrf l2vpn evpn large-community-list exact-match
+- show bgp vrf l2vpn evpn neighbors
+- show bgp vrf l2vpn evpn neighbors advertised-routes
+- show bgp vrf l2vpn evpn neighbors routes
+- show bgp vrf l2vpn evpn next-hops
+- show bgp vrf l2vpn evpn rd
+- show bgp vrf l2vpn evpn rd overlay
+- show bgp vrf l2vpn evpn rd tags
+- show bgp vrf l2vpn evpn route
+- show bgp vrf l2vpn evpn route detail
+- show bgp vrf l2vpn evpn route type
+- show bgp vrf l2vpn evpn route type 1
+- show bgp vrf l2vpn evpn route type 2
+- show bgp vrf l2vpn evpn route type 3
+- show bgp vrf l2vpn evpn route type 4
+- show bgp vrf l2vpn evpn route type 5
+- show bgp vrf l2vpn evpn route type ead
+- show bgp vrf l2vpn evpn route type es
+- show bgp vrf l2vpn evpn route type macip
+- show bgp vrf l2vpn evpn route type multicast
+- show bgp vrf l2vpn evpn route type prefix
+- show bgp vrf l2vpn evpn route vni
+- show bgp vrf l2vpn evpn statistics
+- show bgp vrf l2vpn evpn summary
+- show bgp vrf l2vpn evpn summary established
+- show bgp vrf l2vpn evpn summary failed
+- show bgp vrf l2vpn evpn vni
+- show bgp vrf large-community
+- show bgp vrf large-community exact-match
+- show bgp vrf large-community-list
+- show bgp vrf large-community-list exact-match
+- show bgp vrf martian
+- show bgp vrf martian next-hop
+- show bgp vrf neighbors
+- show bgp vrf neighbors advertised-routes
+- show bgp vrf neighbors dampened-routes
+- show bgp vrf neighbors filtered-routes
+- show bgp vrf neighbors flap-statistics
+- show bgp vrf neighbors prefix-counts
+- show bgp vrf neighbors received
+- show bgp vrf neighbors received prefix-filter
+- show bgp vrf neighbors received-routes
+- show bgp vrf neighbors routes
+- show bgp vrf nexthop
+- show bgp vrf nexthop detail
+- show bgp vrf prefix-list
+- show bgp vrf regexp
+- show bgp vrf route-map
+- show bgp vrf statistics
+- show bgp vrf summary
+- show bgp vrf summary established
+- show bgp vrf summary failed
+- show bgp vrf wide
+- show bgp wide
+- show bridge
+- show bridge detail
+- show bridge fdb
+- show bridge mdb
+- show bridge nexthop-group
+- show bridge vlan
+- show bridge vlan tunnel
+- show bridge vni
+- show configuration
+- show configuration all
+- show configuration commands
+- show configuration json
+- show configuration json pretty
+- show conntrack
+- show conntrack statistics
+- show conntrack table
+- show conntrack table ipv4
+- show conntrack table ipv6
+- show conntrack-sync
+- show conntrack-sync cache
+- show conntrack-sync cache external
+- show conntrack-sync cache external expect
+- show conntrack-sync cache external main
+- show conntrack-sync cache internal
+- show conntrack-sync cache internal expect
+- show conntrack-sync cache internal main
+- show conntrack-sync statistics
+- show conntrack-sync status
+- show console-server
+- show console-server ports
+- show console-server user
+- show date
+- show date utc
+- show date utc maya
+- show dhcp
+- show dhcp client
+- show dhcp client leases
+- show dhcp client leases interface
+- show dhcp server
+- show dhcp server leases
+- show dhcp server leases origin
+- show dhcp server leases pool
+- show dhcp server leases sort
+- show dhcp server leases state
+- show dhcp server static-mappings
+- show dhcp server static-mappings pool
+- show dhcp server static-mappings sort
+- show dhcp server statistics
+- show dhcp server statistics pool
+- show dhcpv6
+- show dhcpv6 server
+- show dhcpv6 server leases
+- show dhcpv6 server leases pool
+- show dhcpv6 server leases sort
+- show dhcpv6 server leases state
+- show dhcpv6 server static-mappings
+- show dhcpv6 server static-mappings pool
+- show dhcpv6 server static-mappings sort
+- show dhcpv6 server statistics
+- show dhcpv6 server statistics pool
+- show disk
+- show disk format
+- show dns
+- show dns dynamic
+- show dns dynamic status
+- show dns forwarding
+- show dns forwarding statistics
+- show environment
+- show environment sensors
+- show evpn
+- show evpn access-vlan
+- show evpn access-vlan detail
+- show evpn access-vlan node.tag
+- show evpn arp-cache
+- show evpn arp-cache vni
+- show evpn es
+- show evpn es detail
+- show evpn es-evi
+- show evpn es-evi detail
+- show evpn es-evi vni
+- show evpn mac
+- show evpn mac vni
+- show evpn next-hops
+- show evpn next-hops vni
+- show evpn rmac
+- show evpn rmac vni
+- show evpn vni
+- show evpn vni detail
+- show file
+- show firewall
+- show firewall bridge
+- show firewall bridge forward
+- show firewall bridge forward filter
+- show firewall bridge forward filter detail
+- show firewall bridge forward filter rule
+- show firewall bridge forward filter rule detail
+- show firewall bridge input
+- show firewall bridge input filter
+- show firewall bridge input filter detail
+- show firewall bridge input filter rule
+- show firewall bridge input filter rule detail
+- show firewall bridge name
+- show firewall bridge name detail
+- show firewall bridge name rule
+- show firewall bridge name rule detail
+- show firewall bridge output
+- show firewall bridge output filter
+- show firewall bridge output filter detail
+- show firewall bridge output filter rule
+- show firewall bridge output filter rule detail
+- show firewall bridge prerouting
+- show firewall bridge prerouting filter
+- show firewall bridge prerouting filter detail
+- show firewall bridge prerouting filter rule
+- show firewall bridge prerouting filter rule detail
+- show firewall ipv4
+- show firewall ipv4 prerouting
+- show firewall ipv4 prerouting raw
+- show firewall ipv4 prerouting raw detail
+- show firewall ipv4 prerouting raw rule
+- show firewall ipv4 prerouting raw rule detail
+- show firewall ipv6
+- show firewall ipv6 prerouting
+- show firewall ipv6 prerouting raw
+- show firewall ipv6 prerouting raw detail
+- show firewall ipv6 prerouting raw rule
+- show firewall ipv6 prerouting raw rule detail
+- show firewall statistics
+- show firewall statistics detail
+- show firewall summary
+- show firewall zone-policy
+- show firewall zone-policy zone
+- show flow-accounting
+- show flow-accounting interface
+- show flow-accounting interface host
+- show flow-accounting interface port
+- show flow-accounting interface top
+- show haproxy
+- show hardware
+- show hardware cpu
+- show hardware cpu detail
+- show hardware cpu summary
+- show hardware dmi
+- show hardware mem
+- show hardware pci
+- show hardware pci detail
+- show hardware storage
+- show hardware storage nvme
+- show hardware storage scsi
+- show hardware storage scsi detail
+- show hardware storage smart
+- show hardware usb
+- show hardware usb detail
+- show hardware usb serial
+- show history
+- show history brief
+- show host
+- show host date
+- show host domain
+- show host lookup
+- show host name
+- show host os
+- show interfaces
+- show interfaces counters
+- show interfaces detail
+- show interfaces summary
+- show ip
+- show ip access-list
+- show ip as-path-access-list
+- show ip bgp
+- show ip bgp attribute-info
+- show ip bgp cidr-only
+- show ip bgp community
+- show ip bgp community accept-own
+- show ip bgp community accept-own-nexthop
+- show ip bgp community blackhole
+- show ip bgp community exact-match
+- show ip bgp community graceful-shutdown
+- show ip bgp community llgr-stale
+- show ip bgp community local-AS
+- show ip bgp community no-advertise
+- show ip bgp community no-export
+- show ip bgp community no-llgr
+- show ip bgp community no-peer
+- show ip bgp community route-filter-translated-v4
+- show ip bgp community route-filter-translated-v6
+- show ip bgp community route-filter-v4
+- show ip bgp community route-filter-v6
+- show ip bgp community-info
+- show ip bgp community-list
+- show ip bgp community-list exact-match
+- show ip bgp dampening
+- show ip bgp dampening dampened-paths
+- show ip bgp dampening flap-statistics
+- show ip bgp dampening parameters
+- show ip bgp filter-list
+- show ip bgp ipv4
+- show ip bgp ipv4 unicast
+- show ip bgp ipv4 unicast cidr-only
+- show ip bgp ipv4 unicast community
+- show ip bgp ipv4 unicast community-list
+- show ip bgp ipv4 unicast community-list exact-match
+- show ip bgp ipv4 unicast neighbors
+- show ip bgp ipv4 unicast neighbors advertised-routes
+- show ip bgp ipv4 unicast neighbors filtered-routes
+- show ip bgp ipv4 unicast neighbors prefix-counts
+- show ip bgp ipv4 unicast neighbors received-routes
+- show ip bgp ipv4 unicast neighbors routes
+- show ip bgp ipv4 unicast paths
+- show ip bgp ipv4 unicast prefix-list
+- show ip bgp ipv4 unicast regexp
+- show ip bgp ipv4 unicast route-map
+- show ip bgp ipv4 unicast summary
+- show ip bgp large-community
+- show ip bgp large-community exact-match
+- show ip bgp large-community-info
+- show ip bgp large-community-list
+- show ip bgp large-community-list exact-match
+- show ip bgp memory
+- show ip bgp neighbors
+- show ip bgp neighbors advertised-routes
+- show ip bgp neighbors dampened-routes
+- show ip bgp neighbors filtered-routes
+- show ip bgp neighbors flap-statistics
+- show ip bgp neighbors prefix-counts
+- show ip bgp neighbors received
+- show ip bgp neighbors received prefix-filter
+- show ip bgp neighbors received-routes
+- show ip bgp neighbors routes
+- show ip bgp paths
+- show ip bgp prefix-list
+- show ip bgp regexp
+- show ip bgp route-map
+- show ip bgp statistics
+- show ip bgp summary
+- show ip bgp summary established
+- show ip bgp summary failed
+- show ip bgp vrf
+- show ip bgp vrf attribute-info
+- show ip bgp vrf cidr-only
+- show ip bgp vrf community
+- show ip bgp vrf community accept-own
+- show ip bgp vrf community accept-own-nexthop
+- show ip bgp vrf community blackhole
+- show ip bgp vrf community exact-match
+- show ip bgp vrf community graceful-shutdown
+- show ip bgp vrf community llgr-stale
+- show ip bgp vrf community local-AS
+- show ip bgp vrf community no-advertise
+- show ip bgp vrf community no-export
+- show ip bgp vrf community no-llgr
+- show ip bgp vrf community no-peer
+- show ip bgp vrf community route-filter-translated-v4
+- show ip bgp vrf community route-filter-translated-v6
+- show ip bgp vrf community route-filter-v4
+- show ip bgp vrf community route-filter-v6
+- show ip bgp vrf community-info
+- show ip bgp vrf community-list
+- show ip bgp vrf community-list exact-match
+- show ip bgp vrf dampening
+- show ip bgp vrf dampening dampened-paths
+- show ip bgp vrf dampening flap-statistics
+- show ip bgp vrf dampening parameters
+- show ip bgp vrf filter-list
+- show ip bgp vrf ipv4
+- show ip bgp vrf ipv4 unicast
+- show ip bgp vrf ipv4 unicast cidr-only
+- show ip bgp vrf ipv4 unicast community
+- show ip bgp vrf ipv4 unicast community-list
+- show ip bgp vrf ipv4 unicast community-list exact-match
+- show ip bgp vrf ipv4 unicast neighbors
+- show ip bgp vrf ipv4 unicast neighbors advertised-routes
+- show ip bgp vrf ipv4 unicast neighbors filtered-routes
+- show ip bgp vrf ipv4 unicast neighbors prefix-counts
+- show ip bgp vrf ipv4 unicast neighbors received-routes
+- show ip bgp vrf ipv4 unicast neighbors routes
+- show ip bgp vrf ipv4 unicast paths
+- show ip bgp vrf ipv4 unicast prefix-list
+- show ip bgp vrf ipv4 unicast regexp
+- show ip bgp vrf ipv4 unicast route-map
+- show ip bgp vrf ipv4 unicast summary
+- show ip bgp vrf large-community
+- show ip bgp vrf large-community exact-match
+- show ip bgp vrf large-community-info
+- show ip bgp vrf large-community-list
+- show ip bgp vrf large-community-list exact-match
+- show ip bgp vrf memory
+- show ip bgp vrf neighbors
+- show ip bgp vrf neighbors advertised-routes
+- show ip bgp vrf neighbors dampened-routes
+- show ip bgp vrf neighbors filtered-routes
+- show ip bgp vrf neighbors flap-statistics
+- show ip bgp vrf neighbors prefix-counts
+- show ip bgp vrf neighbors received
+- show ip bgp vrf neighbors received prefix-filter
+- show ip bgp vrf neighbors received-routes
+- show ip bgp vrf neighbors routes
+- show ip bgp vrf paths
+- show ip bgp vrf prefix-list
+- show ip bgp vrf regexp
+- show ip bgp vrf route-map
+- show ip bgp vrf statistics
+- show ip bgp vrf summary
+- show ip bgp vrf summary established
+- show ip bgp vrf summary failed
+- show ip bgp vrf wide
+- show ip bgp wide
+- show ip community-list
+- show ip extcommunity-list
+- show ip forwarding
+- show ip groups
+- show ip igmp
+- show ip igmp groups
+- show ip igmp interface
+- show ip igmp join
+- show ip igmp sources
+- show ip igmp statistics
+- show ip large-community-list
+- show ip multicast
+- show ip multicast group
+- show ip multicast group interface
+- show ip multicast interface
+- show ip multicast route
+- show ip multicast summary
+- show ip neighbors
+- show ip neighbors interface
+- show ip neighbors state
+- show ip nhrp
+- show ip nhrp cache
+- show ip nhrp nhs
+- show ip nhrp shortcut
+- show ip nht
+- show ip nht vrf
+- show ip ospf
+- show ip ospf border-routers
+- show ip ospf database
+- show ip ospf database asbr-summary
+- show ip ospf database asbr-summary adv-router
+- show ip ospf database asbr-summary self-originate
+- show ip ospf database external
+- show ip ospf database external adv-router
+- show ip ospf database external self-originate
+- show ip ospf database max-age
+- show ip ospf database network
+- show ip ospf database network adv-router
+- show ip ospf database network self-originate
+- show ip ospf database nssa-external
+- show ip ospf database nssa-external adv-router
+- show ip ospf database nssa-external self-originate
+- show ip ospf database opaque-area
+- show ip ospf database opaque-area adv-router
+- show ip ospf database opaque-area self-originate
+- show ip ospf database opaque-as
+- show ip ospf database opaque-as adv-router
+- show ip ospf database opaque-as self-originate
+- show ip ospf database opaque-link
+- show ip ospf database opaque-link adv-router
+- show ip ospf database opaque-link self-originate
+- show ip ospf database router
+- show ip ospf database router adv-router
+- show ip ospf database router self-originate
+- show ip ospf database self-originate
+- show ip ospf database summary
+- show ip ospf database summary adv-router
+- show ip ospf database summary self-originate
+- show ip ospf graceful-restart
+- show ip ospf graceful-restart helper
+- show ip ospf interface
+- show ip ospf mpls
+- show ip ospf mpls ldp-sync
+- show ip ospf mpls ldp-sync interface
+- show ip ospf neighbor
+- show ip ospf neighbor detail
+- show ip ospf route
+- show ip ospf route detail
+- show ip ospf vrf
+- show ip ospf vrf border-routers
+- show ip ospf vrf database
+- show ip ospf vrf database asbr-summary
+- show ip ospf vrf database asbr-summary adv-router
+- show ip ospf vrf database asbr-summary self-originate
+- show ip ospf vrf database external
+- show ip ospf vrf database external adv-router
+- show ip ospf vrf database external self-originate
+- show ip ospf vrf database max-age
+- show ip ospf vrf database network
+- show ip ospf vrf database network adv-router
+- show ip ospf vrf database network self-originate
+- show ip ospf vrf database nssa-external
+- show ip ospf vrf database nssa-external adv-router
+- show ip ospf vrf database nssa-external self-originate
+- show ip ospf vrf database opaque-area
+- show ip ospf vrf database opaque-area adv-router
+- show ip ospf vrf database opaque-area self-originate
+- show ip ospf vrf database opaque-as
+- show ip ospf vrf database opaque-as adv-router
+- show ip ospf vrf database opaque-as self-originate
+- show ip ospf vrf database opaque-link
+- show ip ospf vrf database opaque-link adv-router
+- show ip ospf vrf database opaque-link self-originate
+- show ip ospf vrf database router
+- show ip ospf vrf database router adv-router
+- show ip ospf vrf database router self-originate
+- show ip ospf vrf database self-originate
+- show ip ospf vrf database summary
+- show ip ospf vrf database summary adv-router
+- show ip ospf vrf database summary self-originate
+- show ip ospf vrf graceful-restart
+- show ip ospf vrf graceful-restart helper
+- show ip ospf vrf interface
+- show ip ospf vrf mpls
+- show ip ospf vrf mpls ldp-sync
+- show ip ospf vrf mpls ldp-sync interface
+- show ip ospf vrf neighbor
+- show ip ospf vrf neighbor detail
+- show ip ospf vrf route
+- show ip ospf vrf route detail
+- show ip pim
+- show ip pim assert
+- show ip pim assert-internal
+- show ip pim assert-metric
+- show ip pim assert-winner-metric
+- show ip pim bsm-database
+- show ip pim bsr
+- show ip pim bsrp-info
+- show ip pim channel
+- show ip pim group-type
+- show ip pim interface
+- show ip pim join
+- show ip pim local-membership
+- show ip pim neighbor
+- show ip pim nexthop
+- show ip pim rp-info
+- show ip pim rpf
+- show ip pim secondary
+- show ip pim state
+- show ip pim statistics
+- show ip pim upstream
+- show ip pim upstream-join-desired
+- show ip pim upstream-rpf
+- show ip pim vxlan-groups
+- show ip ports
+- show ip prefix-list
+- show ip protocol
+- show ip rip
+- show ip rip status
+- show ip route
+- show ip route bgp
+- show ip route cache
+- show ip route connected
+- show ip route forward
+- show ip route isis
+- show ip route kernel
+- show ip route longer-prefixes
+- show ip route openfabric
+- show ip route ospf
+- show ip route rip
+- show ip route static
+- show ip route summary
+- show ip route summary table
+- show ip route supernets-only
+- show ip route table
+- show ip route tag
+- show ip route vrf
+- show ip route vrf bgp
+- show ip route vrf connected
+- show ip route vrf isis
+- show ip route vrf kernel
+- show ip route vrf node.tag
+- show ip route vrf node.tag longer-prefixes
+- show ip route vrf ospf
+- show ip route vrf rip
+- show ip route vrf static
+- show ip route vrf summary
+- show ip route vrf supernets-only
+- show ip route vrf tag
+- show ipoe-server
+- show ipoe-server sessions
+- show ipoe-server statistics
+- show ipv6
+- show ipv6 access-list
+- show ipv6 forwarding
+- show ipv6 groups
+- show ipv6 mld
+- show ipv6 mld groups
+- show ipv6 mld interface
+- show ipv6 mld joins
+- show ipv6 mld statistics
+- show ipv6 multicast
+- show ipv6 multicast group
+- show ipv6 multicast group interface
+- show ipv6 neighbors
+- show ipv6 neighbors interface
+- show ipv6 neighbors state
+- show ipv6 nht
+- show ipv6 nht vrf
+- show ipv6 ospfv3
+- show ipv6 ospfv3 area
+- show ipv6 ospfv3 area router
+- show ipv6 ospfv3 border-routers
+- show ipv6 ospfv3 border-routers detail
+- show ipv6 ospfv3 database
+- show ipv6 ospfv3 database adv-router
+- show ipv6 ospfv3 database adv-router linkstate-id
+- show ipv6 ospfv3 database adv-router linkstate-id detail
+- show ipv6 ospfv3 database adv-router linkstate-id dump
+- show ipv6 ospfv3 database adv-router linkstate-id internal
+- show ipv6 ospfv3 database any
+- show ipv6 ospfv3 database any any
+- show ipv6 ospfv3 database any any detail
+- show ipv6 ospfv3 database any any dump
+- show ipv6 ospfv3 database any any internal
+- show ipv6 ospfv3 database any detail
+- show ipv6 ospfv3 database any dump
+- show ipv6 ospfv3 database any internal
+- show ipv6 ospfv3 database any node.tag
+- show ipv6 ospfv3 database any node.tag detail
+- show ipv6 ospfv3 database any node.tag dump
+- show ipv6 ospfv3 database any node.tag internal
+- show ipv6 ospfv3 database as-external
+- show ipv6 ospfv3 database as-external adv-router
+- show ipv6 ospfv3 database as-external adv-router detail
+- show ipv6 ospfv3 database as-external adv-router dump
+- show ipv6 ospfv3 database as-external adv-router internal
+- show ipv6 ospfv3 database as-external adv-router linkstate-id
+- show ipv6 ospfv3 database as-external adv-router linkstate-id detail
+- show ipv6 ospfv3 database as-external adv-router linkstate-id dump
+- show ipv6 ospfv3 database as-external adv-router linkstate-id internal
+- show ipv6 ospfv3 database as-external any
+- show ipv6 ospfv3 database as-external any detail
+- show ipv6 ospfv3 database as-external any dump
+- show ipv6 ospfv3 database as-external any internal
+- show ipv6 ospfv3 database as-external detail
+- show ipv6 ospfv3 database as-external dump
+- show ipv6 ospfv3 database as-external internal
+- show ipv6 ospfv3 database as-external linkstate-id
+- show ipv6 ospfv3 database as-external linkstate-id detail
+- show ipv6 ospfv3 database as-external linkstate-id dump
+- show ipv6 ospfv3 database as-external linkstate-id internal
+- show ipv6 ospfv3 database as-external node.tag
+- show ipv6 ospfv3 database as-external node.tag detail
+- show ipv6 ospfv3 database as-external node.tag dump
+- show ipv6 ospfv3 database as-external node.tag internal
+- show ipv6 ospfv3 database as-external self-originated
+- show ipv6 ospfv3 database as-external self-originated detail
+- show ipv6 ospfv3 database as-external self-originated dump
+- show ipv6 ospfv3 database as-external self-originated internal
+- show ipv6 ospfv3 database detail
+- show ipv6 ospfv3 database group-membership
+- show ipv6 ospfv3 database group-membership adv-router
+- show ipv6 ospfv3 database group-membership adv-router detail
+- show ipv6 ospfv3 database group-membership adv-router dump
+- show ipv6 ospfv3 database group-membership adv-router internal
+- show ipv6 ospfv3 database group-membership adv-router linkstate-id
+- show ipv6 ospfv3 database group-membership adv-router linkstate-id detail
+- show ipv6 ospfv3 database group-membership adv-router linkstate-id dump
+- show ipv6 ospfv3 database group-membership adv-router linkstate-id internal
+- show ipv6 ospfv3 database group-membership detail
+- show ipv6 ospfv3 database group-membership dump
+- show ipv6 ospfv3 database group-membership internal
+- show ipv6 ospfv3 database group-membership linkstate-id
+- show ipv6 ospfv3 database group-membership linkstate-id detail
+- show ipv6 ospfv3 database group-membership linkstate-id dump
+- show ipv6 ospfv3 database group-membership linkstate-id internal
+- show ipv6 ospfv3 database group-membership node.tag
+- show ipv6 ospfv3 database group-membership node.tag detail
+- show ipv6 ospfv3 database group-membership node.tag dump
+- show ipv6 ospfv3 database group-membership node.tag internal
+- show ipv6 ospfv3 database group-membership node.tag self-originated
+- show ipv6 ospfv3 database group-membership node.tag self-originated detail
+- show ipv6 ospfv3 database group-membership node.tag self-originated dump
+- show ipv6 ospfv3 database group-membership node.tag self-originated internal
+- show ipv6 ospfv3 database group-membership self-originated
+- show ipv6 ospfv3 database group-membership self-originated detail
+- show ipv6 ospfv3 database group-membership self-originated dump
+- show ipv6 ospfv3 database group-membership self-originated internal
+- show ipv6 ospfv3 database inter-prefix
+- show ipv6 ospfv3 database inter-prefix adv-router
+- show ipv6 ospfv3 database inter-prefix adv-router detail
+- show ipv6 ospfv3 database inter-prefix adv-router dump
+- show ipv6 ospfv3 database inter-prefix adv-router internal
+- show ipv6 ospfv3 database inter-prefix adv-router linkstate-id
+- show ipv6 ospfv3 database inter-prefix adv-router linkstate-id detail
+- show ipv6 ospfv3 database inter-prefix adv-router linkstate-id dump
+- show ipv6 ospfv3 database inter-prefix adv-router linkstate-id internal
+- show ipv6 ospfv3 database inter-prefix detail
+- show ipv6 ospfv3 database inter-prefix dump
+- show ipv6 ospfv3 database inter-prefix internal
+- show ipv6 ospfv3 database inter-prefix linkstate-id
+- show ipv6 ospfv3 database inter-prefix linkstate-id detail
+- show ipv6 ospfv3 database inter-prefix linkstate-id dump
+- show ipv6 ospfv3 database inter-prefix linkstate-id internal
+- show ipv6 ospfv3 database inter-prefix node.tag
+- show ipv6 ospfv3 database inter-prefix node.tag detail
+- show ipv6 ospfv3 database inter-prefix node.tag dump
+- show ipv6 ospfv3 database inter-prefix node.tag internal
+- show ipv6 ospfv3 database inter-prefix node.tag self-originated
+- show ipv6 ospfv3 database inter-prefix node.tag self-originated detail
+- show ipv6 ospfv3 database inter-prefix node.tag self-originated dump
+- show ipv6 ospfv3 database inter-prefix node.tag self-originated internal
+- show ipv6 ospfv3 database inter-prefix self-originated
+- show ipv6 ospfv3 database inter-prefix self-originated detail
+- show ipv6 ospfv3 database inter-prefix self-originated dump
+- show ipv6 ospfv3 database inter-prefix self-originated internal
+- show ipv6 ospfv3 database inter-router
+- show ipv6 ospfv3 database inter-router adv-router
+- show ipv6 ospfv3 database inter-router adv-router detail
+- show ipv6 ospfv3 database inter-router adv-router dump
+- show ipv6 ospfv3 database inter-router adv-router internal
+- show ipv6 ospfv3 database inter-router adv-router linkstate-id
+- show ipv6 ospfv3 database inter-router adv-router linkstate-id detail
+- show ipv6 ospfv3 database inter-router adv-router linkstate-id dump
+- show ipv6 ospfv3 database inter-router adv-router linkstate-id internal
+- show ipv6 ospfv3 database inter-router detail
+- show ipv6 ospfv3 database inter-router dump
+- show ipv6 ospfv3 database inter-router internal
+- show ipv6 ospfv3 database inter-router linkstate-id
+- show ipv6 ospfv3 database inter-router linkstate-id detail
+- show ipv6 ospfv3 database inter-router linkstate-id dump
+- show ipv6 ospfv3 database inter-router linkstate-id internal
+- show ipv6 ospfv3 database inter-router node.tag
+- show ipv6 ospfv3 database inter-router node.tag detail
+- show ipv6 ospfv3 database inter-router node.tag dump
+- show ipv6 ospfv3 database inter-router node.tag internal
+- show ipv6 ospfv3 database inter-router node.tag self-originated
+- show ipv6 ospfv3 database inter-router node.tag self-originated detail
+- show ipv6 ospfv3 database inter-router node.tag self-originated dump
+- show ipv6 ospfv3 database inter-router node.tag self-originated internal
+- show ipv6 ospfv3 database inter-router self-originated
+- show ipv6 ospfv3 database inter-router self-originated detail
+- show ipv6 ospfv3 database inter-router self-originated dump
+- show ipv6 ospfv3 database inter-router self-originated internal
+- show ipv6 ospfv3 database internal
+- show ipv6 ospfv3 database intra-prefix
+- show ipv6 ospfv3 database intra-prefix adv-router
+- show ipv6 ospfv3 database intra-prefix adv-router detail
+- show ipv6 ospfv3 database intra-prefix adv-router dump
+- show ipv6 ospfv3 database intra-prefix adv-router internal
+- show ipv6 ospfv3 database intra-prefix adv-router linkstate-id
+- show ipv6 ospfv3 database intra-prefix adv-router linkstate-id detail
+- show ipv6 ospfv3 database intra-prefix adv-router linkstate-id dump
+- show ipv6 ospfv3 database intra-prefix adv-router linkstate-id internal
+- show ipv6 ospfv3 database intra-prefix detail
+- show ipv6 ospfv3 database intra-prefix dump
+- show ipv6 ospfv3 database intra-prefix internal
+- show ipv6 ospfv3 database intra-prefix linkstate-id
+- show ipv6 ospfv3 database intra-prefix linkstate-id detail
+- show ipv6 ospfv3 database intra-prefix linkstate-id dump
+- show ipv6 ospfv3 database intra-prefix linkstate-id internal
+- show ipv6 ospfv3 database intra-prefix node.tag
+- show ipv6 ospfv3 database intra-prefix node.tag detail
+- show ipv6 ospfv3 database intra-prefix node.tag dump
+- show ipv6 ospfv3 database intra-prefix node.tag internal
+- show ipv6 ospfv3 database intra-prefix node.tag self-originated
+- show ipv6 ospfv3 database intra-prefix node.tag self-originated detail
+- show ipv6 ospfv3 database intra-prefix node.tag self-originated dump
+- show ipv6 ospfv3 database intra-prefix node.tag self-originated internal
+- show ipv6 ospfv3 database intra-prefix self-originated
+- show ipv6 ospfv3 database intra-prefix self-originated detail
+- show ipv6 ospfv3 database intra-prefix self-originated dump
+- show ipv6 ospfv3 database intra-prefix self-originated internal
+- show ipv6 ospfv3 database link
+- show ipv6 ospfv3 database link adv-router
+- show ipv6 ospfv3 database link adv-router detail
+- show ipv6 ospfv3 database link adv-router dump
+- show ipv6 ospfv3 database link adv-router internal
+- show ipv6 ospfv3 database link adv-router linkstate-id
+- show ipv6 ospfv3 database link adv-router linkstate-id detail
+- show ipv6 ospfv3 database link adv-router linkstate-id dump
+- show ipv6 ospfv3 database link adv-router linkstate-id internal
+- show ipv6 ospfv3 database link detail
+- show ipv6 ospfv3 database link dump
+- show ipv6 ospfv3 database link internal
+- show ipv6 ospfv3 database link linkstate-id
+- show ipv6 ospfv3 database link linkstate-id detail
+- show ipv6 ospfv3 database link linkstate-id dump
+- show ipv6 ospfv3 database link linkstate-id internal
+- show ipv6 ospfv3 database link node.tag
+- show ipv6 ospfv3 database link node.tag detail
+- show ipv6 ospfv3 database link node.tag dump
+- show ipv6 ospfv3 database link node.tag internal
+- show ipv6 ospfv3 database link node.tag self-originated
+- show ipv6 ospfv3 database link node.tag self-originated detail
+- show ipv6 ospfv3 database link node.tag self-originated dump
+- show ipv6 ospfv3 database link node.tag self-originated internal
+- show ipv6 ospfv3 database link self-originated
+- show ipv6 ospfv3 database link self-originated detail
+- show ipv6 ospfv3 database link self-originated dump
+- show ipv6 ospfv3 database link self-originated internal
+- show ipv6 ospfv3 database linkstate-id
+- show ipv6 ospfv3 database linkstate-id detail
+- show ipv6 ospfv3 database linkstate-id dump
+- show ipv6 ospfv3 database linkstate-id internal
+- show ipv6 ospfv3 database network
+- show ipv6 ospfv3 database network adv-router
+- show ipv6 ospfv3 database network adv-router detail
+- show ipv6 ospfv3 database network adv-router dump
+- show ipv6 ospfv3 database network adv-router internal
+- show ipv6 ospfv3 database network adv-router linkstate-id
+- show ipv6 ospfv3 database network adv-router linkstate-id detail
+- show ipv6 ospfv3 database network adv-router linkstate-id dump
+- show ipv6 ospfv3 database network adv-router linkstate-id internal
+- show ipv6 ospfv3 database network detail
+- show ipv6 ospfv3 database network dump
+- show ipv6 ospfv3 database network internal
+- show ipv6 ospfv3 database network linkstate-id
+- show ipv6 ospfv3 database network linkstate-id detail
+- show ipv6 ospfv3 database network linkstate-id dump
+- show ipv6 ospfv3 database network linkstate-id internal
+- show ipv6 ospfv3 database network node.tag
+- show ipv6 ospfv3 database network node.tag detail
+- show ipv6 ospfv3 database network node.tag dump
+- show ipv6 ospfv3 database network node.tag internal
+- show ipv6 ospfv3 database network node.tag self-originated
+- show ipv6 ospfv3 database network node.tag self-originated detail
+- show ipv6 ospfv3 database network node.tag self-originated dump
+- show ipv6 ospfv3 database network node.tag self-originated internal
+- show ipv6 ospfv3 database network self-originated
+- show ipv6 ospfv3 database network self-originated detail
+- show ipv6 ospfv3 database network self-originated dump
+- show ipv6 ospfv3 database network self-originated internal
+- show ipv6 ospfv3 database node.tag
+- show ipv6 ospfv3 database node.tag adv-router
+- show ipv6 ospfv3 database node.tag adv-router detail
+- show ipv6 ospfv3 database node.tag adv-router dump
+- show ipv6 ospfv3 database node.tag adv-router internal
+- show ipv6 ospfv3 database node.tag adv-router linkstate-id
+- show ipv6 ospfv3 database node.tag adv-router linkstate-id detail
+- show ipv6 ospfv3 database node.tag adv-router linkstate-id dump
+- show ipv6 ospfv3 database node.tag adv-router linkstate-id internal
+- show ipv6 ospfv3 database node.tag detail
+- show ipv6 ospfv3 database node.tag dump
+- show ipv6 ospfv3 database node.tag internal
+- show ipv6 ospfv3 database node.tag linkstate-id
+- show ipv6 ospfv3 database node.tag linkstate-id detail
+- show ipv6 ospfv3 database node.tag linkstate-id dump
+- show ipv6 ospfv3 database node.tag linkstate-id internal
+- show ipv6 ospfv3 database node.tag node.tag
+- show ipv6 ospfv3 database node.tag node.tag detail
+- show ipv6 ospfv3 database node.tag node.tag dump
+- show ipv6 ospfv3 database node.tag node.tag internal
+- show ipv6 ospfv3 database node.tag node.tag self-originated
+- show ipv6 ospfv3 database node.tag node.tag self-originated detail
+- show ipv6 ospfv3 database node.tag node.tag self-originated dump
+- show ipv6 ospfv3 database node.tag node.tag self-originated internal
+- show ipv6 ospfv3 database node.tag self-originated
+- show ipv6 ospfv3 database node.tag self-originated detail
+- show ipv6 ospfv3 database node.tag self-originated dump
+- show ipv6 ospfv3 database node.tag self-originated internal
+- show ipv6 ospfv3 database router
+- show ipv6 ospfv3 database router adv-router
+- show ipv6 ospfv3 database router adv-router detail
+- show ipv6 ospfv3 database router adv-router dump
+- show ipv6 ospfv3 database router adv-router internal
+- show ipv6 ospfv3 database router adv-router linkstate-id
+- show ipv6 ospfv3 database router adv-router linkstate-id detail
+- show ipv6 ospfv3 database router adv-router linkstate-id dump
+- show ipv6 ospfv3 database router adv-router linkstate-id internal
+- show ipv6 ospfv3 database router detail
+- show ipv6 ospfv3 database router dump
+- show ipv6 ospfv3 database router internal
+- show ipv6 ospfv3 database router linkstate-id
+- show ipv6 ospfv3 database router linkstate-id detail
+- show ipv6 ospfv3 database router linkstate-id dump
+- show ipv6 ospfv3 database router linkstate-id internal
+- show ipv6 ospfv3 database router node.tag
+- show ipv6 ospfv3 database router node.tag detail
+- show ipv6 ospfv3 database router node.tag dump
+- show ipv6 ospfv3 database router node.tag internal
+- show ipv6 ospfv3 database router node.tag self-originated
+- show ipv6 ospfv3 database router node.tag self-originated detail
+- show ipv6 ospfv3 database router node.tag self-originated dump
+- show ipv6 ospfv3 database router node.tag self-originated internal
+- show ipv6 ospfv3 database router self-originated
+- show ipv6 ospfv3 database router self-originated detail
+- show ipv6 ospfv3 database router self-originated dump
+- show ipv6 ospfv3 database router self-originated internal
+- show ipv6 ospfv3 database self-originated
+- show ipv6 ospfv3 database self-originated detail
+- show ipv6 ospfv3 database self-originated dump
+- show ipv6 ospfv3 database self-originated internal
+- show ipv6 ospfv3 database type-7
+- show ipv6 ospfv3 database type-7 adv-router
+- show ipv6 ospfv3 database type-7 adv-router detail
+- show ipv6 ospfv3 database type-7 adv-router dump
+- show ipv6 ospfv3 database type-7 adv-router internal
+- show ipv6 ospfv3 database type-7 adv-router linkstate-id
+- show ipv6 ospfv3 database type-7 adv-router linkstate-id detail
+- show ipv6 ospfv3 database type-7 adv-router linkstate-id dump
+- show ipv6 ospfv3 database type-7 adv-router linkstate-id internal
+- show ipv6 ospfv3 database type-7 detail
+- show ipv6 ospfv3 database type-7 dump
+- show ipv6 ospfv3 database type-7 internal
+- show ipv6 ospfv3 database type-7 linkstate-id
+- show ipv6 ospfv3 database type-7 linkstate-id detail
+- show ipv6 ospfv3 database type-7 linkstate-id dump
+- show ipv6 ospfv3 database type-7 linkstate-id internal
+- show ipv6 ospfv3 database type-7 node.tag
+- show ipv6 ospfv3 database type-7 node.tag detail
+- show ipv6 ospfv3 database type-7 node.tag dump
+- show ipv6 ospfv3 database type-7 node.tag internal
+- show ipv6 ospfv3 database type-7 node.tag self-originated
+- show ipv6 ospfv3 database type-7 node.tag self-originated detail
+- show ipv6 ospfv3 database type-7 node.tag self-originated dump
+- show ipv6 ospfv3 database type-7 node.tag self-originated internal
+- show ipv6 ospfv3 database type-7 self-originated
+- show ipv6 ospfv3 database type-7 self-originated detail
+- show ipv6 ospfv3 database type-7 self-originated dump
+- show ipv6 ospfv3 database type-7 self-originated internal
+- show ipv6 ospfv3 graceful-restart
+- show ipv6 ospfv3 graceful-restart helper
+- show ipv6 ospfv3 interface
+- show ipv6 ospfv3 interface prefix
+- show ipv6 ospfv3 interface prefix detail
+- show ipv6 ospfv3 interface prefix match
+- show ipv6 ospfv3 linkstate
+- show ipv6 ospfv3 linkstate detail
+- show ipv6 ospfv3 linkstate network
+- show ipv6 ospfv3 linkstate network node.tag
+- show ipv6 ospfv3 linkstate router
+- show ipv6 ospfv3 neighbor
+- show ipv6 ospfv3 neighbor detail
+- show ipv6 ospfv3 neighbor drchoice
+- show ipv6 ospfv3 redistribute
+- show ipv6 ospfv3 route
+- show ipv6 ospfv3 route detail
+- show ipv6 ospfv3 route external-1
+- show ipv6 ospfv3 route external-1 detail
+- show ipv6 ospfv3 route external-2
+- show ipv6 ospfv3 route external-2 detail
+- show ipv6 ospfv3 route inter-area
+- show ipv6 ospfv3 route inter-area detail
+- show ipv6 ospfv3 route intra-area
+- show ipv6 ospfv3 route intra-area detail
+- show ipv6 ospfv3 route longer
+- show ipv6 ospfv3 route match
+- show ipv6 ospfv3 route match detail
+- show ipv6 ospfv3 route summary
+- show ipv6 ospfv3 vrf
+- show ipv6 ospfv3 vrf area
+- show ipv6 ospfv3 vrf area router
+- show ipv6 ospfv3 vrf border-routers
+- show ipv6 ospfv3 vrf border-routers detail
+- show ipv6 ospfv3 vrf database
+- show ipv6 ospfv3 vrf database adv-router
+- show ipv6 ospfv3 vrf database adv-router linkstate-id
+- show ipv6 ospfv3 vrf database adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database any
+- show ipv6 ospfv3 vrf database any any
+- show ipv6 ospfv3 vrf database any any detail
+- show ipv6 ospfv3 vrf database any any dump
+- show ipv6 ospfv3 vrf database any any internal
+- show ipv6 ospfv3 vrf database any detail
+- show ipv6 ospfv3 vrf database any dump
+- show ipv6 ospfv3 vrf database any internal
+- show ipv6 ospfv3 vrf database any node.tag
+- show ipv6 ospfv3 vrf database any node.tag detail
+- show ipv6 ospfv3 vrf database any node.tag dump
+- show ipv6 ospfv3 vrf database any node.tag internal
+- show ipv6 ospfv3 vrf database as-external
+- show ipv6 ospfv3 vrf database as-external adv-router
+- show ipv6 ospfv3 vrf database as-external adv-router detail
+- show ipv6 ospfv3 vrf database as-external adv-router dump
+- show ipv6 ospfv3 vrf database as-external adv-router internal
+- show ipv6 ospfv3 vrf database as-external adv-router linkstate-id
+- show ipv6 ospfv3 vrf database as-external adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database as-external adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database as-external adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database as-external any
+- show ipv6 ospfv3 vrf database as-external any detail
+- show ipv6 ospfv3 vrf database as-external any dump
+- show ipv6 ospfv3 vrf database as-external any internal
+- show ipv6 ospfv3 vrf database as-external detail
+- show ipv6 ospfv3 vrf database as-external dump
+- show ipv6 ospfv3 vrf database as-external internal
+- show ipv6 ospfv3 vrf database as-external linkstate-id
+- show ipv6 ospfv3 vrf database as-external linkstate-id detail
+- show ipv6 ospfv3 vrf database as-external linkstate-id dump
+- show ipv6 ospfv3 vrf database as-external linkstate-id internal
+- show ipv6 ospfv3 vrf database as-external node.tag
+- show ipv6 ospfv3 vrf database as-external node.tag detail
+- show ipv6 ospfv3 vrf database as-external node.tag dump
+- show ipv6 ospfv3 vrf database as-external node.tag internal
+- show ipv6 ospfv3 vrf database as-external self-originated
+- show ipv6 ospfv3 vrf database as-external self-originated detail
+- show ipv6 ospfv3 vrf database as-external self-originated dump
+- show ipv6 ospfv3 vrf database as-external self-originated internal
+- show ipv6 ospfv3 vrf database detail
+- show ipv6 ospfv3 vrf database group-membership
+- show ipv6 ospfv3 vrf database group-membership adv-router
+- show ipv6 ospfv3 vrf database group-membership adv-router detail
+- show ipv6 ospfv3 vrf database group-membership adv-router dump
+- show ipv6 ospfv3 vrf database group-membership adv-router internal
+- show ipv6 ospfv3 vrf database group-membership adv-router linkstate-id
+- show ipv6 ospfv3 vrf database group-membership adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database group-membership adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database group-membership adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database group-membership detail
+- show ipv6 ospfv3 vrf database group-membership dump
+- show ipv6 ospfv3 vrf database group-membership internal
+- show ipv6 ospfv3 vrf database group-membership linkstate-id
+- show ipv6 ospfv3 vrf database group-membership linkstate-id detail
+- show ipv6 ospfv3 vrf database group-membership linkstate-id dump
+- show ipv6 ospfv3 vrf database group-membership linkstate-id internal
+- show ipv6 ospfv3 vrf database group-membership node.tag
+- show ipv6 ospfv3 vrf database group-membership node.tag detail
+- show ipv6 ospfv3 vrf database group-membership node.tag dump
+- show ipv6 ospfv3 vrf database group-membership node.tag internal
+- show ipv6 ospfv3 vrf database group-membership node.tag self-originated
+- show ipv6 ospfv3 vrf database group-membership node.tag self-originated detail
+- show ipv6 ospfv3 vrf database group-membership node.tag self-originated dump
+- show ipv6 ospfv3 vrf database group-membership node.tag self-originated internal
+- show ipv6 ospfv3 vrf database group-membership self-originated
+- show ipv6 ospfv3 vrf database group-membership self-originated detail
+- show ipv6 ospfv3 vrf database group-membership self-originated dump
+- show ipv6 ospfv3 vrf database group-membership self-originated internal
+- show ipv6 ospfv3 vrf database inter-prefix
+- show ipv6 ospfv3 vrf database inter-prefix adv-router
+- show ipv6 ospfv3 vrf database inter-prefix adv-router detail
+- show ipv6 ospfv3 vrf database inter-prefix adv-router dump
+- show ipv6 ospfv3 vrf database inter-prefix adv-router internal
+- show ipv6 ospfv3 vrf database inter-prefix adv-router linkstate-id
+- show ipv6 ospfv3 vrf database inter-prefix adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database inter-prefix adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database inter-prefix adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database inter-prefix detail
+- show ipv6 ospfv3 vrf database inter-prefix dump
+- show ipv6 ospfv3 vrf database inter-prefix internal
+- show ipv6 ospfv3 vrf database inter-prefix linkstate-id
+- show ipv6 ospfv3 vrf database inter-prefix linkstate-id detail
+- show ipv6 ospfv3 vrf database inter-prefix linkstate-id dump
+- show ipv6 ospfv3 vrf database inter-prefix linkstate-id internal
+- show ipv6 ospfv3 vrf database inter-prefix node.tag
+- show ipv6 ospfv3 vrf database inter-prefix node.tag detail
+- show ipv6 ospfv3 vrf database inter-prefix node.tag dump
+- show ipv6 ospfv3 vrf database inter-prefix node.tag internal
+- show ipv6 ospfv3 vrf database inter-prefix node.tag self-originated
+- show ipv6 ospfv3 vrf database inter-prefix node.tag self-originated detail
+- show ipv6 ospfv3 vrf database inter-prefix node.tag self-originated dump
+- show ipv6 ospfv3 vrf database inter-prefix node.tag self-originated internal
+- show ipv6 ospfv3 vrf database inter-prefix self-originated
+- show ipv6 ospfv3 vrf database inter-prefix self-originated detail
+- show ipv6 ospfv3 vrf database inter-prefix self-originated dump
+- show ipv6 ospfv3 vrf database inter-prefix self-originated internal
+- show ipv6 ospfv3 vrf database inter-router
+- show ipv6 ospfv3 vrf database inter-router adv-router
+- show ipv6 ospfv3 vrf database inter-router adv-router detail
+- show ipv6 ospfv3 vrf database inter-router adv-router dump
+- show ipv6 ospfv3 vrf database inter-router adv-router internal
+- show ipv6 ospfv3 vrf database inter-router adv-router linkstate-id
+- show ipv6 ospfv3 vrf database inter-router adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database inter-router adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database inter-router adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database inter-router detail
+- show ipv6 ospfv3 vrf database inter-router dump
+- show ipv6 ospfv3 vrf database inter-router internal
+- show ipv6 ospfv3 vrf database inter-router linkstate-id
+- show ipv6 ospfv3 vrf database inter-router linkstate-id detail
+- show ipv6 ospfv3 vrf database inter-router linkstate-id dump
+- show ipv6 ospfv3 vrf database inter-router linkstate-id internal
+- show ipv6 ospfv3 vrf database inter-router node.tag
+- show ipv6 ospfv3 vrf database inter-router node.tag detail
+- show ipv6 ospfv3 vrf database inter-router node.tag dump
+- show ipv6 ospfv3 vrf database inter-router node.tag internal
+- show ipv6 ospfv3 vrf database inter-router node.tag self-originated
+- show ipv6 ospfv3 vrf database inter-router node.tag self-originated detail
+- show ipv6 ospfv3 vrf database inter-router node.tag self-originated dump
+- show ipv6 ospfv3 vrf database inter-router node.tag self-originated internal
+- show ipv6 ospfv3 vrf database inter-router self-originated
+- show ipv6 ospfv3 vrf database inter-router self-originated detail
+- show ipv6 ospfv3 vrf database inter-router self-originated dump
+- show ipv6 ospfv3 vrf database inter-router self-originated internal
+- show ipv6 ospfv3 vrf database internal
+- show ipv6 ospfv3 vrf database intra-prefix
+- show ipv6 ospfv3 vrf database intra-prefix adv-router
+- show ipv6 ospfv3 vrf database intra-prefix adv-router detail
+- show ipv6 ospfv3 vrf database intra-prefix adv-router dump
+- show ipv6 ospfv3 vrf database intra-prefix adv-router internal
+- show ipv6 ospfv3 vrf database intra-prefix adv-router linkstate-id
+- show ipv6 ospfv3 vrf database intra-prefix adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database intra-prefix adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database intra-prefix adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database intra-prefix detail
+- show ipv6 ospfv3 vrf database intra-prefix dump
+- show ipv6 ospfv3 vrf database intra-prefix internal
+- show ipv6 ospfv3 vrf database intra-prefix linkstate-id
+- show ipv6 ospfv3 vrf database intra-prefix linkstate-id detail
+- show ipv6 ospfv3 vrf database intra-prefix linkstate-id dump
+- show ipv6 ospfv3 vrf database intra-prefix linkstate-id internal
+- show ipv6 ospfv3 vrf database intra-prefix node.tag
+- show ipv6 ospfv3 vrf database intra-prefix node.tag detail
+- show ipv6 ospfv3 vrf database intra-prefix node.tag dump
+- show ipv6 ospfv3 vrf database intra-prefix node.tag internal
+- show ipv6 ospfv3 vrf database intra-prefix node.tag self-originated
+- show ipv6 ospfv3 vrf database intra-prefix node.tag self-originated detail
+- show ipv6 ospfv3 vrf database intra-prefix node.tag self-originated dump
+- show ipv6 ospfv3 vrf database intra-prefix node.tag self-originated internal
+- show ipv6 ospfv3 vrf database intra-prefix self-originated
+- show ipv6 ospfv3 vrf database intra-prefix self-originated detail
+- show ipv6 ospfv3 vrf database intra-prefix self-originated dump
+- show ipv6 ospfv3 vrf database intra-prefix self-originated internal
+- show ipv6 ospfv3 vrf database link
+- show ipv6 ospfv3 vrf database link adv-router
+- show ipv6 ospfv3 vrf database link adv-router detail
+- show ipv6 ospfv3 vrf database link adv-router dump
+- show ipv6 ospfv3 vrf database link adv-router internal
+- show ipv6 ospfv3 vrf database link adv-router linkstate-id
+- show ipv6 ospfv3 vrf database link adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database link adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database link adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database link detail
+- show ipv6 ospfv3 vrf database link dump
+- show ipv6 ospfv3 vrf database link internal
+- show ipv6 ospfv3 vrf database link linkstate-id
+- show ipv6 ospfv3 vrf database link linkstate-id detail
+- show ipv6 ospfv3 vrf database link linkstate-id dump
+- show ipv6 ospfv3 vrf database link linkstate-id internal
+- show ipv6 ospfv3 vrf database link node.tag
+- show ipv6 ospfv3 vrf database link node.tag detail
+- show ipv6 ospfv3 vrf database link node.tag dump
+- show ipv6 ospfv3 vrf database link node.tag internal
+- show ipv6 ospfv3 vrf database link node.tag self-originated
+- show ipv6 ospfv3 vrf database link node.tag self-originated detail
+- show ipv6 ospfv3 vrf database link node.tag self-originated dump
+- show ipv6 ospfv3 vrf database link node.tag self-originated internal
+- show ipv6 ospfv3 vrf database link self-originated
+- show ipv6 ospfv3 vrf database link self-originated detail
+- show ipv6 ospfv3 vrf database link self-originated dump
+- show ipv6 ospfv3 vrf database link self-originated internal
+- show ipv6 ospfv3 vrf database linkstate-id
+- show ipv6 ospfv3 vrf database linkstate-id detail
+- show ipv6 ospfv3 vrf database linkstate-id dump
+- show ipv6 ospfv3 vrf database linkstate-id internal
+- show ipv6 ospfv3 vrf database network
+- show ipv6 ospfv3 vrf database network adv-router
+- show ipv6 ospfv3 vrf database network adv-router detail
+- show ipv6 ospfv3 vrf database network adv-router dump
+- show ipv6 ospfv3 vrf database network adv-router internal
+- show ipv6 ospfv3 vrf database network adv-router linkstate-id
+- show ipv6 ospfv3 vrf database network adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database network adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database network adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database network detail
+- show ipv6 ospfv3 vrf database network dump
+- show ipv6 ospfv3 vrf database network internal
+- show ipv6 ospfv3 vrf database network linkstate-id
+- show ipv6 ospfv3 vrf database network linkstate-id detail
+- show ipv6 ospfv3 vrf database network linkstate-id dump
+- show ipv6 ospfv3 vrf database network linkstate-id internal
+- show ipv6 ospfv3 vrf database network node.tag
+- show ipv6 ospfv3 vrf database network node.tag detail
+- show ipv6 ospfv3 vrf database network node.tag dump
+- show ipv6 ospfv3 vrf database network node.tag internal
+- show ipv6 ospfv3 vrf database network node.tag self-originated
+- show ipv6 ospfv3 vrf database network node.tag self-originated detail
+- show ipv6 ospfv3 vrf database network node.tag self-originated dump
+- show ipv6 ospfv3 vrf database network node.tag self-originated internal
+- show ipv6 ospfv3 vrf database network self-originated
+- show ipv6 ospfv3 vrf database network self-originated detail
+- show ipv6 ospfv3 vrf database network self-originated dump
+- show ipv6 ospfv3 vrf database network self-originated internal
+- show ipv6 ospfv3 vrf database node.tag
+- show ipv6 ospfv3 vrf database node.tag adv-router
+- show ipv6 ospfv3 vrf database node.tag adv-router detail
+- show ipv6 ospfv3 vrf database node.tag adv-router dump
+- show ipv6 ospfv3 vrf database node.tag adv-router internal
+- show ipv6 ospfv3 vrf database node.tag adv-router linkstate-id
+- show ipv6 ospfv3 vrf database node.tag adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database node.tag adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database node.tag adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database node.tag detail
+- show ipv6 ospfv3 vrf database node.tag dump
+- show ipv6 ospfv3 vrf database node.tag internal
+- show ipv6 ospfv3 vrf database node.tag linkstate-id
+- show ipv6 ospfv3 vrf database node.tag linkstate-id detail
+- show ipv6 ospfv3 vrf database node.tag linkstate-id dump
+- show ipv6 ospfv3 vrf database node.tag linkstate-id internal
+- show ipv6 ospfv3 vrf database node.tag node.tag
+- show ipv6 ospfv3 vrf database node.tag node.tag detail
+- show ipv6 ospfv3 vrf database node.tag node.tag dump
+- show ipv6 ospfv3 vrf database node.tag node.tag internal
+- show ipv6 ospfv3 vrf database node.tag node.tag self-originated
+- show ipv6 ospfv3 vrf database node.tag node.tag self-originated detail
+- show ipv6 ospfv3 vrf database node.tag node.tag self-originated dump
+- show ipv6 ospfv3 vrf database node.tag node.tag self-originated internal
+- show ipv6 ospfv3 vrf database node.tag self-originated
+- show ipv6 ospfv3 vrf database node.tag self-originated detail
+- show ipv6 ospfv3 vrf database node.tag self-originated dump
+- show ipv6 ospfv3 vrf database node.tag self-originated internal
+- show ipv6 ospfv3 vrf database router
+- show ipv6 ospfv3 vrf database router adv-router
+- show ipv6 ospfv3 vrf database router adv-router detail
+- show ipv6 ospfv3 vrf database router adv-router dump
+- show ipv6 ospfv3 vrf database router adv-router internal
+- show ipv6 ospfv3 vrf database router adv-router linkstate-id
+- show ipv6 ospfv3 vrf database router adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database router adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database router adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database router detail
+- show ipv6 ospfv3 vrf database router dump
+- show ipv6 ospfv3 vrf database router internal
+- show ipv6 ospfv3 vrf database router linkstate-id
+- show ipv6 ospfv3 vrf database router linkstate-id detail
+- show ipv6 ospfv3 vrf database router linkstate-id dump
+- show ipv6 ospfv3 vrf database router linkstate-id internal
+- show ipv6 ospfv3 vrf database router node.tag
+- show ipv6 ospfv3 vrf database router node.tag detail
+- show ipv6 ospfv3 vrf database router node.tag dump
+- show ipv6 ospfv3 vrf database router node.tag internal
+- show ipv6 ospfv3 vrf database router node.tag self-originated
+- show ipv6 ospfv3 vrf database router node.tag self-originated detail
+- show ipv6 ospfv3 vrf database router node.tag self-originated dump
+- show ipv6 ospfv3 vrf database router node.tag self-originated internal
+- show ipv6 ospfv3 vrf database router self-originated
+- show ipv6 ospfv3 vrf database router self-originated detail
+- show ipv6 ospfv3 vrf database router self-originated dump
+- show ipv6 ospfv3 vrf database router self-originated internal
+- show ipv6 ospfv3 vrf database self-originated
+- show ipv6 ospfv3 vrf database self-originated detail
+- show ipv6 ospfv3 vrf database self-originated dump
+- show ipv6 ospfv3 vrf database self-originated internal
+- show ipv6 ospfv3 vrf database type-7
+- show ipv6 ospfv3 vrf database type-7 adv-router
+- show ipv6 ospfv3 vrf database type-7 adv-router detail
+- show ipv6 ospfv3 vrf database type-7 adv-router dump
+- show ipv6 ospfv3 vrf database type-7 adv-router internal
+- show ipv6 ospfv3 vrf database type-7 adv-router linkstate-id
+- show ipv6 ospfv3 vrf database type-7 adv-router linkstate-id detail
+- show ipv6 ospfv3 vrf database type-7 adv-router linkstate-id dump
+- show ipv6 ospfv3 vrf database type-7 adv-router linkstate-id internal
+- show ipv6 ospfv3 vrf database type-7 detail
+- show ipv6 ospfv3 vrf database type-7 dump
+- show ipv6 ospfv3 vrf database type-7 internal
+- show ipv6 ospfv3 vrf database type-7 linkstate-id
+- show ipv6 ospfv3 vrf database type-7 linkstate-id detail
+- show ipv6 ospfv3 vrf database type-7 linkstate-id dump
+- show ipv6 ospfv3 vrf database type-7 linkstate-id internal
+- show ipv6 ospfv3 vrf database type-7 node.tag
+- show ipv6 ospfv3 vrf database type-7 node.tag detail
+- show ipv6 ospfv3 vrf database type-7 node.tag dump
+- show ipv6 ospfv3 vrf database type-7 node.tag internal
+- show ipv6 ospfv3 vrf database type-7 node.tag self-originated
+- show ipv6 ospfv3 vrf database type-7 node.tag self-originated detail
+- show ipv6 ospfv3 vrf database type-7 node.tag self-originated dump
+- show ipv6 ospfv3 vrf database type-7 node.tag self-originated internal
+- show ipv6 ospfv3 vrf database type-7 self-originated
+- show ipv6 ospfv3 vrf database type-7 self-originated detail
+- show ipv6 ospfv3 vrf database type-7 self-originated dump
+- show ipv6 ospfv3 vrf database type-7 self-originated internal
+- show ipv6 ospfv3 vrf graceful-restart
+- show ipv6 ospfv3 vrf graceful-restart helper
+- show ipv6 ospfv3 vrf interface
+- show ipv6 ospfv3 vrf interface prefix
+- show ipv6 ospfv3 vrf interface prefix detail
+- show ipv6 ospfv3 vrf interface prefix match
+- show ipv6 ospfv3 vrf linkstate
+- show ipv6 ospfv3 vrf linkstate detail
+- show ipv6 ospfv3 vrf linkstate network
+- show ipv6 ospfv3 vrf linkstate network node.tag
+- show ipv6 ospfv3 vrf linkstate router
+- show ipv6 ospfv3 vrf neighbor
+- show ipv6 ospfv3 vrf neighbor detail
+- show ipv6 ospfv3 vrf neighbor drchoice
+- show ipv6 ospfv3 vrf redistribute
+- show ipv6 ospfv3 vrf route
+- show ipv6 ospfv3 vrf route detail
+- show ipv6 ospfv3 vrf route external-1
+- show ipv6 ospfv3 vrf route external-1 detail
+- show ipv6 ospfv3 vrf route external-2
+- show ipv6 ospfv3 vrf route external-2 detail
+- show ipv6 ospfv3 vrf route inter-area
+- show ipv6 ospfv3 vrf route inter-area detail
+- show ipv6 ospfv3 vrf route intra-area
+- show ipv6 ospfv3 vrf route intra-area detail
+- show ipv6 ospfv3 vrf route longer
+- show ipv6 ospfv3 vrf route match
+- show ipv6 ospfv3 vrf route match detail
+- show ipv6 ospfv3 vrf route summary
+- show ipv6 ospfv3 vrfs
+- show ipv6 pim
+- show ipv6 pim bsm-database
+- show ipv6 pim bsr
+- show ipv6 pim bsrp-info
+- show ipv6 pim channel
+- show ipv6 pim interface
+- show ipv6 pim join
+- show ipv6 pim local-membership
+- show ipv6 pim neighbor
+- show ipv6 pim nexthop
+- show ipv6 pim rp-info
+- show ipv6 pim rpf
+- show ipv6 pim secondary
+- show ipv6 pim state
+- show ipv6 pim statistics
+- show ipv6 pim upstream
+- show ipv6 pim upstream-join-desired
+- show ipv6 pim upstream-rpf
+- show ipv6 prefix-list
+- show ipv6 prefix-list detail
+- show ipv6 prefix-list node.tag
+- show ipv6 prefix-list node.tag first-match
+- show ipv6 prefix-list node.tag longer
+- show ipv6 prefix-list seq
+- show ipv6 prefix-list summary
+- show ipv6 ripng
+- show ipv6 ripng status
+- show ipv6 route
+- show ipv6 route bgp
+- show ipv6 route cache
+- show ipv6 route connected
+- show ipv6 route forward
+- show ipv6 route isis
+- show ipv6 route kernel
+- show ipv6 route longer-prefixes
+- show ipv6 route openfabric
+- show ipv6 route ospfv3
+- show ipv6 route ripng
+- show ipv6 route static
+- show ipv6 route summary
+- show ipv6 route summary table
+- show ipv6 route table
+- show ipv6 route tag
+- show ipv6 route vrf
+- show ipv6 route vrf bgp
+- show ipv6 route vrf connected
+- show ipv6 route vrf isis
+- show ipv6 route vrf kernel
+- show ipv6 route vrf node.tag
+- show ipv6 route vrf node.tag longer-prefixes
+- show ipv6 route vrf ospfv3
+- show ipv6 route vrf ripng
+- show ipv6 route vrf static
+- show ipv6 route vrf summary
+- show ipv6 route vrf supernets-only
+- show ipv6 route vrf table
+- show ipv6 route vrf tag
+- show isis
+- show isis database
+- show isis database detail
+- show isis fast-reroute
+- show isis fast-reroute summary
+- show isis fast-reroute summary level-1
+- show isis fast-reroute summary level-2
+- show isis hostname
+- show isis interface
+- show isis interface detail
+- show isis mpls
+- show isis mpls ldp-sync
+- show isis mpls ldp-sync interface
+- show isis mpls-te
+- show isis mpls-te interface
+- show isis mpls-te router
+- show isis neighbor
+- show isis neighbor detail
+- show isis route
+- show isis route level-1
+- show isis route level-2
+- show isis route prefix-sid
+- show isis segment-routing
+- show isis segment-routing node
+- show isis spf-delay-ietf
+- show isis summary
+- show isis topology
+- show isis topology level-1
+- show isis topology level-2
+- show isis vrf
+- show isis vrf database
+- show isis vrf database detail
+- show isis vrf fast-reroute
+- show isis vrf fast-reroute summary
+- show isis vrf fast-reroute summary level-1
+- show isis vrf fast-reroute summary level-2
+- show isis vrf hostname
+- show isis vrf interface
+- show isis vrf interface detail
+- show isis vrf mpls
+- show isis vrf mpls ldp-sync
+- show isis vrf mpls ldp-sync interface
+- show isis vrf mpls-te
+- show isis vrf mpls-te interface
+- show isis vrf mpls-te router
+- show isis vrf neighbor
+- show isis vrf neighbor detail
+- show isis vrf route
+- show isis vrf route level-1
+- show isis vrf route level-2
+- show isis vrf route prefix-sid
+- show isis vrf segment-routing
+- show isis vrf segment-routing node
+- show isis vrf spf-delay-ietf
+- show isis vrf summary
+- show isis vrf topology
+- show isis vrf topology level-1
+- show isis vrf topology level-2
+- show kernel
+- show kernel modules
+- show l2tp-server
+- show l2tp-server sessions
+- show l2tp-server statistics
+- show license
+- show lldp
+- show lldp neighbors
+- show lldp neighbors detail
+- show lldp neighbors interface
+- show lldp neighbors interface detail
+- show log
+- show log all
+- show log audit
+- show log authorization
+- show log certbot
+- show log cluster
+- show log conntrack-sync
+- show log console-server
+- show log dhcp
+- show log dhcp client
+- show log dhcp client interface
+- show log dhcp server
+- show log dhcpv6
+- show log dhcpv6 client
+- show log dhcpv6 client interface
+- show log dhcpv6 server
+- show log dns
+- show log dns dynamic
+- show log dns forwarding
+- show log firewall
+- show log firewall bridge
+- show log firewall bridge forward
+- show log firewall bridge forward filter
+- show log firewall bridge forward filter rule
+- show log firewall bridge input
+- show log firewall bridge input filter
+- show log firewall bridge input filter rule
+- show log firewall bridge name
+- show log firewall bridge name rule
+- show log firewall bridge output
+- show log firewall bridge output filter
+- show log firewall bridge output filter rule
+- show log firewall bridge prerouting
+- show log firewall bridge prerouting filter
+- show log firewall bridge prerouting filter rule
+- show log firewall ipv4
+- show log firewall ipv4 forward
+- show log firewall ipv4 forward filter
+- show log firewall ipv4 forward filter rule
+- show log firewall ipv4 input
+- show log firewall ipv4 input filter
+- show log firewall ipv4 input filter rule
+- show log firewall ipv4 name
+- show log firewall ipv4 name rule
+- show log firewall ipv4 output
+- show log firewall ipv4 output filter
+- show log firewall ipv4 output filter rule
+- show log firewall ipv4 prerouting
+- show log firewall ipv4 prerouting raw
+- show log firewall ipv4 prerouting raw rule
+- show log firewall ipv6
+- show log firewall ipv6 forward
+- show log firewall ipv6 forward filter
+- show log firewall ipv6 forward filter rule
+- show log firewall ipv6 input
+- show log firewall ipv6 input filter
+- show log firewall ipv6 input filter rule
+- show log firewall ipv6 name
+- show log firewall ipv6 name rule
+- show log firewall ipv6 output
+- show log firewall ipv6 output filter
+- show log firewall ipv6 output filter rule
+- show log firewall ipv6 prerouting
+- show log firewall ipv6 prerouting raw
+- show log firewall ipv6 prerouting raw rule
+- show log flow-accounting
+- show log frr
+- show log https
+- show log ids
+- show log ids ddos-protection
+- show log image
+- show log image all
+- show log image authorization
+- show log image tail
+- show log ipoe-server
+- show log ipsec
+- show log kernel
+- show log l2tp
+- show log lldp
+- show log macsec
+- show log macsec interface
+- show log mdns
+- show log mdns repeater
+- show log nat
+- show log nat destination
+- show log nat destination rule
+- show log nat source
+- show log nat source rule
+- show log nat static
+- show log nat static rule
+- show log ndp-proxy
+- show log network-event
+- show log network-event addr
+- show log network-event addr interface
+- show log network-event interface
+- show log network-event link
+- show log network-event link interface
+- show log network-event neigh
+- show log network-event neigh interface
+- show log network-event route
+- show log network-event route interface
+- show log network-event rule
+- show log network-event rule interface
+- show log nhrp
+- show log ntp
+- show log openconnect
+- show log openvpn
+- show log openvpn interface
+- show log pppoe
+- show log pppoe interface
+- show log pppoe-server
+- show log pptp
+- show log protocol
+- show log protocol bfd
+- show log protocol bgp
+- show log protocol isis
+- show log protocol mpls
+- show log protocol multicast
+- show log protocol nhrp
+- show log protocol openfabric
+- show log protocol ospf
+- show log protocol ospfv3
+- show log protocol rip
+- show log protocol ripng
+- show log protocol static
+- show log router-advert
+- show log snmp
+- show log ssh
+- show log ssh dynamic-protection
+- show log sstp
+- show log sstpc
+- show log sstpc interface
+- show log tail
+- show log vpn
+- show log vyos-configd
+- show log vyos-domain-resolver
+- show log webproxy
+- show log wireless
+- show log wireless hostapd
+- show log wireless hostapd interface
+- show log wireless wpa-supplicant
+- show log wireless wpa-supplicant interface
+- show login
+- show login groups
+- show login level
+- show login user
+- show monitoring
+- show monitoring frr
+- show monitoring frr zebra
+- show monitoring frr zebra client
+- show monitoring frr zebra client summary
+- show monitoring frr zebra dplane
+- show monitoring frr zebra router
+- show monitoring frr zebra router table
+- show monitoring frr zebra router table summary
+- show mpls
+- show mpls ldp
+- show mpls ldp binding
+- show mpls ldp binding detail
+- show mpls ldp binding local-label
+- show mpls ldp binding local-label detail
+- show mpls ldp binding local-label neighbor
+- show mpls ldp binding local-label remote-label
+- show mpls ldp binding neighbor
+- show mpls ldp binding neighbor detail
+- show mpls ldp binding neighbor local-label
+- show mpls ldp binding neighbor remote-label
+- show mpls ldp binding remote-label
+- show mpls ldp binding remote-label detail
+- show mpls ldp binding remote-label local-label
+- show mpls ldp binding remote-label neighbor
+- show mpls ldp discovery
+- show mpls ldp discovery detail
+- show mpls ldp interface
+- show mpls ldp neighbor
+- show mpls ldp neighbor capabilities
+- show mpls ldp neighbor detail
+- show mpls pseudowire
+- show mpls table
+- show nat
+- show nat cgnat
+- show nat cgnat allocation
+- show nat cgnat allocation external-address
+- show nat cgnat allocation internal-address
+- show nat destination
+- show nat destination rules
+- show nat destination statistics
+- show nat destination translations
+- show nat destination translations address
+- show nat source
+- show nat source rules
+- show nat source statistics
+- show nat source translations
+- show nat source translations address
+- show nat66
+- show nat66 destination
+- show nat66 destination rules
+- show nat66 destination statistics
+- show nat66 destination translations
+- show nat66 destination translations address
+- show nat66 source
+- show nat66 source rules
+- show nat66 source statistics
+- show nat66 source translations
+- show nat66 source translations address
+- show netns
+- show ntp
+- show ntp activity
+- show ntp sources
+- show ntp system
+- show openconnect-server
+- show openconnect-server sessions
+- show openconnect-server user
+- show openconnect-server user otp
+- show openconnect-server user otp full
+- show openconnect-server user otp key-b32
+- show openconnect-server user otp key-hex
+- show openconnect-server user otp qrcode
+- show openconnect-server user otp uri
+- show openfabric
+- show openfabric database
+- show openfabric database detail
+- show openfabric interface
+- show openfabric interface detail
+- show openfabric neighbor
+- show openfabric neighbor detail
+- show openfabric summary
+- show openvpn
+- show openvpn client
+- show openvpn server
+- show openvpn site-to-site
+- show pki
+- show pki ca
+- show pki ca pem
+- show pki certificate
+- show pki certificate fingerprint
+- show pki certificate pem
+- show pki crl
+- show pki crl pem
+- show policy
+- show policy route
+- show policy route rule
+- show policy route6
+- show policy route6 rule
+- show poweroff
+- show pppoe-server
+- show pppoe-server interfaces
+- show pppoe-server sessions
+- show pppoe-server statistics
+- show pptp-server
+- show pptp-server sessions
+- show pptp-server statistics
+- show protocols
+- show protocols static
+- show protocols static arp
+- show protocols static arp interface
+- show qos
+- show qos cake
+- show qos cake interface
+- show qos shaper
+- show qos shaper detail
+- show qos shaper interface
+- show qos shaper interface class
+- show qos shaper interface class detail
+- show qos shaper interface detail
+- show raid
+- show reboot
+- show route-map
+- show rpki
+- show rpki as-number
+- show rpki cache-connection
+- show rpki cache-server
+- show rpki prefix
+- show rpki prefix as-number
+- show rpki prefix-table
+- show secure-boot
+- show secure-boot keys
+- show segment-routing
+- show segment-routing srv6
+- show segment-routing srv6 locator
+- show sflow
+- show snmp
+- show snmp community
+- show snmp community host
+- show snmp mib
+- show snmp mib ifmib
+- show snmp mib ifmib ifAlias
+- show snmp mib ifmib ifDescr
+- show snmp mib ifmib ifIndex
+- show snmp v3
+- show snmp v3 certificates
+- show snmp v3 group
+- show snmp v3 trap-target
+- show snmp v3 user
+- show snmp v3 view
+- show ssh
+- show ssh dynamic-protection
+- show ssh fingerprints
+- show ssh fingerprints ascii
+- show sstp-server
+- show sstp-server sessions
+- show sstp-server statistics
+- show system
+- show system acceleration
+- show system acceleration qat
+- show system acceleration qat device
+- show system acceleration qat device config
+- show system acceleration qat device flows
+- show system acceleration qat interrupts
+- show system acceleration qat status
+- show system commit
+- show system commit diff
+- show system commit file
+- show system commit file compare
+- show system commit file compare commands
+- show system connections
+- show system connections tcp
+- show system connections tcp all
+- show system connections tcp numeric
+- show system connections udp
+- show system connections udp numeric
+- show system cpu
+- show system image
+- show system image details
+- show system kernel-messages
+- show system login
+- show system login authentication
+- show system login authentication user
+- show system login authentication user otp
+- show system login authentication user otp full
+- show system login authentication user otp key-b32
+- show system login authentication user otp qrcode
+- show system login authentication user otp uri
+- show system login users
+- show system login users all
+- show system login users locked
+- show system login users other
+- show system login users vyos
+- show system memory
+- show system memory cache
+- show system memory detail
+- show system memory routing-daemons
+- show system processes
+- show system processes extensive
+- show system processes summary
+- show system processes tree
+- show system routing-daemons
+- show system storage
+- show system updates
+- show system uptime
+- show table
+- show tech-support
+- show tech-support report
+- show tech-support report machine-readable
+- show users
+- show users recent
+- show version
+- show version all
+- show version frr
+- show version funny
+- show version kernel
+- show vpn
+- show vpn debug
+- show vpn debug peer
+- show vpn debug peer tunnel
+- show vpn ike
+- show vpn ike sa
+- show vpn ike sa nat-traversal
+- show vpn ike sa peer
+- show vpn ike secrets
+- show vpn ike status
+- show vpn ipsec
+- show vpn ipsec connections
+- show vpn ipsec policy
+- show vpn ipsec remote-access
+- show vpn ipsec remote-access connection-id
+- show vpn ipsec remote-access detail
+- show vpn ipsec remote-access summary
+- show vpn ipsec remote-access username
+- show vpn ipsec sa
+- show vpn ipsec sa detail
+- show vpn ipsec state
+- show vpn ipsec status
+- show vrf
+- show vrf processes
+- show vrf vni
+- show wan-load-balance
+- show wan-load-balance connection
+- show wan-load-balance status
+- show webproxy
+- show webproxy blacklist
+- show webproxy blacklist categories
+- show webproxy log
+- show webproxy update-log
+- traceroute
+- traceroute node.tag
+- update
+- update geoip
+- update suricata
+- update webproxy
+- update webproxy blacklists
+- update webproxy blacklists vrf
+```

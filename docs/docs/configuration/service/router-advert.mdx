@@ -1,0 +1,643 @@
+---
+title: Router Advert
+description: Router Advert Configuration
+cfg:
+    - service router-advert
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; default-lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Lifetime associated with the default router in units of seconds
+
+| Value | Help |
+|-------|------|
+| `0` |  Not a default router |
+| `u32:4-9000` |  Router Lifetime in seconds |
+
+constraint error message: Default router livetime bust be 0 or between 4 and 9000
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; default-preference</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: medium</span>
+
+Preference associated with the default router,
+
+| Value | Help |
+|-------|------|
+| `high` |  Default router has high preference |
+| `medium` |  Default router has medium preference |
+| `low` |  Default router has low preference |
+
+constraint error message: Default preference must be low, medium or high
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; dnssl</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DNS search list
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; hop-limit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 64</span>
+
+Set Hop Count field of the IP header for outgoing packets
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Value should represent current diameter of the Internet |
+| `u32:0` |  Unspecified (by this router) |
+
+constraint error message: Hop count must be between 0 and 255
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; interval max</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 600</span>
+
+Maximum interval between unsolicited multicast RAs
+
+| Value | Help |
+|-------|------|
+| `u32:4-1800` |  Maximum interval in seconds |
+
+constraint error message: Maximum interval must be between 4 and 1800 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; interval min</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Minimum interval between unsolicited multicast RAs
+
+| Value | Help |
+|-------|------|
+| `u32:3-1350` |  Minimum interval in seconds |
+
+constraint error message: Minimum interval must be between 3 and 1350 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; link-mtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Link MTU value placed in RAs, exluded in RAs if unset
+
+| Value | Help |
+|-------|------|
+| `u32:1280-9000` |  Link MTU value in RAs |
+
+constraint error message: Link MTU must be between 1280 and 9000
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; managed-flag</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hosts use the administered (stateful) protocol for address autoconfiguration in addition to any addresses autoconfigured using SLAAC
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; name-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain Name Servers (DNS) addresses
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Domain Name Server (DNS) IPv6 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; name-server-lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum duration how long the RDNSS entries are used
+
+| Value | Help |
+|-------|------|
+| `u32:1-7200` |  Maximum interval in seconds |
+| `u32:0` |  Name-servers should no longer be used |
+
+constraint error message: Maximum interval must be between 1 and 7200 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; nat64prefix &lt;tag&gt; valid-lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 65528</span>
+
+Time in seconds that the prefix will remain valid
+
+| Value | Help |
+|-------|------|
+| `u32:4-65528` |  Time in seconds that the prefix will remain valid |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; no-send-advert</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not send router adverts
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; other-config-flag</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hosts use the administered (stateful) protocol for autoconfiguration of other (non-address) information
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; prefix &lt;tag&gt; decrement-lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Lifetime is decremented by the number of seconds since the last RA - use in conjunction with a DHCPv6-PD prefix
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; prefix &lt;tag&gt; deprecate-prefix</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Upon shutdown, this option will deprecate the prefix by announcing it in the shutdown RA
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; prefix &lt;tag&gt; no-autonomous-flag</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix can not be used for stateless address auto-configuration
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; prefix &lt;tag&gt; no-on-link-flag</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix can not be used for on-link determination
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; prefix &lt;tag&gt; preferred-lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 14400</span>
+
+Time in seconds that the prefix will remain preferred
+
+| Value | Help |
+|-------|------|
+| `infinity` |  Prefix will remain preferred forever |
+| `u32` |  Time in seconds that the prefix will remain preferred |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; prefix &lt;tag&gt; valid-lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2592000</span>
+
+Time in seconds that the prefix will remain valid
+
+| Value | Help |
+|-------|------|
+| `infinity` |  Prefix will remain preferred forever |
+| `u32:1-4294967295` |  Time in seconds that the prefix will remain valid |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; reachable-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Time, in milliseconds, that a node assumes a neighbor is reachable after having received a reachability confirmation
+
+| Value | Help |
+|-------|------|
+| `u32:1-3600000` |  Reachable Time value in RAs (in milliseconds) |
+| `u32:0` |  Reachable Time unspecified by this router |
+
+constraint error message: Reachable time must be 0 or between 1 and 3600000 milliseconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; retrans-timer</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Time in milliseconds between retransmitted Neighbor Solicitation messages
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  Minimum interval in milliseconds |
+| `u32:0` |  Time, in milliseconds, between retransmitted Neighbor Solicitation messages |
+
+constraint error message: Retransmit interval must be 0 or between 1 and 4294967295 milliseconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; route &lt;tag&gt; no-remove-route</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not announce this route with a zero second lifetime upon shutdown
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; route &lt;tag&gt; route-preference</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: medium</span>
+
+Preference associated with the route,
+
+| Value | Help |
+|-------|------|
+| `high` |  Route has high preference |
+| `medium` |  Route has medium preference |
+| `low` |  Route has low preference |
+
+constraint error message: Route preference must be low, medium or high
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; route &lt;tag&gt; valid-lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1800</span>
+
+Time in seconds that the route will remain valid
+
+| Value | Help |
+|-------|------|
+| `infinity` |  Route will remain preferred forever |
+| `u32:1-4294967295` |  Time in seconds that the route will remain valid |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service router-advert interface &lt;tag&gt; source-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use IPv6 address as source address. Useful with VRRP.
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address to be advertized (must be configured on interface) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

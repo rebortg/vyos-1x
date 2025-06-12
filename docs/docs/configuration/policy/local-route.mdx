@@ -1,0 +1,242 @@
+---
+title: Local Route
+description: Local Route Configuration
+cfg:
+    - policy local-route
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route rule &lt;tag&gt; destination address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route rule &lt;tag&gt; source address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 address or prefix
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  Prefix to match against |
+| `ipv4` |  Address to match against |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route rule &lt;tag&gt; destination port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route rule &lt;tag&gt; source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route6 rule &lt;tag&gt; destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route6 rule &lt;tag&gt; source port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route rule &lt;tag&gt; fwmark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route6 rule &lt;tag&gt; fwmark</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match fwmark value
+
+| Value | Help |
+|-------|------|
+| `u32:1-2147483647` |  Address to match against |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route rule &lt;tag&gt; inbound-interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route6 rule &lt;tag&gt; inbound-interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Inbound Interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route rule &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route6 rule &lt;tag&gt; protocol</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Protocol to match (protocol name or number)
+
+| Value | Help |
+|-------|------|
+| `&lt;protocol&gt;` |  IP protocol name |
+| `u32:0-255` |  IP protocol number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route rule &lt;tag&gt; set table</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route6 rule &lt;tag&gt; set table</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Routing table to forward packet with
+
+| Value | Help |
+|-------|------|
+| `u32:1-200` |  Table number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route6 rule &lt;tag&gt; destination address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy local-route6 rule &lt;tag&gt; source address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 address or prefix
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Prefix to match against |
+| `ipv6` |  Address to match against |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

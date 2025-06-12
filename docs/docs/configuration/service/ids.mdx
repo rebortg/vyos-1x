@@ -1,0 +1,366 @@
+---
+title: IDS
+description: IDS Configuration
+cfg:
+    - service ids
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection alert-script</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Path to fastnetmon alert script
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection ban-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1900</span>
+
+How long we should keep an IP in blocked state
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967294` |  Time in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection direction</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Direction for processing traffic
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection excluded-network</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specify IPv4 and IPv6 networks which are going to be excluded from protection
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 prefix(es) to exclude |
+| `ipv4net` |  IPv4 prefix(es) to exclude |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection listen-interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Listen interface for mirroring traffic
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Traffic capture mode
+
+| Value | Help |
+|-------|------|
+| `sflow` |  Capture sFlow flows |
+| `mirror` |  Listen to mirrored traffic |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection network</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specify IPv4 and IPv6 networks which belong to you
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Your IPv6 prefix(es) |
+| `ipv4net` |  Your IPv4 prefix(es) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection sflow listen-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IPv4 addresses to listen on
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address to listen for incoming connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection sflow port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 6343</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold general fps</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold icmp fps</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold tcp fps</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold udp fps</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flows per second
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967294` |  Flows per second |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold general mbps</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold icmp mbps</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold tcp mbps</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold udp mbps</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Megabits per second
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967294` |  Megabits per second |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold general pps</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold icmp pps</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold tcp pps</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ids ddos-protection threshold udp pps</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Packets per second
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967294` |  Packets per second |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,535 @@
+---
+title: PKI
+description: PKI Configuration
+cfg:
+    - pki
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki ca &lt;tag&gt; certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; certificate</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate in PEM format
+
+constraint error message: Certificate is not base64-encoded
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki ca &lt;tag&gt; crl</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate revocation list in PEM format
+
+constraint error message: CRL is not base64-encoded
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki ca &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki ca &lt;tag&gt; private key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; private key</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki key-pair &lt;tag&gt; private key</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki openssh &lt;tag&gt; private key</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Private key in PEM format
+
+constraint error message: Private key is not base64-encoded
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki ca &lt;tag&gt; private password-protected</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; private password-protected</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki key-pair &lt;tag&gt; private password-protected</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki openssh &lt;tag&gt; private password-protected</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Private key portion is password protected
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki ca &lt;tag&gt; revoke</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; revoke</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Include certificate in parent CRL
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; acme domain-name</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain Name
+
+constraint error message: Invalid domain name (RFC 1123 section 2).\nMay only contain letters, numbers and .-_
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; acme email</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Email address to associate with certificate
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; acme listen-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IPv4 addresses to listen on
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address to listen for incoming connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; acme rsa-key-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2048</span>
+
+Size of the RSA key
+
+| Value | Help |
+|-------|------|
+| `4096` |  RSA key length 4096 bit |
+| `3072` |  RSA key length 3072 bit |
+| `2048` |  RSA key length 2048 bit |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki certificate &lt;tag&gt; acme url</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: https://acme-v02.api.letsencrypt.org/directory</span>
+
+Remote URL
+
+| Value | Help |
+|-------|------|
+| `url` |  Remote HTTP(S) URL |
+
+constraint error message: Invalid HTTP(S) URL format
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki dh &lt;tag&gt; parameters</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DH parameters in PEM format
+
+constraint error message: DH parameters are not base64-encoded
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki key-pair &lt;tag&gt; public key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki openssh &lt;tag&gt; public key</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Public key in PEM format
+
+constraint error message: Public key is not base64-encoded
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki openssh &lt;tag&gt; public type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+SSH public key type
+
+| Value | Help |
+|-------|------|
+| `ssh-rsa` |  Key pair based on RSA algorithm |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki openvpn shared-secret &lt;tag&gt; key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+OpenVPN shared secret key data
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki openvpn shared-secret &lt;tag&gt; version</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+OpenVPN shared secret key version
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki x509 default country</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: GB</span>
+
+Default country
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki x509 default locality</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: Some-City</span>
+
+Default locality
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki x509 default organization</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: VyOS</span>
+
+Default organization
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set pki x509 default state</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: Some-State</span>
+
+Default state
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

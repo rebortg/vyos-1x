@@ -1,0 +1,97 @@
+---
+title: Community List
+description: Community List Configuration
+cfg:
+    - policy community-list
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy community-list &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy community-list &lt;tag&gt; rule &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy community-list &lt;tag&gt; rule &lt;tag&gt; action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Action to take on entries matching this rule
+
+| Value | Help |
+|-------|------|
+| `deny` |  Deny matching entries |
+| `permit` |  Permit matching entries |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy community-list &lt;tag&gt; rule &lt;tag&gt; regex</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Regular expression to match against a community-list
+
+| Value | Help |
+|-------|------|
+| `additive` |  New value is appended to the existing value |
+| `internet` |  Well-known communities value 0 |
+| `no-export` |  Well-known communities value NO_EXPORT 0xFFFFFF01 |
+| `no-advertise` |  Well-known communities value NO_ADVERTISE 0xFFFFFF02 |
+| `local-AS` |  Well-known communities value NO_EXPORT_SUBCONFED 0xFFFFFF03 |
+| `&lt;aa:nn&gt;` |  Community number in AA:NN format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

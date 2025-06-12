@@ -1,0 +1,1935 @@
+---
+title: OpenVPN Interface
+description: OpenVPN Interface Configuration
+cfg:
+    - interfaces openvpn
+opmode:
+    - show interfaces openvpn
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; authentication password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Password used for authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  Password |
+
+constraint error message: Password is limited to ASCII characters only, with a total length of 128
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; authentication username</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Username used for authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  Username |
+
+constraint error message: Username is limited to ASCII characters only, with a total length of 128
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; device-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: tun</span>
+
+OpenVPN interface device-type
+
+| Value | Help |
+|-------|------|
+| `tap` |  TAP device, required for OSI layer 2 |
+| `tun` |  TUN device, required for OSI layer 3 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Administratively disable interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; encryption cipher</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Standard Data Encryption Algorithm
+
+| Value | Help |
+|-------|------|
+| `aes256gcm` |  AES algorithm with 256-bit key GCM |
+| `aes256` |  AES algorithm with 256-bit key CBC |
+| `aes192gcm` |  AES algorithm with 192-bit key GCM |
+| `aes192` |  AES algorithm with 192-bit key CBC |
+| `aes128gcm` |  AES algorithm with 128-bit key GCM |
+| `aes128` |  AES algorithm with 128-bit key CBC |
+| `3des` |  DES algorithm with triple encryption |
+| `none` |  Disable encryption |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; encryption ncp-ciphers</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Cipher negotiation list for use in server or client mode
+
+| Value | Help |
+|-------|------|
+| `aes256gcm` |  AES algorithm with 256-bit key GCM |
+| `aes256` |  AES algorithm with 256-bit key CBC |
+| `aes192gcm` |  AES algorithm with 192-bit key GCM |
+| `aes192` |  AES algorithm with 192-bit key CBC |
+| `aes128gcm` |  AES algorithm with 128-bit key GCM |
+| `aes128` |  AES algorithm with 128-bit key CBC |
+| `3des` |  DES algorithm with triple encryption |
+| `none` |  Disable encryption |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; hash</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hashing Algorithm
+
+| Value | Help |
+|-------|------|
+| `sha512` |  SHA-512 algorithm |
+| `sha384` |  SHA-384 algorithm |
+| `sha256` |  SHA-256 algorithm |
+| `sha1` |  SHA-1 algorithm |
+| `md5` |  MD5 algorithm |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip adjust-mss</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ipv6 adjust-mss</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Adjust TCP MSS value
+
+| Value | Help |
+|-------|------|
+| `u32:536-65535` |  TCP Maximum segment size in bytes |
+| `clamp-mss-to-pmtu` |  Automatically sets the MSS to the proper value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip arp-cache-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+ARP cache entry timeout in seconds
+
+| Value | Help |
+|-------|------|
+| `u32:1-86400` |  ARP cache entry timout in seconds |
+
+constraint error message: ARP cache entry timeout must be between 1 and 86400 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip disable-arp-filter</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable ARP filter on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip disable-forwarding</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ipv6 disable-forwarding</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable IP forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip enable-arp-accept</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP accept on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip enable-arp-announce</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP announce on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip enable-arp-ignore</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP ignore on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip enable-directed-broadcast</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable directed broadcast forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip enable-proxy-arp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable proxy-arp on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip proxy-arp-pvlan</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable private VLAN proxy ARP on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ip source-validation</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ipv6 source-validation</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source validation by reversed path (RFC3704)
+
+| Value | Help |
+|-------|------|
+| `disable` |  No source validation |
+| `loose` |  Enable Loose Reverse Path Forwarding as defined in RFC3704 |
+| `strict` |  Enable Strict Reverse Path Forwarding as defined in RFC3704 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ipv6 accept-dad</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Accept Duplicate Address Detection
+
+| Value | Help |
+|-------|------|
+| `2` |  Enable DAD - disable IPv6 if MAC-based duplicate link-local address found |
+| `1` |  Enable DAD |
+| `0` |  Disable DAD |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ipv6 address autoconf</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable acquisition of IPv6 address using stateless autoconfig (SLAAC)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ipv6 address eui64</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix for IPv6 address with MAC-based EUI-64
+
+| Value | Help |
+|-------|------|
+| `&lt;h:h:h:h:h:h:h:h/64&gt;` |  IPv6 /64 network |
+
+constraint error message: EUI64 prefix length must be 64
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ipv6 address no-default-link-local</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remove the default link-local address from the interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; ipv6 dup-addr-detect-transmits</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Number of NS messages to send while performing DAD
+
+| Value | Help |
+|-------|------|
+| `u32:1-n` |  Number of NS messages to send while performing DAD |
+| `u32:0` |  Disable Duplicate Address Dectection (DAD) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; keep-alive failure-count</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 60</span>
+
+Maximum number of keepalive packet failures
+
+| Value | Help |
+|-------|------|
+| `u32:0-1000` |  Maximum number of keepalive packet failures |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; keep-alive interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Keepalive packet interval in seconds
+
+| Value | Help |
+|-------|------|
+| `u32:0-600` |  Keepalive packet interval (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; local-address &lt;tag&gt; subnet-mask</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Subnet-mask for local IP address of tunnel (IPv4 only)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; local-host</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IP address to accept connections (all if not set)
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Local IPv6 address |
+| `ipv4` |  Local IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; local-port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local port number to accept connections
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; mirror egress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirror egress traffic to destination interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; mirror ingress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirror ingress traffic to destination interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+OpenVPN mode of operation
+
+| Value | Help |
+|-------|------|
+| `server` |  Server in client-server mode |
+| `client` |  Client in client-server mode |
+| `site-to-site` |  Site-to-site mode |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; offload dco</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable data channel offload on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; openvpn-option</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Additional OpenVPN options. You must use the syntax of openvpn.conf in this text-field. Using this without proper knowledge may result in a crashed OpenVPN server. Check system log to look for errors.
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; persistent-tunnel</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not close and reopen interface (TUN/TAP device) on client restarts
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: udp</span>
+
+OpenVPN communication protocol
+
+| Value | Help |
+|-------|------|
+| `tcp-active` |  TCP and initiates connections actively |
+| `tcp-passive` |  TCP and accepts connections passively |
+| `udp` |  UDP |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; redirect</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Redirect incoming packet to destination
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; remote-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of remote end of tunnel
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Remote end IPv6 address |
+| `ipv4` |  Remote end IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; remote-host</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remote host to connect to (dynamic if not set)
+
+| Value | Help |
+|-------|------|
+| `txt` |  Hostname of remote host |
+| `ipv6` |  IPv6 address of remote host |
+| `ipv4` |  IPv4 address of remote host |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; remote-port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remote port number to connect to
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; replace-default-route local</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Tunnel endpoints are on the same subnet
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client-ip-pool disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client-ipv6-pool disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client &lt;tag&gt; ip</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of the client
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Client IPv6 address |
+| `ipv4` |  Client IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client &lt;tag&gt; push-route</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Route to be pushed to the client
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 network and prefix length |
+| `ipv4net` |  IPv4 network and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client &lt;tag&gt; subnet</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Subnet belonging to the client (iroute)
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 network and prefix length belonging to the client |
+| `ipv4net` |  IPv4 network and prefix length belonging to the client |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client-ip-pool start</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+First IP address in the pool
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client-ip-pool stop</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Last IP address in the pool
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client-ip-pool subnet-mask</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Subnet mask pushed to dynamic clients. If not set the server subnet mask will be used. Only used with topology subnet or device type tap. Not used with bridged interfaces.
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 subnet mask |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server client-ipv6-pool base</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Client IPv6 pool base address with optional prefix length
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Client IPv6 pool base address with optional prefix length (defaults: base = server subnet + 0x1000, prefix length = server prefix length) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server domain-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DNS suffix to be pushed to all clients
+
+| Value | Help |
+|-------|------|
+| `txt` |  Domain Name Server suffix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server max-connections</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Number of maximum client connections
+
+| Value | Help |
+|-------|------|
+| `u32:1-4096` |  Number of concurrent clients |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server mfa totp challenge</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: enable</span>
+
+Expect password as result of a challenge response protocol
+
+| Value | Help |
+|-------|------|
+| `enable` |  Enable chalenge-response |
+| `disable` |  Disable challenge-response |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server mfa totp digits</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 6</span>
+
+Number of digits to use for totp hash
+
+| Value | Help |
+|-------|------|
+| `1-65535` |  Seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server mfa totp drift</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Time drift in seconds
+
+| Value | Help |
+|-------|------|
+| `1-65535` |  Seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server mfa totp slop</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 180</span>
+
+Maximum allowed clock slop in seconds
+
+| Value | Help |
+|-------|------|
+| `1-65535` |  Seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server mfa totp step</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+Step value for totp in seconds
+
+| Value | Help |
+|-------|------|
+| `1-65535` |  Seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server name-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain Name Servers (DNS) addresses
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Domain Name Server (DNS) IPv6 address |
+| `ipv4` |  Domain Name Server (DNS) IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server push-route &lt;tag&gt; metric</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Set metric for this route
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  Metric for this route |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server reject-unconfigured-clients</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Reject connections from clients that are not explicitly configured
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server subnet</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Server-mode subnet (from which client IPs are allocated)
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 network and prefix length |
+| `ipv4net` |  IPv4 network and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; server topology</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: net30</span>
+
+Topology for clients
+
+| Value | Help |
+|-------|------|
+| `subnet` |  Subnet topology |
+| `point-to-point` |  Point-to-point topology |
+| `net30` |  net30 topology |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; shared-secret-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Secret key shared with remote end of tunnel
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; tls auth-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+TLS shared secret key for tls-auth
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; tls ca-certificate</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate Authority chain in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of CA in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; tls certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of certificate in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; tls crypt-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Static key to use to authenticate control channel
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; tls dh-params</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Diffie Hellman parameters (server only)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; tls peer-fingerprint</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Peer certificate SHA256 fingerprint
+
+constraint error message: Peer certificate fingerprint must be a colon-separated SHA256 hex digest
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; tls role</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+TLS negotiation role
+
+| Value | Help |
+|-------|------|
+| `passive` |  Wait for incoming TLS connection |
+| `active` |  Initiate TLS negotiation actively |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; tls tls-version-min</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specify the minimum required TLS version
+
+| Value | Help |
+|-------|------|
+| `1.3` |  TLS v1.3 |
+| `1.2` |  TLS v1.2 |
+| `1.1` |  TLS v1.1 |
+| `1.0` |  TLS v1.0 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; use-lzo-compression</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use fast LZO compression on this TUN/TAP interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces openvpn &lt;tag&gt; vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+## Operational Mode Commands
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces openvpn brief</div>
+  </div>
+</dt>
+
+<dd>
+  Show summary of specified OpenVPN interface information
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces openvpn detail</div>
+  </div>
+</dt>
+
+<dd>
+  Show detailed OpenVPN interface information
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces openvpn user mfa qrcode</div>
+  </div>
+</dt>
+
+<dd>
+  Show multi-factor authentication QR code
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces openvpn user mfa secret</div>
+  </div>
+</dt>
+
+<dd>
+  Show multi-factor authentication secret
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces openvpn user mfa uri</div>
+  </div>
+</dt>
+
+<dd>
+  Show multi-factor authentication otpauth uri
+</dd>
+</dl>
+

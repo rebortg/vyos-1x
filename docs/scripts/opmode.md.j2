@@ -1,9 +1,10 @@
 <dl>
 {% for command in commandnames %}
 <dt>
-  <div class="command-block">```{{ command }}```</div>
+  <div class="opcmd-heading">
+    <div class="opcmd">{{ command | e }}</div>
+  </div>
 </dt>
-
 {% endfor %}
 
 <dd>

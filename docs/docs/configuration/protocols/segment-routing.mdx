@@ -1,0 +1,165 @@
+---
+title: Segment Routing
+description: Segment Routing Configuration
+cfg:
+    - protocols segment-routing
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols segment-routing interface &lt;tag&gt; srv6 hmac</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: accept</span>
+
+Define HMAC policy for ingress SR-enabled packets on this interface
+
+| Value | Help |
+|-------|------|
+| `ignore` |  Ignore HMAC field. |
+| `drop` |  Drop packets without HMAC, validate packets with HMAC |
+| `accept` |  Accept packets without HMAC, validate packets with HMAC |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols segment-routing srv6 locator &lt;tag&gt; behavior-usid</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set SRv6 behavior uSID
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols segment-routing srv6 locator &lt;tag&gt; block-len</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 40</span>
+
+Configure SRv6 locator block length in bits
+
+| Value | Help |
+|-------|------|
+| `u32:16-64` |  Specify SRv6 locator block length in bits |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols segment-routing srv6 locator &lt;tag&gt; func-bits</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 16</span>
+
+Configure SRv6 locator function length in bits
+
+| Value | Help |
+|-------|------|
+| `u32:0-64` |  Specify SRv6 locator function length in bits |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols segment-routing srv6 locator &lt;tag&gt; node-len</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 24</span>
+
+Configure SRv6 locator node length in bits
+
+| Value | Help |
+|-------|------|
+| `u32:16-64` |  Configure SRv6 locator node length in bits |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols segment-routing srv6 locator &lt;tag&gt; prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+SRv6 locator prefix
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  SRv6 locator prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,1518 @@
+---
+title: Webproxy
+description: Webproxy Configuration
+cfg:
+    - service webproxy
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy append-domain</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default domain name
+
+| Value | Help |
+|-------|------|
+| `domain` |  Domain to use for urls that do not contain a &#39;.&#39; |
+
+constraint error message: Must start append-domain with a '.'
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication children</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Number of authentication helper processes
+
+| Value | Help |
+|-------|------|
+| `n` |  Number of authentication helper processes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication credentials-ttl</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 60</span>
+
+Authenticated session time to live in minutes
+
+| Value | Help |
+|-------|------|
+| `n` |  Authenticated session timeout |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap base-dn</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+LDAP Base DN to search
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap bind-dn</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+LDAP DN used to bind to server
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap filter-expression</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Filter expression to perform LDAP search with
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+LDAP password to bind with
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap persistent-connection</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use persistent LDAP connection
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 389</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap server</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+LDAP server to use
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap use-ssl</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use SSL/TLS for LDAP connection
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap username-attribute</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+LDAP username attribute
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication ldap version</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+LDAP protocol version
+
+| Value | Help |
+|-------|------|
+| `3` |  LDAP protocol version 2 |
+| `2` |  LDAP protocol version 2 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication method</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Authentication Method
+
+| Value | Help |
+|-------|------|
+| `ldap` |  Lightweight Directory Access Protocol |
+
+constraint error message: The only supported method currently is LDAP
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy authentication realm</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Name of authentication realm (e.g. &#34;My Company proxy server&#34;)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy cache-peer &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hostname or IP address of peer
+
+| Value | Help |
+|-------|------|
+| `hostname` |  Squid cache-peer hostname |
+| `ipv4` |  Squid cache-peer IPv4 address |
+
+constraint error message: Invalid FQDN or IP address
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy cache-peer &lt;tag&gt; http-port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy default-port</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3128</span>
+
+Default Proxy Port
+
+| Value | Help |
+|-------|------|
+| `u32:1025-65535` |  Default port number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy cache-peer &lt;tag&gt; icp-port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Cache peer ICP port
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Cache peer ICP port |
+| `u32:0` |  Cache peer disabled |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy cache-peer &lt;tag&gt; options</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: no-query default</span>
+
+Cache peer options
+
+| Value | Help |
+|-------|------|
+| `txt` |  Cache peer options |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy cache-peer &lt;tag&gt; type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: parent</span>
+
+Squid peer type (default parent)
+
+| Value | Help |
+|-------|------|
+| `multicast` |  Peer is a member of a multicast group |
+| `sibling` |  Peer is a sibling |
+| `parent` |  Peer is a parent |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy cache-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 100</span>
+
+Disk cache size in MB
+
+| Value | Help |
+|-------|------|
+| `0` |  Disable disk caching |
+| `u32` |  Disk cache size in MB |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy disable-access-log</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable logging of HTTP accesses
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy domain-block</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain name to block
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy domain-noncache</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain name to access without caching
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy listen-address &lt;tag&gt; disable-transparent</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable transparent mode
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy listen-address &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default Proxy Port
+
+| Value | Help |
+|-------|------|
+| `u32:1025-65535` |  Default port number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy maximum-object-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum size of object to be stored in cache in kilobytes
+
+| Value | Help |
+|-------|------|
+| `u32` |  Object size in KB |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy mem-cache-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 20</span>
+
+Memory cache size in MB
+
+| Value | Help |
+|-------|------|
+| `u32` |  Memory cache size in MB  |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy minimum-object-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum size of object to be stored in cache in kilobytes
+
+| Value | Help |
+|-------|------|
+| `u32` |  Object size in KB |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy outgoing-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Outgoing IP address for webproxy
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy reply-block-mime</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+MIME type to block
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy reply-body-max-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum reply body size in KB
+
+| Value | Help |
+|-------|------|
+| `u32` |  Reply size in KB |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy safe-ports</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Safe port ACL
+
+| Value | Help |
+|-------|------|
+| `u32:1-1024` |  Port number. Ports included by default: 21,70,80,210,280,443,488,591,777,873,1025-65535 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy ssl-safe-ports</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+SSL safe port
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Port number. Ports included by default: 443 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard allow-category</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; allow-category</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Category to allow
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard allow-ipaddr-url</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; allow-ipaddr-url</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Allow IP address URLs
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard auto-update update-hour</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Hour of day for database update
+
+| Value | Help |
+|-------|------|
+| `u32:0-23` |  Hour for database update |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard block-category</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; block-category</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Category to block
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard default-action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; default-action</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default action (default: allow)
+
+| Value | Help |
+|-------|------|
+| `block` |  Default filter action is block |
+| `allow` |  Default filter action is allow) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard enable-safe-search</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; enable-safe-search</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable safe-mode search on popular search engines
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard local-block</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; local-block</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local site to block
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IP address of site to block |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard local-block-keyword</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; local-block-keyword</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local keyword to block
+
+| Value | Help |
+|-------|------|
+| `keyword` |  Keyword (or regex) to block |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard local-block-url</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; local-block-url</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local URL to block
+
+| Value | Help |
+|-------|------|
+| `url` |  Local URL to block (without &#34;http://&#34;) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard local-ok</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; local-ok</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local site to allow
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IP address of site to allow |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard local-ok-url</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; local-ok-url</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local URL to allow
+
+| Value | Help |
+|-------|------|
+| `url` |  Local URL to allow (without &#34;http://&#34;) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard log</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; log</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log block category
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard redirect-url</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: block.vyos.net</span>
+
+Redirect URL for filtered websites
+
+| Value | Help |
+|-------|------|
+| `url` |  URL for redirect |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; redirect-url</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Redirect URL for filtered websites
+
+| Value | Help |
+|-------|------|
+| `url` |  URL for redirect |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; source-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source-group for this rule
+
+| Value | Help |
+|-------|------|
+| `group` |  Source group identifier for this rule |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard rule &lt;tag&gt; time-period</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time-period for this rule
+
+| Value | Help |
+|-------|------|
+| `period` |  Time period for this rule |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard source-group &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Address for source-group
+
+| Value | Help |
+|-------|------|
+| `ipv4range` |  IPv4 address range to match |
+| `ipv4net` |  IPv4 prefix to match |
+| `ipv4` |  IPv4 address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard source-group &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard time-period &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard source-group &lt;tag&gt; domain</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain for source-group
+
+| Value | Help |
+|-------|------|
+| `domain` |  Domain name for the source-group |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard source-group &lt;tag&gt; ldap-ip-search</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+LDAP search expression for an IP address list
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard source-group &lt;tag&gt; ldap-user-search</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+LDAP search expression for a user group
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard source-group &lt;tag&gt; user</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+List of user names
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service webproxy url-filtering squidguard time-period &lt;tag&gt; days &lt;tag&gt; time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time for time-period
+
+| Value | Help |
+|-------|------|
+| `&lt;hh:mm - hh:mm&gt;` |  Time range in 24hr time |
+
+constraint error message: Expected time format hh:mm - hh:mm in 24hr time
+
+
+
+</dd>
+</dl>
+

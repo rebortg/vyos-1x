@@ -1,0 +1,239 @@
+---
+title: Source NAT64
+description: Source NAT64 Configuration
+cfg:
+    - nat64 source
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; translation pool &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; translation pool &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; match mark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match fwmark value
+
+| Value | Help |
+|-------|------|
+| `u32:1-2147483647` |  Fwmark value to match against |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; source prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 prefix to be translated
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; translation pool &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 address or prefix to translate to
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  IPv4 prefix |
+| `ipv4` |  IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; translation pool &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number
+
+| Value | Help |
+|-------|------|
+| `range` |  Numbered port range (e.g., 1001-1005) |
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; translation pool &lt;tag&gt; protocol icmp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Internet Control Message Protocol
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; translation pool &lt;tag&gt; protocol tcp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Transmission Control Protocol
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat64 source rule &lt;tag&gt; translation pool &lt;tag&gt; protocol udp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+User Datagram Protocol
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

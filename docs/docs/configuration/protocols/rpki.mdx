@@ -1,0 +1,192 @@
+---
+title: RPKI
+description: RPKI Configuration
+cfg:
+    - protocols rpki
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols rpki cache &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols rpki cache &lt;tag&gt; preference</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Preference of the cache server
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Preference of the cache server |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols rpki cache &lt;tag&gt; ssh key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+OpenSSH key in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of OpenSSH key in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols rpki cache &lt;tag&gt; ssh username</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Username used for authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  Username |
+
+constraint error message: Username is limited to ASCII characters only, with a total length of 128
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols rpki expire-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 7200</span>
+
+Interval to wait before expiring the cache
+
+| Value | Help |
+|-------|------|
+| `u32:600-172800` |  Interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols rpki polling-period</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+Cache polling interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-86400` |  Interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols rpki retry-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 600</span>
+
+Retry interval to connect to the cache server
+
+| Value | Help |
+|-------|------|
+| `u32:1-7200` |  Interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,1002 @@
+---
+title: Wireguard Interface
+description: Wireguard Interface Configuration
+cfg:
+    - interfaces wireguard
+opmode:
+    - show interfaces wireguard
+    - renew dhcp
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 address and prefix length |
+| `ipv4net` |  IPv4 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; peer &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Administratively disable interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; fwmark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+A 32-bit fwmark value set on all outgoing packets
+
+| Value | Help |
+|-------|------|
+| `number` |  value which marks the packet for QoS/shaper |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip adjust-mss</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ipv6 adjust-mss</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Adjust TCP MSS value
+
+| Value | Help |
+|-------|------|
+| `u32:536-65535` |  TCP Maximum segment size in bytes |
+| `clamp-mss-to-pmtu` |  Automatically sets the MSS to the proper value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip arp-cache-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+ARP cache entry timeout in seconds
+
+| Value | Help |
+|-------|------|
+| `u32:1-86400` |  ARP cache entry timout in seconds |
+
+constraint error message: ARP cache entry timeout must be between 1 and 86400 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip disable-arp-filter</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable ARP filter on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip disable-forwarding</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ipv6 disable-forwarding</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable IP forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip enable-arp-accept</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP accept on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip enable-arp-announce</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP announce on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip enable-arp-ignore</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP ignore on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip enable-directed-broadcast</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable directed broadcast forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip enable-proxy-arp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable proxy-arp on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip proxy-arp-pvlan</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable private VLAN proxy ARP on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ip source-validation</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ipv6 source-validation</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source validation by reversed path (RFC3704)
+
+| Value | Help |
+|-------|------|
+| `disable` |  No source validation |
+| `loose` |  Enable Loose Reverse Path Forwarding as defined in RFC3704 |
+| `strict` |  Enable Strict Reverse Path Forwarding as defined in RFC3704 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ipv6 accept-dad</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Accept Duplicate Address Detection
+
+| Value | Help |
+|-------|------|
+| `2` |  Enable DAD - disable IPv6 if MAC-based duplicate link-local address found |
+| `1` |  Enable DAD |
+| `0` |  Disable DAD |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ipv6 address autoconf</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable acquisition of IPv6 address using stateless autoconfig (SLAAC)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ipv6 address eui64</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix for IPv6 address with MAC-based EUI-64
+
+| Value | Help |
+|-------|------|
+| `&lt;h:h:h:h:h:h:h:h/64&gt;` |  IPv6 /64 network |
+
+constraint error message: EUI64 prefix length must be 64
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ipv6 address no-default-link-local</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remove the default link-local address from the interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; ipv6 dup-addr-detect-transmits</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Number of NS messages to send while performing DAD
+
+| Value | Help |
+|-------|------|
+| `u32:1-n` |  Number of NS messages to send while performing DAD |
+| `u32:0` |  Disable Duplicate Address Dectection (DAD) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; mirror egress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirror egress traffic to destination interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; mirror ingress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirror ingress traffic to destination interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; mtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1420</span>
+
+Maximum Transmission Unit (MTU)
+
+| Value | Help |
+|-------|------|
+| `u32:68-16000` |  Maximum Transmission Unit in byte |
+
+constraint error message: MTU must be between 68 and 16000
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; peer &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of tunnel endpoint
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address of remote tunnel endpoint |
+| `ipv4` |  IPv4 address of remote tunnel endpoint |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; peer &lt;tag&gt; allowed-ips</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP addresses allowed to traverse the peer
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; peer &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; peer &lt;tag&gt; persistent-keepalive</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interval to send keepalive messages
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; peer &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; peer &lt;tag&gt; preshared-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+base64 encoded preshared key
+
+constraint error message: Key is not base64-encoded
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; peer &lt;tag&gt; public-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+base64 encoded public key
+
+constraint error message: Key is not base64-encoded
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; per-client-thread</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Process traffic from each client in a dedicated thread
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; private-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Base64 encoded private key
+
+constraint error message: Key is not base64-encoded
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; redirect</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Redirect incoming packet to destination
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces wireguard &lt;tag&gt; vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+## Operational Mode Commands
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard allowed-ips</div>
+  </div>
+</dt>
+
+<dd>
+  Show all IP addresses allowed for the specified interface
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard detail</div>
+  </div>
+</dt>
+
+<dd>
+  Show detailed Wireguard interface information
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard endpoints</div>
+  </div>
+</dt>
+
+<dd>
+  Show all endpoints for the specified interface
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard event-log addr</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for network address events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard event-log link</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for network link events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard event-log neigh</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for neighbor table events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard event-log route</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for route events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard event-log rule</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for PBR rule change events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard peers</div>
+  </div>
+</dt>
+
+<dd>
+  Show all peer IDs for the specified interface
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard public-key</div>
+  </div>
+</dt>
+
+<dd>
+  Show interface public-key
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces wireguard summary</div>
+  </div>
+</dt>
+
+<dd>
+  Shows current configuration and device information
+</dd>
+</dl>
+

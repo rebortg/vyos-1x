@@ -1,0 +1,1846 @@
+---
+title: L2TP
+description: L2TP Configuration
+cfg:
+    - vpn l2tp
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication local-users username &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius server &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication local-users username &lt;tag&gt; password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Password for authentication
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication local-users username &lt;tag&gt; rate-limit download</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Download bandwidth limit in kbits/sec
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication local-users username &lt;tag&gt; rate-limit upload</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Upload bandwidth limit in kbits/sec
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication local-users username &lt;tag&gt; static-ip</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: *</span>
+
+Static client IP address
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: local</span>
+
+Authentication mode used by this server
+
+| Value | Help |
+|-------|------|
+| `noauth` |  Authentication disabled |
+| `radius` |  Use RADIUS server for user autentication |
+| `local` |  Use local username/password configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication protocols</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: pap chap mschap mschap-v2</span>
+
+Authentication protocol for remote access peer
+
+| Value | Help |
+|-------|------|
+| `mschap-v2` |  Authentication via MS-CHAPv2 (Microsoft Challenge Handshake Authentication Protocol, version 2) |
+| `mschap` |  Authentication via MS-CHAP (Microsoft Challenge Handshake Authentication Protocol) |
+| `chap` |  Authentication via CHAP (Challenge Handshake Authentication Protocol) |
+| `pap` |  Authentication via PAP (Password Authentication Protocol) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius accounting-interim-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interval in seconds to send accounting information
+
+| Value | Help |
+|-------|------|
+| `u32:1-3600` |  Interval in seconds to send accounting information |
+
+constraint error message: Interval value must be between 1 and 3600 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius acct-interim-jitter</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum jitter value in seconds to be applied to accounting information interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-60` |  Maximum jitter value in seconds |
+
+constraint error message: Jitter value must be between 1 and 60 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius acct-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Timeout for Interim-Update packets, terminate session afterwards
+
+| Value | Help |
+|-------|------|
+| `u32:0-60` |  Timeout in seconds, 0 to keep active |
+
+constraint error message: Timeout must be between 0 and 60 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius dynamic-author key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Shared secret for Dynamic Authorization Extension server
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius dynamic-author port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1700</span>
+
+Port for Dynamic Authorization Extension server (DM/CoA)
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  TCP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius dynamic-author server</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address for Dynamic Authorization Extension server (DM/CoA)
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address for aynamic authorization server |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius max-try</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Number of tries to send Access-Request/Accounting-Request queries
+
+| Value | Help |
+|-------|------|
+| `u32:1-20` |  Maximum tries |
+
+constraint error message: Maximum tries must be between 1 and 20
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius nas-identifier</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+NAS-Identifier attribute sent to RADIUS
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius nas-ip-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+NAS-IP-Address attribute sent to RADIUS
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  NAS-IP-Address attribute |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius preallocate-vif</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable attribute NAS-Port-Id in Access-Request
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius rate-limit attribute</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: Filter-Id</span>
+
+RADIUS attribute that contains rate information
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius rate-limit enable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable bandwidth shaping via RADIUS
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius rate-limit multiplier</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Shaper multiplier
+
+| Value | Help |
+|-------|------|
+| `&lt;0.001-1000&gt;` |  Shaper multiplier |
+
+constraint error message: Multiplier needs to be between 0.001 and 1000
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius rate-limit vendor</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Vendor dictionary
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius server &lt;tag&gt; acct-port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1813</span>
+
+Accounting port
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius server &lt;tag&gt; disable-accounting</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable accounting
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius server &lt;tag&gt; fail-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Mark server unavailable for &lt;n&gt; seconds on failure
+
+| Value | Help |
+|-------|------|
+| `u32:0-600` |  Fail time penalty |
+
+constraint error message: Fail time must be between 0 and 600 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius server &lt;tag&gt; key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Shared secret key
+
+| Value | Help |
+|-------|------|
+| `txt` |  Password string (key) |
+
+constraint error message: Password must be less then 128 characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1812</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 source address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access authentication radius timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Timeout in seconds to wait response from RADIUS server
+
+| Value | Help |
+|-------|------|
+| `u32:1-60` |  Timeout in seconds |
+
+constraint error message: Timeout must be between 1 and 60 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access client-ip-pool &lt;tag&gt; next-pool</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Next pool name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of IP pool |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access client-ip-pool &lt;tag&gt; range</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Range of IP addresses
+
+| Value | Help |
+|-------|------|
+| `ipv4range` |  IPv4 address range inside /24 network |
+| `ipv4net` |  IPv4 prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access client-ipv6-pool &lt;tag&gt; delegate &lt;tag&gt; delegation-prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix length delegated to client
+
+| Value | Help |
+|-------|------|
+| `u32:32-64` |  Delegated prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access client-ipv6-pool &lt;tag&gt; prefix &lt;tag&gt; mask</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 64</span>
+
+Prefix length used for individual client
+
+| Value | Help |
+|-------|------|
+| `u32:48-128` |  Client prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access default-ipv6-pool</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default client IPv6 pool name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Default IPv6 pool |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access default-pool</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default client IP pool name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Default IP pool |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access extended-scripts on-change</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run when session interface changed by RADIUS CoA handling
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access extended-scripts on-down</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run when session interface going to terminate
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access extended-scripts on-pre-up</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run before session interface comes up
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access extended-scripts on-up</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run when session interface is completely configured and started
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access gateway-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Gateway IP address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Default Gateway send to the client |
+
+constraint error message: invalid IPv4 address
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings authentication mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Authentication mode for IPsec
+
+| Value | Help |
+|-------|------|
+| `x509` |  Use X.509 certificate for IPsec authentication |
+| `pre-shared-secret` |  Use pre-shared secret for IPsec authentication |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings authentication pre-shared-secret</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Pre-shared secret key
+
+| Value | Help |
+|-------|------|
+| `txt` |  Pre-shared secret key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings authentication x509 ca-certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate Authority in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of CA in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings authentication x509 certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of certificate in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings authentication x509 passphrase</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Private key passphrase
+
+| Value | Help |
+|-------|------|
+| `txt` |  Passphrase to decrypt the private key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings esp-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Encapsulating Security Payloads (ESP) group name
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings ike-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Internet Key Exchange (IKE) group name
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings ike-lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3600</span>
+
+IKE lifetime
+
+| Value | Help |
+|-------|------|
+| `u32:30-86400` |  IKE lifetime in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ipsec-settings lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3600</span>
+
+ESP lifetime
+
+| Value | Help |
+|-------|------|
+| `u32:30-86400` |  IKE lifetime in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access limits burst</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Burst count
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access limits connection-limit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Acceptable rate of connections (e.g. 1/min, 60/sec)
+
+constraint error message: illegal value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access limits timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Timeout in seconds
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access lns host-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Sent to the client (LAC) in the Host-Name attribute
+
+constraint error message: Host-name must be alphanumeric and can contain hyphens
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access lns shared-secret</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Tunnel password used to authenticate the client (LAC)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access max-concurrent-sessions</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum number of concurrent session start attempts
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Maximum number of concurrent session start attempts |
+
+constraint error message: Maximum concurent sessions must be in range 0-65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access mtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1436</span>
+
+Maximum Transmission Unit (MTU)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access name-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain Name Servers (DNS) addresses
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Domain Name Server (DNS) IPv6 address |
+| `ipv4` |  Domain Name Server (DNS) IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access outside-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+External IP address to which VPN clients will connect
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options disable-ccp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable Compression Control Protocol (CCP)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options interface-cache</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+PPP interface cache
+
+| Value | Help |
+|-------|------|
+| `u32:1-256000` |  Count of interfaces to keep in cache |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options ipv4</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 (IPCP) negotiation algorithm
+
+| Value | Help |
+|-------|------|
+| `require` |  Require IPv4 negotiation |
+| `prefer` |  Ask client for IPv4 negotiation, do not fail if it rejects |
+| `allow` |  Negotiate IPv4 only if client requests |
+| `deny` |  Do not negotiate IPv4 |
+
+constraint error message: invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options ipv6</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: deny</span>
+
+IPv6 (IPCP6) negotiation algorithm
+
+| Value | Help |
+|-------|------|
+| `require` |  Require IPv6 negotiation |
+| `prefer` |  Ask client for IPv6 negotiation, do not fail if it rejects |
+| `allow` |  Negotiate IPv6 only if client requests |
+| `deny` |  Do not negotiate IPv6 |
+
+constraint error message: invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options ipv6-accept-peer-interface-id</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Accept peer interface identifier
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options ipv6-interface-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Fixed or random interface identifier for IPv6
+
+| Value | Help |
+|-------|------|
+| `x:x:x:x` |  specify interface identifier for IPv6 |
+| `random` |  Random interface identifier for IPv6 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options ipv6-peer-interface-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Peer interface identifier for IPv6
+
+| Value | Help |
+|-------|------|
+| `calling-sid` |  Calculate interface identifier from calling-station-id |
+| `ipv4-addr` |  Calculate interface identifier from IPv4 address, for example 192:168:0:1 |
+| `random` |  Use a random interface identifier for IPv6 |
+| `x:x:x:x` |  Interface identifier for IPv6 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options lcp-echo-failure</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Maximum number of Echo-Requests may be sent without valid reply
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options lcp-echo-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+LCP echo-requests/sec
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options lcp-echo-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Timeout in seconds to wait for any peer activity. If this option specified it turns on adaptive lcp echo functionality and &#34;lcp-echo-failure&#34; is not used.
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options min-mtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Minimum acceptable MTU (68-65535)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options mppe</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: prefer</span>
+
+Specifies mppe negotiation preferences
+
+| Value | Help |
+|-------|------|
+| `deny` |  drop all mppe |
+| `prefer` |  send mppe request, if client rejects continue |
+| `require` |  send mppe request, if client rejects, drop the connection |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access ppp-options mru</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Preferred MRU (68-65535)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access shaper fwmark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Firewall mark value for traffic that excludes from shaping
+
+| Value | Help |
+|-------|------|
+| `u32:1-2147483647` |  Match firewall mark value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access snmp master-agent</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable SNMP master agent mode
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn l2tp remote-access wins-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Windows Internet Name Service (WINS) servers propagated to client
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Domain Name Server (DNS) IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

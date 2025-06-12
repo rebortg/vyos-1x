@@ -1,0 +1,310 @@
+---
+title: Conntrack Sync
+description: Conntrack Sync Configuration
+cfg:
+    - service conntrack-sync
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync accept-protocol</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Protocols for which local conntrack entries will be synced
+
+| Value | Help |
+|-------|------|
+| `dccp` |  Sync Datagram Congestion Control Protocol entries |
+| `sctp` |  Sync Stream Control Transmission Protocol entries |
+| `icmp6` |  Sync IPv6 Internet Control Message Protocol entries |
+| `icmp` |  Sync Internet Control Message Protocol entries |
+| `udp` |  Sync User Datagram Protocol entries |
+| `tcp` |  Sync Transmission Control Protocol entries |
+
+constraint error message: Allowed protocols: tcp udp icmp or sctp
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync disable-external-cache</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Directly injects the flow-states into the in-kernel Connection Tracking System of the backup firewall.
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync disable-syslog</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable connection logging via Syslog
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync event-listen-queue-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 8</span>
+
+Queue size for local conntrack events
+
+| Value | Help |
+|-------|------|
+| `u32` |  Queue size in MB |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync expect-sync</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Protocol for which expect entries need to be synchronized
+
+constraint error message: Invalid protocol
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync failover-mechanism vrrp sync-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRRP sync group
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync ignore-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP addresses for which local conntrack entries will not be synced
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 prefix to ignore |
+| `ipv6` |  IPv6 address to ignore |
+| `ipv4net` |  IPv4 prefix to ignore |
+| `ipv4` |  IPv4 address to ignore |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync interface &lt;tag&gt; peer</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of the peer to send the UDP conntrack info too. This disable multicast.
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IP address to listen for incoming connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync interface &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync listen-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IPv4 addresses to listen on
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address to listen for incoming connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync mcast-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 225.0.0.50</span>
+
+Multicast group to use for syncing conntrack entries
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service conntrack-sync sync-queue-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Queue size for syncing conntrack entries
+
+| Value | Help |
+|-------|------|
+| `u32` |  Queue size in MB |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

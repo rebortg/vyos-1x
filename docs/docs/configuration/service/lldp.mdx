@@ -1,0 +1,301 @@
+---
+title: LLDP
+description: LLDP Configuration
+cfg:
+    - service lldp
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp interface &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp interface &lt;tag&gt; location coordinate-based altitude</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Altitude in meters
+
+| Value | Help |
+|-------|------|
+| `[+-]&lt;meters&gt;` |  Altitude in meters |
+| `0` |  No altitude |
+
+constraint error message: Altitude should be a positive or negative number
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp interface &lt;tag&gt; location coordinate-based datum</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: WGS84</span>
+
+Coordinate datum type
+
+| Value | Help |
+|-------|------|
+| `MLLW` |  NAD83/MLLW |
+| `NAD83` |  NAD83 |
+| `WGS84` |  WGS84 |
+
+constraint error message: Datum should be WGS84, NAD83, or MLLW
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp interface &lt;tag&gt; location coordinate-based latitude</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Latitude
+
+| Value | Help |
+|-------|------|
+| `&lt;latitude&gt;` |  Latitude (example &#34;37.524449N&#34;) |
+
+constraint error message: Latitude should be a number followed by S or N
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp interface &lt;tag&gt; location coordinate-based longitude</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Longitude
+
+| Value | Help |
+|-------|------|
+| `&lt;longitude&gt;` |  Longitude (example &#34;122.267255W&#34;) |
+
+constraint error message: Longiture should be a number followed by E or W
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp interface &lt;tag&gt; location elin</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+ECS ELIN (Emergency location identifier number)
+
+| Value | Help |
+|-------|------|
+| `u32:0-9999999999` |  Emergency Call Service ELIN number (between 10-25 numbers) |
+
+constraint error message: ELIN number must be between 10-25 numbers
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp legacy-protocols cdp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Listen for CDP for Cisco routers/switches
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp legacy-protocols edp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Listen for EDP for Extreme routers/switches
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp legacy-protocols fdp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Listen for FDP for Foundry routers/switches
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp legacy-protocols sonmp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Listen for SONMP for Nortel routers/switches
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp management-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Management IP Address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 Management Address |
+| `ipv4` |  IPv4 Management Address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service lldp snmp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable SNMP queries of the LLDP database
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

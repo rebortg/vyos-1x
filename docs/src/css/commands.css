@@ -1,0 +1,96 @@
+div.opcmd-heading,
+div.cfgcmd-heading,
+table .opcmd,
+table .cfgcmd {
+  padding: 0;
+  display: flex;
+  background-color: unset;
+  border: none;
+  border-radius: 8px 0 0 8px;
+}
+
+div.opcmd-heading,
+div.cfgcmd-heading {
+  margin-bottom: 15px;
+}
+
+div.opcmd-heading,
+table .opcmd {
+  border-left: 5px solid #B8E9F9;
+}
+
+div.cfgcmd-heading,
+table .cfgcmd {
+  border-left: 5px solid #FD8F01;
+}
+
+div.opcmd,
+div.cfgcmd {
+  display: flex;
+  padding: 4px 8px 8px 30px;
+  margin-right: 12px;
+  align-items: flex-start;
+  color: #121010 !important;
+  font-family: 'Roboto Mono', monospace !important;
+  letter-spacing: -0.04em !important;
+  font-weight: 500 !important;
+  position: relative;
+  word-break: break-all;
+  border-radius: 8px;
+  gap: 12px;
+}
+
+div.opcmd::before,
+div.cfgcmd::before {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+}
+
+div.opcmd::before {
+  content: url('@site/static/img/opcmd-dollar-icon.svg');
+}
+
+div.cfgcmd::before {
+  content: url('@site/static/img/cfgcmd-hash-icon.svg');
+}
+
+div.opcmd {
+  background-color: #EBF9FF;
+}
+
+div.cfgcmd {
+  background-color: #FFF4E6;
+}
+
+span.opcmd,
+div.cfgcmd {
+  font-size: 16px !important;
+}
+
+.command-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.command-tag {
+  background-color: #F3F4F6;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 11px;
+  height: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  white-space: nowrap;
+}
+
+.command-tag.multi { color: #1976d2; }
+.command-tag.valueless { color: #7b1fa2; }
+.command-tag.single { color: #388e3c; }
+.command-tag.secret { color: #d32f2f; }
+.command-tag.default { color: #555; } 

@@ -1,0 +1,827 @@
+---
+title: PIM
+description: PIM Configuration
+cfg:
+    - protocols pim
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim ecmp rebalance</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable PIM ECMP Rebalance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim igmp watermark-warning</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Configure group limit for watermark warning
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Group count to generate watermark warning |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; bfd profile</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use settings from BFD profile
+
+| Value | Help |
+|-------|------|
+| `txt` |  BFD profile name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; dr-priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; dr-priority</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Designated router election priority
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  DR Priority |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; hello</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; hello</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hello Interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-180` |  Hello Interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; igmp disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; mld disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; igmp join &lt;tag&gt; source-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 source address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; igmp query-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IGMP host query interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-1800` |  Query interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; igmp query-max-response-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IGMP max query response time
+
+| Value | Help |
+|-------|------|
+| `u32:10-250` |  Query response value in deci-seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; igmp version</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Interface IGMP version
+
+| Value | Help |
+|-------|------|
+| `3` |  IGMP version 3 |
+| `2` |  IGMP version 2 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; no-bsm</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; no-bsm</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not process bootstrap messages
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; no-unicast-bsm</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; no-unicast-bsm</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not process unicast bootstrap messages
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; passive</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; passive</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable sending and receiving PIM control packets on the interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim interface &lt;tag&gt; source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 source address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim join-prune-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 join-prune-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 60</span>
+
+Join prune send interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim keep-alive-timer</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim rp keep-alive-timer</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 keep-alive-timer</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 rp keep-alive-timer</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Keep alive Timer
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Keep alive Timer in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim no-v6-secondary</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable IPv6 secondary address in hello packets
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim packets</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 packets</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Packets to process at once
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Number of packets |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim register-accept-list prefix-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim spt-switchover infinity-and-beyond prefix-list</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim ssm prefix-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix-list to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Prefix-list to apply (IPv4) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim register-suppress-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 register-suppress-time</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Register suppress timer
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Timer in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim rp address &lt;tag&gt; group</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group Address range
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  Group Address range RFC 3171 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; mld interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Query interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Query interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; mld join &lt;tag&gt; source</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; mld last-member-query-count</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Last member query count
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Count |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; mld last-member-query-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Last member query interval
+
+| Value | Help |
+|-------|------|
+| `u32:100-6553500` |  Last member query interval in milliseconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; mld max-response-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Max query response time
+
+| Value | Help |
+|-------|------|
+| `u32:100-6553500` |  Query response value in milliseconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 interface &lt;tag&gt; mld version</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2</span>
+
+MLD version
+
+| Value | Help |
+|-------|------|
+| `2` |  MLD version 2 |
+| `1` |  MLD version 1 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 rp address &lt;tag&gt; group</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group Address range
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Group Address range |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols pim6 rp address &lt;tag&gt; prefix-list6</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix-list to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Prefix-list to apply (IPv6) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

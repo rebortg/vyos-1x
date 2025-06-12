@@ -1,0 +1,381 @@
+---
+title: BFD
+description: BFD Configuration
+cfg:
+    - protocols bfd
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; echo-mode</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd profile &lt;tag&gt; echo-mode</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enables the echo transmission mode
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; interval echo-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd profile &lt;tag&gt; interval echo-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Echo receive transmission interval
+
+| Value | Help |
+|-------|------|
+| `u32:10-60000` |  The minimal echo receive transmission interval that this system is capable of handling |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; interval multiplier</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd profile &lt;tag&gt; interval multiplier</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Multiplier to determine packet loss
+
+| Value | Help |
+|-------|------|
+| `u32:2-255` |  Remote transmission interval will be multiplied by this value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; interval receive</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd profile &lt;tag&gt; interval receive</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+Minimum interval of receiving control packets
+
+| Value | Help |
+|-------|------|
+| `u32:10-60000` |  Interval in milliseconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; interval transmit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd profile &lt;tag&gt; interval transmit</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+Minimum interval of transmitting control packets
+
+| Value | Help |
+|-------|------|
+| `u32:10-60000` |  Interval in milliseconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; minimum-ttl</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd profile &lt;tag&gt; minimum-ttl</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Expect packets with at least this TTL
+
+| Value | Help |
+|-------|------|
+| `u32:1-254` |  Minimum TTL expected |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; multihop</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Allow this BFD peer to not be directly connected
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; passive</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd profile &lt;tag&gt; passive</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not attempt to start sessions
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; profile</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use settings from BFD profile
+
+| Value | Help |
+|-------|------|
+| `txt` |  BFD profile name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; shutdown</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd profile &lt;tag&gt; shutdown</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable this peer
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; source address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local address to bind our peer listener to
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Local IPv6 address used to connect to the peer |
+| `ipv4` |  Local IPv4 address used to connect to the peer |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; source interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols bfd peer &lt;tag&gt; vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

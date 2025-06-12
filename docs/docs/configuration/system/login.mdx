@@ -1,0 +1,701 @@
+---
+title: Login
+description: Login Configuration
+cfg:
+    - system login
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login banner post-login</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+A system banner after the user logs in 
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login banner pre-login</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+A system banner before the user logs in
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login max-login-session</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum number of all login sessions
+
+| Value | Help |
+|-------|------|
+| `u32:1-65536` |  Maximum number of all login sessions |
+
+constraint error message: Maximum logins must be between 1 and 65536
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login radius security-mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: optional</span>
+
+Security mode for RADIUS authentication
+
+| Value | Help |
+|-------|------|
+| `optional` |  Pass to the next authentication method if RADIUS answers with Access-Reject |
+| `mandatory` |  Deny access immediately if RADIUS answers with Access-Reject |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login radius server &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login tacacs server &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login radius server &lt;tag&gt; key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login tacacs server &lt;tag&gt; key</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Shared secret key
+
+| Value | Help |
+|-------|------|
+| `txt` |  Password string (key) |
+
+constraint error message: Password must be less then 128 characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login radius server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1812</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login radius server &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 255</span>
+
+Server priority
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Server priority |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login radius server &lt;tag&gt; timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login tacacs timeout</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2</span>
+
+Session timeout
+
+| Value | Help |
+|-------|------|
+| `u32:1-240` |  Session timeout in seconds (default: 2) |
+
+constraint error message: Timeout must be between 1 and 240 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login radius source-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source IP address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 source address |
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login radius vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login tacacs vrf</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login tacacs security-mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: optional</span>
+
+Security mode for TACACS+ authentication
+
+| Value | Help |
+|-------|------|
+| `optional` |  Pass to the next authentication method if TACACS+ answers with REJECT |
+| `mandatory` |  Deny access immediately if TACACS+ answers with REJECT |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login tacacs server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 49</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login tacacs source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 source address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Session timeout
+
+| Value | Help |
+|-------|------|
+| `u32:5-604800` |  Session timeout in seconds |
+
+constraint error message: Timeout must be between 5 and 604800 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication encrypted-password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: !</span>
+
+Encrypted password
+
+constraint error message: Invalid encrypted password for $VAR(../../@).
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication otp key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Key/secret the token algorithm (see RFC4226)
+
+| Value | Help |
+|-------|------|
+| `txt` |  Base32 encoded key/token |
+
+constraint error message: Key must only include base32 characters and be at least 26 characters long
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication otp rate-limit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Limit number of logins (rate-limit) per rate-time
+
+| Value | Help |
+|-------|------|
+| `u32:1-10` |  Number of attempts |
+
+constraint error message: Number of login attempts must me between 1 and 10
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication otp rate-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+Limit number of logins (rate-limit) per rate-time
+
+| Value | Help |
+|-------|------|
+| `u32:15-600` |  Time interval |
+
+constraint error message: Rate limit time interval must be between 15 and 600 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication otp window-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Set window of concurrently valid codes
+
+| Value | Help |
+|-------|------|
+| `u32:1-21` |  Window size |
+
+constraint error message: Window of concurrently valid codes must be between 1 and 21
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication plaintext-password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Plaintext password used for encryption
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication public-keys &lt;tag&gt; key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Public key value (Base64 encoded)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication public-keys &lt;tag&gt; options</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Optional public key options
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; authentication public-keys &lt;tag&gt; type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+SSH public key type
+
+| Value | Help |
+|-------|------|
+| `sk-ssh-ed25519@openssh.com` |  Elliptic curve 25519 security key |
+| `sk-ecdsa-sha2-nistp256@openssh.com` |  Elliptic Curve DSA security key |
+| `ssh-ed25519` |  Edwards-curve DSA with elliptic curve 25519 |
+| `ecdsa-sha2-nistp521` |  Elliptic Curve DSA with NIST P-521 curve |
+| `ecdsa-sha2-nistp384` |  Elliptic Curve DSA with NIST P-384 curve |
+| `ecdsa-sha2-nistp256` |  Elliptic Curve DSA with NIST P-256 curve |
+| `ssh-rsa` |  Key pair based on RSA algorithm |
+| `ssh-dss` |  Digital Signature Algorithm (DSA) key support |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; full-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Full name of the user (use quotes for names with spaces)
+
+constraint error message: Cannot use ':' in full name
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system login user &lt;tag&gt; home-directory</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Home directory
+
+| Value | Help |
+|-------|------|
+| `txt` |  Path to home directory |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,310 @@
+---
+title: High Availability Virtual Server
+description: High Availability Virtual Server Configuration
+cfg:
+    - high-availability disable
+    - high-availability virtual-server
+opmode:
+    - show virtual-server
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address |
+| `ipv4` |  IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; algorithm</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: least-connection</span>
+
+Schedule algorithm (default - least-connection)
+
+| Value | Help |
+|-------|------|
+| `locality-based-least-connection` |  Locality-Based least connection |
+| `destination-hashing` |  Destination hashing |
+| `source-hashing` |  Source hashing |
+| `weighted-least-connection` |  Weighted least connection |
+| `least-connection` |  Least connection |
+| `weighted-round-robin` |  Weighted round robin |
+| `round-robin` |  Round robin |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; delay-loop</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Interval between health-checks (in seconds)
+
+| Value | Help |
+|-------|------|
+| `u32:1-600` |  Interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; forward-method</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: nat</span>
+
+Forwarding method
+
+| Value | Help |
+|-------|------|
+| `tunnel` |  Tunneling |
+| `nat` |  NAT |
+| `direct` |  Direct routing |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; fwmark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match fwmark value
+
+| Value | Help |
+|-------|------|
+| `u32:1-2147483647` |  Match firewall mark value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; persistence-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+Timeout for persistent connections
+
+| Value | Help |
+|-------|------|
+| `u32:1-86400` |  Timeout for persistent connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; real-server &lt;tag&gt; port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 0 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: tcp</span>
+
+Protocol for port checks
+
+| Value | Help |
+|-------|------|
+| `udp` |  UDP |
+| `tcp` |  TCP |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; real-server &lt;tag&gt; connection-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Server connection timeout
+
+| Value | Help |
+|-------|------|
+| `u32:1-86400` |  Connection timeout to remote server |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability virtual-server &lt;tag&gt; real-server &lt;tag&gt; health-check script</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Health check script file
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+## Operational Mode Commands
+

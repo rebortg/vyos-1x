@@ -1,0 +1,883 @@
+---
+title: Openconnect
+description: Openconnect Configuration
+cfg:
+    - vpn openconnect
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect accounting mode radius</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use RADIUS server for accounting
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect accounting radius server &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication identity-based-config disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication local-users username &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication radius server &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect accounting radius server &lt;tag&gt; key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication radius server &lt;tag&gt; key</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Shared secret key
+
+| Value | Help |
+|-------|------|
+| `txt` |  Password string (key) |
+
+constraint error message: Password must be less then 128 characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect accounting radius server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1813</span>
+
+Accounting port
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication group</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group that a client is allowed to select (from a list). Maps to RADIUS Class attribute.
+
+| Value | Help |
+|-------|------|
+| `txt` |  Group string. The group may be followed by a user-friendly name in brackets: group1[First Group] |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication identity-based-config default-config</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default configuration if discrete config could not be found
+
+| Value | Help |
+|-------|------|
+| `filename` |  Default configuration filename, must be under /config/auth |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication identity-based-config directory</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Directory to containing configuration files
+
+| Value | Help |
+|-------|------|
+| `path` |  Path to configuration directory, must be under /config/auth |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication identity-based-config mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Select per user or per group configuration file - ignored if authentication group is configured
+
+| Value | Help |
+|-------|------|
+| `group` |  Match RADIUS response class attribute as file name |
+| `user` |  Match configuration file on username |
+
+constraint error message: Invalid mode, must be either user or group
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication local-users username &lt;tag&gt; otp interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+Time tokens interval in seconds
+
+| Value | Help |
+|-------|------|
+| `u32:5-86400` |  Time tokens interval in seconds. |
+
+constraint error message: Time token interval must be between 5 and 86400 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication local-users username &lt;tag&gt; otp key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Token Key Secret key for the token algorithm (see RFC 4226)
+
+| Value | Help |
+|-------|------|
+| `txt` |  OTP key in hex-encoded format |
+
+constraint error message: Key name must only include hex characters and be at least 20 characters long
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication local-users username &lt;tag&gt; otp otp-length</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 6</span>
+
+Number of digits in OTP code
+
+| Value | Help |
+|-------|------|
+| `u32:6-8` |  Number of digits in OTP code |
+
+constraint error message: Number of digits in OTP code must be between 6 and 8
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication local-users username &lt;tag&gt; otp token-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: hotp-time</span>
+
+Token type
+
+| Value | Help |
+|-------|------|
+| `hotp-event` |  Event-based OTP algorithm |
+| `hotp-time` |  Time-based OTP algorithm |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication local-users username &lt;tag&gt; password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Password used for authentication
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication mode local</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use local username/password configuration (OTP supported)
+
+| Value | Help |
+|-------|------|
+| `password-otp` |  Password (first) + OTP local authentication |
+| `otp` |  OTP-only local authentication |
+| `password` |  Password-only local authentication |
+
+constraint error message: Invalid authentication mode. Must be one of: password, otp or password-otp 
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication mode radius</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use RADIUS server for user autentication
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication radius groupconfig</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+If the groupconfig option is set, then config-per-user will be overriden, and all configuration will be read from RADIUS.
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication radius server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1812</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication radius source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 source address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect authentication radius timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2</span>
+
+Session timeout
+
+| Value | Help |
+|-------|------|
+| `u32:1-240` |  Session timeout in seconds (default: 2) |
+
+constraint error message: Timeout must be between 1 and 240 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect http-security-headers</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable HTTP security headers
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect listen-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0.0.0.0</span>
+
+Local IPv4 addresses to listen on
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address to listen for incoming connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect listen-ports tcp</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 443</span>
+
+tcp port number to accept connections
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect listen-ports udp</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 443</span>
+
+udp port number to accept connections
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect network-settings client-ip-settings subnet</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Client IP subnet (CIDR notation)
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  IPv4 address and prefix length |
+
+constraint error message: Not a valid CIDR formatted prefix
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect network-settings client-ipv6-pool mask</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 64</span>
+
+Prefix length used for individual client
+
+| Value | Help |
+|-------|------|
+| `u32:48-128` |  Client prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect network-settings client-ipv6-pool prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Pool of addresses used to assign to clients
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect network-settings name-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain Name Servers (DNS) addresses
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Domain Name Server (DNS) IPv6 address |
+| `ipv4` |  Domain Name Server (DNS) IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect network-settings push-route</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Route to be pushed to the client
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 network and prefix length |
+| `ipv4net` |  IPv4 network and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect network-settings split-dns</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domains over which the provided DNS should be used
+
+| Value | Help |
+|-------|------|
+| `txt` |  Client prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect network-settings tunnel-all-dns</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: no</span>
+
+If the tunnel-all-dns option is set to yes, tunnel all DNS queries via the VPN. This is the default when a default route is set.
+
+| Value | Help |
+|-------|------|
+| `no` |  Disable tunneling of all DNS traffic |
+| `yes` |  Enable tunneling of all DNS traffic |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect ssl ca-certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate Authority in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of CA in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect ssl certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of certificate in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn openconnect ssl passphrase</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Private key passphrase
+
+| Value | Help |
+|-------|------|
+| `txt` |  Passphrase to decrypt the private key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,102 @@
+---
+title: Task Scheduler
+description: Task Scheduler Configuration
+cfg:
+    - system task-scheduler
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system task-scheduler task &lt;tag&gt; crontab-spec</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+UNIX crontab time specification string
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system task-scheduler task &lt;tag&gt; executable arguments</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Arguments passed to the executable
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system task-scheduler task &lt;tag&gt; executable path</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Path to executable
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system task-scheduler task &lt;tag&gt; interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Execution interval
+
+| Value | Help |
+|-------|------|
+| `&lt;days&gt;d` |  Execution interval in days |
+| `&lt;hours&gt;h` |  Execution interval in hours |
+| `&lt;minutes&gt;m` |  Execution interval in minutes |
+| `&lt;minutes&gt;` |  Execution interval in minutes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

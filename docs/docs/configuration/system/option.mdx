@@ -1,0 +1,302 @@
+---
+title: Option
+description: Option Configuration
+cfg:
+    - system option
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option ctrl-alt-delete</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+System action on Ctrl-Alt-Delete keystroke
+
+| Value | Help |
+|-------|------|
+| `poweroff` |  Poweroff system |
+| `reboot` |  Reboot system |
+| `ignore` |  Ignore key sequence |
+
+constraint error message: Must be ignore, reboot, or poweroff
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option http-client source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option ssh-client source-address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source IP address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 source address |
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option http-client source-interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option ssh-client source-interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface used to establish connection
+
+| Value | Help |
+|-------|------|
+| `interface` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option kernel disable-mitigations</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable all optional CPU mitigations
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option kernel disable-power-saving</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable CPU power saving mechanisms also known as C states
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option keyboard-layout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: us</span>
+
+System keyboard layout, type ISO2
+
+| Value | Help |
+|-------|------|
+| `dvorak` |  Dvorak |
+| `se-latin1` |  Sweden |
+| `dk` |  Denmark |
+| `no` |  Norway |
+| `jp106` |  Japan |
+| `fi` |  Finland |
+| `es` |  Spain |
+| `de` |  Germany |
+| `fr` |  France |
+| `uk` |  United Kingdom |
+| `us` |  United States |
+
+constraint error message: Invalid keyboard layout
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option performance</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Tune system performance
+
+| Value | Help |
+|-------|------|
+| `latency` |  Tune for low network latency |
+| `throughput` |  Tune for maximum network throughput |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option reboot-on-panic</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Reboot system on kernel panic
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option root-partition-auto-resize</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable root partition auto-extention on system boot
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option startup-beep</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+plays sound via system speaker when you can login
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system option time-format</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 12-hour</span>
+
+System time-format
+
+| Value | Help |
+|-------|------|
+| `24-hour` |  24 hour time format |
+| `12-hour` |  12 hour time format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

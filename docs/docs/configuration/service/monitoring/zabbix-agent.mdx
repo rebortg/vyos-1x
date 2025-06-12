@@ -1,0 +1,322 @@
+---
+title: Zabbix Agent
+description: Zabbix Agent Configuration
+cfg:
+    - service monitoring zabbix-agent
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent directory</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Folder containing individual Zabbix-agent configuration files
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent host-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Zabbix agent hostname
+
+constraint error message: Host-name must be alphanumeric and can contain hyphens
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent limits buffer-flush-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Do not keep data longer than N seconds in buffer
+
+| Value | Help |
+|-------|------|
+| `u32:1-3600` |  Seconds |
+
+constraint error message: buffer-flush-interval must be between 1 and 3600 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent limits buffer-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 100</span>
+
+Maximum number of values in a memory buffer
+
+| Value | Help |
+|-------|------|
+| `u32:2-65535` |  Maximum number of values in a memory buffer |
+
+constraint error message: Buffer-size must be between 2 and 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent listen-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0.0.0.0</span>
+
+Local IP addresses to listen on
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address to listen for incoming connections |
+| `ipv4` |  IPv4 address to listen for incoming connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent log debug-level</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: warning</span>
+
+Debug level
+
+| Value | Help |
+|-------|------|
+| `extended-debug` |  Extended debug information |
+| `debug` |  Debug information |
+| `warning` |  Warnings |
+| `error` |  Error information |
+| `critical` |  Critical information |
+| `basic` |  Basic information |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent log remote-commands</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable logging of executed shell commands as warnings
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent log size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Log file size in megabytes
+
+| Value | Help |
+|-------|------|
+| `u32:0-1024` |  Megabytes |
+
+constraint error message: Size must be between 0 and 1024 Megabytes
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10050</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remote server to connect to
+
+| Value | Help |
+|-------|------|
+| `hostname` |  Server hostname/FQDN |
+| `ipv6` |  Server IPv6 address |
+| `ipv4` |  Server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent server-active &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service monitoring zabbix-agent timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Item processing timeout in seconds
+
+| Value | Help |
+|-------|------|
+| `u32:1-30` |  Item processing timeout |
+
+constraint error message: Timeout must be between 1 and 30 seconds
+
+
+
+</dd>
+</dl>
+

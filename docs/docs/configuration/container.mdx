@@ -20,14 +20,16 @@ The VyOS container implementation is based on https://podman.io as a deamonless 
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> allow-host-networks```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; allow-host-networks</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item valueless">valueless</span>
-</div>
 
 Allow sharing host networking with container
 
@@ -40,14 +42,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> allow-host-pid```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; allow-host-pid</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item valueless">valueless</span>
-</div>
 
 Allow sharing host process namespace with container
 
@@ -60,16 +64,18 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> arguments```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; arguments</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
-The command's arguments for this container
+The command&#39;s arguments for this container
 
 constraint error message: The command's arguments must be ASCII characters, use &quot; and &apos for double and single quotes respectively
 
@@ -80,14 +86,16 @@ constraint error message: The command's arguments must be ASCII characters, use 
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> capability```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; capability</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item multi">multi</span>
-</div>
 
 Grant individual Linux capability to container instance
 
@@ -111,14 +119,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> command```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; command</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Override the default CMD from the image
 
@@ -131,15 +141,17 @@ constraint error message: Command must be ASCII characters, use &quot; and &apos
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> cpu-quota```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; cpu-quota</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-  <span class="meta-item default">default: 0</span>
-</div>
+<span class="command-tag default">default: 0</span>
 
 This limits the number of CPU resources the container can use
 
@@ -157,18 +169,22 @@ constraint error message: Container CPU limit must be a (decimal) number in rang
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> description```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 <dt>
-  <div class="command-block">```set container network <tag> description```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container network &lt;tag&gt; description</div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Description
 
@@ -185,16 +201,18 @@ constraint error message: Description too long (limit 255 characters)
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> device <tag> destination```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; device &lt;tag&gt; destination</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
-Destination container device (Example: "/dev/x")
+Destination container device (Example: &#34;/dev/x&#34;)
 
 | Value | Help |
 |-------|------|
@@ -209,16 +227,18 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> device <tag> source```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; device &lt;tag&gt; source</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
-Source device (Example: "/dev/x")
+Source device (Example: &#34;/dev/x&#34;)
 
 | Value | Help |
 |-------|------|
@@ -233,18 +253,22 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> disable```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
 </dt>
-
+  
 <dt>
-  <div class="command-block">```set container registry <tag> disable```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container registry &lt;tag&gt; disable</div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item valueless">valueless</span>
-</div>
 
 Disable instance
 
@@ -257,14 +281,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> entrypoint```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; entrypoint</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Override the default ENTRYPOINT from the image
 
@@ -277,14 +303,16 @@ constraint error message: Entrypoint must be ASCII characters, use &quot; and &a
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> environment <tag> value```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; environment &lt;tag&gt; value</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Set environment option value
 
@@ -301,14 +329,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> gid```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; gid</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Group ID this container will run as
 
@@ -325,14 +355,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> host-name```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; host-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Container host name
 
@@ -357,14 +389,16 @@ Usage Example:
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> image```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; image</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Container image to use
 
@@ -381,14 +415,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> label <tag> value```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; label &lt;tag&gt; value</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Set label option value
 
@@ -405,15 +441,17 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> memory```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; memory</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-  <span class="meta-item default">default: 512</span>
-</div>
+<span class="command-tag default">default: 512</span>
 
 Memory (RAM) available to this container
 
@@ -431,14 +469,16 @@ constraint error message: Container memory must be in range 0 to 16384 MB
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> network <tag> address```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; network &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item multi">multi</span>
-</div>
 
 Assign static IP address to container
 
@@ -456,14 +496,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> port <tag> destination```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; port &lt;tag&gt; destination</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Destination container port
 
@@ -481,14 +523,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> port <tag> listen-address```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; port &lt;tag&gt; listen-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item multi">multi</span>
-</div>
 
 Local IP addresses to listen on
 
@@ -506,15 +550,17 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> port <tag> protocol```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; port &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-  <span class="meta-item default">default: tcp</span>
-</div>
+<span class="command-tag default">default: tcp</span>
 
 Transport protocol used for port mapping
 
@@ -532,14 +578,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> port <tag> source```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; port &lt;tag&gt; source</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Source host port
 
@@ -557,15 +605,17 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> restart```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; restart</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-  <span class="meta-item default">default: on-failure</span>
-</div>
+<span class="command-tag default">default: on-failure</span>
 
 Restart options for container
 
@@ -584,15 +634,17 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> shared-memory```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; shared-memory</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-  <span class="meta-item default">default: 64</span>
-</div>
+<span class="command-tag default">default: 64</span>
 
 Shared memory available to this container
 
@@ -610,14 +662,16 @@ constraint error message: Container memory must be in range 0 to 8192 MB
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> sysctl parameter <tag> value```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; sysctl parameter &lt;tag&gt; value</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Sysctl configuration value
 
@@ -630,14 +684,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> uid```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; uid</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 User ID this container will run as
 
@@ -654,14 +710,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> volume <tag> destination```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; volume &lt;tag&gt; destination</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Destination container directory
 
@@ -678,15 +736,17 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> volume <tag> mode```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; volume &lt;tag&gt; mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-  <span class="meta-item default">default: rw</span>
-</div>
+<span class="command-tag default">default: rw</span>
 
 Volume access mode ro/rw
 
@@ -704,15 +764,17 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> volume <tag> propagation```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; volume &lt;tag&gt; propagation</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-  <span class="meta-item default">default: rprivate</span>
-</div>
+<span class="command-tag default">default: rprivate</span>
 
 Volume bind propagation
 
@@ -734,14 +796,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container name <tag> volume <tag> source```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container name &lt;tag&gt; volume &lt;tag&gt; source</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Source host directory
 
@@ -758,14 +822,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container network <tag> no-name-server```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container network &lt;tag&gt; no-name-server</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item valueless">valueless</span>
-</div>
 
 Disable Domain Name System (DNS) plugin for this network
 
@@ -778,14 +844,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container network <tag> prefix```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container network &lt;tag&gt; prefix</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item multi">multi</span>
-</div>
 
 Prefix which allocated to that network
 
@@ -803,14 +871,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container network <tag> vrf```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container network &lt;tag&gt; vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 VRF instance name
 
@@ -827,14 +897,16 @@ constraint error message: Invalid value
 
 <dl>
 <dt>
-  <div class="command-block">```set container registry <tag> authentication password```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container registry &lt;tag&gt; authentication password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Password used for authentication
 
@@ -851,14 +923,16 @@ constraint error message: Password is limited to ASCII characters only, with a t
 
 <dl>
 <dt>
-  <div class="command-block">```set container registry <tag> authentication username```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set container registry &lt;tag&gt; authentication username</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
 </dt>
-
+  
 
 <dd>
-<div class="command-meta">
-  <span class="meta-item single">single</span>
-</div>
 
 Username used for authentication
 

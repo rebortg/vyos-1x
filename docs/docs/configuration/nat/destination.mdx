@@ -1,0 +1,655 @@
+---
+title: Destination NAT
+description: Destination NAT Configuration
+cfg:
+    - nat destination
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; destination address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; source address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address, subnet, or range
+
+| Value | Help |
+|-------|------|
+| `!ipv4range` |  Match everything except the specified range |
+| `!ipv4net` |  Match everything except the specified prefix |
+| `!ipv4` |  Match everything except the specified address |
+| `ipv4range` |  IPv4 address range to match |
+| `ipv4net` |  IPv4 prefix to match |
+| `ipv4` |  IPv4 address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; destination group address-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; source group address-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of addresses
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; destination group domain-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; source group domain-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of domains
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; destination group mac-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; source group mac-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of MAC addresses
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; destination group network-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; source group network-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of networks
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; destination group port-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; source group port-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of ports
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; destination port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; source port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number
+
+| Value | Help |
+|-------|------|
+| `` |  \n\nMultiple destination ports can be specified as a comma-separated list.\nThe whole list can also be negated using &#39;!&#39;.\nFor example: &#39;!22,telnet,http,123,1001-1005&#39; |
+| `start-end` |  Numbered port range (e.g. 1001-1005) |
+| `u32:1-65535` |  Numeric IP port |
+| `txt` |  Named port (any name in /etc/services, e.g., http) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; exclude</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Exclude packets matching this rule from NAT
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; inbound-interface group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match interface-group
+
+| Value | Help |
+|-------|------|
+| `!txt` |  Inverted interface-group name to match |
+| `txt` |  Interface-group name to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; inbound-interface name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match interface
+
+| Value | Help |
+|-------|------|
+| `!txt` |  Inverted interface name to match |
+| `txt*` |  Interface name with wildcard |
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; load-balance backend &lt;tag&gt; weight</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set probability for this output value
+
+| Value | Help |
+|-------|------|
+| `u32:1-100` |  Set probability for this output value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; load-balance hash</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: random</span>
+
+Define the parameters of the packet header to apply the hashing
+
+| Value | Help |
+|-------|------|
+| `random` |  Do not use information from ip header. Use random value. |
+| `destination-port` |  Use destination port for hashing |
+| `source-port` |  Use source port for hashing |
+| `destination-address` |  Use destination IP address for hashing |
+| `source-address` |  Use source IP address for hashing |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; log</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log packets hitting this rule
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; packet-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Packet type
+
+| Value | Help |
+|-------|------|
+| `other` |  Match packet addressed to another host |
+| `multicast` |  Match multicast packet type |
+| `host` |  Match host packet type, addressed to local host |
+| `broadcast` |  Match broadcast packet type |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: all</span>
+
+Protocol to NAT
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  IP protocol number |
+| `rohc` |  Robust Header Compression |
+| `wesp` |  Wrapped Encapsulating Security Payload |
+| `shim6` |  Shim6 Protocol |
+| `hip` |  Host Identity Protocol |
+| `manet` |  MANET Protocols [RFC5498] |
+| `mpls-in-ip` |  MPLS-in-IP [RFC4023] |
+| `udplite` |  UDP-Lite [RFC3828] |
+| `mobility-header` |  Mobility Support for IPv6 [RFC3775] |
+| `fc` |  Fibre Channel |
+| `sctp` |  Stream Control Transmission Protocol |
+| `isis` |  IS-IS over IPv4 |
+| `l2tp` |  Layer Two Tunneling Protocol [RFC2661] |
+| `vrrp` |  Virtual Router Redundancy Protocol [RFC5798] |
+| `ipcomp` |  IP Payload Compression Protocol |
+| `pim` |  Protocol Independent Multicast |
+| `99` |  Any private encryption scheme |
+| `encap` |  Yet Another IP encapsulation [RFC1241] |
+| `etherip` |  Ethernet-within-IP Encapsulation [RFC3378] |
+| `ipip` |  IP-within-IP Encapsulation Protocol |
+| `ax.25` |  AX.25 frames |
+| `ospf` |  Open Shortest Path First IGP |
+| `eigrp` |  Enhanced Interior Routing Protocol (Cisco) |
+| `vmtp` |  Versatile Message Transport |
+| `rspf` |  Radio Shortest Path First (officially CPHB) |
+| `ipv6-opts` |  Destination Options for IPv6 |
+| `ipv6-nonxt` |  No Next Header for IPv6 |
+| `ipv6-icmp` |  ICMP for IPv6 |
+| `skip` |  SKIP |
+| `ah` |  Authentication Header [RFC2402] |
+| `esp` |  Encap Security Payload [RFC2406] |
+| `gre` |  General Routing Encapsulation |
+| `rsvp` |  Reservation Protocol |
+| `idrp` |  Inter-Domain Routing Protocol |
+| `ipv6-frag` |  Fragment Header for IPv6 |
+| `ipv6-route` |  Routing Header for IPv6 |
+| `Ipv6` |  Internet Protocol, version 6 |
+| `idpr-cmtp` |  IDPR Control Message Transport |
+| `ddp` |  Datagram Delivery Protocol |
+| `xtp` |  Xpress Transfer Protocol |
+| `dccp` |  Datagram Congestion Control Prot. [RFC4340] |
+| `iso-tp4` |  ISO Transport Protocol class 4 [RFC905] |
+| `rdp` |  &#34;reliable datagram&#34; protocol |
+| `xns-idp` |  Xerox NS IDP |
+| `hmp` |  host monitoring protocol |
+| `tcp_udp` |  Both TCP and UDP |
+| `udp` |  user datagram protocol |
+| `pup` |  PARC universal packet protocol |
+| `igp` |  any private interior gateway (Cisco) |
+| `egp` |  exterior gateway protocol |
+| `tcp` |  transmission control protocol |
+| `st` |  ST datagram mode |
+| `ipencap` |  IP encapsulated in IP (officially IP) |
+| `ggp` |  gateway-gateway protocol |
+| `igmp` |  Internet Group Management |
+| `icmp` |  internet control message protocol |
+| `hopopt` |  IPv6 Hop-by-Hop Option [RFC1883] |
+| `ip` |  Internet Protocol, pseudo protocol number |
+| `all` |  All IP protocols |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; translation address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address, subnet, or range
+
+| Value | Help |
+|-------|------|
+| `ipv4range` |  IPv4 address range to match |
+| `ipv4net` |  IPv4 prefix to match |
+| `ipv4` |  IPv4 address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; translation options address-mapping</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: random</span>
+
+Address mapping options
+
+| Value | Help |
+|-------|------|
+| `random` |  Random source or destination address allocation for each connection |
+| `persistent` |  Gives a client the same source or destination-address for each connection |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; translation options port-mapping</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: none</span>
+
+Port mapping options
+
+| Value | Help |
+|-------|------|
+| `none` |  Do not apply port randomization |
+| `fully-random` |  Full port randomization |
+| `random` |  Randomize source port mapping |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; translation port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set nat destination rule &lt;tag&gt; translation redirect port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number
+
+| Value | Help |
+|-------|------|
+| `range` |  Numbered port range (e.g., 1001-1005) |
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

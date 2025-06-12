@@ -1,0 +1,983 @@
+---
+title: VRRP
+description: VRRP Configuration
+cfg:
+    - high-availability disable
+    - high-availability vrrp
+opmode:
+    - show vrrp
+    - show log vrrp
+    - monitor log vrrp
+    - restart vrrp    
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp global-parameters garp interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; garp interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Interval between Gratuitous ARP
+
+| Value | Help |
+|-------|------|
+| `&lt;0.000-1000&gt;` |  Interval in seconds, resolution microseconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp global-parameters garp master-delay</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; garp master-delay</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Delay for second set of gratuitous ARPs after transition to master
+
+| Value | Help |
+|-------|------|
+| `u32:1-1000` |  Delay in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp global-parameters garp master-refresh</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; garp master-refresh</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Minimum time interval for refreshing gratuitous ARPs while beeing master
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Interval in seconds |
+| `u32:0` |  No refresh |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp global-parameters garp master-refresh-repeat</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; garp master-refresh-repeat</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Number of gratuitous ARP messages to send at a time while beeing master
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Number of gratuitous ARP messages |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp global-parameters garp master-repeat</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; garp master-repeat</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Number of gratuitous ARP messages to send at a time after transition to master
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Number of gratuitous ARP messages |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp global-parameters startup-delay</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time VRRP startup process (in seconds)
+
+| Value | Help |
+|-------|------|
+| `u32:1-600` |  Interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp global-parameters version</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default VRRP version to use, IPv6 always uses VRRP version 3
+
+| Value | Help |
+|-------|------|
+| `3` |  VRRP version 3 |
+| `2` |  VRRP version 2 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; address &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; advertise-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Advertise interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Advertise interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; authentication password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRRP password
+
+| Value | Help |
+|-------|------|
+| `txt` |  Password string (up to 8 characters) |
+
+constraint error message: Password must not be longer than 8 characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; authentication type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Authentication type
+
+| Value | Help |
+|-------|------|
+| `ah` |  AH - IPSEC (not recommended) |
+| `plaintext-password` |  Simple password string |
+
+constraint error message: Authentication type must be plaintext-password or ah
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; excluded-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Virtual address (If you need additional IPv4 and IPv6 in same group)
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address |
+| `ipv4` |  IP address |
+
+constraint error message: Virtual address must be a valid IPv4 or IPv6 address with prefix length (e.g. 192.0.2.3/24 or 2001:db8:ff::10/64)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; health-check failure-count</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; health-check failure-count</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Health check failure count required for transition to fault
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; health-check interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; health-check interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 60</span>
+
+Health check execution interval in seconds
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; health-check ping</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; health-check ping</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+ICMP ping health check
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 ping target address |
+| `ipv4` |  IPv4 ping target address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; health-check script</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; health-check script</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Health check script file
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; hello-source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRRP hello source address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 hello source address |
+| `ipv4` |  IPv4 hello source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; no-preempt</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable master preemption
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; peer-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Unicast VRRP peer address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 unicast peer address |
+| `ipv4` |  IPv4 unicast peer address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; preempt-delay</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Preempt delay (in seconds)
+
+| Value | Help |
+|-------|------|
+| `u32:0-1000` |  preempt delay |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 100</span>
+
+Router priority
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Router priority |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; rfc3768-compatibility</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use VRRP virtual MAC address as per RFC3768
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; track exclude-vrrp-interface</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable track state of main interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; track interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface name state check
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; transition-script backup</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; transition-script backup</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run on VRRP state transition to backup
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; transition-script fault</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; transition-script fault</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run on VRRP state transition to fault
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; transition-script master</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; transition-script master</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run on VRRP state transition to master
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; transition-script stop</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; transition-script stop</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run on VRRP state transition to stop
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp group &lt;tag&gt; vrid</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Virtual router identifier
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Virtual router identifier |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp snmp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable SNMP
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set high-availability vrrp sync-group &lt;tag&gt; member</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Sync group member
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRRP group name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+## Operational Mode Commands
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show log vrrp</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for Virtual Router Redundancy Protocol (VRRP)
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">monitor log vrrp</div>
+  </div>
+</dt>
+
+<dd>
+  Monitor last lines of Virtual Router Redundancy Protocol log
+</dd>
+</dl>
+

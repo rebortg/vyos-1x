@@ -1,0 +1,1256 @@
+---
+title: Tunnel Interface
+description: Tunnel Interface Configuration
+cfg:
+    - interfaces tunnel
+opmode:
+    - show interfaces tunnel
+    - renew dhcp
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; 6rd-prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+6rd network prefix
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; 6rd-relay-prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+6rd relay prefix
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  IPv4 prefix of interface for 6rd |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 address and prefix length |
+| `ipv4net` |  IPv4 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Administratively disable interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; disable-link-detect</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Ignore link state changes
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; enable-multicast</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable multicast operation over tunnel
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; encapsulation</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Encapsulation of this tunnel interface
+
+| Value | Help |
+|-------|------|
+| `sit` |  Simple Internet Transition (IPv6 in IPv4) |
+| `ipip6` |  IPv4 in IP6 encapsulation |
+| `ipip` |  IPv4 in IPv4 encapsulation |
+| `ip6ip6` |  IPv6 in IPv6 encapsulation |
+| `ip6gretap` |  GRE over IPv6 (datalink layer) |
+| `ip6gre` |  GRE over IPv6 (network layer) |
+| `ip6erspan` |  Encapsulated Remote Switched Port Analyzer over IPv6 |
+| `gretap` |  Generic Routing Encapsulation (datalink layer) |
+| `gre` |  Generic Routing Encapsulation (network layer) |
+| `erspan` |  Encapsulated Remote Switched Port Analyzer |
+
+constraint error message: Invalid encapsulation, must be one of: erspan, gre, gretap, ip6erspan, ip6gre, ip6gretap, ipip, sit, ipip6 or ip6ip6
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip adjust-mss</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ipv6 adjust-mss</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Adjust TCP MSS value
+
+| Value | Help |
+|-------|------|
+| `u32:536-65535` |  TCP Maximum segment size in bytes |
+| `clamp-mss-to-pmtu` |  Automatically sets the MSS to the proper value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip arp-cache-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+ARP cache entry timeout in seconds
+
+| Value | Help |
+|-------|------|
+| `u32:1-86400` |  ARP cache entry timout in seconds |
+
+constraint error message: ARP cache entry timeout must be between 1 and 86400 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip disable-arp-filter</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable ARP filter on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip disable-forwarding</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ipv6 disable-forwarding</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable IP forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip enable-arp-accept</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP accept on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip enable-arp-announce</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP announce on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip enable-arp-ignore</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP ignore on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip enable-directed-broadcast</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable directed broadcast forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip enable-proxy-arp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable proxy-arp on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip proxy-arp-pvlan</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable private VLAN proxy ARP on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ip source-validation</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ipv6 source-validation</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source validation by reversed path (RFC3704)
+
+| Value | Help |
+|-------|------|
+| `disable` |  No source validation |
+| `loose` |  Enable Loose Reverse Path Forwarding as defined in RFC3704 |
+| `strict` |  Enable Strict Reverse Path Forwarding as defined in RFC3704 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ipv6 accept-dad</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Accept Duplicate Address Detection
+
+| Value | Help |
+|-------|------|
+| `2` |  Enable DAD - disable IPv6 if MAC-based duplicate link-local address found |
+| `1` |  Enable DAD |
+| `0` |  Disable DAD |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ipv6 address autoconf</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable acquisition of IPv6 address using stateless autoconfig (SLAAC)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ipv6 address eui64</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix for IPv6 address with MAC-based EUI-64
+
+| Value | Help |
+|-------|------|
+| `&lt;h:h:h:h:h:h:h:h/64&gt;` |  IPv6 /64 network |
+
+constraint error message: EUI64 prefix length must be 64
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ipv6 address no-default-link-local</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remove the default link-local address from the interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; ipv6 dup-addr-detect-transmits</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Number of NS messages to send while performing DAD
+
+| Value | Help |
+|-------|------|
+| `u32:1-n` |  Number of NS messages to send while performing DAD |
+| `u32:0` |  Disable Duplicate Address Dectection (DAD) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; mirror egress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirror egress traffic to destination interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; mirror ingress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirror ingress traffic to destination interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; mtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1476</span>
+
+Maximum Transmission Unit (MTU)
+
+| Value | Help |
+|-------|------|
+| `u32:64-8024` |  Maximum Transmission Unit in byte |
+
+constraint error message: MTU must be between 64 and 8024
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters erspan direction</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirrored traffic direction
+
+| Value | Help |
+|-------|------|
+| `egress` |  Mirror egress traffic |
+| `ingress` |  Mirror ingress traffic |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters erspan hw-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Unique identifier of an ERSPAN engine within a system
+
+| Value | Help |
+|-------|------|
+| `u32:0-1048575` |  Unique identifier of an ERSPAN engine |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters erspan index</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+ERSPAN version 1 index field
+
+| Value | Help |
+|-------|------|
+| `u32:0-63` |  Platform-depedent field for specifying port number and direction |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters erspan version</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Protocol version
+
+| Value | Help |
+|-------|------|
+| `2` |  ERSPAN Type III |
+| `1` |  ERSPAN Type II |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ip ignore-df</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Ignore the DF (don&#39;t fragment) bit
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ip key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Tunnel key (only GRE tunnels)
+
+| Value | Help |
+|-------|------|
+| `u32` |  Tunnel key |
+
+constraint error message: key must be between 0-4294967295
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ip no-pmtu-discovery</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable path MTU discovery
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ip tos</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: inherit</span>
+
+Specifies TOS value to use in outgoing packets
+
+| Value | Help |
+|-------|------|
+| `u32:0-99` |  Type of Service (TOS) |
+
+constraint error message: TOS must be between 0 and 99
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ip ttl</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 64</span>
+
+Specifies TTL value to use in outgoing packets
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Time to Live |
+| `u32:0` |  Inherit - copy value from original IP header |
+
+constraint error message: TTL must be between 0 and 255
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ipv6 encaplimit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 4</span>
+
+Set fixed encapsulation limit
+
+| Value | Help |
+|-------|------|
+| `none` |  Disable encapsulation limit |
+| `u32:0-255` |  Encapsulation limit |
+
+constraint error message: Tunnel encaplimit must be 0-255 or none
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ipv6 flowlabel</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specifies the flow label to use in outgoing packets
+
+| Value | Help |
+|-------|------|
+| `0x0-0x0fffff` |  Tunnel key, or hex value |
+| `inherit` |  Copy field from original header |
+
+constraint error message: Must be 'inherit' or a number
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ipv6 hoplimit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 64</span>
+
+Hoplimit
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  Hop limit |
+
+constraint error message: hop limit must be between 0-255
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; parameters ipv6 tclass</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: inherit</span>
+
+Traffic class (Tclass)
+
+| Value | Help |
+|-------|------|
+| `0x0-0x0fffff` |  Traffic class, &#39;inherit&#39; or hex value |
+
+constraint error message: Must be 'inherit' or a number
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; redirect</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Redirect incoming packet to destination
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; remote</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Tunnel remote address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Tunnel remote IPv6 address |
+| `ipv4` |  Tunnel remote IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source IP address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 source address |
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; source-interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface used to establish connection
+
+| Value | Help |
+|-------|------|
+| `interface` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces tunnel &lt;tag&gt; vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+## Operational Mode Commands
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces tunnel brief</div>
+  </div>
+</dt>
+
+<dd>
+  Show summary of the specified tunnel interface information
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces tunnel detail</div>
+  </div>
+</dt>
+
+<dd>
+  Show detailed tunnel interface information
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces tunnel event-log addr</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for network address events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces tunnel event-log link</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for network link events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces tunnel event-log neigh</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for neighbor table events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces tunnel event-log route</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for route events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces tunnel event-log rule</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for PBR rule change events
+</dd>
+</dl>
+

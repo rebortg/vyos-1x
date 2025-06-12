@@ -1,0 +1,155 @@
+---
+title: Salt Minion
+description: Salt Minion Configuration
+cfg:
+    - service salt-minion
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service salt-minion hash</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: sha256</span>
+
+Hash used when discovering file on master server (default: sha256)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service salt-minion id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Explicitly declare ID for this minion to use (default: hostname)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service salt-minion interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 60</span>
+
+Interval in minutes between updates (default: 60)
+
+| Value | Help |
+|-------|------|
+| `u32:1-1440` |  Update interval in minutes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service salt-minion master</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Hostname or IP address of the Salt master server
+
+| Value | Help |
+|-------|------|
+| `hostname` |  Salt server FQDN address |
+| `ipv6` |  Salt server IPv6 address |
+| `ipv4` |  Salt server IPv4 address |
+
+constraint error message: Invalid FQDN or IP address
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service salt-minion master-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+URL with signature of master for auth reply verification
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service salt-minion source-interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface used to establish connection
+
+| Value | Help |
+|-------|------|
+| `interface` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

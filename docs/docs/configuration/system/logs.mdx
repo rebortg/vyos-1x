@@ -1,0 +1,94 @@
+---
+title: Logs
+description: Logs Configuration
+cfg:
+    - system logs
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system logs logrotate atop max-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Size of a single log file that triggers rotation
+
+| Value | Help |
+|-------|------|
+| `u32:1-1024` |  Size in MB |
+
+constraint error message: The size must be between 1 and 1024 MB
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system logs logrotate atop rotate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system logs logrotate messages rotate</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Count of rotations before old logs will be deleted
+
+| Value | Help |
+|-------|------|
+| `u32:1-100` |  Rotations |
+
+constraint error message: The count must be between 1 and 100
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system logs logrotate messages max-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Size of a single log file that triggers rotation
+
+| Value | Help |
+|-------|------|
+| `u32:1-1024` |  Size in MB |
+
+constraint error message: The size must be between 1 and 1024 MB
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,514 @@
+---
+title: Firewall global-options
+description: Firewall global-options
+cfg:
+    - firewall global-options
+opmode:
+---
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options all-ping</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: enable</span>
+
+Policy for handling of all IPv4 ICMP echo requests
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable processing of all IPv4 ICMP echo requests |
+| `enable` |  Enable processing of all IPv4 ICMP echo requests |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options broadcast-ping</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: disable</span>
+
+Policy for handling broadcast IPv4 ICMP echo and timestamp requests
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable processing of broadcast IPv4 ICMP echo/timestamp requests |
+| `enable` |  Enable processing of broadcast IPv4 ICMP echo/timestamp requests |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options ip-src-route</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: disable</span>
+
+Policy for handling IPv4 packets with source route option
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable processing of IPv4 packets with source route option |
+| `enable` |  Enable processing of IPv4 packets with source route option |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options ipv6-receive-redirects</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: disable</span>
+
+Policy for handling received ICMPv6 redirect messages
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable processing of received ICMPv6 redirect messages |
+| `enable` |  Enable processing of received ICMPv6 redirect messages |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options ipv6-source-validation</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: disable</span>
+
+Policy for IPv6 source validation by reversed path, as specified in RFC3704
+
+| Value | Help |
+|-------|------|
+| `disable` |  No IPv6 source validation |
+| `loose` |  Enable IPv6 Loose Reverse Path Forwarding as defined in RFC3704 |
+| `strict` |  Enable IPv6 Strict Reverse Path Forwarding as defined in RFC3704 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options ipv6-src-route</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: disable</span>
+
+Policy for handling IPv6 packets with routing extension header
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable processing of IPv6 packets with routing header |
+| `enable` |  Enable processing of IPv6 packets with routing header type 2 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options log-martians</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: enable</span>
+
+Policy for logging IPv4 packets with invalid addresses
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable logging of Ipv4 packets with invalid addresses |
+| `enable` |  Enable logging of IPv4 packets with invalid addresses |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options receive-redirects</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: disable</span>
+
+Policy for handling received IPv4 ICMP redirect messages
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable processing of received IPv4 ICMP redirect messages |
+| `enable` |  Enable processing of received IPv4 ICMP redirect messages |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options resolver-cache</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Retains last successful value if domain resolution fails
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options resolver-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+Domain resolver update interval
+
+| Value | Help |
+|-------|------|
+| `u32:10-3600` |  Interval (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options send-redirects</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: enable</span>
+
+Policy for sending IPv4 ICMP redirect messages
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable sending IPv4 ICMP redirect messages |
+| `enable` |  Enable sending IPv4 ICMP redirect messages |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options source-validation</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: disable</span>
+
+Policy for IPv4 source validation by reversed path, as specified in RFC3704
+
+| Value | Help |
+|-------|------|
+| `disable` |  No IPv4 source validation |
+| `loose` |  Enable IPv4 Loose Reverse Path Forwarding as defined in RFC3704 |
+| `strict` |  Enable IPv4 Strict Reverse Path Forwarding as defined in RFC3704 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy established action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy invalid action</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy related action</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Action for packets
+
+| Value | Help |
+|-------|------|
+| `reject` |  Action to reject |
+| `drop` |  Action to drop |
+| `accept` |  Action to accept |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy established log</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy invalid log</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy related log</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log packets hitting this rule
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy established log-level</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy invalid log-level</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options state-policy related log-level</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set log-level. Log must be enable.
+
+| Value | Help |
+|-------|------|
+| `debug` |  Debug log level |
+| `info` |  Info log level |
+| `notice` |  Notice log level |
+| `warn` |  Warning log level |
+| `err` |  Error log level |
+| `crit` |  Critical log level |
+| `alert` |  Alert log level |
+| `emerg` |  Emerg log level |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options syn-cookies</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: enable</span>
+
+Policy for using TCP SYN cookies with IPv4
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable use of TCP SYN cookies with IPv4 |
+| `enable` |  Enable use of TCP SYN cookies with IPv4 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall global-options twa-hazards-protection</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: disable</span>
+
+RFC1337 TCP TIME-WAIT assasination hazards protection
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable RFC1337 TIME-WAIT hazards protection |
+| `enable` |  Enable RFC1337 TIME-WAIT hazards protection |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

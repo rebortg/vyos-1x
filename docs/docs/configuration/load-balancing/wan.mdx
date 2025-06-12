@@ -1,0 +1,692 @@
+---
+title: WAN
+description: WAN Configuration
+cfg:
+    - load-balancing wan
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan disable-source-nat</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable source NAT rules from being configured for WAN load balancing
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan enable-local-traffic</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable WAN load balancing for locally sourced traffic
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan flush-connections</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flush connection tracking tables on connection state change
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan hook</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to be executed on interface status change
+
+| Value | Help |
+|-------|------|
+| `txt` |  Script in /config/scripts |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan interface-health &lt;tag&gt; failure-count</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Failure count
+
+| Value | Help |
+|-------|------|
+| `u32:1-10` |  Failure count |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan interface-health &lt;tag&gt; nexthop</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Outbound interface nexthop address. Can be &#39;DHCP or IPv4 address&#39; [REQUIRED]
+
+| Value | Help |
+|-------|------|
+| `dhcp` |  Set the nexthop via DHCP |
+| `ipv4` |  Nexthop IP address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan interface-health &lt;tag&gt; success-count</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Success count
+
+| Value | Help |
+|-------|------|
+| `u32:1-10` |  Success count |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan interface-health &lt;tag&gt; test &lt;tag&gt; resp-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Ping response time (seconds)
+
+| Value | Help |
+|-------|------|
+| `u32:1-30` |  Response time (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan interface-health &lt;tag&gt; test &lt;tag&gt; target</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Health target address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Health target address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan interface-health &lt;tag&gt; test &lt;tag&gt; test-script</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Path to user-defined script
+
+| Value | Help |
+|-------|------|
+| `txt` |  Script in /config/scripts |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan interface-health &lt;tag&gt; test &lt;tag&gt; ttl-limit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+TTL limit (hop count)
+
+| Value | Help |
+|-------|------|
+| `u32:1-254` |  Number of hops |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan interface-health &lt;tag&gt; test &lt;tag&gt; type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: ping</span>
+
+WLB test type
+
+| Value | Help |
+|-------|------|
+| `user-defined` |  User-defined test script |
+| `ttl` |  Test with UDP TTL expired response |
+| `ping` |  Test with ICMP echo response |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; destination address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; source address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address, subnet, or range
+
+| Value | Help |
+|-------|------|
+| `!ipv4range` |  Match everything except the specified range |
+| `!ipv4net` |  Match everything except the specified prefix |
+| `!ipv4` |  Match everything except the specified address |
+| `ipv4range` |  IPv4 address range to match |
+| `ipv4net` |  IPv4 prefix to match |
+| `ipv4` |  IPv4 address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; destination port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; source port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number
+
+| Value | Help |
+|-------|------|
+| `` |  \n\nMultiple destination ports can be specified as a comma-separated list.\nThe whole list can also be negated using &#39;!&#39;.\nFor example: &#39;!22,telnet,http,123,1001-1005&#39; |
+| `start-end` |  Numbered port range (e.g. 1001-1005) |
+| `u32:1-65535` |  Numeric IP port |
+| `txt` |  Named port (any name in /etc/services, e.g., http) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; exclude</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Exclude packets matching this rule from WAN load balance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; failover</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable failover for packets matching this rule from WAN load balance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; inbound-interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Inbound interface name (e.g., &#34;eth0&#34;) [REQUIRED]
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; interface &lt;tag&gt; weight</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Load-balance weight
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Interface weight |
+
+constraint error message: Weight must be between 1 and 255
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; limit burst</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Burst limit for matching packets
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  Burst limit for matching packets |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; limit period</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: second</span>
+
+Time window for rate calculation
+
+| Value | Help |
+|-------|------|
+| `second` |  second |
+| `minute` |  minute |
+| `hour` |  hour |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; limit rate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Number of packets used for rate limit
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  Number of packets used for rate limit |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; limit threshold</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: below</span>
+
+Threshold behavior for limit
+
+| Value | Help |
+|-------|------|
+| `below` |  Below limit |
+| `above` |  Above limit |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; per-packet-balancing</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Option to match traffic per-packet instead of the default, per-flow
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan rule &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: all</span>
+
+Protocol to match (protocol name, number, or &#34;all&#34;)
+
+| Value | Help |
+|-------|------|
+| `!&lt;protocol&gt;` |  IP protocol name |
+| `&lt;protocol&gt;` |  IP protocol name |
+| `u32:0-255` |  IP protocol number |
+| `tcp_udp` |  Both TCP and UDP |
+| `all` |  All IP protocols |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set load-balancing wan sticky-connections inbound</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable sticky incoming WAN connections
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

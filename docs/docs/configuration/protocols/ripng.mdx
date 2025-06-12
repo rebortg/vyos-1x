@@ -1,0 +1,530 @@
+---
+title: RIPNG
+description: RIPNG Configuration
+cfg:
+    - protocols ripng
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng aggregate-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Aggregate RIPng route announcement
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Aggregate RIPng route announcement |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng default-information originate</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distribute a default route
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng default-metric</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Metric of redistributed routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-16` |  Default metric |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng distribute-list access-list in</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng distribute-list interface &lt;tag&gt; access-list in</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Access list to apply to input packets
+
+| Value | Help |
+|-------|------|
+| `u32` |  Access list to apply to input packets |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng distribute-list access-list out</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng distribute-list interface &lt;tag&gt; access-list out</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Access list to apply to output packets
+
+| Value | Help |
+|-------|------|
+| `u32` |  Access list to apply to output packets |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng distribute-list interface &lt;tag&gt; prefix-list in</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng distribute-list prefix-list in</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix-list to apply to input packets
+
+| Value | Help |
+|-------|------|
+| `txt` |  Prefix-list to apply to input packets |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng distribute-list interface &lt;tag&gt; prefix-list out</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng distribute-list prefix-list out</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix-list to apply to output packets
+
+| Value | Help |
+|-------|------|
+| `txt` |  Prefix-list to apply to output packets |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng interface &lt;tag&gt; split-horizon disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng interface &lt;tag&gt; split-horizon poison-reverse</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable split horizon on specified interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng network</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+RIPng network
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  RIPng network |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng passive-interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Passive interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Suppress routing updates on interface |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute babel metric</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute bgp metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute connected metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute kernel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute ospfv3 metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute static metric</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Metric for redistributed routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-16` |  Redistribute route metric |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute babel route-map</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute bgp route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute connected route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute kernel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute ospfv3 route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng redistribute static route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng route-map</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specify route-map name to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Route map name |
+
+constraint error message: Name of route-map can only contain alpha-numeric letters, hyphen and underscores
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng route</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+RIPng static route
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  RIPng static route |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng timers garbage-collection</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 120</span>
+
+Garbage collection timer
+
+| Value | Help |
+|-------|------|
+| `u32:5-2147483647` |  Garbage colletion time |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng timers timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 180</span>
+
+Routing information timeout timer
+
+| Value | Help |
+|-------|------|
+| `u32:5-2147483647` |  Routing information timeout timer |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ripng timers update</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+Routing table update timer
+
+| Value | Help |
+|-------|------|
+| `u32:5-2147483647` |  Routing table update timer in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

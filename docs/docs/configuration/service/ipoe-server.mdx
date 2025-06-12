@@ -1,0 +1,1281 @@
+---
+title: IPOE Server
+description: ipoe Server Configuration
+cfg:
+    - service ipoe-server
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication interface &lt;tag&gt; mac &lt;tag&gt; rate-limit download</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Download bandwidth limit in kbits/sec
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication interface &lt;tag&gt; mac &lt;tag&gt; rate-limit upload</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Upload bandwidth limit in kbits/sec
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication interface &lt;tag&gt; mac &lt;tag&gt; vlan</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VLAN monitor for automatic creation of VLAN interfaces
+
+| Value | Help |
+|-------|------|
+| `u32:1-4094` |  Client VLAN id |
+
+constraint error message: VLAN IDs need to be in range 1-4094
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: local</span>
+
+Authentication mode used by this server
+
+| Value | Help |
+|-------|------|
+| `noauth` |  Authentication disabled |
+| `radius` |  Use RADIUS server for user autentication |
+| `local` |  Use local username/password configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius accounting-interim-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interval in seconds to send accounting information
+
+| Value | Help |
+|-------|------|
+| `u32:1-3600` |  Interval in seconds to send accounting information |
+
+constraint error message: Interval value must be between 1 and 3600 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius acct-interim-jitter</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum jitter value in seconds to be applied to accounting information interval
+
+| Value | Help |
+|-------|------|
+| `u32:1-60` |  Maximum jitter value in seconds |
+
+constraint error message: Jitter value must be between 1 and 60 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius acct-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Timeout for Interim-Update packets, terminate session afterwards
+
+| Value | Help |
+|-------|------|
+| `u32:0-60` |  Timeout in seconds, 0 to keep active |
+
+constraint error message: Timeout must be between 0 and 60 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius dynamic-author key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Shared secret for Dynamic Authorization Extension server
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius dynamic-author port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1700</span>
+
+Port for Dynamic Authorization Extension server (DM/CoA)
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  TCP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius dynamic-author server</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address for Dynamic Authorization Extension server (DM/CoA)
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address for aynamic authorization server |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius max-try</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Number of tries to send Access-Request/Accounting-Request queries
+
+| Value | Help |
+|-------|------|
+| `u32:1-20` |  Maximum tries |
+
+constraint error message: Maximum tries must be between 1 and 20
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius nas-identifier</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+NAS-Identifier attribute sent to RADIUS
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius nas-ip-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+NAS-IP-Address attribute sent to RADIUS
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  NAS-IP-Address attribute |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius preallocate-vif</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable attribute NAS-Port-Id in Access-Request
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius rate-limit attribute</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: Filter-Id</span>
+
+RADIUS attribute that contains rate information
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius rate-limit enable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable bandwidth shaping via RADIUS
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius rate-limit multiplier</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Shaper multiplier
+
+| Value | Help |
+|-------|------|
+| `&lt;0.001-1000&gt;` |  Shaper multiplier |
+
+constraint error message: Multiplier needs to be between 0.001 and 1000
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius rate-limit vendor</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Vendor dictionary
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius server &lt;tag&gt; acct-port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1813</span>
+
+Accounting port
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius server &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius server &lt;tag&gt; disable-accounting</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable accounting
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius server &lt;tag&gt; fail-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Mark server unavailable for &lt;n&gt; seconds on failure
+
+| Value | Help |
+|-------|------|
+| `u32:0-600` |  Fail time penalty |
+
+constraint error message: Fail time must be between 0 and 600 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius server &lt;tag&gt; key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Shared secret key
+
+| Value | Help |
+|-------|------|
+| `txt` |  Password string (key) |
+
+constraint error message: Password must be less then 128 characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1812</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 source address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server authentication radius timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3</span>
+
+Timeout in seconds to wait response from RADIUS server
+
+| Value | Help |
+|-------|------|
+| `u32:1-60` |  Timeout in seconds |
+
+constraint error message: Timeout must be between 1 and 60 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server client-ip-pool &lt;tag&gt; next-pool</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Next pool name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of IP pool |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server client-ip-pool &lt;tag&gt; range</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Range of IP addresses
+
+| Value | Help |
+|-------|------|
+| `ipv4range` |  IPv4 address range inside /24 network |
+| `ipv4net` |  IPv4 prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server client-ipv6-pool &lt;tag&gt; delegate &lt;tag&gt; delegation-prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix length delegated to client
+
+| Value | Help |
+|-------|------|
+| `u32:32-64` |  Delegated prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server client-ipv6-pool &lt;tag&gt; prefix &lt;tag&gt; mask</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 64</span>
+
+Prefix length used for individual client
+
+| Value | Help |
+|-------|------|
+| `u32:48-128` |  Client prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server default-ipv6-pool</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default client IPv6 pool name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Default IPv6 pool |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server default-pool</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default client IP pool name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Default IP pool |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server extended-scripts on-change</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run when session interface changed by RADIUS CoA handling
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server extended-scripts on-down</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run when session interface going to terminate
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server extended-scripts on-pre-up</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run before session interface comes up
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server extended-scripts on-up</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script to run when session interface is completely configured and started
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server gateway-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Gateway IP address
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  Default Gateway, mask send to the client |
+
+constraint error message: invalid IPv4 address
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server interface &lt;tag&gt; client-subnet</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Client address pool
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  IPv4 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server interface &lt;tag&gt; external-dhcp dhcp-relay</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DHCP Server the request will be redirected to.
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address of the DHCP Server |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server interface &lt;tag&gt; external-dhcp giaddr</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Relay Agent IPv4 Address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Gateway IP address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server interface &lt;tag&gt; mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: l2</span>
+
+Client connectivity mode
+
+| Value | Help |
+|-------|------|
+| `l3` |  Client located behind a router |
+| `l2` |  Client located on same interface as server |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server interface &lt;tag&gt; network</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: shared</span>
+
+Enables clients to share the same network or each client has its own vlan
+
+| Value | Help |
+|-------|------|
+| `vlan` |  One VLAN per client |
+| `shared` |  Multiple clients share the same network |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server interface &lt;tag&gt; vlan</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VLAN monitor for automatic creation of VLAN interfaces
+
+| Value | Help |
+|-------|------|
+| `start-end` |  VLAN range for automatic creation (e.g. 1-4094) |
+| `u32:1-4094` |  VLAN for automatic creation |
+
+constraint error message: VLAN IDs need to be in range 1-4094
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server limits burst</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Burst count
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server limits connection-limit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Acceptable rate of connections (e.g. 1/min, 60/sec)
+
+constraint error message: illegal value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server limits timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Timeout in seconds
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server max-concurrent-sessions</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum number of concurrent session start attempts
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Maximum number of concurrent session start attempts |
+
+constraint error message: Maximum concurent sessions must be in range 0-65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server name-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain Name Servers (DNS) addresses
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Domain Name Server (DNS) IPv6 address |
+| `ipv4` |  Domain Name Server (DNS) IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server shaper fwmark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Firewall mark value for traffic that excludes from shaping
+
+| Value | Help |
+|-------|------|
+| `u32:1-2147483647` |  Match firewall mark value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ipoe-server snmp master-agent</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable SNMP master agent mode
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,240 @@
+---
+title: Prefix List
+description: Prefix List Configuration
+cfg:
+    - policy prefix-list
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list &lt;tag&gt; rule &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list6 &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list6 &lt;tag&gt; rule &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list &lt;tag&gt; rule &lt;tag&gt; action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list6 &lt;tag&gt; rule &lt;tag&gt; action</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Action to take on entries matching this rule
+
+| Value | Help |
+|-------|------|
+| `deny` |  Deny matching entries |
+| `permit` |  Permit matching entries |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list &lt;tag&gt; rule &lt;tag&gt; ge</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix length to match a netmask greater than or equal to it
+
+| Value | Help |
+|-------|------|
+| `u32:0-32` |  Netmask greater than length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list &lt;tag&gt; rule &lt;tag&gt; le</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix length to match a netmask less than or equal to it
+
+| Value | Help |
+|-------|------|
+| `u32:0-32` |  Netmask less than length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list &lt;tag&gt; rule &lt;tag&gt; prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix to match
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  Prefix to match against |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list6 &lt;tag&gt; rule &lt;tag&gt; ge</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix length to match a netmask greater than or equal to it
+
+| Value | Help |
+|-------|------|
+| `u32:0-128` |  Netmask greater than length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list6 &lt;tag&gt; rule &lt;tag&gt; le</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix length to match a netmask less than or equal to it
+
+| Value | Help |
+|-------|------|
+| `u32:0-128` |  Netmask less than length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy prefix-list6 &lt;tag&gt; rule &lt;tag&gt; prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix to match
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

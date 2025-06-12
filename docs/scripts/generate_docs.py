@@ -45,7 +45,7 @@ def flatten_json_opmode(commands, commandname='', sep=' '):
 
 
 # TODO: set an option to render the command as text or markdown or ...
-def render_command(command, env, command_hashtable, template_commands, jinja_template): 
+def render_command(command, env, command_hashtable, template_commands, template_not_commands, jinja_template): 
     '''
     render a command as text or markdown
     command_hashtable is the hashtable of the commandnames for the template
@@ -66,7 +66,8 @@ def render_command(command, env, command_hashtable, template_commands, jinja_tem
         commandnames = command_hashtable[hash]
         # take only the commandnames that are in the template_commands
         commandnames = [commandname for commandname in commandnames if any(commandname.startswith(template_command) for template_command in template_commands)]
-
+        # remove commandnames that are in the template_not_commands
+        commandnames = [commandname for commandname in commandnames if not any(commandname.startswith(not_command) for not_command in template_not_commands)]
         # Use Jinja2 template for leaf nodes
         template = env.get_template(jinja_template)
         text += template.render(
@@ -107,7 +108,7 @@ def collect_templates_content():
 
 def generate_hash(command):
     '''
-    generate a hash of the command
+    generate a hash of the commandname
     return a string of the hash
     '''
     content = command.copy()
@@ -136,29 +137,39 @@ def generate_command_hashtable(data):
     return command_hashtable
 
 
-def extract_command_for_template(commands, hashtable, template_commands):
+def extract_command_for_template(commands, hashtable, template_commands, template_not_commands=[]): 
     '''
-    extracta all commands for a template
-    ignore duplicates via hashtable and just add the first occurence
+    extract all commands for a template
+    ignore duplicate commandnames via hashtable and just add the first occurence
     use the hastable to get all commandnames later in rendering
 
     return a tuple with the commands for the template and the used commandnames
     '''
     used_commandnames = []
     commands_for_template = []
+    # order of loops are important even it takes longer
+    # so the order of commands in the templates will render
     for template_command in template_commands:
         for command in commands:
             if command['commandname'].startswith(template_command):
+                # continue if the command is in the not_commands
+                skip_command = False
+                for not_command in template_not_commands:
+                    if command['commandname'].startswith(not_command):
+                        skip_command = True
+                        break
+                if skip_command:
+                    continue
                 if command['commandname'] in used_commandnames:
                     continue
-                # add command to used_commandnames to prevent duplicates
+                # add command to used_commandnames to prevent duplicates in one template
                 commands_for_template.append(command)
                 hash = generate_hash(command)
                 # add all commandnames for the tempate to used_commandnames from the hashtable
                 for commandname in hashtable[hash]:
                     if commandname.startswith(template_command):
-                        used_commandnames.append(commandname)               
-            
+                        used_commandnames.append(commandname)
+
     return commands_for_template, used_commandnames
 
 
@@ -182,6 +193,27 @@ def save_documentation_file(template_file, content):
     except Exception as e:
         print(f"Error saving documentation file {full_path}: {str(e)}")
         raise
+
+
+def save_coverage(cfg_coverage, op_coverage):
+    """
+    Generate and save a coverage report using the coverage.md.j2 template.
+    
+    Args:
+        cfg_coverage: List of processed configuration commands
+        op_coverage: List of processed operational mode commands
+    """
+    # Get the template
+    template = env.get_template('coverage.md.j2')
+    
+    # Render the template with coverage data
+    content = template.render(
+        cfg_coverage=cfg_coverage,
+        op_coverage=op_coverage
+    )
+    
+    # Save the rendered content to docs/coverage.md
+    save_documentation_file({'filepath': 'coverage.md'}, content)
 
 
 if __name__ == '__main__':
@@ -230,25 +262,42 @@ if __name__ == '__main__':
         new_content = template_file['content']
 
         if template_file['yaml_header']['cfg']:
-            cfg, used_commandnames = extract_command_for_template(data_cfg, cfg_command_hashtable, template_file['yaml_header']['cfg'])
+            not_cfg = template_file['yaml_header'].get('not_cfg', [])
+            cfg, used_commandnames = extract_command_for_template(data_cfg, cfg_command_hashtable, template_file['yaml_header']['cfg'], not_cfg)
             used_cf_commandnames.extend(used_commandnames)
             # render commands
             for command in cfg:
-                new_content += render_command(command, env, cfg_command_hashtable, template_file['yaml_header']['cfg'], 'cfg.md.j2')
+                new_content += render_command(command, env, cfg_command_hashtable, template_file['yaml_header']['cfg'], not_cfg, 'cfg.md.j2')
 
         if template_file['yaml_header']['opmode']:
-            opmode, used_commandnames = extract_command_for_template(data_opmode, op_command_hashtable, template_file['yaml_header']['opmode'])
+            not_opmode = template_file['yaml_header'].get('not_opmode', [])
+            opmode, used_commandnames = extract_command_for_template(data_opmode, op_command_hashtable, template_file['yaml_header']['opmode'], not_opmode)
             used_opmode_commandnames.extend(used_commandnames)
             # render template
             new_content += "## Operational Mode Commands\n\n"
-            for command in opmode:
-                new_content += render_command(command, env, op_command_hashtable, template_file['yaml_header']['opmode'], 'opmode.md.j2')
+            for command in opmode:#
+                new_content += render_command(command, env, op_command_hashtable, template_file['yaml_header']['opmode'], not_opmode, 'opmode.md.j2')
             
         # Save the generated documentation
         save_documentation_file(template_file, new_content)
+    
+    # generate coverage
+    cfg_coverage = []
+    for command in data_cfg:
+        if command['commandname'] not in used_cf_commandnames:
+            if command.get('node_type', None) == 'leaf' or command.get('type', None) == 'leafNode':
+                cfg_coverage.append(command['commandname'])
+
+    op_coverage = []
+    for command in data_opmode:
+        if command['commandname'] not in used_opmode_commandnames:
+            op_coverage.append(command['commandname'])
+
+    # save coverage
+    save_coverage(cfg_coverage, op_coverage)
 
     print("")
     print("Summary:")
-    print(f"- Configuration commands processed: {len(used_cf_commandnames)}")
-    print(f"- Operational mode commands processed: {len(used_opmode_commandnames)}")
+    print(f"- Configuration commands processed: {len(set(used_cf_commandnames))}/{len(data_cfg)}")
+    print(f"- Operational mode commands processed: {len(set(used_opmode_commandnames))}/{len(data_opmode)}")
     print(f"- Total files generated: {len(template_files)}")

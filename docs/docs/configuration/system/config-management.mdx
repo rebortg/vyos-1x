@@ -1,0 +1,92 @@
+---
+title: Config Management
+description: Config Management Configuration
+cfg:
+    - system config-management
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system config-management commit-archive location</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Commit archive location
+
+| Value | Help |
+|-------|------|
+| `git+https://&lt;user&gt;:&lt;passwd&gt;@&lt;host&gt;/&lt;path&gt;` |   |
+| `tftp://&lt;host&gt;/&lt;path&gt;` |   |
+| `scp://&lt;user&gt;:&lt;passwd&gt;@&lt;host&gt;/&lt;path&gt;` |   |
+| `sftp://&lt;user&gt;:&lt;passwd&gt;@&lt;host&gt;/&lt;path&gt;` |   |
+| `ftp://&lt;user&gt;:&lt;passwd&gt;@&lt;host&gt;/&lt;path&gt;` |   |
+| `https://&lt;user&gt;:&lt;passwd&gt;@&lt;host&gt;/&lt;path&gt;` |   |
+| `http://&lt;user&gt;:&lt;passwd&gt;@&lt;host&gt;/&lt;path&gt;` |   |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system config-management commit-archive source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source IP address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 source address |
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system config-management commit-revisions</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Commit revisions
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Number of config backups to keep |
+
+constraint error message: Number of revisions must be between 0 and 65535
+
+
+
+</dd>
+</dl>
+

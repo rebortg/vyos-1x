@@ -1,0 +1,196 @@
+---
+title: Failover
+description: Failover Configuration
+cfg:
+    - protocols failover
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols failover route &lt;tag&gt; next-hop &lt;tag&gt; check policy</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: any-available</span>
+
+Policy for check targets
+
+| Value | Help |
+|-------|------|
+| `any-available` |  Any target must be alive |
+| `all-available` |  All targets must be alive |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols failover route &lt;tag&gt; next-hop &lt;tag&gt; check port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols failover route &lt;tag&gt; next-hop &lt;tag&gt; check target</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Check target address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Address to check |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols failover route &lt;tag&gt; next-hop &lt;tag&gt; check timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Timeout between checks
+
+| Value | Help |
+|-------|------|
+| `u32:1-300` |  Timeout in seconds between checks |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols failover route &lt;tag&gt; next-hop &lt;tag&gt; check type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: icmp</span>
+
+Check type
+
+| Value | Help |
+|-------|------|
+| `tcp` |  Check target by TCP |
+| `icmp` |  Check target by ICMP |
+| `arp` |  Check target by ARP |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols failover route &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Gateway interface name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Gateway interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols failover route &lt;tag&gt; next-hop &lt;tag&gt; metric</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Route metric for this gateway
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Route metric |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

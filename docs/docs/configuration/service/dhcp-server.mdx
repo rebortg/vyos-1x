@@ -1,0 +1,1577 @@
+---
+title: DHCP Server
+description: DHCP Server Configuration
+cfg:
+    - service dhcp-server
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server dynamic-dns-update</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Dynamically update Domain Name System (RFC4702)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server failover ca-certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate Authority in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of CA in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server failover certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of certificate in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server failover name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Peer name used to identify connection
+
+constraint error message: Invalid failover peer name. May only contain letters, numbers and .-_
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server failover remote</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 remote address used for connectio
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address of failover peer |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server failover source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 source address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server failover status</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Failover hierarchy
+
+| Value | Help |
+|-------|------|
+| `secondary` |  Configure this server to be the secondary node |
+| `primary` |  Configure this server to be the primary node |
+
+constraint error message: Invalid DHCP failover peer status
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server hostfile-update</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Updating /etc/hosts file (per client lease)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server listen-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IPv4 addresses to listen on
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address to listen for incoming connections |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server listen-interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to listen on
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; authoritative</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Option to make DHCP server authoritative for this physical network
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option bootfile-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option bootfile-name</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option bootfile-name</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option bootfile-name</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Bootstrap file name
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option bootfile-server</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option bootfile-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option bootfile-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option bootfile-server</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Server from which the initial boot file is to be loaded
+
+| Value | Help |
+|-------|------|
+| `hostname` |  Bootfile server FQDN |
+| `ipv4` |  Bootfile server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option bootfile-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option bootfile-size</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option bootfile-size</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option bootfile-size</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Bootstrap file size
+
+| Value | Help |
+|-------|------|
+| `u32:1-16` |  Bootstrap file size in 512 byte blocks |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option captive-portal</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option captive-portal</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option captive-portal</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option captive-portal</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Captive portal API endpoint
+
+| Value | Help |
+|-------|------|
+| `txt` |  Captive portal API endpoint |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option client-prefix-length</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option client-prefix-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option client-prefix-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option client-prefix-length</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specifies the clients subnet mask as per RFC 950. If unset, subnet declaration is used.
+
+| Value | Help |
+|-------|------|
+| `u32:0-32` |  DHCP client prefix length must be 0 to 32 |
+
+constraint error message: DHCP client prefix length must be 0 to 32
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option default-router</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option default-router</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option default-router</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option default-router</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of default router
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Default router IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option domain-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option domain-name</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option domain-name</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option domain-name</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Client Domain Name
+
+constraint error message: Invalid domain name (RFC 1123 section 2).\nMay only contain letters, numbers and .-_
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option domain-search</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option domain-search</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option domain-search</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option domain-search</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Client Domain Name search list
+
+constraint error message: Invalid domain name (RFC 1123 section 2).\nMay only contain letters, numbers, period, and underscore.
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option ip-forwarding</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option ip-forwarding</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option ip-forwarding</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option ip-forwarding</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable IP forwarding on client
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option ipv6-only-preferred</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option ipv6-only-preferred</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option ipv6-only-preferred</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option ipv6-only-preferred</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable IPv4 on IPv6 only hosts (RFC 8925)
+
+| Value | Help |
+|-------|------|
+| `u32` |  Seconds |
+
+constraint error message: Seconds must be between 0 and 4294967295 (49 days)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option name-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option name-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option name-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option name-server</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain Name Servers (DNS) addresses
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Domain Name Server (DNS) IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option ntp-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option ntp-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option ntp-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option ntp-server</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of NTP server
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  NTP server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option pop-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option pop-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option pop-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option pop-server</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of POP3 server
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  POP3 server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option server-identifier</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option server-identifier</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option server-identifier</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option server-identifier</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Address for DHCP server identifier
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  DHCP server identifier IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option smtp-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option smtp-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option smtp-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option smtp-server</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of SMTP server
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  SMTP server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option static-route &lt;tag&gt; next-hop</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option static-route &lt;tag&gt; next-hop</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option static-route &lt;tag&gt; next-hop</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option static-route &lt;tag&gt; next-hop</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of router to be used to reach the destination subnet
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address of router |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option tftp-server-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option tftp-server-name</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option tftp-server-name</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option tftp-server-name</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+TFTP server name
+
+| Value | Help |
+|-------|------|
+| `hostname` |  TFTP server FQDN |
+| `ipv4` |  TFTP server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option time-offset</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option time-offset</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option time-offset</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option time-offset</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Client subnet offset in seconds from Coordinated Universal Time (UTC)
+
+| Value | Help |
+|-------|------|
+| `[-]N` |  Time offset (number, may be negative) |
+
+constraint error message: Invalid time offset value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option time-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option time-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option time-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option time-server</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of time server
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Time server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option time-zone</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option time-zone</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option time-zone</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option time-zone</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time zone to send to clients. Uses RFC4833 options 100 and 101
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option vendor-option ubiquiti unifi-controller</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option vendor-option ubiquiti unifi-controller</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option vendor-option ubiquiti unifi-controller</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option vendor-option ubiquiti unifi-controller</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Address of UniFi controller
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IP address of UniFi controller |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option wins-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option wins-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option wins-server</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option wins-server</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address for Windows Internet Name Service (WINS) server
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  WINS server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; option wpad-url</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; option wpad-url</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; option wpad-url</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; option wpad-url</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Web Proxy Autodiscovery (WPAD) URL
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; exclude</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address to exclude from DHCP lease range
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address to exclude from lease range |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; ignore-client-id</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Ignore client identifier for lease lookups
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; lease</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 86400</span>
+
+Lease timeout in seconds
+
+| Value | Help |
+|-------|------|
+| `u32` |  DHCP lease time in seconds |
+
+constraint error message: DHCP lease time must be between 0 and 4294967295 (49 days)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; start</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+First IP address for DHCP lease range
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 start address of pool |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; range &lt;tag&gt; stop</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Last IP address for DHCP lease range
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 end address of pool |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; duid</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DHCP unique identifier (DUID) to be sent by client
+
+| Value | Help |
+|-------|------|
+| `duid` |  DHCP unique identifier |
+
+constraint error message: Invalid DUID, must be in the format h[[:h]...]
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; ip-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Fixed IP address of static mapping
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 address used in static mapping |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; static-mapping &lt;tag&gt; mac</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Media Access Control (MAC) address
+
+| Value | Help |
+|-------|------|
+| `macaddr` |  Hardware (MAC) address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcp-server shared-network-name &lt;tag&gt; subnet &lt;tag&gt; subnet-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Unique ID mapped to leases in the lease file
+
+| Value | Help |
+|-------|------|
+| `u32` |  Unique subnet ID |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

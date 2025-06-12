@@ -1,0 +1,2288 @@
+---
+title: IPSec
+description: IPSec Configuration
+cfg:
+    - vpn ipsec
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec authentication psk &lt;tag&gt; dhcp-interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DHCP interface supplying next-hop IP address
+
+| Value | Help |
+|-------|------|
+| `txt` |  DHCP interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec authentication psk &lt;tag&gt; id</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+ID for authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  ID used for authentication |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec authentication psk &lt;tag&gt; secret</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IKE pre-shared secret key
+
+| Value | Help |
+|-------|------|
+| `txt` |  IKE pre-shared secret key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec disable-uniqreqids</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable requirement for unique IDs in the Security Database
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec esp-group &lt;tag&gt; compression</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ESP compression
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec esp-group &lt;tag&gt; life-bytes</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Security Association byte count to expire
+
+| Value | Help |
+|-------|------|
+| `u32:1024-26843545600000` |  SA life in bytes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec esp-group &lt;tag&gt; life-packets</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Security Association packet count to expire
+
+| Value | Help |
+|-------|------|
+| `u32:1000-26843545600000` |  SA life in packets |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec esp-group &lt;tag&gt; lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3600</span>
+
+Security Association time to expire
+
+| Value | Help |
+|-------|------|
+| `u32:30-86400` |  SA lifetime in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec esp-group &lt;tag&gt; mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: tunnel</span>
+
+ESP mode
+
+| Value | Help |
+|-------|------|
+| `transport` |  Transport mode |
+| `tunnel` |  Tunnel mode |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec esp-group &lt;tag&gt; pfs</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: enable</span>
+
+ESP Perfect Forward Secrecy
+
+| Value | Help |
+|-------|------|
+| `disable` |  Disable PFS |
+| `dh-group32` |  Use Diffie-Hellman group 32 (curve448) |
+| `dh-group31` |  Use Diffie-Hellman group 31 (curve25519) |
+| `dh-group30` |  Use Diffie-Hellman group 30 (ecp512bp) |
+| `dh-group29` |  Use Diffie-Hellman group 29 (ecp384bp) |
+| `dh-group28` |  Use Diffie-Hellman group 28 (ecp256bp) |
+| `dh-group27` |  Use Diffie-Hellman group 27 (ecp224bp) |
+| `dh-group26` |  Use Diffie-Hellman group 26 (ecp224) |
+| `dh-group25` |  Use Diffie-Hellman group 25 (ecp192) |
+| `dh-group24` |  Use Diffie-Hellman group 24 (modp2048s256) |
+| `dh-group23` |  Use Diffie-Hellman group 23 (modp2048s224) |
+| `dh-group22` |  Use Diffie-Hellman group 22 (modp1024s160) |
+| `dh-group21` |  Use Diffie-Hellman group 21 (ecp521) |
+| `dh-group20` |  Use Diffie-Hellman group 20 (ecp384) |
+| `dh-group19` |  Use Diffie-Hellman group 19 (ecp256) |
+| `dh-group18` |  Use Diffie-Hellman group 18 (modp8192) |
+| `dh-group17` |  Use Diffie-Hellman group 17 (modp6144) |
+| `dh-group16` |  Use Diffie-Hellman group 16 (modp4096) |
+| `dh-group15` |  Use Diffie-Hellman group 15 (modp3072) |
+| `dh-group14` |  Use Diffie-Hellman group 14 (modp2048) |
+| `dh-group5` |  Use Diffie-Hellman group 5 (modp1536) |
+| `dh-group2` |  Use Diffie-Hellman group 2 (modp1024) |
+| `dh-group1` |  Use Diffie-Hellman group 1 (modp768) |
+| `enable` |  Inherit Diffie-Hellman group from the IKE group |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec esp-group &lt;tag&gt; proposal &lt;tag&gt; encryption</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; proposal &lt;tag&gt; encryption</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: aes128</span>
+
+Encryption algorithm
+
+| Value | Help |
+|-------|------|
+| `chacha20poly1305` |  256 bit ChaCha20/Poly1305 with 128 bit ICV |
+| `cast128` |  128 bit CAST-CBC |
+| `twofish256` |  256 bit Twofish-CBC |
+| `twofish192` |  192 bit Twofish-CBC |
+| `twofish128` |  128 bit Twofish-CBC |
+| `serpent256` |  256 bit Serpent-CBC |
+| `serpent192` |  192 bit Serpent-CBC |
+| `serpent128` |  128 bit Serpent-CBC |
+| `camellia256ccm128` |  256 bit Camellia-CCM with 128 bit ICV |
+| `camellia192ccm128` |  192 bit Camellia-CCM with 128 bit ICV |
+| `camellia128ccm128` |  128 bit Camellia-CCM with 128 bit ICV |
+| `camellia256ccm96` |  256 bit Camellia-CCM with 96 bit ICV |
+| `camellia192ccm96` |  192 bit Camellia-CCM with 96 bit ICV |
+| `camellia128ccm96` |  128 bit Camellia-CCM with 96 bit ICV |
+| `camellia256ccm64` |  256 bit Camellia-CCM with 64 bit ICV |
+| `camellia192ccm64` |  192 bit Camellia-CCM with 64 bit ICV |
+| `camellia128ccm64` |  128 bit Camellia-CCM with 64 bit ICV |
+| `camellia256ctr` |  256 bit Camellia-COUNTER |
+| `camellia192ctr` |  192 bit Camellia-COUNTER |
+| `camellia128ctr` |  128 bit Camellia-COUNTER |
+| `camellia256` |  256 bit Camellia-CBC |
+| `camellia192` |  192 bit Camellia-CBC |
+| `camellia128` |  128 bit Camellia-CBC |
+| `blowfish256` |  256 bit Blowfish-CBC |
+| `blowfish192` |  192 bit Blowfish-CBC |
+| `blowfish128` |  128 bit Blowfish-CBC |
+| `3des` |  168 bit 3DES-EDE-CBC |
+| `aes256gmac` |  Null encryption with 256 bit AES-GMAC |
+| `aes192gmac` |  Null encryption with 192 bit AES-GMAC |
+| `aes128gmac` |  Null encryption with 128 bit AES-GMAC |
+| `aes256gcm128` |  256 bit AES-GCM with 128 bit ICV |
+| `aes192gcm128` |  192 bit AES-GCM with 128 bit ICV |
+| `aes128gcm128` |  128 bit AES-GCM with 128 bit ICV |
+| `aes256gcm96` |  256 bit AES-GCM with 96 bit ICV |
+| `aes192gcm96` |  192 bit AES-GCM with 96 bit ICV |
+| `aes128gcm96` |  128 bit AES-GCM with 96 bit ICV |
+| `aes256gcm64` |  256 bit AES-GCM with 64 bit ICV |
+| `aes192gcm64` |  192 bit AES-GCM with 64 bit ICV |
+| `aes128gcm64` |  128 bit AES-GCM with 64 bit ICV |
+| `aes256ccm128` |  256 bit AES-CCM with 128 bit ICV |
+| `aes192ccm128` |  192 bit AES-CCM with 128 bit IC |
+| `aes128ccm128` |  128 bit AES-CCM with 128 bit ICV |
+| `aes256ccm96` |  256 bit AES-CCM with 96 bit ICV |
+| `aes192ccm96` |  192 bit AES-CCM with 96 bit ICV |
+| `aes128ccm96` |  128 bit AES-CCM with 96 bit ICV |
+| `aes256ccm64` |  256 bit AES-CCM with 64 bit ICV |
+| `aes192ccm64` |  192 bit AES-CCM with 64 bit ICV |
+| `aes128ccm64` |  128 bit AES-CCM with 64 bit ICV |
+| `aes256ctr` |  256 bit AES-COUNTER |
+| `aes192ctr` |  192 bit AES-COUNTER |
+| `aes128ctr` |  128 bit AES-COUNTER |
+| `aes256` |  256 bit AES-CBC |
+| `aes192` |  192 bit AES-CBC |
+| `aes128` |  128 bit AES-CBC |
+| `null` |  Null encryption |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec esp-group &lt;tag&gt; proposal &lt;tag&gt; hash</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; proposal &lt;tag&gt; hash</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: sha1</span>
+
+Hash algorithm
+
+| Value | Help |
+|-------|------|
+| `aes256gmac` |  256-bit AES-GMAC |
+| `aes192gmac` |  192-bit AES-GMAC |
+| `aes128gmac` |  128-bit AES-GMAC |
+| `aescmac` |  AES CMAC |
+| `aesxcbc` |  AES XCBC |
+| `sha512` |  SHA2_512_256 HMAC |
+| `sha384` |  SHA2_384_192 HMAC |
+| `sha256_96` |  SHA2_256_96 HMAC |
+| `sha256` |  SHA2_256_128 HMAC |
+| `sha1_160` |  SHA1_160 HMAC |
+| `sha1` |  SHA1 HMAC |
+| `md5_128` |  MD5_128 HMAC |
+| `md5` |  MD5 HMAC |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; close-action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: none</span>
+
+Action to take if a child SA is unexpectedly closed
+
+| Value | Help |
+|-------|------|
+| `start` |  Attempt to re-negotiate the connection immediately |
+| `trap` |  Attempt to re-negotiate when matching traffic is seen |
+| `none` |  Do nothing |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; dead-peer-detection action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: clear</span>
+
+Keep-alive failure action
+
+| Value | Help |
+|-------|------|
+| `restart` |  Attempt to re-negotiate the connection immediately |
+| `clear` |  Remove the connection immediately |
+| `trap` |  Attempt to re-negotiate the connection when matching traffic is seen |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; dead-peer-detection interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+Keep-alive interval
+
+| Value | Help |
+|-------|------|
+| `u32:2-86400` |  Keep-alive interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; dead-peer-detection timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 120</span>
+
+Dead Peer Detection keep-alive timeout (IKEv1 only)
+
+| Value | Help |
+|-------|------|
+| `u32:2-86400` |  Keep-alive timeout in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; disable-mobike</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable MOBIKE Support (IKEv2 only)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; ikev2-reauth</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Re-authentication of the remote peer during an IKE re-key (IKEv2 only)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; key-exchange</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IKE version
+
+| Value | Help |
+|-------|------|
+| `ikev2` |  Use IKEv2 for key exchange |
+| `ikev1` |  Use IKEv1 for key exchange |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; lifetime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 28800</span>
+
+IKE lifetime
+
+| Value | Help |
+|-------|------|
+| `u32:0-86400` |  IKE lifetime in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: main</span>
+
+IKEv1 phase 1 mode
+
+| Value | Help |
+|-------|------|
+| `aggressive` |  Use the aggressive mode (insecure, not recommended) |
+| `main` |  Use the main mode (recommended) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; proposal &lt;tag&gt; dh-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2</span>
+
+dh-grouphelp
+
+| Value | Help |
+|-------|------|
+| `32` |  Diffie-Hellman group 32 (curve448) |
+| `31` |  Diffie-Hellman group 31 (curve25519) |
+| `30` |  Diffie-Hellman group 30 (ecp512bp) |
+| `29` |  Diffie-Hellman group 29 (ecp384bp) |
+| `28` |  Diffie-Hellman group 28 (ecp256bp) |
+| `27` |  Diffie-Hellman group 27 (ecp224bp) |
+| `26` |  Diffie-Hellman group 26 (ecp224) |
+| `25` |  Diffie-Hellman group 25 (ecp192) |
+| `24` |  Diffie-Hellman group 24 (modp2048s256) |
+| `23` |  Diffie-Hellman group 23 (modp2048s224) |
+| `22` |  Diffie-Hellman group 22 (modp1024s160) |
+| `21` |  Diffie-Hellman group 21 (ecp521) |
+| `20` |  Diffie-Hellman group 20 (ecp384) |
+| `19` |  Diffie-Hellman group 19 (ecp256) |
+| `18` |  Diffie-Hellman group 18 (modp8192) |
+| `17` |  Diffie-Hellman group 17 (modp6144) |
+| `16` |  Diffie-Hellman group 16 (modp4096) |
+| `15` |  Diffie-Hellman group 15 (modp3072) |
+| `14` |  Diffie-Hellman group 14 (modp2048) |
+| `5` |  Diffie-Hellman group 5 (modp1536) |
+| `2` |  Diffie-Hellman group 2 (modp1024) |
+| `1` |  Diffie-Hellman group 1 (modp768) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec ike-group &lt;tag&gt; proposal &lt;tag&gt; prf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Pseudo-Random Functions
+
+| Value | Help |
+|-------|------|
+| `prfsha512` |  SHA2_512 PRF |
+| `prfsha384` |  SHA2_384 PRF |
+| `prfsha256` |  SHA2_256 PRF |
+| `prfaescmac` |  AES CMAC PRF |
+| `prfaesxcbc` |  AES XCBC PRF |
+| `prfsha1` |  SHA1 PRF |
+| `prfmd5` |  MD5 PRF |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec log level</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Global IPsec logging Level
+
+| Value | Help |
+|-------|------|
+| `2` |  More detailed debugging control flow |
+| `1` |  Generic control flow with errors, a good default to see whats going on |
+| `0` |  Very basic auditing logs (e.g., SA up/SA down) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec log subsystem</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Subsystem logging levels
+
+| Value | Help |
+|-------|------|
+| `any` |  Any subsystem |
+| `pts` |   Platform Trust Service |
+| `imv` |  Integrity Measurement Verifier |
+| `imc` |  Integrity Measurement Collector |
+| `tnc` |  Trusted Network Connect |
+| `tls` |   libtls library messages |
+| `esp` |  libipsec library messages |
+| `lib` |  libstrongswan library messages |
+| `enc` |  Packet encoding/decoding encryption/decryption operations |
+| `asn` |  Low-level encoding/decoding (ASN.1, X.509 etc.) |
+| `net` |  IKE network communication |
+| `knl` |  IPsec/Networking kernel interface |
+| `cfg` |  Configuration management and plugins |
+| `job` |  Jobs queuing/processing and thread pool management |
+| `chd` |  CHILD_SA/IPsec SA |
+| `ike` |  IKE_SA/ISAKMP SA |
+| `mgr` |  IKE_SA manager, handling synchronization for IKE_SA access |
+| `dmn` |  Main daemon setup/cleanup/signal handling |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec options disable-route-autoinstall</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not automatically install routes to remote networks
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec options flexvpn</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Allow FlexVPN vendor ID payload (IKEv2 only)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec options interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access dhcp interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec options virtual-ip</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Allow install virtual-ip addresses
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec profile &lt;tag&gt; authentication mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Authentication mode
+
+| Value | Help |
+|-------|------|
+| `pre-shared-secret` |  Use a pre-shared secret key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec profile &lt;tag&gt; authentication pre-shared-secret</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication pre-shared-secret</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Pre-shared secret key
+
+| Value | Help |
+|-------|------|
+| `txt` |  Pre-shared secret key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec profile &lt;tag&gt; bind tunnel</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Tunnel interface associated with this profile
+
+| Value | Help |
+|-------|------|
+| `txt` |  Associated interface to this profile |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec profile &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication local-users username &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access radius server &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; tunnel &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec profile &lt;tag&gt; esp-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; esp-group</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; tunnel &lt;tag&gt; esp-group</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; vti esp-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Encapsulating Security Payloads (ESP) group name
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec profile &lt;tag&gt; ike-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; ike-group</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; ike-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Internet Key Exchange (IKE) group name
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication client-mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: eap-mschapv2</span>
+
+Client authentication mode
+
+| Value | Help |
+|-------|------|
+| `eap-radius` |  Use EAP-RADIUS authentication |
+| `eap-mschapv2` |  Use EAP-MSCHAPv2 authentication |
+| `eap-tls` |  Use EAP-TLS authentication |
+| `x509` |  Use IPsec x.509 certificate authentication |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication local-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication local-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local ID for peer authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  Local ID used for peer authentication |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication local-users username &lt;tag&gt; password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Password used for authentication
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication server-mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: x509</span>
+
+Server authentication mode
+
+| Value | Help |
+|-------|------|
+| `x509` |  Use x.509 certificate |
+| `pre-shared-secret` |  Use a pre-shared secret key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication x509 ca-certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication x509 ca-certificate</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate Authority in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of CA in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication x509 certificate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication x509 certificate</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Certificate in PKI configuration
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of certificate in PKI configuration |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; authentication x509 passphrase</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication x509 passphrase</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Private key passphrase
+
+| Value | Help |
+|-------|------|
+| `txt` |  Passphrase to decrypt the private key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; local port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; tunnel &lt;tag&gt; local port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; tunnel &lt;tag&gt; remote port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; local prefix</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; tunnel &lt;tag&gt; local prefix</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IPv4 or IPv6 prefix
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Local IPv6 prefix |
+| `ipv4net` |  Local IPv4 prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; local-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; local-address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 or IPv6 address of a local interface to use for VPN
+
+| Value | Help |
+|-------|------|
+| `any` |  Allow any IPv4 address present on the system to be used for VPN |
+| `ipv6` |  IPv6 address of a local interface for VPN |
+| `ipv4` |  IPv4 address of a local interface for VPN |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; pool</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address pool
+
+| Value | Help |
+|-------|------|
+| `radius` |  Forward requests for virtual IP addresses to a RADIUS server |
+| `dhcp` |  Forward requests for virtual IP addresses to a DHCP server |
+| `txt` |  Predefined IP pool name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; replay-window</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; replay-window</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 32</span>
+
+IPsec replay window to configure for this CHILD_SA
+
+| Value | Help |
+|-------|------|
+| `u32:1-2040` |  Replay window size in packets |
+| `u32:0` |  Disable IPsec replay protection |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 28800</span>
+
+Timeout to close connection if no data is transmitted
+
+| Value | Help |
+|-------|------|
+| `u32:1-86400` |  Timeout in seconds |
+| `u32:0` |  Disable inactivity checks |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access connection &lt;tag&gt; unique</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Connection uniqueness enforcement policy
+
+| Value | Help |
+|-------|------|
+| `replace` |  Delete any existing connection if a new one for the same user gets established |
+| `keep` |  Reject new connection attempts if the same user already has an active connection |
+| `never` |  Never enforce connection uniqueness |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access dhcp server</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DHCP server address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  DHCP server IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access pool &lt;tag&gt; exclude</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IPv4 or IPv6 pool prefix exclusions
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Local IPv6 pool prefix exclusion |
+| `ipv4net` |  Local IPv4 pool prefix exclusion |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access pool &lt;tag&gt; name-server</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Domain Name Servers (DNS) addresses
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Domain Name Server (DNS) IPv6 address |
+| `ipv4` |  Domain Name Server (DNS) IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access pool &lt;tag&gt; prefix</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local IPv4 or IPv6 pool prefix
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Local IPv6 pool prefix |
+| `ipv4net` |  Local IPv4 pool prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access radius nas-identifier</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+NAS-Identifier attribute sent to RADIUS
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access radius server &lt;tag&gt; disable-accounting</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable accounting
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access radius server &lt;tag&gt; key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Shared secret key
+
+| Value | Help |
+|-------|------|
+| `txt` |  Password string (key) |
+
+constraint error message: Password must be less then 128 characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access radius server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1812</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access radius source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 source address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec remote-access radius timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2</span>
+
+Session timeout
+
+| Value | Help |
+|-------|------|
+| `u32:1-240` |  Session timeout in seconds (default: 2) |
+
+constraint error message: Timeout must be between 1 and 240 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Authentication mode
+
+| Value | Help |
+|-------|------|
+| `x509` |  Use x.509 certificate |
+| `rsa` |  Use RSA key |
+| `pre-shared-secret` |  Use pre-shared secret key |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication remote-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: %any</span>
+
+ID for remote authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  ID used for peer authentication |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication rsa local-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Name of PKI key-pair with local private key
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication rsa passphrase</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local private key passphrase
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication rsa remote-key</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Name of PKI key-pair with remote public key
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; authentication use-x509-id</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use certificate common name as ID
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; connection-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Connection type
+
+| Value | Help |
+|-------|------|
+| `none` |  Load the connection only |
+| `respond` |  Wait for the peer to initiate the connection |
+| `initiate` |  Bring the connection up immediately |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; default-esp-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Defult ESP group name
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; dhcp-interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DHCP interface supplying next-hop IP address
+
+| Value | Help |
+|-------|------|
+| `txt` |  DHCP interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; force-udp-encapsulation</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Force UDP encapsulation
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; ikev2-reauth</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Re-authentication of the remote peer during an IKE re-key (IKEv2 only)
+
+| Value | Help |
+|-------|------|
+| `inherit` |  Inherit the reauth configuration form your IKE-group |
+| `no` |  Disable remote host re-authenticaton during an IKE re-key. |
+| `yes` |  Enable remote host re-autentication during an IKE re-key. Currently broken due to a strong swan bug |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; remote-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 or IPv6 address of the remote peer
+
+| Value | Help |
+|-------|------|
+| `any` |  Allow any IP address of the remote peer |
+| `hostname` |  Fully qualified domain name of the remote peer |
+| `ipv6` |  IPv6 address of the remote peer |
+| `ipv4` |  IPv4 address of the remote peer |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; tunnel &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Priority for IPsec policy (lowest value more preferable)
+
+| Value | Help |
+|-------|------|
+| `u32:1-100` |  Priority for IPsec policy (lowest value more preferable) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; tunnel &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Protocol
+
+| Value | Help |
+|-------|------|
+| `txt` |  Protocol name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; tunnel &lt;tag&gt; remote prefix</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remote IPv4 or IPv6 prefix
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  Remote IPv6 prefix |
+| `ipv4net` |  Remote IPv4 prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; virtual-address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Initiator request virtual-address from peer
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Request IPv6 address from peer |
+| `ipv4` |  Request IPv4 address from peer |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vpn ipsec site-to-site peer &lt;tag&gt; vti bind</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VTI tunnel interface associated with this configuration
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

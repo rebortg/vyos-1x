@@ -1,0 +1,216 @@
+---
+title: Firewall Zone
+description: Firewall Zone
+cfg:
+    - firewall zone
+opmode:
+---
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; default-action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: drop</span>
+
+Default-action for traffic coming into this zone
+
+| Value | Help |
+|-------|------|
+| `reject` |  Drop and notify source |
+| `drop` |  Drop silently |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; default-log</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log packets hitting default-action
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; from &lt;tag&gt; firewall ipv6-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; intra-zone-filtering firewall ipv6-name</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 firewall ruleset
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; from &lt;tag&gt; firewall name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; intra-zone-filtering firewall name</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 firewall ruleset
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface associated with zone
+
+| Value | Help |
+|-------|------|
+| `vrf` |  VRF associated with zone |
+| `txt` |  Interface associated with zone |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; intra-zone-filtering action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Action for intra-zone traffic
+
+| Value | Help |
+|-------|------|
+| `drop` |  Drop silently |
+| `accept` |  Accept traffic |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall zone &lt;tag&gt; local-zone</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Zone to be local-zone
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

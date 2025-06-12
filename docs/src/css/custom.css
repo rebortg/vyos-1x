@@ -31,3 +31,6 @@
 
 /* Removing all custom styles we added before */
 @import './command-properties.css';
+@import './code-snippets.css';
+@import './commands.css';
+

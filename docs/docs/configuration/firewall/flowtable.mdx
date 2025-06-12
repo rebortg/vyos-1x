@@ -1,0 +1,83 @@
+---
+title: Firewall Flowtable
+description: Firewall Flowtable
+cfg:
+    - firewall flowtable
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall flowtable &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall flowtable &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interfaces to use this flowtable
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set firewall flowtable &lt;tag&gt; offload</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: software</span>
+
+Offloading method
+
+| Value | Help |
+|-------|------|
+| `software` |  Software offload |
+| `hardware` |  Hardware offload |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

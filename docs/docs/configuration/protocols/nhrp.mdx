@@ -1,0 +1,263 @@
+---
+title: NHRP
+description: NHRP Configuration
+cfg:
+    - protocols nhrp
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; cisco-authentication</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Pass phrase for cisco authentication
+
+| Value | Help |
+|-------|------|
+| `txt` |  Pass phrase for cisco authentication |
+
+constraint error message: Password should contain up to eight non-whitespace characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; dynamic-map &lt;tag&gt; nbma-domain-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set HUB fqdn (nbma-address - fqdn)
+
+| Value | Help |
+|-------|------|
+| `&lt;fqdn&gt;` |  Set the external HUB fqdn |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; holding-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; shortcut-target &lt;tag&gt; holding-time</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Holding time in seconds
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; map &lt;tag&gt; cisco</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+If the statically mapped peer is running Cisco IOS, specify this
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; map &lt;tag&gt; nbma-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set HUB address (nbma-address - external hub address or fqdn)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; map &lt;tag&gt; register</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specifies that Registration Request should be sent to this peer on startup
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; multicast</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set multicast for NHRP
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; non-caching</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+This can be used to reduce memory consumption on big NBMA subnets
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; redirect</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable sending of Cisco style NHRP Traffic Indication packets
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; shortcut</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable creation of shortcut routes. A received NHRP Traffic Indication will trigger the resolution and establishment of a shortcut route
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols nhrp tunnel &lt;tag&gt; shortcut-destination</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+This instructs opennhrp to reply with authorative answers on NHRP Resolution Requests destined to addresses in this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

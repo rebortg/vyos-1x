@@ -1,0 +1,1554 @@
+---
+title: Route6
+description: Route6 Configuration
+cfg:
+    - policy route6
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; default-log</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log packets hitting default-action
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name, wildcard (*) supported |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Rule action
+
+| Value | Help |
+|-------|------|
+| `drop` |  Drop matching entries |
+| `return` |  Return from the current chain and continue at the next rule of the last chain |
+| `reject` |  Reject matching entries |
+| `accept` |  Accept matching entries |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; connection-mark</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Connection mark
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  Connection-mark to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; destination address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; source address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address, subnet, or range
+
+| Value | Help |
+|-------|------|
+| `!ipv6range` |  Match everything except the specified range |
+| `!ipv6net` |  Match everything except the specified prefix |
+| `!ipv6` |  Match everything except the specified address |
+| `ipv6range` |  IP range to match |
+| `ipv6net` |  Subnet to match |
+| `ipv6` |  IP address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; destination group address-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of addresses
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; destination group domain-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; source group domain-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of domains
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; destination group mac-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; source group mac-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of MAC addresses
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; destination group network-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of networks
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; destination group port-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; source group port-group</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of ports
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; destination port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; source port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port
+
+| Value | Help |
+|-------|------|
+| `` |  \n\n  Multiple destination ports can be specified as a comma-separated list.\n  For example: &#39;telnet,http,123,1001-1005&#39; |
+| `&lt;start-end&gt;` |  Numbered port range (e.g. 1001-1005) |
+| `u32:1-65535` |  Numbered port |
+| `txt` |  Named port (any name in /etc/services, e.g., http) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; dscp</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DSCP value
+
+| Value | Help |
+|-------|------|
+| `&lt;start-end&gt;` |  DSCP range to match |
+| `u32:0-63` |  DSCP value to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; dscp-exclude</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DSCP value not to match
+
+| Value | Help |
+|-------|------|
+| `&lt;start-end&gt;` |  DSCP range not to match |
+| `u32:0-63` |  DSCP value not to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; fragment match-frag</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Second and further fragments of fragmented packets
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; fragment match-non-frag</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Head fragments or unfragmented packets
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; hop-limit eq</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match on equal value
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  Equal to value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; hop-limit gt</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match on greater then value
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  Greater then value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; hop-limit lt</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match on less then value
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  Less then value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; icmpv6 type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+ICMP type-name
+
+| Value | Help |
+|-------|------|
+| `packet-too-big` |  ICMP type/code name |
+| `address-mask-reply` |  ICMP type/code name |
+| `address-mask-request` |  ICMP type/code name |
+| `timestamp-reply` |  ICMP type/code name |
+| `timestamp-request` |  ICMP type/code name |
+| `required-option-missing` |  ICMP type/code name |
+| `ip-header-bad` |  ICMP type/code name |
+| `parameter-problem` |  ICMP type/code name |
+| `ttl-zero-during-reassembly` |  ICMP type/code name |
+| `ttl-zero-during-transit` |  ICMP type/code name |
+| `ttl-exceeded` |  ICMP type/code name |
+| `time-exceeded` |  ICMP type/code name |
+| `router-solicitation` |  ICMP type/code name |
+| `router-advertisement` |  ICMP type/code name |
+| `ping` |  ICMP type/code name |
+| `echo-request` |  ICMP type/code name |
+| `TOS host-redirect` |  ICMP type/code name |
+| `TOS-network-redirect` |  ICMP type/code name |
+| `host-redirect` |  ICMP type/code name |
+| `network-redirect` |  ICMP type/code name |
+| `redirect` |  ICMP type/code name |
+| `source-quench` |  ICMP type/code name |
+| `precedence-cutoff` |  ICMP type/code name |
+| `host-precedence-violation` |  ICMP type/code name |
+| `communication-prohibited` |  ICMP type/code name |
+| `TOS-host-unreachable` |  ICMP type/code name |
+| `TOS-network-unreachable` |  ICMP type/code name |
+| `host-prohibited` |  ICMP type/code name |
+| `network-prohibited` |  ICMP type/code name |
+| `host-unknown` |  ICMP type/code name |
+| `network-unknown` |  ICMP type/code name |
+| `source-route-failed` |  ICMP type/code name |
+| `fragmentation-needed` |  ICMP type/code name |
+| `port-unreachable` |  ICMP type/code name |
+| `protocol-unreachable` |  ICMP type/code name |
+| `host-unreachable` |  ICMP type/code name |
+| `network-unreachable` |  ICMP type/code name |
+| `destination-unreachable` |  ICMP type/code name |
+| `pong` |  ICMP type/code name |
+| `echo-reply` |  ICMP type/code name |
+| `any` |  Any ICMP type/code |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; ipsec match-ipsec</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Inbound IPsec packets
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; ipsec match-none</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Inbound non-IPsec packets
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; limit burst</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum number of packets to allow in excess of rate
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  Maximum number of packets to allow in excess of rate |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; limit rate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum average matching rate
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  Maximum average matching rate |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; log</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log packets hitting this rule
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; mark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Firewall mark
+
+| Value | Help |
+|-------|------|
+| `!&lt;start-end&gt;` |  Firewall mark inverted range to match |
+| `&lt;start-end&gt;` |  Firewall mark range to match |
+| `!u32:0-2147483647` |  Inverted Firewall mark to match |
+| `u32:0-2147483647` |  Firewall mark to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; packet-length</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Payload size in bytes, including header and data to match
+
+| Value | Help |
+|-------|------|
+| `&lt;start-end&gt;` |  Packet length range to match |
+| `u32:1-65535` |  Packet length to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; packet-length-exclude</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Payload size in bytes, including header and data not to match
+
+| Value | Help |
+|-------|------|
+| `&lt;start-end&gt;` |  Packet length range not to match |
+| `u32:1-65535` |  Packet length not to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; packet-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Packet type
+
+| Value | Help |
+|-------|------|
+| `other` |  Match packet addressed to another host |
+| `multicast` |  Match multicast packet type |
+| `host` |  Match host packet type, addressed to local host |
+| `broadcast` |  Match broadcast packet type |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: all</span>
+
+Protocol to match (protocol name, number, or &#34;all&#34;)
+
+| Value | Help |
+|-------|------|
+| `!&lt;protocol&gt;` |  IP protocol number |
+| `0-255` |  IP protocol number |
+| `tcp_udp` |  Both TCP and UDP |
+| `all` |  All IP protocols |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; recent count</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source addresses seen more than N times
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Source addresses seen more than N times |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; recent time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source addresses seen in the last N seconds
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  Source addresses seen in the last N seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; set connection-mark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Connection marking
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  Connection marking |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; set dscp</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Packet Differentiated Services Codepoint (DSCP)
+
+| Value | Help |
+|-------|------|
+| `u32:0-63` |  DSCP number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; set mark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Packet marking
+
+| Value | Help |
+|-------|------|
+| `u32:1-2147483647` |  Packet marking |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; set table</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Routing table to forward packet with
+
+| Value | Help |
+|-------|------|
+| `main` |  Main table |
+| `u32:1-200` |  Table number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; set tcp-mss</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+TCP Maximum Segment Size
+
+| Value | Help |
+|-------|------|
+| `u32:500-1460` |  Explicitly set TCP MSS value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; source group address-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of addresses
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; source group network-group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group of networks
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; source mac-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+MAC address
+
+| Value | Help |
+|-------|------|
+| `!macaddr` |  Match everything except the specified MAC address |
+| `macaddr` |  MAC address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; state</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Session state
+
+| Value | Help |
+|-------|------|
+| `related` |  Related state |
+| `new` |  New state |
+| `invalid` |  Invalid state |
+| `established` |  Established state |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags ack</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags not ack</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Acknowledge flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags cwr</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags not cwr</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Congestion Window Reduced flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags ecn</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags not ecn</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Explicit Congestion Notification flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags fin</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags not fin</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Finish flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags not psh</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags psh</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Push flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags not rst</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags rst</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Reset flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags not syn</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags syn</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Synchronise flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags not urg</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp flags urg</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Urgent flag
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; tcp mss</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum segment size (MSS)
+
+| Value | Help |
+|-------|------|
+| `&lt;min&gt;-&lt;max&gt;` |  TCP MSS range (use &#39;-&#39; as delimiter) |
+| `u32:1-16384` |  Maximum segment size |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; time monthdays</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Monthdays to match rule on
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; time startdate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Date to start matching rule
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; time starttime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time of day to start matching rule
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; time stopdate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Date to stop matching rule
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; time stoptime</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Time of day to stop matching rule
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; time utc</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interpret times for startdate, stopdate, starttime and stoptime to be UTC
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route6 &lt;tag&gt; rule &lt;tag&gt; time weekdays</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Weekdays to match rule on
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

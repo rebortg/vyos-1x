@@ -1,37 +1,41 @@
 <dl>
 {% for command in commandnames %}
 <dt>
-  <div class="command-block">```set {{ command }}```</div>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set {{ command | e }}</div>
+    {% if loop.first %}
+    <div class="command-tags">
+      {% if cmd.multi %}
+      <span class="command-tag multi">multivalue</span>
+      {% endif %}
+      {% if cmd.valueless %}
+      <span class="command-tag valueless">valueless</span>
+      {% endif %}
+      {% if not cmd.valueless and not cmd.multi %}
+      <span class="command-tag single">singlevalue</span>
+      {% endif %}
+      {% if cmd.secret %}
+      <span class="command-tag secret">secret</span>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
 </dt>
-
+  
 {% endfor %}
 
 <dd>
-<div class="command-meta">
-  {% if cmd.multi %}
-  <span class="meta-item multi">multi</span>
-  {% endif %}
-  {% if cmd.valueless %}
-  <span class="meta-item valueless">valueless</span>
-  {% endif %}
-  {% if not cmd.valueless and not cmd.multi %}
-  <span class="meta-item single">single</span>
-  {% endif %}
-  {% if cmd.secret %}
-  <span class="meta-item secret">secret</span>
-  {% endif %}
-  {% if cmd.default_value %}
-  <span class="meta-item default">default: {{ cmd.default_value }}</span>
-  {% endif %}
-</div>
+{% if cmd.default_value %}
+<span class="command-tag default">default: {{ cmd.default_value }}</span>
+{% endif %}
 
-{{ cmd.help }}
+{{ cmd.help | e }}
 
 {% if cmd.value_help != [] %}
 | Value | Help |
 |-------|------|
 {% for value, help in cmd.value_help %}
-| `{{ value }}` |  {{ help }} |
+| `{{ value | e }}` |  {{ help | e }} |
 {% endfor %}
 
 {% endif %}

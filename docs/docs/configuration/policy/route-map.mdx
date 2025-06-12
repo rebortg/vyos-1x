@@ -1,0 +1,1821 @@
+---
+title: Route Map
+description: Route Map Configuration
+cfg:
+    - policy route-map
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Action to take on entries matching this rule
+
+| Value | Help |
+|-------|------|
+| `deny` |  Deny matching entries |
+| `permit` |  Permit matching entries |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; call</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Call another route-map on match
+
+| Value | Help |
+|-------|------|
+| `txt` |  Route map name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; continue</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Jump to a different rule in this route-map on a match
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Rule number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match as-path</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP as-path-list to match
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match community community-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP community-list to match
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match community exact-match</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Community-list to exactly match
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match evpn default-route</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Default EVPN type-5 route
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match evpn rd</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Route Distinguisher
+
+| Value | Help |
+|-------|------|
+| `ASN:NN_OR_IP-ADDRESS:NN` |  Route Distinguisher, (x.x.x.x:yyy|xxxx:yyyy) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match evpn route-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match route-type
+
+| Value | Help |
+|-------|------|
+| `prefix` |  Prefix route |
+| `multicast` |  IMET route |
+| `macip` |  mac-ip route |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match evpn vni</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Virtual Network Identifier
+
+| Value | Help |
+|-------|------|
+| `u32:0-16777214` |  VXLAN virtual network identifier |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match extcommunity</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP extended community to match
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip address access-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip nexthop access-list</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip route-source access-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP access-list to match
+
+| Value | Help |
+|-------|------|
+| `u32:2000-2699` |  IP extended access list (expanded range) |
+| `u32:1300-1999` |  IP standard access list (expanded range) |
+| `u32:100-199` |  IP extended access list |
+| `u32:1-99` |  IP standard access list |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip address prefix-len</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP prefix-length to match (can be used for kernel routes only)
+
+| Value | Help |
+|-------|------|
+| `u32:0-32` |  Prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip address prefix-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip nexthop prefix-list</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip route-source prefix-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP prefix-list to match
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip nexthop address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address to match
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Nexthop IP address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip nexthop prefix-len</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP prefix-length to match
+
+| Value | Help |
+|-------|------|
+| `u32:0-32` |  Prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ip nexthop type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ipv6 nexthop type</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match type
+
+| Value | Help |
+|-------|------|
+| `blackhole` |  Blackhole |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ipv6 address access-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ipv6 nexthop access-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 access-list to match
+
+| Value | Help |
+|-------|------|
+| `txt` |  IPV6 access list name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ipv6 address prefix-len</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 prefix-length to match (can be used for kernel routes only)
+
+| Value | Help |
+|-------|------|
+| `u32:0-128` |  Prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ipv6 address prefix-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ipv6 nexthop prefix-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 prefix-list to match
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match ipv6 nexthop address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 address of next-hop
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Nexthop IPv6 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match large-community large-community-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP large-community-list to match
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match local-preference</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local Preference
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  Local Preference |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match metric</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Metric of route to match
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Route metric |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match origin</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP origin code to match
+
+| Value | Help |
+|-------|------|
+| `incomplete` |  Incomplete origin |
+| `igp` |  Interior gateway protocol origin |
+| `egp` |  Exterior gateway protocol origin |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match peer</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Peer address to match
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Peer IPv6 address |
+| `ipv4` |  Peer IP address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match protocol via which the route was learnt
+
+| Value | Help |
+|-------|------|
+| `vnc` |  Virtual Network Control (VNC) |
+| `table` |  Non-main Kernel Routing Table |
+| `static` |  Statically configured routes |
+| `ripng` |  Routing Information Protocol next-generation (IPv6) (RIPng) |
+| `rip` |  Routing Information Protocol (RIP) |
+| `ospfv3` |  Open Shortest Path First (IPv6) (OSPFv3) |
+| `ospf` |  Open Shortest Path First (OSPFv2) |
+| `kernel` |  Kernel routes |
+| `isis` |  Intermediate System to Intermediate System (IS-IS) |
+| `connected` |  Connected routes (directly attached subnet or host) |
+| `bgp` |  Border Gateway Protocol (BGP) |
+| `babel` |  Babel routing protocol (Babel) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match rpki</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match RPKI validation result
+
+| Value | Help |
+|-------|------|
+| `valid` |  Match valid entries |
+| `notfound` |  Match notfound entries |
+| `invalid` |  Match invalid entries |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; match tag</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set tag</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Route tag value
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Route tag |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; on-match goto</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Rule number to goto on match
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Rule number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; on-match next</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Next sequence number to goto on match
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set aggregator as</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+AS number of an aggregation
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  Rule number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set aggregator ip</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of an aggregation
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  IP address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set as-path exclude</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remove/exclude from the as-path attribute
+
+| Value | Help |
+|-------|------|
+| `all` |  Exclude all AS numbers from the as-path |
+| `u32:1-4294967295` |  AS number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set as-path prepend</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prepend to the as-path
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  AS number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set as-path prepend-last-as</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use the last AS-number in the as-path
+
+| Value | Help |
+|-------|------|
+| `u32:1-10` |  Number of times to insert |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set atomic-aggregate</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP atomic aggregate attribute
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set community add</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Add communities to a prefix
+
+| Value | Help |
+|-------|------|
+| `no-peer` |  Well-known communities value NOPEER 0xFFFFFF04 |
+| `blackhole` |  Well-known communities value BLACKHOLE 0xFFFF029A |
+| `accept-own-nexthop` |  Well-known communities value accept-own-nexthop 0xFFFF0008 |
+| `no-llgr` |  Well-known communities value NO_LLGR 0xFFFF0007 |
+| `llgr-stale` |  Well-known communities value LLGR_STALE 0xFFFF0006 |
+| `route-filter-v6` |  Well-known communities value ROUTE_FILTER_v6 0xFFFF0005 |
+| `route-filter-translated-v6` |  Well-known communities value ROUTE_FILTER_TRANSLATED_v6 0xFFFF0004 |
+| `route-filter-v4` |  Well-known communities value ROUTE_FILTER_v4 0xFFFF0003 |
+| `route-filter-translated-v4` |  Well-known communities value ROUTE_FILTER_TRANSLATED_v4 0xFFFF0002 |
+| `accept-own` |  Well-known communities value ACCEPT_OWN 0xFFFF0001 |
+| `graceful-shutdown` |  Well-known communities value GRACEFUL_SHUTDOWN 0xFFFF0000 |
+| `internet` |  Well-known communities value 0 |
+| `no-export` |  Well-known communities value NO_EXPORT 0xFFFFFF01 |
+| `no-advertise` |  Well-known communities value NO_ADVERTISE 0xFFFFFF02 |
+| `local-as` |  Well-known communities value NO_EXPORT_SUBCONFED 0xFFFFFF03 |
+| `&lt;AS:VAL&gt;` |  Community number in &lt;0-65535:0-65535&gt; format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set community delete</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remove communities defined in a list from a prefix
+
+| Value | Help |
+|-------|------|
+| `txt` |  Community-list |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set community none</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set extcommunity none</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set large-community none</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Completely remove communities attribute from a prefix
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set community replace</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set communities for a prefix
+
+| Value | Help |
+|-------|------|
+| `no-peer` |  Well-known communities value NOPEER 0xFFFFFF04 |
+| `blackhole` |  Well-known communities value BLACKHOLE 0xFFFF029A |
+| `accept-own-nexthop` |  Well-known communities value accept-own-nexthop 0xFFFF0008 |
+| `no-llgr` |  Well-known communities value NO_LLGR 0xFFFF0007 |
+| `llgr-stale` |  Well-known communities value LLGR_STALE 0xFFFF0006 |
+| `route-filter-v6` |  Well-known communities value ROUTE_FILTER_v6 0xFFFF0005 |
+| `route-filter-translated-v6` |  Well-known communities value ROUTE_FILTER_TRANSLATED_v6 0xFFFF0004 |
+| `route-filter-v4` |  Well-known communities value ROUTE_FILTER_v4 0xFFFF0003 |
+| `route-filter-translated-v4` |  Well-known communities value ROUTE_FILTER_TRANSLATED_v4 0xFFFF0002 |
+| `accept-own` |  Well-known communities value ACCEPT_OWN 0xFFFF0001 |
+| `graceful-shutdown` |  Well-known communities value GRACEFUL_SHUTDOWN 0xFFFF0000 |
+| `internet` |  Well-known communities value 0 |
+| `no-export` |  Well-known communities value NO_EXPORT 0xFFFFFF01 |
+| `no-advertise` |  Well-known communities value NO_ADVERTISE 0xFFFFFF02 |
+| `local-as` |  Well-known communities value NO_EXPORT_SUBCONFED 0xFFFFFF03 |
+| `&lt;AS:VAL&gt;` |  Community number in &lt;0-65535:0-65535&gt; format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set distance</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Locally significant administrative distance
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  Distance value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set evpn gateway ipv4</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set gateway IPv4 address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Gateway IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set evpn gateway ipv6</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set gateway IPv6 address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  Gateway IPv6 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set extcommunity bandwidth</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Bandwidth value in Mbps
+
+| Value | Help |
+|-------|------|
+| `num-multipaths` |  Internally computed bandwidth based on number of multipaths (outbound-only) |
+| `cumulative` |  Cumulative bandwidth of all multipaths (outbound-only) |
+| `u32:1-25600` |  Bandwidth value in Mbps |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set extcommunity bandwidth-non-transitive</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+The link bandwidth extended community is encoded as non-transitive
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set extcommunity rt</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set route target value
+
+| Value | Help |
+|-------|------|
+| `IP:NN` |  Based on a router-id IP address in format &lt;IP:0-65535&gt; |
+| `ASN:NN` |  based on autonomous system number in format &lt;0-65535:0-4294967295&gt; |
+
+constraint error message: Should be in form: ASN:NN or IPADDR:NN where ASN is autonomous system number
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set extcommunity soo</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set Site of Origin value
+
+| Value | Help |
+|-------|------|
+| `IP:NN` |  Based on a router-id IP address in format &lt;IP:0-65535&gt; |
+| `ASN:NN` |  based on autonomous system number in format &lt;0-65535:0-4294967295&gt; |
+
+constraint error message: Should be in form: ASN:NN or IPADDR:NN where ASN is autonomous system number
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set ip-next-hop</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Nexthop IP address
+
+| Value | Help |
+|-------|------|
+| `peer-address` |  Set the BGP nexthop address to the address of the peer |
+| `unchanged` |  Set the BGP nexthop address as unchanged |
+| `ipv4` |  IP address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set ipv6-next-hop global</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Nexthop IPv6 global address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set ipv6-next-hop local</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Nexthop IPv6 local address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set ipv6-next-hop peer-address</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use peer address (for BGP only)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set ipv6-next-hop prefer-global</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefer global address as the nexthop
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set l3vpn-nexthop encapsulation gre</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Accept L3VPN traffic over GRE encapsulation
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set large-community add</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Add large communities to a prefix ;
+
+| Value | Help |
+|-------|------|
+| `&lt;GA:LDP1:LDP2&gt;` |  Community in format &lt;0-4294967295:0-4294967295:0-4294967295&gt; |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set large-community delete</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remove communities defined in a list from a prefix
+
+| Value | Help |
+|-------|------|
+| `txt` |  Community-list |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set large-community replace</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set large communities for a prefix
+
+| Value | Help |
+|-------|------|
+| `&lt;GA:LDP1:LDP2&gt;` |  Community in format &lt;0-4294967295:0-4294967295:0-4294967295&gt; |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set local-preference</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP local preference attribute
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  Local preference value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set metric</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Destination routing protocol metric
+
+| Value | Help |
+|-------|------|
+| `&lt;rtt&gt;` |  Round trip time |
+| `&lt;+/-rtt&gt;` |  Add or subtract round trip time |
+| `u32:0-4294967295` |  Metric value |
+| `&lt;+/-metric&gt;` |  Add or subtract metric |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set metric-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Open Shortest Path First (OSPF) external metric-type
+
+| Value | Help |
+|-------|------|
+| `type-2` |  OSPF external type 2 metric |
+| `type-1` |  OSPF external type 1 metric |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set origin</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Border Gateway Protocl (BGP) origin code
+
+| Value | Help |
+|-------|------|
+| `incomplete` |  Incomplete origin |
+| `egp` |  Exterior gateway protocol origin |
+| `igp` |  Interior gateway protocol origin |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set originator-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP originator ID attribute
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Orignator IP address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set src</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source address for route
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address |
+| `ipv4` |  IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set table</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Set prefixes to table
+
+| Value | Help |
+|-------|------|
+| `u32:1-200` |  Table value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy route-map &lt;tag&gt; rule &lt;tag&gt; set weight</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+BGP weight attribute
+
+| Value | Help |
+|-------|------|
+| `u32:0-4294967295` |  BGP weight |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

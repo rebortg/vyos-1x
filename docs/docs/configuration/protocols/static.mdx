@@ -1,0 +1,1616 @@
+---
+title: Static
+description: Static Configuration
+cfg:
+    - protocols static
+    - vrf name <tag> protocols static
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static arp interface &lt;tag&gt; address &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static arp interface &lt;tag&gt; address &lt;tag&gt; mac</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Media Access Control (MAC) address
+
+| Value | Help |
+|-------|------|
+| `macaddr` |  Hardware (MAC) address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static multicast interface-route &lt;tag&gt; next-hop-interface &lt;tag&gt; distance</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static multicast route &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance value for this route
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for this route |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static neighbor-proxy arp &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static neighbor-proxy nd &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; blackhole distance</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance for this route
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for this route |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; blackhole tag</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Tag value for this route
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  Tag value for this route |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; dhcp-interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; dhcp-interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; dhcp-interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DHCP interface supplying next-hop IP address
+
+| Value | Help |
+|-------|------|
+| `txt` |  DHCP interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; interface &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF to leak route
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of VRF to leak to |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use settings from BFD profile
+
+| Value | Help |
+|-------|------|
+| `txt` |  BFD profile name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Gateway interface name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Gateway interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route-map</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specify route-map name to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Route map name |
+
+constraint error message: Name of route-map can only contain alpha-numeric letters, hyphen and underscores
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; interface &lt;tag&gt; segments</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; interface &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; interface &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+SRv6 segments
+
+| Value | Help |
+|-------|------|
+| `txt` |  Segs (SIDs) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; blackhole distance</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; blackhole distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; interface &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; reject distance</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance for this route
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for this route |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; blackhole tag</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; blackhole tag</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; reject tag</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Tag value for this route
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  Tag value for this route |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static arp interface &lt;tag&gt; address &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; dhcp-interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; dhcp-interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; dhcp-interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DHCP interface supplying next-hop IP address
+
+| Value | Help |
+|-------|------|
+| `txt` |  DHCP interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; interface &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; interface &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; interface &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF to leak route
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of VRF to leak to |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd multi-hop source &lt;tag&gt; profile</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use settings from BFD profile
+
+| Value | Help |
+|-------|------|
+| `txt` |  BFD profile name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Gateway interface name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Gateway interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; interface &lt;tag&gt; segments</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; interface &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols static table &lt;tag&gt; route6 &lt;tag&gt; next-hop &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; interface &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols static route6 &lt;tag&gt; next-hop &lt;tag&gt; segments</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+SRv6 segments
+
+| Value | Help |
+|-------|------|
+| `txt` |  Segs (SIDs) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

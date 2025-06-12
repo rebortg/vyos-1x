@@ -1,0 +1,130 @@
+---
+title: DHCPv6 Relay
+description: DHCPv6 Relay Configuration
+cfg:
+    - service dhcpv6-relay
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcpv6-relay disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcpv6-relay listen-interface &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 address on listen-interface listen for requests on
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address on listen interface |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcpv6-relay max-hop-count</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Maximum hop count for which requests will be processed
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Hop count |
+
+constraint error message: max-hop-count must be a value between 1 and 255
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcpv6-relay upstream-interface &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 address to forward requests to
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address of the DHCP server |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service dhcpv6-relay use-interface-id-option</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Option to set DHCPv6 interface-ID option
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

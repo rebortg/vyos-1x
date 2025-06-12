@@ -1,0 +1,65 @@
+---
+title: LCD
+description: LCD Configuration
+cfg:
+    - system lcd
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system lcd device</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Physical device used by LCD display
+
+| Value | Help |
+|-------|------|
+| `usbNbXpY` |  TTY device name, USB based |
+| `ttySXX` |  TTY device name, regular serial port |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system lcd model</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Model of the display attached to this system
+
+| Value | Help |
+|-------|------|
+| `sdec` |  Lanner, Watchguard, Nexcom NSA, Sophos UTM appliances |
+| `hd44780` |  Hitachi HD44780, Caswell Appliances |
+| `cfa-635` |  Crystalfontz CFA-635 |
+| `cfa-633` |  Crystalfontz CFA-633 |
+| `cfa-631` |  Crystalfontz CFA-631 |
+| `cfa-533` |  Crystalfontz CFA-533 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

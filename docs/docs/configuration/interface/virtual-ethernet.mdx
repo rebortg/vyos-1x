@@ -1,0 +1,1937 @@
+---
+title: Virtual-ethernet Interface
+description: Virtual-ethernet Interface Configuration
+cfg:
+    - interfaces virtual-ethernet
+opmode:
+    - show interfaces virtual-ethernet
+    - renew dhcp
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address
+
+| Value | Help |
+|-------|------|
+| `dhcpv6` |  Dynamic Host Configuration Protocol for IPv6 |
+| `dhcp` |  Dynamic Host Configuration Protocol |
+| `ipv6net` |  IPv6 address and prefix length |
+| `ipv4net` |  IPv4 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcp-options client-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcp-options client-id</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcp-options client-id</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcp-options client-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Identifier used by client to identify itself to the DHCP server
+
+| Value | Help |
+|-------|------|
+| `txt` |  DHCP option string |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcp-options default-route-distance</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcp-options default-route-distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcp-options default-route-distance</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcp-options default-route-distance</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 210</span>
+
+Distance for installed default route
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for the default route from DHCP server |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcp-options host-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcp-options host-name</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcp-options host-name</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcp-options host-name</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Override system host-name sent to DHCP server
+
+constraint error message: Host-name must be alphanumeric and can contain hyphens
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcp-options mtu</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcp-options mtu</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcp-options mtu</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcp-options mtu</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use MTU value from DHCP server - ignore interface setting
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcp-options no-default-route</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcp-options no-default-route</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcp-options no-default-route</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcp-options no-default-route</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not install default route to system
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcp-options reject</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcp-options reject</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcp-options reject</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcp-options reject</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP addresses or subnets from which to reject DHCP leases
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  IPv4 prefix to match |
+| `ipv4` |  IPv4 address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcp-options user-class</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcp-options user-class</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcp-options user-class</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcp-options user-class</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Identify to the DHCP server, user configurable option
+
+| Value | Help |
+|-------|------|
+| `txt` |  DHCP option string |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcp-options vendor-class-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcp-options vendor-class-id</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcp-options vendor-class-id</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcp-options vendor-class-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Identify the vendor client type to the DHCP server
+
+| Value | Help |
+|-------|------|
+| `txt` |  DHCP option string |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcpv6-options duid</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcpv6-options duid</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcpv6-options duid</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcpv6-options duid</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+DHCP unique identifier (DUID) to be sent by client
+
+| Value | Help |
+|-------|------|
+| `duid` |  DHCP unique identifier |
+
+constraint error message: Invalid DUID, must be in the format h[[:h]...]
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcpv6-options no-release</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcpv6-options no-release</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcpv6-options no-release</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcpv6-options no-release</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not send a release message on client exit
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcpv6-options parameters-only</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcpv6-options parameters-only</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcpv6-options parameters-only</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcpv6-options parameters-only</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Acquire only config parameters, no address
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; interface &lt;tag&gt; address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; interface &lt;tag&gt; address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; interface &lt;tag&gt; address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; interface &lt;tag&gt; address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Local interface address assigned to interface (default: EUI-64)
+
+| Value | Help |
+|-------|------|
+| `&gt;0` |  Used to form IPv6 interface address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; interface &lt;tag&gt; sla-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; interface &lt;tag&gt; sla-id</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; interface &lt;tag&gt; sla-id</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; interface &lt;tag&gt; sla-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface site-Level aggregator (SLA)
+
+| Value | Help |
+|-------|------|
+| `u32:0-65535` |  Decimal integer which fits in the length of SLA IDs |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; length</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcpv6-options pd &lt;tag&gt; length</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 64</span>
+
+Request IPv6 prefix length from peer
+
+| Value | Help |
+|-------|------|
+| `u32:32-64` |  Length of delegated prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcpv6-options rapid-commit</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcpv6-options rapid-commit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcpv6-options rapid-commit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcpv6-options rapid-commit</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Wait for immediate reply instead of advertisements
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; dhcpv6-options temporary</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; dhcpv6-options temporary</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; dhcpv6-options temporary</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; dhcpv6-options temporary</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 temporary address
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Administratively disable interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; netns</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Network namespace name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Network namespace name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; peer-name</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Virtual ethernet peer interface name
+
+| Value | Help |
+|-------|------|
+| `txt` |  Name of peer interface |
+
+constraint error message: Virutal Ethernet interface must be named vethN
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; disable-link-detect</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; disable-link-detect</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; disable-link-detect</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Ignore link state changes
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; egress-qos</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VLAN egress QoS
+
+| Value | Help |
+|-------|------|
+| `txt` |  Format for qos mapping, e.g.: &#39;0:1 1:6 7:6&#39; |
+
+constraint error message: QoS mapping should be in the format of '0:7 2:3' with numbers 0-9
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ingress-qos</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VLAN ingress QoS
+
+| Value | Help |
+|-------|------|
+| `txt` |  Format for qos mapping, e.g.: &#39;0:1 1:6 7:6&#39; |
+
+constraint error message: QoS mapping should be in the format of '0:7 2:3' with numbers 0-9
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip adjust-mss</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ipv6 adjust-mss</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip adjust-mss</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ipv6 adjust-mss</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip adjust-mss</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ipv6 adjust-mss</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Adjust TCP MSS value
+
+| Value | Help |
+|-------|------|
+| `u32:536-65535` |  TCP Maximum segment size in bytes |
+| `clamp-mss-to-pmtu` |  Automatically sets the MSS to the proper value |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip arp-cache-timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip arp-cache-timeout</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip arp-cache-timeout</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30</span>
+
+ARP cache entry timeout in seconds
+
+| Value | Help |
+|-------|------|
+| `u32:1-86400` |  ARP cache entry timout in seconds |
+
+constraint error message: ARP cache entry timeout must be between 1 and 86400 seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip disable-arp-filter</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip disable-arp-filter</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip disable-arp-filter</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable ARP filter on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip disable-forwarding</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ipv6 disable-forwarding</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip disable-forwarding</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ipv6 disable-forwarding</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip disable-forwarding</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ipv6 disable-forwarding</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable IP forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip enable-arp-accept</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip enable-arp-accept</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip enable-arp-accept</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP accept on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip enable-arp-announce</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip enable-arp-announce</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip enable-arp-announce</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP announce on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip enable-arp-ignore</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip enable-arp-ignore</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip enable-arp-ignore</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable ARP ignore on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip enable-directed-broadcast</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip enable-directed-broadcast</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip enable-directed-broadcast</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable directed broadcast forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip enable-proxy-arp</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip enable-proxy-arp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip enable-proxy-arp</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable proxy-arp on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip proxy-arp-pvlan</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip proxy-arp-pvlan</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip proxy-arp-pvlan</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable private VLAN proxy ARP on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ip source-validation</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ipv6 source-validation</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ip source-validation</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ipv6 source-validation</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ip source-validation</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ipv6 source-validation</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source validation by reversed path (RFC3704)
+
+| Value | Help |
+|-------|------|
+| `disable` |  No source validation |
+| `loose` |  Enable Loose Reverse Path Forwarding as defined in RFC3704 |
+| `strict` |  Enable Strict Reverse Path Forwarding as defined in RFC3704 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ipv6 accept-dad</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ipv6 accept-dad</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ipv6 accept-dad</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Accept Duplicate Address Detection
+
+| Value | Help |
+|-------|------|
+| `2` |  Enable DAD - disable IPv6 if MAC-based duplicate link-local address found |
+| `1` |  Enable DAD |
+| `0` |  Disable DAD |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ipv6 address autoconf</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ipv6 address autoconf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ipv6 address autoconf</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable acquisition of IPv6 address using stateless autoconfig (SLAAC)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ipv6 address eui64</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ipv6 address eui64</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ipv6 address eui64</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Prefix for IPv6 address with MAC-based EUI-64
+
+| Value | Help |
+|-------|------|
+| `&lt;h:h:h:h:h:h:h:h/64&gt;` |  IPv6 /64 network |
+
+constraint error message: EUI64 prefix length must be 64
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ipv6 address no-default-link-local</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ipv6 address no-default-link-local</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ipv6 address no-default-link-local</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Remove the default link-local address from the interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; ipv6 dup-addr-detect-transmits</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; ipv6 dup-addr-detect-transmits</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; ipv6 dup-addr-detect-transmits</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Number of NS messages to send while performing DAD
+
+| Value | Help |
+|-------|------|
+| `u32:1-n` |  Number of NS messages to send while performing DAD |
+| `u32:0` |  Disable Duplicate Address Dectection (DAD) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; mac</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; mac</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; mac</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Media Access Control (MAC) address
+
+| Value | Help |
+|-------|------|
+| `macaddr` |  Hardware (MAC) address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; mirror egress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; mirror egress</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; mirror egress</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirror egress traffic to destination interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; mirror ingress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; mirror ingress</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; mirror ingress</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Mirror ingress traffic to destination interface
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; mtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; mtu</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; mtu</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1500</span>
+
+Maximum Transmission Unit (MTU)
+
+| Value | Help |
+|-------|------|
+| `u32:68-16000` |  Maximum Transmission Unit in byte |
+
+constraint error message: MTU must be between 68 and 16000
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; redirect</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; redirect</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; redirect</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Redirect incoming packet to destination
+
+| Value | Help |
+|-------|------|
+| `txt` |  Destination interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif &lt;tag&gt; vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vif-c &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vrf</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set interfaces virtual-ethernet &lt;tag&gt; vif-s &lt;tag&gt; protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 802.1ad</span>
+
+Protocol used for service VLAN (default: 802.1ad)
+
+| Value | Help |
+|-------|------|
+| `802.1q` |  VLAN-tagged frame (IEEE 802.1q), ethertype 0x8100 |
+| `802.1ad` |  Provider Bridging (IEEE 802.1ad, Q-inQ), ethertype 0x88a8 |
+
+constraint error message: Ethertype must be 802.1ad or 802.1q
+
+
+
+</dd>
+</dl>
+
+## Operational Mode Commands
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces virtual-ethernet brief</div>
+  </div>
+</dt>
+
+<dd>
+  Show summary of the specified virtual-ethernet interface information
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces virtual-ethernet detail</div>
+  </div>
+</dt>
+
+<dd>
+  Show detailed virtual-ethernet interface information
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces virtual-ethernet event-log addr</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for network address events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces virtual-ethernet event-log link</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for network link events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces virtual-ethernet event-log neigh</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for neighbor table events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces virtual-ethernet event-log route</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for route events
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="opcmd-heading">
+    <div class="opcmd">show interfaces virtual-ethernet event-log rule</div>
+  </div>
+</dt>
+
+<dd>
+  Show log for PBR rule change events
+</dd>
+</dl>
+

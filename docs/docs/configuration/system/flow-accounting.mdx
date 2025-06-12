@@ -1,0 +1,668 @@
+---
+title: Flow Accounting
+description: Flow Accounting Configuration
+cfg:
+    - system flow-accounting
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting buffer-size</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Buffer size
+
+| Value | Help |
+|-------|------|
+| `u32` |  Buffer size in MiB |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting disable-imt</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable in memory table plugin
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting enable-egress</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable egress flow accounting
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow engine-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+NetFlow engine-id
+
+| Value | Help |
+|-------|------|
+| `u32` |  NetFlow engine-id for v9 / IPFIX |
+| `0-255 or 0-255:0-255` |  NetFlow engine-id for v5 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow max-flows</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+NetFlow maximum flows
+
+| Value | Help |
+|-------|------|
+| `u32` |  NetFlow maximum flows |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow sampling-rate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+NetFlow sampling-rate
+
+| Value | Help |
+|-------|------|
+| `u32` |  Sampling rate (1 in N packets) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2055</span>
+
+NetFlow port number
+
+| Value | Help |
+|-------|------|
+| `u32:1025-65535` |  NetFlow port number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow source-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting sflow source-address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Source IP address used to initiate connection
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 source address |
+| `ipv4` |  IPv4 source address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow timeout expiry-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 60</span>
+
+Expiry scan interval
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  Expiry scan interval |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow timeout flow-generic</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3600</span>
+
+Generic flow timeout value
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  Generic flow timeout in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow timeout icmp</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+ICMP timeout value
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  ICMP timeout in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow timeout max-active-life</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 604800</span>
+
+Max active timeout value
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  Max active timeout in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow timeout tcp-fin</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+TCP finish timeout value
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  TCP FIN timeout in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow timeout tcp-generic</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 3600</span>
+
+TCP generic timeout value
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  TCP generic timeout in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow timeout tcp-rst</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 120</span>
+
+TCP reset timeout value
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  TCP RST timeout in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow timeout udp</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 300</span>
+
+UDP timeout value
+
+| Value | Help |
+|-------|------|
+| `u32:0-2147483647` |  UDP timeout in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting netflow version</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 9</span>
+
+NetFlow version to export
+
+| Value | Help |
+|-------|------|
+| `10` |  Internet Protocol Flow Information Export (IPFIX) |
+| `9` |  NetFlow version 9 |
+| `5` |  NetFlow version 5 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting packet-length</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 128</span>
+
+Specifies the maximum number of bytes to capture for each packet
+
+| Value | Help |
+|-------|------|
+| `u32:128-750` |  Packet length in bytes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting sflow agent-address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+sFlow agent IPv4 address
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  sFlow IPv4 agent address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting sflow sampling-rate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+sFlow sampling-rate
+
+| Value | Help |
+|-------|------|
+| `u32` |  Sampling rate (1 in N packets) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting sflow server &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 6343</span>
+
+sFlow port number
+
+| Value | Help |
+|-------|------|
+| `u32:1025-65535` |  sFlow port number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting syslog-facility</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Syslog facility for flow-accounting
+
+| Value | Help |
+|-------|------|
+| `all` |  Authentication and authorization |
+| `local7` |  Local facility 7 |
+| `local6` |  Local facility 6 |
+| `local5` |  Local facility 5 |
+| `local4` |  Local facility 4 |
+| `local3` |  Local facility 3 |
+| `local2` |  Local facility 2 |
+| `local1` |  Local facility 1 |
+| `local0` |  Local facility 0 |
+| `uucp` |  UUCP subsystem |
+| `user` |  Application processes |
+| `syslog` |  Authentication and authorization |
+| `security` |  Authentication and authorization |
+| `protocols` |  Routing protocols (local7) |
+| `news` |  USENET subsystem |
+| `mark` |  Timestamp |
+| `mail` |  Mail subsystem |
+| `lpr` |  Line printer spooler |
+| `kern` |  Kernel |
+| `daemon` |  System daemons |
+| `cron` |  Cron daemon |
+| `authpriv` |  Non-system authorization |
+| `auth` |  Authentication and authorization |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set system flow-accounting vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

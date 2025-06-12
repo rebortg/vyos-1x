@@ -1,0 +1,159 @@
+---
+title: IGMP Proxy
+description: IGMP Proxy Configuration
+cfg:
+    - protocols igmp-proxy
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols igmp-proxy disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols igmp-proxy disable-quickleave</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Option to disable &#34;quickleave&#34;
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols igmp-proxy interface &lt;tag&gt; alt-subnet</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Unicast source networks allowed for multicast traffic to be proxyed
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  IPv4 network |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols igmp-proxy interface &lt;tag&gt; role</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: downstream</span>
+
+IGMP interface role
+
+| Value | Help |
+|-------|------|
+| `disabled` |  Disabled interface |
+| `downstream` |  Downstream interface(s) |
+| `upstream` |  Upstream interface (only 1 allowed) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols igmp-proxy interface &lt;tag&gt; threshold</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+TTL threshold
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  TTL threshold for the interfaces |
+
+constraint error message: Threshold must be between 1 and 255
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols igmp-proxy interface &lt;tag&gt; whitelist</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Group to whitelist
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  IPv4 network |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

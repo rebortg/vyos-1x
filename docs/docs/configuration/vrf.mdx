@@ -1,0 +1,219 @@
+---
+title: VRF
+description: VRF Configuration
+cfg:
+    - vrf
+not_cfg:
+    - vrf name <tag> protocols
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf bind-to-all</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable binding services to all VRFs
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Administratively disable interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; ip disable-forwarding</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; ipv6 disable-forwarding</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable IP forwarding on this interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; ip nht no-resolve-via-default</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; ipv6 nht no-resolve-via-default</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not resolve via default route
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; ip protocol &lt;tag&gt; route-map</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; ipv6 protocol &lt;tag&gt; route-map</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specify route-map name to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Route map name |
+
+constraint error message: Name of route-map can only contain alpha-numeric letters, hyphen and underscores
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; table</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Routing table associated with this instance
+
+| Value | Help |
+|-------|------|
+| `u32:100-65535` |  Routing table ID |
+
+constraint error message: VRF routing table must be in range from 100 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; vni</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Virtual Network Identifier
+
+| Value | Help |
+|-------|------|
+| `u32:0-16777214` |  VXLAN virtual network identifier |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

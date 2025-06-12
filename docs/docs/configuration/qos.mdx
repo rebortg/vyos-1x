@@ -1,0 +1,2909 @@
+---
+title: QoS
+description: QoS Configuration
+cfg:
+    - qos
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos interface &lt;tag&gt; egress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface egress traffic policy
+
+| Value | Help |
+|-------|------|
+| `txt` |  QoS policy to use |
+
+constraint error message: Only alpha-numeric policy name allowed
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos interface &lt;tag&gt; ingress</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface ingress traffic policy
+
+| Value | Help |
+|-------|------|
+| `txt` |  QoS policy to use |
+
+constraint error message: Only alpha-numeric policy name allowed
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; bandwidth</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; bandwidth</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; default bandwidth</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy network-emulator &lt;tag&gt; bandwidth</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy rate-control &lt;tag&gt; bandwidth</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default bandwidth</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Available bandwidth for this policy
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;%%` |  Percentage of interface link speed |
+| `&lt;number&gt;tbit` |  Terabits per second |
+| `&lt;number&gt;gbit` |  Gigabits per second |
+| `&lt;number&gt;mbit` |  Megabits per second |
+| `&lt;number&gt;kbit` |  Kilobits per second |
+| `&lt;number&gt;bit` |  Bits per second |
+| `&lt;number&gt;` |  Bits per second |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy drop-tail &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fair-queue &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fq-codel &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy network-emulator &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy random-detect &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy rate-control &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation blind</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disables flow isolation, all traffic passes through a single queue
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation dst-host</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flows are defined only by destination address
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation dual-dst-host</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flows are defined by the 5-tuple, fairness is applied first over destination addresses, then over individual flows
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation dual-src-host</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flows are defined by the 5-tuple, fairness is applied first over source addresses, then over individual flows
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation flow</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flows are defined by the entire 5-tuple
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation host</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flows are defined by source-destination host pairs
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation nat</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Perform NAT lookup before applying flow-isolation rules
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation src-host</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flows are defined only by source address
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; flow-isolation triple-isolate</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Flows are defined by the 5-tuple, fairness is applied over source and destination addresses and also over individual flows (default)
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy cake &lt;tag&gt; rtt</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 100</span>
+
+Round-Trip-Time for Active Queue Management (AQM)
+
+| Value | Help |
+|-------|------|
+| `u32:1-3600000` |  RTT in ms |
+
+constraint error message: RTT must be in range 1 to 3600000 milli-seconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy drop-tail &lt;tag&gt; queue-limit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy network-emulator &lt;tag&gt; queue-limit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; queue-limit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; default queue-limit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy random-detect &lt;tag&gt; precedence &lt;tag&gt; queue-limit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; queue-limit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; default queue-limit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; queue-limit</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default queue-limit</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum queue size
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  Queue size in packets |
+
+constraint error message: Queue limit must be greater than zero
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fair-queue &lt;tag&gt; hash-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Interval in seconds for queue algorithm perturbation
+
+| Value | Help |
+|-------|------|
+| `u32:1-127` |  Interval in seconds for queue algorithm perturbation (advised: 10) |
+| `u32:0` |  No perturbation |
+
+constraint error message: Interval must be in range 0 to 127
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fair-queue &lt;tag&gt; queue-limit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 127</span>
+
+Upper limit of the SFQ
+
+| Value | Help |
+|-------|------|
+| `u32:1-127` |  Queue size in packets |
+
+constraint error message: Queue limit must be in range 1 to 127
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fq-codel &lt;tag&gt; codel-quantum</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; codel-quantum</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; default codel-quantum</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; codel-quantum</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; default codel-quantum</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; codel-quantum</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default codel-quantum</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1514</span>
+
+Deficit in the fair queuing algorithm
+
+| Value | Help |
+|-------|------|
+| `u32:0-1048576` |  Number of bytes used as &#39;deficit&#39; |
+
+constraint error message: Interval must be in range 0 to 1048576
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fq-codel &lt;tag&gt; flows</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; flows</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; default flows</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; flows</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; default flows</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; flows</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default flows</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1024</span>
+
+Number of flows into which the incoming packets are classified
+
+| Value | Help |
+|-------|------|
+| `u32:1-65536` |  Number of flows |
+
+constraint error message: Interval must be in range 1 to 65536
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fq-codel &lt;tag&gt; interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; interval</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; default interval</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; interval</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; default interval</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; interval</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 100</span>
+
+Interval used to measure the delay
+
+| Value | Help |
+|-------|------|
+| `u32` |  Interval in milliseconds |
+
+constraint error message: Interval must be in range 0 to 4294967295
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fq-codel &lt;tag&gt; queue-limit</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10240</span>
+
+Upper limit of the queue
+
+| Value | Help |
+|-------|------|
+| `u32:2-10999` |  Queue size in packets |
+
+constraint error message: Queue limit must greater than 1 and less than 11000
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy fq-codel &lt;tag&gt; target</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; target</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; default target</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; target</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; default target</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; target</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default target</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Acceptable minimum standing/persistent queue delay
+
+| Value | Help |
+|-------|------|
+| `u32` |  Queue delay in milliseconds |
+
+constraint error message: Delay must be in range 0 to 4294967295
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; burst</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; default burst</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy rate-control &lt;tag&gt; burst</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; burst</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default burst</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 15k</span>
+
+Burst size for this class
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;&lt;suffix&gt;` |  Bytes with scaling suffix (kb, mb, gb) |
+| `&lt;number&gt;` |  Bytes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; exceed</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; default exceed</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: drop</span>
+
+Default action for packets exceeding the limiter
+
+| Value | Help |
+|-------|------|
+| `pipe` |  Pass the packet to the next action in line |
+| `reclassify` |  Treat the packet as non-matching to the filter this action is attached to and continue with the next filter in line (if any) |
+| `ok` |  Accept the packet |
+| `drop` |  Drop the packet immediately |
+| `continue` |  Do not do anything, just continue with the next action in line |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether destination</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether destination</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether destination</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether destination</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether destination</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Ethernet destination address for this match
+
+| Value | Help |
+|-------|------|
+| `macaddr` |  MAC address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether protocol</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Ethernet protocol for this match
+
+| Value | Help |
+|-------|------|
+| `802.1Q` |  802.1Q VLAN tag |
+| `ipx` |  Novell Internet Packet Exchange |
+| `atalk` |  Appletalk |
+| `arp` |  Address Resolution Protocol |
+| `ipv6` |  Internet IP (IPv6) |
+| `ip` |  Internet IP (IPv4) |
+| `all` |  Any protocol |
+| `txt` |  Ethernet protocol name |
+| `u32:0-65535` |  Ethernet protocol number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether source</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether source</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether source</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether source</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ether source</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Ethernet source address for this match
+
+| Value | Help |
+|-------|------|
+| `macaddr` |  MAC address to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Interface name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv4 destination address for this match
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  IPv4 prefix |
+| `ipv4` |  IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip source port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination port</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source port</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip dscp</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 dscp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip dscp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 dscp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip dscp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 dscp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip dscp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 dscp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip dscp</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 dscp</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match on Differentiated Services Codepoint (DSCP)
+
+| Value | Help |
+|-------|------|
+| `EF` |  Expedited Forwarding |
+| `CS7` |   |
+| `CS6` |  Network control |
+| `CS5` |  Signaling |
+| `CS4` |  Real-time interactive |
+| `CS3` |  Broadcast video |
+| `CS2` |  OAM |
+| `CS1` |  Low-priority data |
+| `AF43` |  Multimedia conferencing |
+| `AF42` |  Multimedia conferencing |
+| `AF41` |  Multimedia conferencing |
+| `AF33` |  Multimedia streaming |
+| `AF32` |  Multimedia streaming |
+| `AF31` |  Multimedia streaming |
+| `AF23` |  Low-latency data |
+| `AF22` |  Low-latency data |
+| `AF21` |  Low-latency data |
+| `AF13` |  High-throughput data |
+| `AF12` |  High-throughput data |
+| `AF11` |  High-throughput data |
+| `network` |  match DSCP (111000) |
+| `internet` |  match DSCP (110000) |
+| `critical` |  match DSCP (101000) |
+| `flash-override` |  match DSCP (100000) |
+| `flash` |  match DSCP (011000) |
+| `immediate` |  match DSCP (010000) |
+| `priority` |  match DSCP (001000) |
+| `lowdelay` |  match DSCP (000100) |
+| `throughput` |  match DSCP (000010) |
+| `reliability` |  match DSCP (000001) |
+| `default` |  match DSCP (000000) |
+| `u32:0-63` |  Differentiated Services Codepoint (DSCP) value  |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip max-length</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 max-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip max-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 max-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip max-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 max-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip max-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 max-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip max-length</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 max-length</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Maximum packet length
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Maximum packet/payload length |
+
+constraint error message: Maximum packet length is 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip protocol</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 protocol</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Protocol
+
+| Value | Help |
+|-------|------|
+| `txt` |  Protocol name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp ack</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp ack</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp ack</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp ack</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp ack</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp ack</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp ack</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp ack</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp ack</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp ack</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match TCP ACK
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp syn</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp syn</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp syn</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp syn</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp syn</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp syn</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp syn</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp syn</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ip tcp syn</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 tcp syn</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match TCP SYN
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination address</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 destination address</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; ipv6 source address</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IPv6 destination address for this match
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; mark</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; mark</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; mark</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; mark</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; mark</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Match on mark applied by firewall
+
+| Value | Help |
+|-------|------|
+| `u32` |  FW mark to match |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; vif</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; vif</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; vif</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; vif</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; match &lt;tag&gt; vif</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Virtual Local Area Network (VLAN) ID for this match
+
+| Value | Help |
+|-------|------|
+| `u32:0-4095` |  Virtual Local Area Network (VLAN) tag  |
+
+constraint error message: VLAN ID must be between 0 and 4095
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; mtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; default mtu</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+MTU size for this class
+
+| Value | Help |
+|-------|------|
+| `u32:256-65535` |  Bytes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; not-exceed</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; default not-exceed</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: ok</span>
+
+Default action for packets not exceeding the limiter
+
+| Value | Help |
+|-------|------|
+| `pipe` |  Pass the packet to the next action in line |
+| `reclassify` |  Treat the packet as non-matching to the filter this action is attached to and continue with the next filter in line (if any) |
+| `ok` |  Accept the packet |
+| `drop` |  Drop the packet immediately |
+| `continue` |  Do not do anything, just continue with the next action in line |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy limiter &lt;tag&gt; class &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 20</span>
+
+Priority for rule evaluation
+
+| Value | Help |
+|-------|------|
+| `u32:0-20` |  Priority for match rule evaluation |
+
+constraint error message: Priority must be between 0 and 20
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy network-emulator &lt;tag&gt; corruption</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Introducing error in a random position for chosen percent of packets
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;` |  Percentage of packets affected |
+
+constraint error message: Priority must be between 0 and 100
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy network-emulator &lt;tag&gt; delay</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Adds delay to packets outgoing to chosen network interface
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;` |  Time in milliseconds |
+
+constraint error message: Priority must be between 0 and 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy network-emulator &lt;tag&gt; duplicate</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Cosen percent of packets is duplicated before queuing them
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;` |  Percentage of packets affected |
+
+constraint error message: Priority must be between 0 and 100
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy network-emulator &lt;tag&gt; loss</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Add independent loss probability to the packets outgoing to chosen network interface
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;` |  Percentage of packets affected |
+
+constraint error message: Must be between 0 and 100
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy network-emulator &lt;tag&gt; reordering</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Emulated packet reordering percentage
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;` |  Percentage of packets affected |
+
+constraint error message: Must be between 0 and 100
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; class &lt;tag&gt; queue-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy priority-queue &lt;tag&gt; default queue-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; queue-type</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: drop-tail</span>
+
+Queue type for default traffic
+
+| Value | Help |
+|-------|------|
+| `random-detect` |  Random Early Detection (RED) |
+| `priority` |  Priority queuing |
+| `fq-codel` |  Fair Queue Codel |
+| `fair-queue` |  Stochastic Fair Queue (SFQ) |
+| `drop-tail` |  First-In-First-Out (FIFO) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy random-detect &lt;tag&gt; bandwidth</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; bandwidth</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; bandwidth</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; bandwidth</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: auto</span>
+
+Available bandwidth for this policy
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;%%` |  Percentage of interface link speed |
+| `&lt;number&gt;tbit` |  Terabits per second |
+| `&lt;number&gt;gbit` |  Gigabits per second |
+| `&lt;number&gt;mbit` |  Megabits per second |
+| `&lt;number&gt;kbit` |  Kilobits per second |
+| `&lt;number&gt;bit` |  Bits per second |
+| `&lt;number&gt;` |  Bits per second |
+| `auto` |  Bandwidth matches interface speed |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy random-detect &lt;tag&gt; precedence &lt;tag&gt; average-packet</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1024</span>
+
+Average packet size (bytes)
+
+| Value | Help |
+|-------|------|
+| `u32:16-10240` |  Average packet size in bytes |
+
+constraint error message: Average packet size must be between 16 and 10240
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy random-detect &lt;tag&gt; precedence &lt;tag&gt; mark-probability</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Mark probability for this precedence
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;` |  Numeric value (1/N) |
+
+constraint error message: Mark probability must be greater than 0
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy random-detect &lt;tag&gt; precedence &lt;tag&gt; maximum-threshold</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 18</span>
+
+Maximum threshold for random detection
+
+| Value | Help |
+|-------|------|
+| `u32:0-4096` |  Maximum Threshold in packets |
+
+constraint error message: Threshold must be between 0 and 4096
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy random-detect &lt;tag&gt; precedence &lt;tag&gt; minimum-threshold</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Minimum  threshold for random detection
+
+| Value | Help |
+|-------|------|
+| `u32:0-4096` |  Maximum Threshold in packets |
+
+constraint error message: Threshold must be between 0 and 4096
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy rate-control &lt;tag&gt; latency</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 50</span>
+
+Maximum latency
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;` |  Time in milliseconds |
+
+constraint error message: Threshold must be between 0 and 4096
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; class &lt;tag&gt; quantum</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Packet scheduling quantum
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  Packet scheduling quantum (bytes) |
+
+constraint error message: Quantum must be in range 1 to 4294967295
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy round-robin &lt;tag&gt; default queue-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: fair-queue</span>
+
+Queue type for default traffic
+
+| Value | Help |
+|-------|------|
+| `random-detect` |  Random Early Detection (RED) |
+| `priority` |  Priority queuing |
+| `fq-codel` |  Fair Queue Codel |
+| `fair-queue` |  Stochastic Fair Queue (SFQ) |
+| `drop-tail` |  First-In-First-Out (FIFO) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; ceiling</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default ceiling</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Bandwidth limit for this class
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;bps` |  bps(8),kbps(8*10^3),mbps(8*10^6), gbps, tbps - Byte/sec |
+| `&lt;number&gt;ibps` |  kibps(1024*8), mibps(1024^2*8), gibps, tibps - Byte/sec |
+| `&lt;number&gt;ibit` |  kibit(1024), mibit(1024^2), gibit(1024^3), tbit(1024^4) |
+| `&lt;number&gt;bit` |  bit(1), kbit(10^3), mbit(10^6), gbit, tbit |
+| `&lt;number&gt;%%` |  Percentage of overall rate |
+| `&lt;number&gt;` |  Rate in kbit (kilobit per second) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Priority for rule evaluation
+
+| Value | Help |
+|-------|------|
+| `u32:0-20` |  Priority for match rule evaluation |
+
+constraint error message: Priority must be between 0 and 20
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; queue-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default queue-type</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: fq-codel</span>
+
+Queue type for default traffic
+
+| Value | Help |
+|-------|------|
+| `random-detect` |  Random Early Detection (RED) |
+| `priority` |  Priority queuing |
+| `fq-codel` |  Fair Queue Codel |
+| `fair-queue` |  Stochastic Fair Queue (SFQ) |
+| `drop-tail` |  First-In-First-Out (FIFO) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; class &lt;tag&gt; set-dscp</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default set-dscp</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Change the Differentiated Services (DiffServ) field in the IP header
+
+| Value | Help |
+|-------|------|
+| `EF` |  Expedited Forwarding |
+| `CS7` |   |
+| `CS6` |  Network control |
+| `CS5` |  Signaling |
+| `CS4` |  Real-time interactive |
+| `CS3` |  Broadcast video |
+| `CS2` |  OAM |
+| `CS1` |  Low-priority data |
+| `AF43` |  Multimedia conferencing |
+| `AF42` |  Multimedia conferencing |
+| `AF41` |  Multimedia conferencing |
+| `AF33` |  Multimedia streaming |
+| `AF32` |  Multimedia streaming |
+| `AF31` |  Multimedia streaming |
+| `AF23` |  Low-latency data |
+| `AF22` |  Low-latency data |
+| `AF21` |  Low-latency data |
+| `AF13` |  High-throughput data |
+| `AF12` |  High-throughput data |
+| `AF11` |  High-throughput data |
+| `network` |  match DSCP (111000) |
+| `internet` |  match DSCP (110000) |
+| `critical` |  match DSCP (101000) |
+| `flash-override` |  match DSCP (100000) |
+| `flash` |  match DSCP (011000) |
+| `immediate` |  match DSCP (010000) |
+| `priority` |  match DSCP (001000) |
+| `lowdelay` |  match DSCP (000100) |
+| `throughput` |  match DSCP (000010) |
+| `reliability` |  match DSCP (000001) |
+| `default` |  match DSCP (000000) |
+| `u32:0-63` |  Priority order for bandwidth pool |
+
+constraint error message: Priority must be between 0 and 63
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper &lt;tag&gt; default priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 20</span>
+
+Priority for usage of excess bandwidth
+
+| Value | Help |
+|-------|------|
+| `u32:0-7` |  Priority order for bandwidth pool |
+
+constraint error message: Priority must be between 0 and 7
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; linkshare d</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; realtime d</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; upperlimit d</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default linkshare d</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default realtime d</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default upperlimit d</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Service curve delay
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;` |  Time in milliseconds |
+
+constraint error message: Priority must be between 0 and 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; linkshare m1</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; realtime m1</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; upperlimit m1</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default linkshare m1</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default realtime m1</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default upperlimit m1</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0bit</span>
+
+Linkshare m1 parameter for class traffic
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;bps` |  bps(8),kbps(8*10^3),mbps(8*10^6), gbps, tbps - Byte/sec |
+| `&lt;number&gt;ibps` |  kibps(1024*8), mibps(1024^2*8), gibps, tibps - Byte/sec |
+| `&lt;number&gt;ibit` |  kibit(1024), mibit(1024^2), gibit(1024^3), tbit(1024^4) |
+| `&lt;number&gt;bit` |  bit(1), kbit(10^3), mbit(10^6), gbit, tbit |
+| `&lt;number&gt;%%` |  Percentage of overall rate |
+| `&lt;number&gt;` |  Rate in kbit (kilobit per second) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; linkshare m2</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; realtime m2</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; class &lt;tag&gt; upperlimit m2</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default linkshare m2</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default realtime m2</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set qos policy shaper-hfsc &lt;tag&gt; default upperlimit m2</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 100%</span>
+
+Linkshare m2 parameter for class traffic
+
+| Value | Help |
+|-------|------|
+| `&lt;number&gt;bps` |  bps(8),kbps(8*10^3),mbps(8*10^6), gbps, tbps - Byte/sec |
+| `&lt;number&gt;ibps` |  kibps(1024*8), mibps(1024^2*8), gibps, tibps - Byte/sec |
+| `&lt;number&gt;ibit` |  kibit(1024), mibit(1024^2), gibit(1024^3), tbit(1024^4) |
+| `&lt;number&gt;bit` |  bit(1), kbit(10^3), mbit(10^6), gbit, tbit |
+| `&lt;number&gt;%%` |  Percentage of overall rate |
+| `&lt;number&gt;` |  Rate in kbit (kilobit per second) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

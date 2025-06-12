@@ -1,0 +1,94 @@
+---
+title: Extcommunity List
+description: Extcommunity List Configuration
+cfg:
+    - policy extcommunity-list
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy extcommunity-list &lt;tag&gt; description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy extcommunity-list &lt;tag&gt; rule &lt;tag&gt; description</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy extcommunity-list &lt;tag&gt; rule &lt;tag&gt; action</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Action to take on entries matching this rule
+
+| Value | Help |
+|-------|------|
+| `deny` |  Deny matching entries |
+| `permit` |  Permit matching entries |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set policy extcommunity-list &lt;tag&gt; rule &lt;tag&gt; regex</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Regular expression to match against an extended community list
+
+| Value | Help |
+|-------|------|
+| `&lt;soo aa:nn:nn&gt;` |  Site of Origin regular expression |
+| `&lt;rt aa:nn:nn&gt;` |  Route Target regular expression |
+| `&lt;aa:nn:nn&gt;` |  Extended community list regular expression |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

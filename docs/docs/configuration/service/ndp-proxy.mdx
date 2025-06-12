@@ -1,0 +1,189 @@
+---
+title: NDP Proxy
+description: NDP Proxy Configuration
+cfg:
+    - service ndp-proxy
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ndp-proxy interface &lt;tag&gt; disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ndp-proxy interface &lt;tag&gt; prefix &lt;tag&gt; disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable instance
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ndp-proxy interface &lt;tag&gt; enable-router-bit</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable router bit in Neighbor Advertisement messages
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ndp-proxy interface &lt;tag&gt; prefix &lt;tag&gt; interface</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface to forward Neighbor Solicitation message through. Required for &#34;iface&#34; mode
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ndp-proxy interface &lt;tag&gt; prefix &lt;tag&gt; mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: static</span>
+
+Specify the running mode of the rule
+
+| Value | Help |
+|-------|------|
+| `interface` |  Forward Neighbor Solicitation message through specified interface |
+| `auto` |  Check for a matching route in /proc/net/ipv6_route |
+| `static` |  Immediately answer any Neighbor Solicitation Messages |
+
+constraint error message: Mode must be either one of: static, auto or interface
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ndp-proxy interface &lt;tag&gt; timeout</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 500</span>
+
+Timeout for Neighbor Advertisement after Neighbor Solicitation message
+
+| Value | Help |
+|-------|------|
+| `u32:500-120000` |  Timeout in milliseconds |
+
+constraint error message: Timeout must be between 500 and 120000 milliseconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ndp-proxy interface &lt;tag&gt; ttl</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30000</span>
+
+Proxy entry cache Time-To-Live
+
+| Value | Help |
+|-------|------|
+| `u32:10000-120000` |  Time in milliseconds |
+
+constraint error message: TTL must be between 10000 and 120000 milliseconds
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service ndp-proxy route-refresh</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 30000</span>
+
+Refresh interval for IPv6 routes
+
+| Value | Help |
+|-------|------|
+| `u32:10000-120000` |  Time in milliseconds |
+
+constraint error message: Route-refresh must be between 10000 and 120000 milliseconds
+
+
+
+</dd>
+</dl>
+

@@ -1,0 +1,526 @@
+---
+title: EIGRP
+description: EIGRP Configuration
+cfg:
+    - protocols eigrp
+    - vrf name <tag> protocols eigrp
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp maximum-paths</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp maximum-paths</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Forward packets over multiple paths
+
+| Value | Help |
+|-------|------|
+| `u32:1-32` |  Number of paths |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp metric weights</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp metric weights</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Modify metric coefficients
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  K1 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp network</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp network</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable routing on an IP network
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  EIGRP network prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp passive-interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp passive-interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Suppress routing updates on an interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp redistribute</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp redistribute</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Redistribute information from another routing protocol
+
+| Value | Help |
+|-------|------|
+| `vnc` |  Virtual Network Control (VNC) |
+| `static` |  Statically configured routes |
+| `babel` |  Babel routing protocol (Babel) |
+| `rip` |  Routing Information Protocol (RIP) |
+| `ospf` |  Open Shortest Path First (OSPFv2) |
+| `nhrp` |  Next Hop Resolution Protocol (NHRP) |
+| `connected` |  Connected routes |
+| `bgp` |  Border Gateway Protocol (BGP) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp router-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp router-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Override default router identifier
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Router-ID in IP address format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp system-as</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp system-as</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Autonomous System Number (ASN)
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Autonomous System Number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp variance</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp variance</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Control load balancing variance
+
+| Value | Help |
+|-------|------|
+| `u32:1-128` |  Metric variance multiplier |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp maximum-paths</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp maximum-paths</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Forward packets over multiple paths
+
+| Value | Help |
+|-------|------|
+| `u32:1-32` |  Number of paths |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp metric weights</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp metric weights</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Modify metric coefficients
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  K1 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp network</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp network</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable routing on an IP network
+
+| Value | Help |
+|-------|------|
+| `ipv4net` |  EIGRP network prefix |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp passive-interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp passive-interface</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Suppress routing updates on an interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp redistribute</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp redistribute</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Redistribute information from another routing protocol
+
+| Value | Help |
+|-------|------|
+| `vnc` |  Virtual Network Control (VNC) |
+| `static` |  Statically configured routes |
+| `babel` |  Babel routing protocol (Babel) |
+| `rip` |  Routing Information Protocol (RIP) |
+| `ospf` |  Open Shortest Path First (OSPFv2) |
+| `nhrp` |  Next Hop Resolution Protocol (NHRP) |
+| `connected` |  Connected routes |
+| `bgp` |  Border Gateway Protocol (BGP) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp router-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp router-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Override default router identifier
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Router-ID in IP address format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp system-as</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp system-as</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Autonomous System Number (ASN)
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Autonomous System Number |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols eigrp variance</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols eigrp variance</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Control load balancing variance
+
+| Value | Help |
+|-------|------|
+| `u32:1-128` |  Metric variance multiplier |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

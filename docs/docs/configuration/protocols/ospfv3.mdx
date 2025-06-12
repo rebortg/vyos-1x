@@ -1,0 +1,2702 @@
+---
+title: OSPFv3
+description: OSPFv3 Configuration
+cfg:
+    - protocols ospfv3
+    - vrf name <tag> protocols ospfv3
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; area-type nssa default-information-originate</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; area-type nssa default-information-originate</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Originate Type 7 default into NSSA area
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; area-type nssa no-summary</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; area-type stub no-summary</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; area-type nssa no-summary</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; area-type stub no-summary</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not inject inter-area routes into the stub
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; export-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; export-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Name of export-list
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; import-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; import-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Name of import-list
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; range &lt;tag&gt; advertise</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; range &lt;tag&gt; advertise</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Advertise this range
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; range &lt;tag&gt; not-advertise</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; range &lt;tag&gt; not-advertise</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not advertise this range
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 auto-cost reference-bandwidth</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 auto-cost reference-bandwidth</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 100</span>
+
+Reference bandwidth method to assign cost
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967` |  Reference bandwidth cost in Mbits/sec |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 default-information originate always</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 default-information originate always</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Always advertise a default route
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 default-information originate metric</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute babel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute bgp metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute connected metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute isis metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute kernel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute ripng metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute static metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 default-information originate metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute babel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute bgp metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute connected metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute isis metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute kernel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute ripng metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute static metric</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+OSPF default metric
+
+| Value | Help |
+|-------|------|
+| `u32:0-16777214` |  Default metric |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 default-information originate metric-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute babel metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute bgp metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute connected metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute isis metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute kernel metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute ripng metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute static metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 default-information originate metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute babel metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute bgp metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute connected metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute isis metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute kernel metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute ripng metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute static metric-type</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2</span>
+
+OSPF metric type for default routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-2` |  Set OSPF External Type 1/2 metrics |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 default-information originate route-map</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute babel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute bgp route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute connected route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute isis route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute kernel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute ripng route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute static route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 default-information originate route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute babel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute bgp route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute connected route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute isis route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute kernel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute ripng route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute static route-map</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specify route-map name to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Route map name |
+
+constraint error message: Name of route-map can only contain alpha-numeric letters, hyphen and underscores
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 distance global</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 distance global</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Administrative distance
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Administrative distance |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 distance ospfv3 external</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 distance ospfv3 external</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance for external routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for external routes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 distance ospfv3 inter-area</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 distance ospfv3 inter-area</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance for inter-area routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for inter-area routes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 distance ospfv3 intra-area</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 distance ospfv3 intra-area</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance for intra-area routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for intra-area routes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart grace-period</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart grace-period</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 120</span>
+
+Maximum length of the grace period
+
+| Value | Help |
+|-------|------|
+| `u32:1-1800` |  Maximum length of the grace period in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart helper enable router-id</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart helper enable router-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Advertising Router-ID
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Router-ID in IP address format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart helper lsa-check-disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart helper lsa-check-disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable strict LSA check
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart helper planned-only</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart helper planned-only</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Supported only planned restart
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart helper supported-grace-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart helper supported-grace-time</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Supported grace timer
+
+| Value | Help |
+|-------|------|
+| `u32:10-1800` |  Grace interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; area</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; area</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable OSPF on this interface
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  OSPF area ID in IP address notation |
+| `u32` |  OSPF area ID as decimal notation |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; bfd profile</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use settings from BFD profile
+
+| Value | Help |
+|-------|------|
+| `txt` |  BFD profile name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; cost</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; cost</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface cost
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  OSPF interface cost |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; dead-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; dead-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 40</span>
+
+Interval after which a neighbor is declared dead
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Neighbor dead interval (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; hello-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; hello-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Interval between hello packets
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Hello interval (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; ifmtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; ifmtu</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface MTU
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Interface MTU |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; instance-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; instance-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Instance ID
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  Instance Id |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; mtu-ignore</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; mtu-ignore</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable Maximum Transmission Unit (MTU) mismatch detection
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; network</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; network</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Network type
+
+| Value | Help |
+|-------|------|
+| `point-to-point` |  Point-to-point network type |
+| `broadcast` |  Broadcast network type |
+
+constraint error message: Must be broadcast or point-to-point
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; passive</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; passive</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Configure passive mode for interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; priority</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Router priority
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  OSPF router priority cost |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; retransmit-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; retransmit-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Interval between retransmitting lost link state advertisements
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Retransmit interval (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; transmit-delay</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; transmit-delay</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Link state transmit delay
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Link state transmit delay (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 log-adjacency-changes detail</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 log-adjacency-changes detail</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log all state changes
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 parameters router-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 parameters router-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Override default router identifier
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Router-ID in IP address format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; area-type nssa default-information-originate</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; area-type nssa default-information-originate</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Originate Type 7 default into NSSA area
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; area-type nssa no-summary</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; area-type stub no-summary</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; area-type nssa no-summary</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; area-type stub no-summary</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not inject inter-area routes into the stub
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; export-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; export-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Name of export-list
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; import-list</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; import-list</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Name of import-list
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; range &lt;tag&gt; advertise</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; range &lt;tag&gt; advertise</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Advertise this range
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 area &lt;tag&gt; range &lt;tag&gt; not-advertise</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 area &lt;tag&gt; range &lt;tag&gt; not-advertise</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Do not advertise this range
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 auto-cost reference-bandwidth</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 auto-cost reference-bandwidth</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 100</span>
+
+Reference bandwidth method to assign cost
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967` |  Reference bandwidth cost in Mbits/sec |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 default-information originate always</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 default-information originate always</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Always advertise a default route
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 default-information originate metric</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute babel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute bgp metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute connected metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute isis metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute kernel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute ripng metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute static metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 default-information originate metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute babel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute bgp metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute connected metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute isis metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute kernel metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute ripng metric</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute static metric</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+OSPF default metric
+
+| Value | Help |
+|-------|------|
+| `u32:0-16777214` |  Default metric |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 default-information originate metric-type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute babel metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute bgp metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute connected metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute isis metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute kernel metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute ripng metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute static metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 default-information originate metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute babel metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute bgp metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute connected metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute isis metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute kernel metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute ripng metric-type</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute static metric-type</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 2</span>
+
+OSPF metric type for default routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-2` |  Set OSPF External Type 1/2 metrics |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 default-information originate route-map</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute babel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute bgp route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute connected route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute isis route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute kernel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute ripng route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 redistribute static route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 default-information originate route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute babel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute bgp route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute connected route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute isis route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute kernel route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute ripng route-map</div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 redistribute static route-map</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specify route-map name to use
+
+| Value | Help |
+|-------|------|
+| `txt` |  Route map name |
+
+constraint error message: Name of route-map can only contain alpha-numeric letters, hyphen and underscores
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 distance global</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 distance global</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Administrative distance
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Administrative distance |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 distance ospfv3 external</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 distance ospfv3 external</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance for external routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for external routes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 distance ospfv3 inter-area</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 distance ospfv3 inter-area</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance for inter-area routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for inter-area routes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 distance ospfv3 intra-area</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 distance ospfv3 intra-area</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Distance for intra-area routes
+
+| Value | Help |
+|-------|------|
+| `u32:1-255` |  Distance for intra-area routes |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart grace-period</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart grace-period</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 120</span>
+
+Maximum length of the grace period
+
+| Value | Help |
+|-------|------|
+| `u32:1-1800` |  Maximum length of the grace period in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart helper enable router-id</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart helper enable router-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Advertising Router-ID
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Router-ID in IP address format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart helper lsa-check-disable</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart helper lsa-check-disable</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable strict LSA check
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart helper planned-only</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart helper planned-only</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Supported only planned restart
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 graceful-restart helper supported-grace-time</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 graceful-restart helper supported-grace-time</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Supported grace timer
+
+| Value | Help |
+|-------|------|
+| `u32:10-1800` |  Grace interval in seconds |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; area</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; area</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable OSPF on this interface
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  OSPF area ID in IP address notation |
+| `u32` |  OSPF area ID as decimal notation |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; bfd profile</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; bfd profile</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Use settings from BFD profile
+
+| Value | Help |
+|-------|------|
+| `txt` |  BFD profile name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; cost</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; cost</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface cost
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  OSPF interface cost |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; dead-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; dead-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 40</span>
+
+Interval after which a neighbor is declared dead
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Neighbor dead interval (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; hello-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; hello-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 10</span>
+
+Interval between hello packets
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Hello interval (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; ifmtu</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; ifmtu</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Interface MTU
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Interface MTU |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; instance-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; instance-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0</span>
+
+Instance ID
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  Instance Id |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; mtu-ignore</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; mtu-ignore</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Disable Maximum Transmission Unit (MTU) mismatch detection
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; network</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; network</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Network type
+
+| Value | Help |
+|-------|------|
+| `point-to-point` |  Point-to-point network type |
+| `broadcast` |  Broadcast network type |
+
+constraint error message: Must be broadcast or point-to-point
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; passive</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; passive</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Configure passive mode for interface
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; priority</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; priority</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Router priority
+
+| Value | Help |
+|-------|------|
+| `u32:0-255` |  OSPF router priority cost |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; retransmit-interval</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; retransmit-interval</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 5</span>
+
+Interval between retransmitting lost link state advertisements
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Retransmit interval (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 interface &lt;tag&gt; transmit-delay</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 interface &lt;tag&gt; transmit-delay</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 1</span>
+
+Link state transmit delay
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Link state transmit delay (seconds) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 log-adjacency-changes detail</div>
+    <div class="command-tags">
+      <span class="command-tag valueless">valueless</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 log-adjacency-changes detail</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Log all state changes
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set protocols ospfv3 parameters router-id</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set vrf name &lt;tag&gt; protocols ospfv3 parameters router-id</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Override default router identifier
+
+| Value | Help |
+|-------|------|
+| `ipv4` |  Router-ID in IP address format |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+

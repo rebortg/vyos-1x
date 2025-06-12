@@ -1,0 +1,871 @@
+---
+title: SNMP
+description: SNMP Configuration
+cfg:
+    - service snmp
+opmode:
+---
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp community &lt;tag&gt; authorization</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: ro</span>
+
+Authorization type
+
+| Value | Help |
+|-------|------|
+| `rw` |  Read-Write |
+| `ro` |  Read-Only |
+
+constraint error message: Authorization type must be either 'rw' or 'ro'
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp community &lt;tag&gt; client</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+IP address of SNMP client allowed to contact system
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp community &lt;tag&gt; network</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 0.0.0.0/0 ::/0</span>
+
+Subnet of SNMP client(s) allowed to contact system
+
+| Value | Help |
+|-------|------|
+| `ipv6net` |  IPv6 address and prefix length |
+| `ipv4net` |  IP address and prefix length |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp contact</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Contact information
+
+constraint error message: Contact information is limited to 255 characters or less
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp description</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Description
+
+| Value | Help |
+|-------|------|
+| `txt` |  Description |
+
+constraint error message: Description too long (limit 255 characters)
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp listen-address &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 161</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp location</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Location information
+
+constraint error message: Location is limited to 255 characters or less
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp mib interface</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Sets the interface name prefix to include in the IF-MIB data collection
+
+| Value | Help |
+|-------|------|
+| `wwan` |  Allow prefix for IF-MIB data collection |
+| `wlan` |  Allow prefix for IF-MIB data collection |
+| `wg` |  Allow prefix for IF-MIB data collection |
+| `vxlan` |  Allow prefix for IF-MIB data collection |
+| `vtun` |  Allow prefix for IF-MIB data collection |
+| `vti` |  Allow prefix for IF-MIB data collection |
+| `veth` |  Allow prefix for IF-MIB data collection |
+| `tun` |  Allow prefix for IF-MIB data collection |
+| `sstpc` |  Allow prefix for IF-MIB data collection |
+| `peth` |  Allow prefix for IF-MIB data collection |
+| `macsec` |  Allow prefix for IF-MIB data collection |
+| `gnv` |  Allow prefix for IF-MIB data collection |
+| `eth` |  Allow prefix for IF-MIB data collection |
+| `dum` |  Allow prefix for IF-MIB data collection |
+| `bond` |  Allow prefix for IF-MIB data collection |
+| `br` |  Allow prefix for IF-MIB data collection |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp mib interface-max</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Sets the maximum number of interfaces included in IF-MIB data collection
+
+| Value | Help |
+|-------|------|
+| `u32:1-4294967295` |  Sets the maximum number of interfaces included in IF-MIB data collection |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp oid-enable</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Enable specific OIDs that by default are disable
+
+| Value | Help |
+|-------|------|
+| `ip-net-to-physical-phys-address` |  Enable ipNetToPhysicalPhysAddress: .1.3.6.1.2.1.4.35 |
+| `ip-net-to-media-table` |  Enable ipNetToMediaTable: .1.3.6.1.2.1.4.22 |
+| `ip-route-table` |  Enable ipRouteTable: .1.3.6.1.2.1.4.21 |
+| `ip-forward` |  Enable ipForward: .1.3.6.1.2.1.4.24 |
+
+constraint error message: OID must be one of the liste options
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp protocol</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; protocol</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: udp</span>
+
+Protocol to be used (TCP/UDP)
+
+| Value | Help |
+|-------|------|
+| `tcp` |  Listen protocol TCP |
+| `udp` |  Listen protocol UDP |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp script-extensions extension-name &lt;tag&gt; script</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Script location and name
+
+constraint error message: Script extension contains invalid characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp smux-peer</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Register a subtree for SMUX-based processing
+
+| Value | Help |
+|-------|------|
+| `txt` |  SNMP Object Identifier |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp trap-source</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+SNMP trap source address
+
+| Value | Help |
+|-------|------|
+| `ipv6` |  IPv6 address |
+| `ipv4` |  IPv4 address |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp trap-target &lt;tag&gt; community</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Community used when sending trap information
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp trap-target &lt;tag&gt; port</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; port</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: 162</span>
+
+Port number used by connection
+
+| Value | Help |
+|-------|------|
+| `u32:1-65535` |  Numeric IP port |
+
+constraint error message: Port number must be in range 1 to 65535
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 engineid</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specifies the EngineID that uniquely identify an agent (e.g. 000000000000000000000002)
+
+constraint error message: ID must contain an even number (from 2 to 36) of hex digits
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 group &lt;tag&gt; mode</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 user &lt;tag&gt; mode</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: ro</span>
+
+Define access permission
+
+| Value | Help |
+|-------|------|
+| `rw` |  read write |
+| `ro` |  Read-Only |
+
+constraint error message: Authorization type must be either 'rw' or 'ro'
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 group &lt;tag&gt; seclevel</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: auth</span>
+
+Security levels
+
+| Value | Help |
+|-------|------|
+| `priv` |  Messages are authenticated and encrypted (authPriv) |
+| `auth` |  Messages are authenticated but not encrypted (authNoPriv) |
+| `noauth` |  Messages not authenticated and not encrypted (noAuthNoPriv) |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 group &lt;tag&gt; view</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Defines the name of view
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; auth encrypted-password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 user &lt;tag&gt; auth encrypted-password</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Defines the encrypted key for authentication
+
+constraint error message: Encrypted key must only contain hex digits
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; auth plaintext-password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 user &lt;tag&gt; auth plaintext-password</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Defines the clear text key for authentication
+
+constraint error message: Key must contain 8 or more characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; auth type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 user &lt;tag&gt; auth type</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: md5</span>
+
+Define used protocol
+
+| Value | Help |
+|-------|------|
+| `sha` |  Secure Hash Algorithm |
+| `md5` |  Message Digest 5 |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; privacy encrypted-password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 user &lt;tag&gt; privacy encrypted-password</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Defines the encrypted key for privacy protocol
+
+constraint error message: Encrypted key must only contain hex digits
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; privacy plaintext-password</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 user &lt;tag&gt; privacy plaintext-password</div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Defines the clear text key for privacy protocol
+
+constraint error message: Key must contain 8 or more characters
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; privacy type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 user &lt;tag&gt; privacy type</div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: des</span>
+
+Defines the protocol for privacy
+
+| Value | Help |
+|-------|------|
+| `aes` |  Advanced Encryption Standard |
+| `des` |  Data Encryption Standard |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; type</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+<span class="command-tag default">default: inform</span>
+
+Specifies the type of notification between inform and trap
+
+| Value | Help |
+|-------|------|
+| `trap` |  Use TRAP |
+| `inform` |  Use INFORM |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 trap-target &lt;tag&gt; user</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Defines username for authentication
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 user &lt;tag&gt; group</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Specifies group for user name
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 view &lt;tag&gt; oid &lt;tag&gt; exclude</div>
+    <div class="command-tags">
+      <span class="command-tag multi">multivalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Exclude is an optional argument
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp v3 view &lt;tag&gt; oid &lt;tag&gt; mask</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+Defines a bit-mask that is indicating which subidentifiers of the associated subtree OID should be regarded as significant
+
+constraint error message: MASK is a list of hex octets, separated by '.' or ':'
+
+
+
+</dd>
+</dl>
+
+<dl>
+<dt>
+  <div class="cfgcmd-heading">
+    <div class="cfgcmd">set service snmp vrf</div>
+    <div class="command-tags">
+      <span class="command-tag single">singlevalue</span>
+    </div>
+  </div>
+</dt>
+  
+
+<dd>
+
+VRF instance name
+
+| Value | Help |
+|-------|------|
+| `txt` |  VRF instance name |
+
+constraint error message: Invalid value
+
+
+
+</dd>
+</dl>
+
