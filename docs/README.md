@@ -1,41 +1,58 @@
-# Website
+# docusaurus poc
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+docusaurus quickstart
 
-### Installation
+https://docusaurus.io/docs/3.7.0/category/getting-started
 
-```
-$ yarn
-```
+## idea and concept
 
-### Local Development
+use the rendered configuration and operation mode command cache
 
 ```
-$ yarn start
+make interface_definitions
+make op_mode_definitions
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+at the moment the 2 json files will be in a tmp directory. Copy them in the docusaurus root and replace the 2 here.
 
-### Build
+On docusaurus build. A plugin ```./plugins/docusaurus-plugin-generate-docs``` will preprocess the json files and render the pages from the the command templates in the ```templates``` folder.
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
+Each template must have a yaml header. This header will be used by the render plugin and by docusaurus itself. for example the Title and description field.
 
 ```
-$ USE_SSH=true yarn deploy
+---
+title: VRF
+description: VRF Configuration
+cfg:
+    - vrf
+not_cfg:
+    - vrf name <tag> protocols
+opmode:
+    - show vrf
+---
 ```
 
-Not using SSH:
+```cfg``` and ```opmode``` define on which command tree the rendering will start.
+```not_cfg``` will exclude and command tree, for example in vrf to have bgp, ospf in the bgp or ospf page.
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+## build and local server
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### local test server
+
+```npx docusaurus start```
+
+### deploy via github
+
+https://docusaurus.io/docs/deployment
+
+https://docusaurus.io/docs/deployment#deploying-to-github-pages
+
+
+# TODO and open questions
+
+- opmode command cache is not in the final form at the moment
+- find a solution for commands which are not a leafnode, for example 'set service ssh' is enough to setup a basic ssh server
+- migrate some plugins like "vytask" to a react component https://docusaurus.io/docs/markdown-features/react
+- how to deal with versions and translations
+    - github branches
+    - docusaurus own release implementation https://docusaurus.io/docs/3.7.0/versioning#overview
